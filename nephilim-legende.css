@@ -112,7 +112,7 @@ textarea
 	padding-top:0px;
 }
 
-div.autoex
+div.sheet-autoex
 {
 	line-height: 1.4em;
 	min-height: 1.4em;
@@ -122,7 +122,7 @@ div.autoex
 	width:100%;
 }
 
-div.autoex > span
+div.sheet-autoex > span
 {
 	visibility: hidden;
 	display: block;
@@ -138,7 +138,7 @@ div.autoex > span
 	padding-right:2px;
 }
 
-div.autoex > textarea
+div.sheet-autoex > textarea
 {
 	display: block;
 	z-index: 1;
@@ -160,7 +160,7 @@ div.autoex > textarea
 	padding-right:0px;
 }
 
-div.autoex > textarea::placeholder
+div.sheet-autoex > textarea::placeholder
 {
 	font-family:"Contrail One";
 	color: #575957da;
@@ -171,37 +171,37 @@ div.autoex > textarea::placeholder
 	font-weight:normal;
 }
 
-div.autoex22
+div.sheet-autoex22
 {
 	min-height:22px;
 }
 
-div.autoex24
+div.sheet-autoex24
 {
 	min-height:24px;
 }
 
-div.autoex26
+div.sheet-autoex26
 {
 	min-height:26px;
 }
 
-div.autoex28
+div.sheet-autoex28
 {
 	min-height:28px;
 }
 
-div.autoex40
+div.sheet-autoex40
 {
 	min-height:40px;
 }
 
-div.autoex100
+div.sheet-autoex100
 {
 	min-height:100px;
 }
 
-div.container
+div.sheet-container
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -210,7 +210,7 @@ div.container
 	min-width:700px;
 }
 
-div.menuTop
+div.sheet-menuTop
 {
 	position:absolute;
 	width:calc(100% - 60px);
@@ -218,7 +218,7 @@ div.menuTop
 	margin-top:2px;
 }
 
-div.options
+div.sheet-options
 {
 	position:absolute;
 	width:100%;
@@ -226,14 +226,14 @@ div.options
 	margin-top:2px;
 }
 
-div.options > label
+div.sheet-options > label
 {
 	margin-left:auto;
 	width:30px;
 	height:30px;
 }
 
-div.options > label > input[type="checkbox"]
+div.sheet-options > label > input[type="checkbox"]
 {
 	position:absolute;
 	width:30px;
@@ -241,12 +241,12 @@ div.options > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.options > label > input[type="checkbox"] ~ span
+div.sheet-options > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.options > label > input[type="checkbox"] ~ span::before
+div.sheet-options > label > input[type="checkbox"] ~ span::before
 {
 	width:100%;
 	height:30px;
@@ -258,12 +258,12 @@ div.options > label > input[type="checkbox"] ~ span::before
 	color:var(--brun);
 }
 
-div.options > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-options > label > input[type="checkbox"]:checked ~ span::before
 {
 	text-shadow:none;
 }
 
-div.options > div
+div.sheet-options > div
 {
 	display:none;
 	position:absolute;
@@ -280,12 +280,12 @@ div.options > div
 	padding:10px;
 }
 
-div.options > input[type="hidden"][value="1"] ~ div
+div.sheet-options > input[type="hidden"][value="1"] ~ div
 {
 	display:flex;
 }
 
-div.options > div > label
+div.sheet-options > div > label
 {
 	width:140px;
 	height:20px;
@@ -293,7 +293,7 @@ div.options > div > label
 	margin-bottom:5px;
 }
 
-div.options > div > label > input[type="checkbox"]
+div.sheet-options > div > label > input[type="checkbox"]
 {
 	position:absolute;
 	width:140px;
@@ -301,12 +301,12 @@ div.options > div > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.options > div > label > input[type="checkbox"] ~ span
+div.sheet-options > div > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.options > div > label > input[type="checkbox"] ~ span::before
+div.sheet-options > div > label > input[type="checkbox"] ~ span::before
 {
 	content:attr(title);
 	width:100%;
@@ -323,14 +323,14 @@ div.options > div > label > input[type="checkbox"] ~ span::before
 	box-shadow: 1px 1px 1px black;
 }
 
-div.options > div > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-options > div > label > input[type="checkbox"]:checked ~ span::before
 {
 	box-shadow: none;
 	background:var(--brun);
 	color:white;
 }
 
-div.menu
+div.sheet-menu
 {
 	width:100%;
 	justify-content:space-between;
@@ -339,7 +339,7 @@ div.menu
 	margin-top:5px;
 }
 
-div.menu > label
+div.sheet-menu > label
 {
 	width:calc((100% / 3) - 10px);
 	justify-content:center;
@@ -347,7 +347,7 @@ div.menu > label
 	height:38px;
 }
 
-div.menu > label > input[type="radio"]
+div.sheet-menu > label > input[type="radio"]
 {
 	position:absolute;
 	width:calc((100% / 4) - 33px);
@@ -355,12 +355,12 @@ div.menu > label > input[type="radio"]
 	height:30px;
 }
 
-div.menu > label > input[type="radio"] ~ span
+div.sheet-menu > label > input[type="radio"] ~ span
 {
 	width:calc(100% - 8px);
 }
 
-div.menu > label > input[type="radio"] ~ span::before
+div.sheet-menu > label > input[type="radio"] ~ span::before
 {
 	display:flex;
 	content:attr(title);
@@ -374,19 +374,19 @@ div.menu > label > input[type="radio"] ~ span::before
 	border:1px solid var(--brun);
 }
 
-div.menu > label > input[type="radio"]:checked
+div.sheet-menu > label > input[type="radio"]:checked
 {
 	width:calc((100% / 3) - 23px);
 	height:38px;
 }
 
-div.menu > label > input[type="radio"]:checked ~ span
+div.sheet-menu > label > input[type="radio"]:checked ~ span
 {
 	width:100%;
 	height:38px;
 }
 
-div.menu > label > input[type="radio"]:checked ~ span::before
+div.sheet-menu > label > input[type="radio"]:checked ~ span::before
 {
 	height: 36px;
 	line-height: 36px;
@@ -395,52 +395,52 @@ div.menu > label > input[type="radio"]:checked ~ span::before
 	font-size: 20px;
 }
 
-input[type="hidden"].menu[value="1"] ~ div.tab1,
-input[type="hidden"].menu[value="2"] ~ div.tab2,
-input[type="hidden"].menu[value="3"] ~ div.tab3,
-input[type="hidden"].menu[value="4"] ~ div.tab4,
-input[type="hidden"].menu[value="5"] ~ div.tab5,
-input[type="hidden"].menu[value="6"] ~ div.tab6,
-input[type="hidden"].menu[value="7"] ~ div.tab7,
-input[type="hidden"].menu[value="8"] ~ div.tab8,
-input[type="hidden"].menu[value="9"] ~ div.tab9,
-input[type="hidden"].menu[value="10"] ~ div.tab10
+input[type="hidden"].sheet-menu[value="1"] ~ div.sheet-tab1,
+input[type="hidden"].sheet-menu[value="2"] ~ div.sheet-tab2,
+input[type="hidden"].sheet-menu[value="3"] ~ div.sheet-tab3,
+input[type="hidden"].sheet-menu[value="4"] ~ div.sheet-tab4,
+input[type="hidden"].sheet-menu[value="5"] ~ div.sheet-tab5,
+input[type="hidden"].sheet-menu[value="6"] ~ div.sheet-tab6,
+input[type="hidden"].sheet-menu[value="7"] ~ div.sheet-tab7,
+input[type="hidden"].sheet-menu[value="8"] ~ div.sheet-tab8,
+input[type="hidden"].sheet-menu[value="9"] ~ div.sheet-tab9,
+input[type="hidden"].sheet-menu[value="10"] ~ div.sheet-tab10
 {
 	display:flex;
 }
 
-input[type="hidden"].magie[value="0"] ~ div.menu > label:nth-of-type(6),
-input[type="hidden"].kabbale[value="0"] ~ div.menu > label:nth-of-type(7),
-input[type="hidden"].alchimie[value="0"] ~ div.menu > label:nth-of-type(8),
-input[type="hidden"].alchimie[value="0"] ~ div.menu > label:nth-of-type(9)
+input[type="hidden"].sheet-magie[value="0"] ~ div.sheet-menu > label:nth-of-type(6),
+input[type="hidden"].sheet-kabbale[value="0"] ~ div.sheet-menu > label:nth-of-type(7),
+input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(8),
+input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(9)
 {
 	display:none;
 }
 
-div.tab1,
-div.tab2,
-div.tab3,
-div.tab4,
-div.tab5,
-div.tab6,
-div.tab7,
-div.tab8,
-div.tab9,
-div.tab10
+div.sheet-tab1,
+div.sheet-tab2,
+div.sheet-tab3,
+div.sheet-tab4,
+div.sheet-tab5,
+div.sheet-tab6,
+div.sheet-tab7,
+div.sheet-tab8,
+div.sheet-tab9,
+div.sheet-tab10
 {
 	display:none;
 	width:100%;
 	flex-wrap:wrap;
 }
 
-div.tab2 > .col2 > .degreMetamorphe,
-div.tab2 > .col2 > .equipement
+div.sheet-tab2 > .sheet-col2 > .sheet-degreMetamorphe,
+div.sheet-tab2 > .sheet-col2 > .sheet-equipement
 {
 	border-left: 2px solid rgb(var(--marron));
 }
 
-div.tab2 > .col2 > .degreMetamorphe > h1,
-div.tab2 > .col2 > .equipement > h1
+div.sheet-tab2 > .sheet-col2 > .sheet-degreMetamorphe > h1,
+div.sheet-tab2 > .sheet-col2 > .sheet-equipement > h1
 {
 	background-image: linear-gradient(to right, rgba(var(--blanc), 0) 50%, rgba(var(--blanc), 0.8)), linear-gradient(to right, rgba(var(--marron), 0.8),rgba(var(--marron), 0.8)), var(--astrolabe);
 	background-repeat: no-repeat;
@@ -450,14 +450,15 @@ div.tab2 > .col2 > .equipement > h1
 	height: 36px;
 }
 
-div.tab6 > .col2 > .degreMetamorphe
+div.sheet-tab6 > .sheet-col2 > .sheet-degreMetamorphe
 {
 	border-left:2px solid var(--titreGris);
 }
 
-div.tab5 > .degreMetamorphe > h1,
-div.tab6 > .col2 > .degreMetamorphe > h1,
-div.tab7 > .degreMetamorphe > h1
+div.sheet-tab5 > .sheet-degreMetamorphe > h1,
+div.sheet-tab5 > .sheet-gsDomains > h1,
+div.sheet-tab6 > .sheet-col2 > .sheet-degreMetamorphe > h1,
+div.sheet-tab7 > .sheet-degreMetamorphe > h1
 {
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5),rgba(48, 59, 56, 0.5));
 	background-repeat: no-repeat;
@@ -465,71 +466,71 @@ div.tab7 > .degreMetamorphe > h1
 	background-size: auto, 100% auto, auto;
 }
 
-div.tab10 > .degreMetamorphe
+div.sheet-tab10 > .sheet-degreMetamorphe
 {
 	margin-top:0px;
 	margin-bottom:5px;
 }
 
-div.tab3 > .degreMetamorphe,
-div.tab4 > .degreMetamorphe,
-div.tab6 > .degreMetamorphe,
-div.tab7 > .degreMetamorphe,
-div.tab10 > .degreMetamorphe
+div.sheet-tab3 > .sheet-degreMetamorphe,
+div.sheet-tab4 > .sheet-degreMetamorphe,
+div.sheet-tab6 > .sheet-degreMetamorphe,
+div.sheet-tab7 > .sheet-degreMetamorphe,
+div.sheet-tab10 > .sheet-degreMetamorphe
 {
 	width:calc(100% / 3);
 }
 
-div.tab5 > .degreMetamorphe
+div.sheet-tab5 > .sheet-degreMetamorphe
 {
 	width:calc(40% - 10px);
 }
 
-div.tab5
+div.sheet-tab5
 {
 	justify-content:space-between;
 }
 
-div.col
+div.sheet-col
 {
 	width:calc(100% / 3);
 	flex-wrap:wrap;
 }
 
-div.col2
+div.sheet-col2
 {
 	width:calc(100% / 2);
 	flex-wrap:wrap;
 	align-content:flex-start;
 }
 
-div.col40
+div.sheet-col40
 {
 	width:calc(40% - 10px);
 	flex-wrap:wrap;
 	align-content:flex-start;
 }
 
-div.col60
+div.sheet-col60
 {
 	width:calc(60% - 10px);
 	flex-wrap:wrap;
 	align-content:flex-start;
 }
 
-div.2colT1
+div.sheet-2colT1
 {
 	width:calc((100% / 3)*2);
 	flex-wrap:wrap;
 }
 
-img.logo
+img.sheet-logo
 {
 	width:250px;
 	height:46px;
 }
 
-label.headerName
+label.sheet-headerName
 {
 	width:100%;
 	justify-content:space-between;
@@ -539,7 +540,7 @@ label.headerName
 	background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
 }
 
-label.headerName > span
+label.sheet-headerName > span
 {
 	width:45px;
 	color:var(--brun);
@@ -550,7 +551,7 @@ label.headerName > span
 	font-weight:bold;
 }
 
-label.headerName > input[type="text"]
+label.sheet-headerName > input[type="text"]
 {
 	border:2px solid var(--brun);
 	width:calc(100% - 45px);
@@ -558,7 +559,7 @@ label.headerName > input[type="text"]
 	text-align:center;
 }
 
-div.metamorphe
+div.sheet-metamorphe
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -568,7 +569,7 @@ div.metamorphe
 	counter-reset:metamorphe;
 }
 
-div.metamorphe > input[type="text"]
+div.sheet-metamorphe > input[type="text"]
 {
 	width:100%;
 	border:0px;
@@ -578,7 +579,7 @@ div.metamorphe > input[type="text"]
 	background:transparent;
 }
 
-div.metamorphe > span
+div.sheet-metamorphe > span
 {
 	font-family:"Times New Roman";
 	min-height:max-content;
@@ -589,23 +590,23 @@ div.metamorphe > span
 	letter-spacing:1px;
 }
 
-div.metamorphe > span:first-of-type
+div.sheet-metamorphe > span:first-of-type
 {
 	margin-left:5px;
 }
 
-div.metamorphe > span:last-of-type
+div.sheet-metamorphe > span:last-of-type
 {
 	margin-right:5px;
 }
 
-div.metamorphe > .repcontainer
+div.sheet-metamorphe > .repcontainer
 {
 	width:100%;
 	flex-wrap:wrap;
 }
 
-div.metamorphe > .repcontainer > .repitem
+div.sheet-metamorphe > .repcontainer > .repitem
 {
 	width:100%;
 	border-bottom:1px dotted black;
@@ -615,24 +616,24 @@ div.metamorphe > .repcontainer > .repitem
 	margin-top:10px;
 }
 
-div.metamorphe > .repcontainer > .repitem > .itemcontrol
+div.sheet-metamorphe > .repcontainer > .repitem > .itemcontrol
 {
 	margin-top:-7px;
 }
 
-div.metamorphe > .repcontainer > .repitem > .itemcontrol > .btn
+div.sheet-metamorphe > .repcontainer > .repitem > .itemcontrol > .btn
 {
 	padding-top:1px;
 	padding-bottom:2px;
 }
 
-div.metamorphe > .repcontainer > .repitem > label:first-of-type
+div.sheet-metamorphe > .repcontainer > .repitem > label:first-of-type
 {
 	width:calc(100% - 20px);
 	justify-content:space-between;
 }
 
-div.metamorphe > .repcontainer > .repitem > label:first-of-type > span::before
+div.sheet-metamorphe > .repcontainer > .repitem > label:first-of-type > span::before
 {
 	display:flex;
 	width:15px;
@@ -643,7 +644,7 @@ div.metamorphe > .repcontainer > .repitem > label:first-of-type > span::before
 	content:counter(metamorphe);
 }
 
-div.metamorphe > .repcontainer > .repitem > label:first-of-type > input[type="text"]
+div.sheet-metamorphe > .repcontainer > .repitem > label:first-of-type > input[type="text"]
 {
 	width:calc(100% - 20px);
 	border:0px;
@@ -651,13 +652,13 @@ div.metamorphe > .repcontainer > .repitem > label:first-of-type > input[type="te
 	background:transparent;
 }
 
-div.metamorphe > .repcontainer > .repitem > label
+div.sheet-metamorphe > .repcontainer > .repitem > label
 {
 	width:15px;
 	height:15px;
 }
 
-div.metamorphe > .repcontainer > .repitem > label > input[type="checkbox"]
+div.sheet-metamorphe > .repcontainer > .repitem > label > input[type="checkbox"]
 {
 	position:absolute;
 	width:15px;
@@ -665,12 +666,12 @@ div.metamorphe > .repcontainer > .repitem > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.metamorphe > .repcontainer > .repitem > label > input[type="checkbox"] ~ span
+div.sheet-metamorphe > .repcontainer > .repitem > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.metamorphe > .repcontainer > .repitem > label > input[type="checkbox"] ~ span::before
+div.sheet-metamorphe > .repcontainer > .repitem > label > input[type="checkbox"] ~ span::before
 {
 	display:flex;
 	content:"";
@@ -687,14 +688,14 @@ div.metamorphe > .repcontainer > .repitem > label > input[type="checkbox"] ~ spa
 	font-weight: bold;
 }
 
-div.metamorphe > .repcontainer > .repitem > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-metamorphe > .repcontainer > .repitem > label > input[type="checkbox"]:checked ~ span::before
 {
 	content:"";
 	background-color:var(--brun);
 }
 
-div.degreMetamorphe,
-div.equipement
+div.sheet-degreMetamorphe,
+div.sheet-equipement
 {
 	margin-top:10px;
 	width:100%;
@@ -703,8 +704,9 @@ div.equipement
 	background-image:radial-gradient(rgba(255, 255, 255,0.5), rgba(255, 255, 255, 0.5));
 }
 
-div.degreMetamorphe > h1,
-div.equipement > h1
+div.sheet-degreMetamorphe > h1,
+div.sheet-gsDomains > h1,
+div.sheet-equipement > h1
 {
 	width: 100%;
 	color: white;
@@ -719,83 +721,83 @@ div.equipement > h1
 	font-size: 15px;
 }
 
-div.equipement > .repcontainer > .repitem > div.autoex
+div.sheet-equipement > .repcontainer > .repitem > div.sheet-autoex
 {
 	background-image: linear-gradient(rgba(var(--blanc), 0.5), rgba(var(--blanc), 0.5));
 	border-bottom: 1px dotted var(--brun);
 	border-right: 1px dotted var(--brun);
 }
 
-div.equipement > .repcontainer > .repitem:not(:first-of-type) > div.autoex
+div.sheet-equipement > .repcontainer > .repitem:not(:first-of-type) > div.sheet-autoex
 {
 	border-top: 1px dotted var(--brun);
 }
 
-div.degreMetamorphe > input[type="hidden"][value="1"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="2"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="2"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="3"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="3"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="3"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(4),
-div.degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(4),
-div.degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(5),
-div.degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(4),
-div.degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(5),
-div.degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(6),
-div.degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(4),
-div.degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(5),
-div.degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(6),
-div.degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(7),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(4),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(5),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(6),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(7),
-div.degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(8),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(4),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(5),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(6),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(7),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(8),
-div.degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(9),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(1),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(2),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(3),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(4),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(5),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(6),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(7),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(8),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(9),
-div.degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(10)
+div.sheet-degreMetamorphe > input[type="hidden"][value="1"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="2"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="2"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="3"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="3"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="3"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="4"] ~ label:nth-of-type(4),
+div.sheet-degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(4),
+div.sheet-degreMetamorphe > input[type="hidden"][value="5"] ~ label:nth-of-type(5),
+div.sheet-degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(4),
+div.sheet-degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(5),
+div.sheet-degreMetamorphe > input[type="hidden"][value="6"] ~ label:nth-of-type(6),
+div.sheet-degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(4),
+div.sheet-degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(5),
+div.sheet-degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(6),
+div.sheet-degreMetamorphe > input[type="hidden"][value="7"] ~ label:nth-of-type(7),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(4),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(5),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(6),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(7),
+div.sheet-degreMetamorphe > input[type="hidden"][value="8"] ~ label:nth-of-type(8),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(4),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(5),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(6),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(7),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(8),
+div.sheet-degreMetamorphe > input[type="hidden"][value="9"] ~ label:nth-of-type(9),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(1),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(2),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(3),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(4),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(5),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(6),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(7),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(8),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(9),
+div.sheet-degreMetamorphe > input[type="hidden"][value="10"] ~ label:nth-of-type(10)
 {
 	display:flex;
 }
 
-div.degreMetamorphe > div
+div.sheet-degreMetamorphe > div
 {
 	width:100%;
 }
 
-div.degreMetamorphe > div > select
+div.sheet-degreMetamorphe > div > select
 {
 	width:100%;
 	padding: 0px;
@@ -808,7 +810,7 @@ div.degreMetamorphe > div > select
 	padding-top: 12px;
 }
 
-div.degreMetamorphe > label
+div.sheet-degreMetamorphe > label
 {
 	width:25px;
 	height:25px;
@@ -819,7 +821,7 @@ div.degreMetamorphe > label
 	display:none;
 }
 
-div.degreMetamorphe > label > input[type="checkbox"]
+div.sheet-degreMetamorphe > label > input[type="checkbox"]
 {
 	position:absolute;
 	width:25px;
@@ -827,12 +829,12 @@ div.degreMetamorphe > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.degreMetamorphe > label > input[type="checkbox"] ~ span
+div.sheet-degreMetamorphe > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.degreMetamorphe > label > input[type="checkbox"] ~ span::before
+div.sheet-degreMetamorphe > label > input[type="checkbox"] ~ span::before
 {
 	display:flex;
 	width:100%;
@@ -846,14 +848,14 @@ div.degreMetamorphe > label > input[type="checkbox"] ~ span::before
 	background:var(--titre);
 }
 
-div.degreMetamorphe > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-degreMetamorphe > label > input[type="checkbox"]:checked ~ span::before
 {
 	box-shadow:inset 1px 1px 3px black;
 	background:RGB(119, 89, 59);
 	color:white;
 }
 
-label.sapience
+label.sheet-sapience
 {
 	width: 255px;
 	justify-content: space-between;
@@ -869,7 +871,7 @@ label.sapience
 	margin-right:35px;
 }
 
-label.sapience > input[type="number"]
+label.sheet-sapience > input[type="number"]
 {
 	height:35px;
 	width:60px;
@@ -878,7 +880,7 @@ label.sapience > input[type="number"]
 	font-size:25px;
 }
 
-div.kaElement
+div.sheet-kaElement
 {
 	width: 445px;
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element.png');
@@ -891,7 +893,7 @@ div.kaElement
 	margin-top:-30px;
 }
 
-div.kaElement > input[type="number"]
+div.sheet-kaElement > input[type="number"]
 {
 	position:absolute;
 	text-align: center;
@@ -904,7 +906,7 @@ div.kaElement > input[type="number"]
 	color: black;
 }
 
-div.kaElement > button[type="roll"]
+div.sheet-kaElement > button[type="roll"]
 {
 	position:absolute;
 	margin:0px;
@@ -913,12 +915,12 @@ div.kaElement > button[type="roll"]
 	background:none;
 }
 
-div.kaElement > button[type="roll"]::before
+div.sheet-kaElement > button[type="roll"]::before
 {
 	content:"";
 }
 
-div.kaElement > button[type="roll"] > span
+div.sheet-kaElement > button[type="roll"] > span
 {
 	font-family: "Times New Roman";
 	font-size: 18px;
@@ -927,13 +929,13 @@ div.kaElement > button[type="roll"] > span
 	font-variant:small-caps;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(1)
+div.sheet-kaElement > button[type="roll"]:nth-of-type(1)
 {
 	margin-left: 164px;
 	margin-top: 28px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(1)::before
+div.sheet-kaElement > button[type="roll"]:nth-of-type(1)::before
 {
 	content:"t";
 	padding-right:5px;
@@ -943,19 +945,19 @@ div.kaElement > button[type="roll"]:nth-of-type(1)::before
 	background-repeat: no-repeat;
 }
 
-div.kaElement > input[type="number"]:nth-of-type(1)
+div.sheet-kaElement > input[type="number"]:nth-of-type(1)
 {
 	margin-left: 208px;
 	margin-top: 101px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(2)
+div.sheet-kaElement > button[type="roll"]:nth-of-type(2)
 {
 	margin-top: 142px;
 	margin-left: -10px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(2)::before
+div.sheet-kaElement > button[type="roll"]:nth-of-type(2)::before
 {
 	content:"t";
 	width: 25px;
@@ -965,19 +967,19 @@ div.kaElement > button[type="roll"]:nth-of-type(2)::before
 	padding-right:5px;
 }
 
-div.kaElement > input[type="number"]:nth-of-type(2)
+div.sheet-kaElement > input[type="number"]:nth-of-type(2)
 {
 	margin-left: 90px;
 	margin-top: 189px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(3)
+div.sheet-kaElement > button[type="roll"]:nth-of-type(3)
 {
 	margin-top: 142px;
 	margin-left: 370px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(3)::after
+div.sheet-kaElement > button[type="roll"]:nth-of-type(3)::after
 {
 	content:"t";
 	padding-left:5px;
@@ -988,19 +990,19 @@ div.kaElement > button[type="roll"]:nth-of-type(3)::after
 	background-position-x: right;
 }
 
-div.kaElement > input[type="number"]:nth-of-type(3)
+div.sheet-kaElement > input[type="number"]:nth-of-type(3)
 {
 	margin-left: 326px;
 	margin-top: 189px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(4)
+div.sheet-kaElement > button[type="roll"]:nth-of-type(4)
 {
 	margin-top: 410px;
 	margin-left: 60px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(4)::before
+div.sheet-kaElement > button[type="roll"]:nth-of-type(4)::before
 {
 	content:"t";
 	padding-right:5px;
@@ -1010,19 +1012,19 @@ div.kaElement > button[type="roll"]:nth-of-type(4)::before
 	background-repeat: no-repeat;
 }
 
-div.kaElement > input[type="number"]:nth-of-type(4)
+div.sheet-kaElement > input[type="number"]:nth-of-type(4)
 {
 	margin-top: 335px;
 	margin-left: 129px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(5)
+div.sheet-kaElement > button[type="roll"]:nth-of-type(5)
 {
 	margin-top: 410px;
 	margin-left: 293px;
 }
 
-div.kaElement > button[type="roll"]:nth-of-type(5)::after
+div.sheet-kaElement > button[type="roll"]:nth-of-type(5)::after
 {
 	content:"t";
 	padding-left:5px;
@@ -1033,13 +1035,13 @@ div.kaElement > button[type="roll"]:nth-of-type(5)::after
 	background-position-x: right;
 }
 
-div.kaElement > input[type="number"]:nth-of-type(5)
+div.sheet-kaElement > input[type="number"]:nth-of-type(5)
 {
 	margin-top: 335px;
 	margin-left: 285px;
 }
 
-div.nephilimPhrase
+div.sheet-nephilimPhrase
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -1049,7 +1051,7 @@ div.nephilimPhrase
 	margin-top:5px;
 }
 
-div.nephilimPhrase > span
+div.sheet-nephilimPhrase > span
 {
 	width:100%;
 	font-variant:small-caps;
@@ -1061,12 +1063,12 @@ div.nephilimPhrase > span
 	letter-spacing:1px;
 }
 
-div.nephilimPhrase > div
+div.sheet-nephilimPhrase > div
 {
 	width:100%;
 }
 
-div.chutes
+div.sheet-chutes
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -1077,12 +1079,12 @@ div.chutes
 	align-content:flex-start;
 }
 
-div.chutes
+div.sheet-chutes
 {
 	margin-right:5px;
 }
 
-div.chutes > h1
+div.sheet-chutes > h1
 {
 	font-family:"Kodchasan";
 	width: 100%;
@@ -1097,14 +1099,14 @@ div.chutes > h1
 	padding-left:10px;
 }
 
-div.chutes > div
+div.sheet-chutes > div
 {
 	width:100%;
 	flex-wrap:wrap;
 	margin-top:5px;
 }
 
-div.chutes > div > input[type="text"]
+div.sheet-chutes > div > input[type="text"]
 {
 	width: 100%;
 	border: 0px;
@@ -1114,7 +1116,7 @@ div.chutes > div > input[type="text"]
 	background: transparent;
 }
 
-div.chutes > div > div
+div.sheet-chutes > div > div
 {
 	width: 100%;
 	flex-wrap: wrap;
@@ -1127,72 +1129,72 @@ div.chutes > div > div
 	align-items: center;
 }
 
-div.chutes > div > div > input[type="hidden"][value="1"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="2"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="2"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="3"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="3"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="3"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(5) > span::before,
-div.chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(5) > span::before,
-div.chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(6) > span::before,
-div.chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(5) > span::before,
-div.chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(6) > span::before,
-div.chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(7) > span::before,
-div.chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(5) > span::before,
-div.chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(6) > span::before,
-div.chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(7) > span::before,
-div.chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(8) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(5) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(6) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(7) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(8) > span::before,
-div.chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(9) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(5) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(6) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(7) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(8) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(9) > span::before,
-div.chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(10) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(2) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(3) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(4) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(5) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(6) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(7) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(8) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(9) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(10) > span::before,
-div.chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(11) > span::before
+div.sheet-chutes > div > div > input[type="hidden"][value="1"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="2"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="2"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="3"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="3"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="3"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="4"] ~ label:nth-of-type(5) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(5) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="5"] ~ label:nth-of-type(6) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(5) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(6) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="6"] ~ label:nth-of-type(7) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(5) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(6) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(7) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="7"] ~ label:nth-of-type(8) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(5) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(6) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(7) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(8) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="8"] ~ label:nth-of-type(9) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(5) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(6) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(7) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(8) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(9) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="9"] ~ label:nth-of-type(10) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(2) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(3) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(4) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(5) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(6) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(7) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(8) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(9) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(10) > span::before,
+div.sheet-chutes > div > div > input[type="hidden"][value="10"] ~ label:nth-of-type(11) > span::before
 {
 	background:var(--brun);
 }
 
-div.chutes > div > div > label
+div.sheet-chutes > div > div > label
 {
 	width:15px;
 	height:15px;
 }
 
-div.chutes > div > div > label > input[type="radio"]
+div.sheet-chutes > div > div > label > input[type="radio"]
 {
 	position:absolute;
 	width:15px;
@@ -1200,12 +1202,12 @@ div.chutes > div > div > label > input[type="radio"]
 	opacity:0;
 }
 
-div.chutes > div > div > label > input[type="radio"] ~ span
+div.sheet-chutes > div > div > label > input[type="radio"] ~ span
 {
 	width:100%;
 }
 
-div.chutes > div > div > label > input[type="radio"] ~ span::before
+div.sheet-chutes > div > div > label > input[type="radio"] ~ span::before
 {
 	display: flex;
 	content: "";
@@ -1222,31 +1224,31 @@ div.chutes > div > div > label > input[type="radio"] ~ span::before
 	font-weight: bold;
 }
 
-div.chutes > div > div > label:nth-last-of-type(1) > input[type="radio"] ~ span::before,
-div.chutes > div > div > label:nth-last-of-type(2) > input[type="radio"] ~ span::before,
-div.chutes > div > div > label:nth-last-of-type(3) > input[type="radio"] ~ span::before
+div.sheet-chutes > div > div > label:nth-last-of-type(1) > input[type="radio"] ~ span::before,
+div.sheet-chutes > div > div > label:nth-last-of-type(2) > input[type="radio"] ~ span::before,
+div.sheet-chutes > div > div > label:nth-last-of-type(3) > input[type="radio"] ~ span::before
 {
 	border:1px solid red;
 }
 
-div.chutes > div > div > label:not(:first-of-type)
+div.sheet-chutes > div > div > label:not(:first-of-type)
 {
 	margin-left:5px;
 }
 
-div.chutes > div > div > label:nth-of-type(5),
-div.chutes > div > div > label:nth-of-type(8),
-div.chutes > div > div > label:nth-of-type(10)
+div.sheet-chutes > div > div > label:nth-of-type(5),
+div.sheet-chutes > div > div > label:nth-of-type(8),
+div.sheet-chutes > div > div > label:nth-of-type(10)
 {
 	margin-right:5px;
 }
 
-div.chutes > div > div > label:first-of-type > input[type="radio"]
+div.sheet-chutes > div > div > label:first-of-type > input[type="radio"]
 {
 	z-index:99;
 }
 
-div.chutes > div > div > label:first-of-type > input[type="radio"] ~ span::before
+div.sheet-chutes > div > div > label:first-of-type > input[type="radio"] ~ span::before
 {
 	content:"X";
 	line-height: 13px;
@@ -1258,12 +1260,12 @@ div.chutes > div > div > label:first-of-type > input[type="radio"] ~ span::befor
 	color:white;
 }
 
-div.chutes > div > div:hover > label:first-of-type > input[type="radio"] ~ span::before
+div.sheet-chutes > div > div:hover > label:first-of-type > input[type="radio"] ~ span::before
 {
 	opacity:1;
 }
 
-div.chutes > div > div > h2
+div.sheet-chutes > div > div > h2
 {
 	width:100px;
 	flex-wrap:wrap;
@@ -1275,8 +1277,8 @@ div.chutes > div > div > h2
 	align-content:center;
 }
 
-div.stase,
-div.adoption
+div.sheet-stase,
+div.sheet-adoption
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -1286,13 +1288,13 @@ div.adoption
 	align-content:flex-start;
 }
 
-div.adoption
+div.sheet-adoption
 {
 	margin-bottom:5px;
 }
 
-div.stase > div:first-of-type,
-div.adoption > div:first-of-type
+div.sheet-stase > div:first-of-type,
+div.sheet-adoption > div:first-of-type
 {
 	width: 100%;
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0) 50%), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png'), linear-gradient(to right, rgb(208, 175, 152, 1),rgba(208, 175, 152, 0.5));
@@ -1303,7 +1305,7 @@ div.adoption > div:first-of-type
 	justify-content:flex-end;
 }
 
-div.metamorphe > div:first-of-type
+div.sheet-metamorphe > div:first-of-type
 {
 	width: 100%;
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%,rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152, 1),rgba(208, 175, 152, 0.5));
@@ -1313,9 +1315,9 @@ div.metamorphe > div:first-of-type
 	height: 40px;
 }
 
-div.stase > div:first-of-type > h1,
-div.adoption > div:first-of-type > h1,
-div.metamorphe > div:first-of-type > h1
+div.sheet-stase > div:first-of-type > h1,
+div.sheet-adoption > div:first-of-type > h1,
+div.sheet-metamorphe > div:first-of-type > h1
 {
 	font-family:"Kodchasan";
 	font-size: 25px;
@@ -1327,9 +1329,9 @@ div.metamorphe > div:first-of-type > h1
 }
 
 
-div.stase > div:first-of-type > input[type="number"],
-div.adoption > div:first-of-type > input[type="number"],
-div.metamorphe > div:first-of-type > input[type="number"]
+div.sheet-stase > div:first-of-type > input[type="number"],
+div.sheet-adoption > div:first-of-type > input[type="number"],
+div.sheet-metamorphe > div:first-of-type > input[type="number"]
 {
 	height: 35px;
 	width: 35px;
@@ -1342,25 +1344,25 @@ div.metamorphe > div:first-of-type > input[type="number"]
 	font-weight: bold;
 }
 
-div.metamorphe > div:first-of-type > input[type="number"]
+div.sheet-metamorphe > div:first-of-type > input[type="number"]
 {
 	margin-left:auto;
 }
 
-div.stase > div:last-of-type,
-div.adoption > div:last-of-type
+div.sheet-stase > div:last-of-type,
+div.sheet-adoption > div:last-of-type
 {
 	background:linear-gradient(RGB(255, 255, 255, 0.5), RGB(255, 255, 255, 0.5));
 }
 
-div.stase > div:last-of-type > textarea,
-div.adoption > div:last-of-type > textarea
+div.sheet-stase > div:last-of-type > textarea,
+div.sheet-adoption > div:last-of-type > textarea
 {
 	background:transparent;
 	border-bottom:1px dotted black;
 }
 
-div.simulacreVecu
+div.sheet-simulacreVecu
 {
 	width:100%;
 	background-image: linear-gradient(to right, rgba(var(--blanc), 0) 50%, rgba(var(--blanc), 0.8)), linear-gradient(to right, rgba(var(--marron), 0.8),rgba(var(--marron), 0.8)), var(--astrolabe);
@@ -1371,7 +1373,7 @@ div.simulacreVecu
 	height:36px;
 }
 
-div.simulacreVecu > h1
+div.sheet-simulacreVecu > h1
 {
 	color:white;
 	font-family:"Kodchasan";
@@ -1381,7 +1383,7 @@ div.simulacreVecu > h1
 	font-size:25px;
 }
 
-div.simulacreVecu > input[type="text"]
+div.sheet-simulacreVecu > input[type="text"]
 {
 	padding: 0px;
 	border: 1px solid var(--brun);
@@ -1390,7 +1392,7 @@ div.simulacreVecu > input[type="text"]
 	padding-left:5px;
 }
 
-div.simulacreVecu > input[type="number"]
+div.sheet-simulacreVecu > input[type="number"]
 {
 	height: 30px;
 	width: 30px;
@@ -1401,7 +1403,7 @@ div.simulacreVecu > input[type="number"]
 	text-align:center;
 }
 
-div.simulacreVecu > select
+div.sheet-simulacreVecu > select
 {
 	width: 200px;
 	padding: 0px;
@@ -1416,7 +1418,7 @@ div.simulacreVecu > select
 	margin-right: 10px;
 }
 
-div.simulacreVecu > button[type="roll"]
+div.sheet-simulacreVecu > button[type="roll"]
 {
 	width: 40px;
 	height: 30px;
@@ -1431,42 +1433,42 @@ div.simulacreVecu > button[type="roll"]
 	margin-right: auto;
 }
 
-div.simulacreVecu > button[type="roll"]::before
+div.sheet-simulacreVecu > button[type="roll"]::before
 {
 	content:"";
 }
 
-div.simulacreIdentite1,
-div.simulacreIdentite2
+div.sheet-simulacreIdentite1,
+div.sheet-simulacreIdentite2
 {
 	width:100%;
 	justify-content:space-between;
 	margin-top:5px;
 }
 
-div.simulacreIdentite1
+div.sheet-simulacreIdentite1
 {
 	margin-right:5px;
 }
 
-div.simulacreIdentite2
+div.sheet-simulacreIdentite2
 {
 	margin-left:5px;
 }
 
-div.simulacreIdentite1 > label:nth-of-type(1)
+div.sheet-simulacreIdentite1 > label:nth-of-type(1)
 {
 	width:calc(100% - 125px);
 	justify-content:space-between;
 }
 
-div.simulacreIdentite2 > label:nth-of-type(1)
+div.sheet-simulacreIdentite2 > label:nth-of-type(1)
 {
 	width:calc(100% - 223px);
 	justify-content:space-between;
 }
 
-div.simulacreIdentite1 > label:nth-of-type(1) > span
+div.sheet-simulacreIdentite1 > label:nth-of-type(1) > span
 {
 	width:40px;
 	font-family:"Time New Roman";
@@ -1477,7 +1479,7 @@ div.simulacreIdentite1 > label:nth-of-type(1) > span
 	font-size:20px;
 }
 
-div.simulacreIdentite2 > label:nth-of-type(1) > span
+div.sheet-simulacreIdentite2 > label:nth-of-type(1) > span
 {
 	width:80px;
 	font-family:"Time New Roman";
@@ -1488,8 +1490,8 @@ div.simulacreIdentite2 > label:nth-of-type(1) > span
 	font-size:20px;
 }
 
-div.simulacreIdentite1 > label:nth-of-type(1) > input[type="text"],
-div.simulacreIdentite2 > label:nth-of-type(1) > input[type="text"]
+div.sheet-simulacreIdentite1 > label:nth-of-type(1) > input[type="text"],
+div.sheet-simulacreIdentite2 > label:nth-of-type(1) > input[type="text"]
 {
 	width:calc(100% - 40px - 5px);
 	border:0px;
@@ -1499,19 +1501,19 @@ div.simulacreIdentite2 > label:nth-of-type(1) > input[type="text"]
 	min-width:0px;
 }
 
-div.simulacreIdentite1 > label:nth-of-type(2)
+div.sheet-simulacreIdentite1 > label:nth-of-type(2)
 {
 	width:115px;
 	justify-content:space-between;
 }
 
-div.simulacreIdentite2 > label:nth-of-type(2)
+div.sheet-simulacreIdentite2 > label:nth-of-type(2)
 {
 	width:65px;
 	justify-content:space-between;
 }
 
-div.simulacreIdentite1 > label:nth-of-type(2) > span
+div.sheet-simulacreIdentite1 > label:nth-of-type(2) > span
 {
 	width:80px;
 	font-family:"Time New Roman";
@@ -1521,7 +1523,7 @@ div.simulacreIdentite1 > label:nth-of-type(2) > span
 	font-size:20px;
 }
 
-div.simulacreIdentite2 > label:nth-of-type(2) > span
+div.sheet-simulacreIdentite2 > label:nth-of-type(2) > span
 {
 	width:35px;
 	font-family:"Time New Roman";
@@ -1531,8 +1533,8 @@ div.simulacreIdentite2 > label:nth-of-type(2) > span
 	font-size:20px;
 }
 
-div.simulacreIdentite1 > label:nth-of-type(2) > input[type="number"],
-div.simulacreIdentite2 > label:nth-of-type(2) > input[type="number"]
+div.sheet-simulacreIdentite1 > label:nth-of-type(2) > input[type="number"],
+div.sheet-simulacreIdentite2 > label:nth-of-type(2) > input[type="number"]
 {
 	width:30px;
 	height:30px;
@@ -1542,7 +1544,7 @@ div.simulacreIdentite2 > label:nth-of-type(2) > input[type="number"]
 	margin-bottom:-5px;
 }
 
-div.simulacreRessources
+div.sheet-simulacreRessources
 {
 	flex-wrap:wrap;
 	margin-top:10px;
@@ -1551,7 +1553,7 @@ div.simulacreRessources
 	border-left:2px solid rgb(var(--marron));
 }
 
-div.simulacreRessources > label
+div.sheet-simulacreRessources > label
 {
 	width:100%;
 	background-image: linear-gradient(to right, rgba(var(--blanc), 0) 50%, rgba(var(--blanc), 0.8)), linear-gradient(to right, rgba(var(--marron), 0.8),rgba(var(--marron), 0.8)), var(--astrolabe);
@@ -1562,7 +1564,7 @@ div.simulacreRessources > label
 	height: 36px;
 }
 
-div.simulacreRessources > label > h1
+div.sheet-simulacreRessources > label > h1
 {
 	width:calc(100% - 25px);
 	color: white;
@@ -1572,7 +1574,7 @@ div.simulacreRessources > label > h1
 	font-size: 16px;
 }
 
-div.simulacreRessources > label > input[type="number"]
+div.sheet-simulacreRessources > label > input[type="number"]
 {
 	width: 30px;
 	height: 30px;
@@ -1581,7 +1583,7 @@ div.simulacreRessources > label > input[type="number"]
 	text-align: center;
 }
 
-div.simulacreRessources > div.autoex
+div.sheet-simulacreRessources > div.sheet-autoex
 {
 	background-image:linear-gradient(rgba(var(--blanc), 0.5), rgba(var(--blanc), 0.5));
 	border-bottom:1px dotted var(--brun);
@@ -1589,12 +1591,12 @@ div.simulacreRessources > div.autoex
 	border-left:1px dotted var(--brun);
 }
 
-div.simulacreRessources > div.autoex > textarea
+div.sheet-simulacreRessources > div.sheet-autoex > textarea
 {
 	background:transparent;
 }
 
-div.simulacreDescription
+div.sheet-simulacreDescription
 {
 	flex-wrap:wrap;
 	margin-top:10px;
@@ -1602,7 +1604,7 @@ div.simulacreDescription
 	width:100%;
 }
 
-div.simulacreProches
+div.sheet-simulacreProches
 {
 	flex-wrap:wrap;
 	margin-top:10px;
@@ -1610,8 +1612,8 @@ div.simulacreProches
 	width:100%;
 }
 
-div.simulacreDescription > h1,
-div.simulacreProches > h1
+div.sheet-simulacreDescription > h1,
+div.sheet-simulacreProches > h1
 {
 	width:100%;
 	background-image: linear-gradient(to right, rgba(var(--blanc), 0) 50%, rgba(var(--blanc), 0.8)), linear-gradient(to right, rgba(var(--marron), 0.8),rgba(var(--marron), 0.8)), var(--astrolabe);
@@ -1628,26 +1630,26 @@ div.simulacreProches > h1
 	font-size: 16px;
 }
 
-div.simulacreDescription > div.autoex,
-div.simulacreProches > div.autoex
+div.sheet-simulacreDescription > div.sheet-autoex,
+div.sheet-simulacreProches > div.sheet-autoex
 {
 	background-image:linear-gradient(rgba(var(--blanc), 0.5), rgba(var(--blanc), 0.5));
 	border-bottom:1px dotted var(--brun);
 	border-right:1px dotted var(--brun);
 }
 
-div.simulacreProches > div.autoex
+div.sheet-simulacreProches > div.sheet-autoex
 {
 	border-left:1px dotted var(--brun);
 }
 
-div.simulacreDescription > div.autoex > textarea,
-div.simulacreProches > div.autoex > textarea
+div.sheet-simulacreDescription > div.sheet-autoex > textarea,
+div.sheet-simulacreProches > div.sheet-autoex > textarea
 {
 	background:transparent;
 }
 
-div.epoquesIncarnation
+div.sheet-epoquesIncarnation
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -1655,31 +1657,31 @@ div.epoquesIncarnation
 	align-content:baseline;
 }
 
-div.quetesEsoteriques,
-div.savoirsEsoteriques,
-div.actionsAttributs,
-div.dommagesPhysiques,
-div.dommagesMagiques
+div.sheet-quetesEsoteriques,
+div.sheet-savoirsEsoteriques,
+div.sheet-actionsAttributs,
+div.sheet-dommagesPhysiques,
+div.sheet-dommagesMagiques
 {
 	width:100%;
 	flex-wrap:wrap;
 	margin-top:10px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type),
-div.savoirsEsoteriques
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type),
+div.sheet-savoirsEsoteriques
 {
 	border-left:2px solid var(--titre);
 }
 
-div.actionsAttributs,
-div.dommagesPhysiques,
-div.dommagesMagiques
+div.sheet-actionsAttributs,
+div.sheet-dommagesPhysiques,
+div.sheet-dommagesMagiques
 {
 	border-left:2px solid var(--titreGris);
 }
 
-div.epoquesIncarnation > h1
+div.sheet-epoquesIncarnation > h1
 {
 	font-family: "Kodchasan";
 	width: calc((100% / 3) - 10px);
@@ -1694,17 +1696,17 @@ div.epoquesIncarnation > h1
 	padding-left: 10px;
 }
 
-div.quetesEsoteriques > h1,
-div.savoirsEsoteriques > h1,
-div.armes > h1,
-div.artefacts > h1,
-div.alchimie > h1,
-div.armures > h1,
-div.arcadia > h1,
-h1.titreMagie,
-h1.titreKabbale,
-h1.titreAlchimie,
-div.fraternite > h1:first-of-type
+div.sheet-quetesEsoteriques > h1,
+div.sheet-savoirsEsoteriques > h1,
+div.sheet-armes > h1,
+div.sheet-artefacts > h1,
+div.sheet-alchimie > h1,
+div.sheet-armures > h1,
+div.sheet-arcadia > h1,
+h1.sheet-titreMagie,
+h1.sheet-titreKabbale,
+h1.sheet-titreAlchimie,
+div.sheet-fraternite > h1:first-of-type
 {
 	font-family: "Kodchasan";
 	width: calc(100% - 10px);
@@ -1719,15 +1721,15 @@ div.fraternite > h1:first-of-type
 	padding-left: 10px;
 }
 
-div.actionsAttributs > h1,
-div.dommagesPhysiques > h1,
-div.dommagesMagiques > h1,
-div.titre > h1,
-div.sorts > h1,
-div.invocations > h1,
-div.fraternite > div > label > h1,
-div.fraternite > div > div > h1,
-div.fraternite > h1:not(:first-of-type)
+div.sheet-actionsAttributs > h1,
+div.sheet-dommagesPhysiques > h1,
+div.sheet-dommagesMagiques > h1,
+div.sheet-titre > h1,
+div.sheet-sorts > h1,
+div.sheet-invocations > h1,
+div.sheet-fraternite > div > label > h1,
+div.sheet-fraternite > div > div > h1,
+div.sheet-fraternite > h1:not(:first-of-type)
 {
 	font-family: "Kodchasan";
 	width: 100%;
@@ -1745,47 +1747,47 @@ div.fraternite > h1:not(:first-of-type)
 	padding-left: 10px;
 }
 
-div.epoquesIncarnation > .repcontainer,
-div.quetesEsoteriques > .repcontainer,
-div.savoirsEsoteriques > .repcontainer,
-div.armes > .repcontainer,
-div.artefacts > .repcontainer,
-div.alchimie > .repcontainer,
-div.equipement > .repcontainer,
-div.armures > .repcontainer,
-div.arcadia > .repcontainer,
-div.quetesEsoteriques > .repcontainer > .repitem,
-div.savoirsEsoteriques > .repcontainer > .repitem,
-div.armes > .repcontainer > .repitem,
-div.artefacts > .repcontainer > .repitem,
-div.alchimie > .repcontainer > .repitem,
-div.equipement > .repcontainer > .repitem,
-div.armures > .repcontainer > .repitem,
-div.arcadia > .repcontainer > .repitem
+div.sheet-epoquesIncarnation > .repcontainer,
+div.sheet-quetesEsoteriques > .repcontainer,
+div.sheet-savoirsEsoteriques > .repcontainer,
+div.sheet-armes > .repcontainer,
+div.sheet-artefacts > .repcontainer,
+div.sheet-alchimie > .repcontainer,
+div.sheet-equipement > .repcontainer,
+div.sheet-armures > .repcontainer,
+div.sheet-arcadia > .repcontainer,
+div.sheet-quetesEsoteriques > .repcontainer > .repitem,
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem,
+div.sheet-armes > .repcontainer > .repitem,
+div.sheet-artefacts > .repcontainer > .repitem,
+div.sheet-alchimie > .repcontainer > .repitem,
+div.sheet-equipement > .repcontainer > .repitem,
+div.sheet-armures > .repcontainer > .repitem,
+div.sheet-arcadia > .repcontainer > .repitem,
 {
 	width:100%;
 	flex-wrap:wrap;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem
+div.sheet-epoquesIncarnation > .repcontainer > .repitem
 {
 	width:100%;
 	flex-wrap:nowrap;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem:not(:first-of-type)
+div.sheet-epoquesIncarnation > .repcontainer > .repitem:not(:first-of-type)
 {
 	border-top:5px double var(--titre);
 }
 
-div.savoirsEsoteriques > .repcontainer > .repitem,
-div.quetesEsoteriques > .repcontainer > .repitem
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem,
+div.sheet-quetesEsoteriques > .repcontainer > .repitem
 {
 	justify-content:space-between;
 	margin-bottom:5px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type)
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type)
 {
 	width:calc(100% / 3);
 	flex-wrap:wrap;
@@ -1795,7 +1797,7 @@ div.epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type)
 	padding-bottom:5px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div:last-of-type > div
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:last-of-type > div
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -1804,13 +1806,13 @@ div.epoquesIncarnation > .repcontainer > .repitem > div:last-of-type > div
 	justify-content:space-between;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div label
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label
 {
 	width:30px;
 	height:30px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div label > input[type="checkbox"]
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label > input[type="checkbox"]
 {
 	position:absolute;
 	opacity:0;
@@ -1818,12 +1820,12 @@ div.epoquesIncarnation > .repcontainer > .repitem > div label > input[type="chec
 	height:30px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"] ~ span
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"] ~ span::before
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"] ~ span::before
 {
 	display:flex;
 	width:100%;
@@ -1839,7 +1841,7 @@ div.epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkb
 	transition:all 0.2s;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"] ~ span::before
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"] ~ span::before
 {
 	display:flex;
 	width:100%;
@@ -1853,13 +1855,13 @@ div.epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkb
 	transition:all 0.2s;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"]:checked ~ span::before
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label input[type="checkbox"]:checked ~ span::before
 {
 	content:"-";
 	box-shadow:0px 0px 5px black inset;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div select
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div select
 {
 	padding:0px;
 	padding-left:2px;
@@ -1872,17 +1874,17 @@ div.epoquesIncarnation > .repcontainer > .repitem > div select
 	padding-top:12px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div:nth-of-type(2) select
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:nth-of-type(2) select
 {
 	width:calc(100% - 30px);
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div:nth-of-type(3) select
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:nth-of-type(3) select
 {
 	width:calc(100% - 50px);
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div input[type="text"]
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="text"]
 {
 	width:calc(100% - 65px);
 	padding:0px;
@@ -1896,7 +1898,7 @@ div.epoquesIncarnation > .repcontainer > .repitem > div input[type="text"]
 	padding-top:12px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div input[type="number"]
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="number"]
 {
 	height: 30px;
 	width: 30px;
@@ -1907,7 +1909,7 @@ div.epoquesIncarnation > .repcontainer > .repitem > div input[type="number"]
 	margin-right:3px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem div.autoex
+div.sheet-epoquesIncarnation > .repcontainer > .repitem div.sheet-autoex
 {
 	display:none;
 	background-image: linear-gradient(rgba(var(--blanc), 0.5), rgba(var(--blanc), 0.5));
@@ -1916,12 +1918,12 @@ div.epoquesIncarnation > .repcontainer > .repitem div.autoex
 	margin-right:1px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]::before
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]::before
 {
 	content:"";
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]
 {
 	width: 40px;
 	height: 30px;
@@ -1936,12 +1938,12 @@ div.epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]
 	margin-right:5px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div input[type="text"].perso
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="text"].sheet-perso
 {
 	display:none;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div input[type="hidden"][value="Perso"] ~ input[type="text"].perso
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="hidden"][value="Perso"] ~ input[type="text"].sheet-perso
 {
 	display:flex;
 	width:100%;
@@ -1949,18 +1951,18 @@ div.epoquesIncarnation > .repcontainer > .repitem > div input[type="hidden"][val
 	min-width:0px;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem > div input[type="hidden"][value="1"] ~ div.autoex
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="hidden"][value="1"] ~ div.sheet-autoex
 {
 	display:flex;
 }
 
-div.epoquesIncarnation > .repcontainer > .repitem div.autoex > textarea
+div.sheet-epoquesIncarnation > .repcontainer > .repitem div.sheet-autoex > textarea
 {
 	background:transparent;
 }
 
-div.savoirsEsoteriques > .repcontainer > .repitem > select,
-div.quetesEsoteriques > .repcontainer > .repitem > select
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > select,
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > select
 {
 	width:calc(100% - 50px - 40px);
 	padding:0px;
@@ -1974,8 +1976,8 @@ div.quetesEsoteriques > .repcontainer > .repitem > select
 	font-size:13px;
 }
 
-div.savoirsEsoteriques > .repcontainer > .repitem > input[type="text"],
-div.quetesEsoteriques > .repcontainer > .repitem > input[type="text"]
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > input[type="text"],
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > input[type="text"]
 {
 	display:none;
 	width: 100%;
@@ -1990,14 +1992,14 @@ div.quetesEsoteriques > .repcontainer > .repitem > input[type="text"]
 	padding-top: 12px;
 }
 
-div.savoirsEsoteriques > .repcontainer > .repitem > input[type="hidden"][value="0"] ~ input[type="text"],
-div.quetesEsoteriques > .repcontainer > .repitem > input[type="hidden"][value="0"] ~ input[type="text"]
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > input[type="hidden"][value="0"] ~ input[type="text"],
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > input[type="hidden"][value="0"] ~ input[type="text"]
 {
 	display:flex;
 }
 
-div.quetesEsoteriques > .repcontainer > .repitem > input[type="number"],
-div.savoirsEsoteriques > .repcontainer > .repitem > input[type="number"]
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > input[type="number"],
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > input[type="number"]
 {
 	height: 30px;
 	width: 30px;
@@ -2008,8 +2010,8 @@ div.savoirsEsoteriques > .repcontainer > .repitem > input[type="number"]
 	margin-right:3px;
 }
 
-div.quetesEsoteriques > .repcontainer > .repitem > button[type="roll"],
-div.savoirsEsoteriques > .repcontainer > .repitem > button[type="roll"]
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > button[type="roll"],
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > button[type="roll"]
 {
 	width: 40px;
 	height: 30px;
@@ -2024,21 +2026,21 @@ div.savoirsEsoteriques > .repcontainer > .repitem > button[type="roll"]
 	margin-right:5px;
 }
 
-div.quetesEsoteriques > .repcontainer > .repitem > button[type="roll"]::before,
-div.savoirsEsoteriques > .repcontainer > .repitem > button[type="roll"]::before
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > button[type="roll"]::before,
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > button[type="roll"]::before
 {
 	content:"";
 }
 
-div.actionsAttributs,
-div.dommagesPhysiques,
-div.dommagesMagiques
+div.sheet-actionsAttributs,
+div.sheet-dommagesPhysiques,
+div.sheet-dommagesMagiques
 {
 	justify-content:space-between;
 }
 
-div.actionsAttributs > div,
-div.actionsAttributs > label
+div.sheet-actionsAttributs > div,
+div.sheet-actionsAttributs > label
 {
 	width:100%;
 	line-height:30px;
@@ -2046,13 +2048,13 @@ div.actionsAttributs > label
 	padding-right:5px;
 }
 
-div.actionsAttributs > label
+div.sheet-actionsAttributs > label
 {
 	margin-top:5px;
 }
 
-div.actionsAttributs > div > span,
-div.actionsAttributs > label > span
+div.sheet-actionsAttributs > div > span,
+div.sheet-actionsAttributs > label > span
 {
 	width:calc(100% - 30px);
 	line-height:30px;
@@ -2061,7 +2063,7 @@ div.actionsAttributs > label > span
 	padding-left:5px;
 }
 
-div.actionsAttributs > div > button[type="roll"] > span
+div.sheet-actionsAttributs > div > button[type="roll"] > span
 {
 	width:100%;
 	line-height:30px;
@@ -2071,7 +2073,7 @@ div.actionsAttributs > div > button[type="roll"] > span
 }
 
 
-div.actionsAttributs > div > button[type="roll"]
+div.sheet-actionsAttributs > div > button[type="roll"]
 {
 	width: 105px;
 	height: 30px;
@@ -2087,12 +2089,12 @@ div.actionsAttributs > div > button[type="roll"]
 	align-items:center;
 }
 
-div.actionsAttributs > div > button[type="roll"]::before
+div.sheet-actionsAttributs > div > button[type="roll"]::before
 {
 	content:"";
 }
 
-div.actionsAttributs > div > button[type="roll"]::after
+div.sheet-actionsAttributs > div > button[type="roll"]::after
 {
 	content:"";
 	background-image: var(--dice);
@@ -2103,8 +2105,8 @@ div.actionsAttributs > div > button[type="roll"]::after
 	background-position:center;
 }
 
-div.actionsAttributs > div > input[type="number"],
-div.actionsAttributs > label > input[type="number"]
+div.sheet-actionsAttributs > div > input[type="number"],
+div.sheet-actionsAttributs > label > input[type="number"]
 {
 	width:30px;
 	height:30px;
@@ -2113,61 +2115,61 @@ div.actionsAttributs > label > input[type="number"]
 	cursor:auto;
 }
 
-div.actionsAttributs > div:nth-of-type(1) > span,
-div.actionsAttributs > div:nth-of-type(1) > button[type="roll"] > span,
-div.actionsAttributs > label:nth-of-type(2) > span
+div.sheet-actionsAttributs > div:nth-of-type(1) > span,
+div.sheet-actionsAttributs > div:nth-of-type(1) > button[type="roll"] > span,
+div.sheet-actionsAttributs > label:nth-of-type(2) > span
 {
 	color:rgb(020, 091, 132);
 }
 
-div.actionsAttributs > div:nth-of-type(1) > input[type="number"],
-div.actionsAttributs > label:nth-of-type(2) > input[type="number"]
+div.sheet-actionsAttributs > div:nth-of-type(1) > input[type="number"],
+div.sheet-actionsAttributs > label:nth-of-type(2) > input[type="number"]
 {
 	border-color:rgb(020, 091, 132);
 }
 
-div.actionsAttributs > label:nth-of-type(1) > span
+div.sheet-actionsAttributs > label:nth-of-type(1) > span
 {
 	color:rgb(122, 149, 063);
 }
 
-div.actionsAttributs > label:nth-of-type(1) > input[type="number"]
+div.sheet-actionsAttributs > label:nth-of-type(1) > input[type="number"]
 {
 	border-color:rgb(122, 149, 063);
 }
 
-div.actionsAttributs > label:nth-of-type(3) > span
+div.sheet-actionsAttributs > label:nth-of-type(3) > span
 {
 	color:rgb(140, 015, 017);
 }
 
-div.actionsAttributs > label:nth-of-type(3) > input[type="number"]
+div.sheet-actionsAttributs > label:nth-of-type(3) > input[type="number"]
 {
 	border-color:rgb(140, 015, 017);
 }
 
-div.actionsAttributs > label:nth-of-type(4) > span
+div.sheet-actionsAttributs > label:nth-of-type(4) > span
 {
 	color:rgb(108, 183, 195);
 }
 
-div.actionsAttributs > label:nth-of-type(4) > input[type="number"]
+div.sheet-actionsAttributs > label:nth-of-type(4) > input[type="number"]
 {
 	border-color:rgb(108, 183, 195);
 }
 
-div.actionsAttributs > label:nth-of-type(5) > span
+div.sheet-actionsAttributs > label:nth-of-type(5) > span
 {
 	color:rgb(134, 140, 147);
 }
 
-div.actionsAttributs > label:nth-of-type(5) > input[type="number"]
+div.sheet-actionsAttributs > label:nth-of-type(5) > input[type="number"]
 {
 	border-color:rgb(134, 140, 147);
 }
 
-div.dommagesPhysiques > div:first-of-type,
-div.dommagesMagiques > div:first-of-type
+div.sheet-dommagesPhysiques > div:first-of-type,
+div.sheet-dommagesMagiques > div:first-of-type
 {
 	width:100%;
 	justify-content:space-evenly;
@@ -2175,32 +2177,32 @@ div.dommagesMagiques > div:first-of-type
 	margin-bottom:5px;
 }
 
-div.dommagesPhysiques > div > input[type="hidden"][value="1"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="1"] ~ label:nth-last-of-type(2),
-div.dommagesPhysiques > div > input[type="hidden"][value="2"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="2"] ~ label:nth-last-of-type(2),
-div.dommagesPhysiques > div > input[type="hidden"][value="3"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="3"] ~ label:nth-last-of-type(2),
-div.dommagesPhysiques > div > input[type="hidden"][value="4"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="4"] ~ label:nth-last-of-type(2),
-div.dommagesPhysiques > div > input[type="hidden"][value="5"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="6"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="7"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="8"] ~ label:nth-last-of-type(1),
-div.dommagesPhysiques > div > input[type="hidden"][value="9"] ~ label:nth-last-of-type(1)
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="1"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="1"] ~ label:nth-last-of-type(2),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="2"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="2"] ~ label:nth-last-of-type(2),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="3"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="3"] ~ label:nth-last-of-type(2),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="4"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="4"] ~ label:nth-last-of-type(2),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="5"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="6"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="7"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="8"] ~ label:nth-last-of-type(1),
+div.sheet-dommagesPhysiques > div > input[type="hidden"][value="9"] ~ label:nth-last-of-type(1)
 {
 	display:none;
 }
 
-div.dommagesPhysiques > div:first-of-type > label,
-div.dommagesMagiques > div:first-of-type > label
+div.sheet-dommagesPhysiques > div:first-of-type > label,
+div.sheet-dommagesMagiques > div:first-of-type > label
 {
 	width:30px;
 	height:30px;
 }
 
-div.dommagesPhysiques > div:first-of-type > label > span:first-of-type,
-div.dommagesMagiques > div:first-of-type > label > span:first-of-type
+div.sheet-dommagesPhysiques > div:first-of-type > label > span:first-of-type,
+div.sheet-dommagesMagiques > div:first-of-type > label > span:first-of-type
 {
 	position:absolute;
 	width:30px;
@@ -2209,8 +2211,8 @@ div.dommagesMagiques > div:first-of-type > label > span:first-of-type
 	justify-content:center;
 }
 
-div.dommagesPhysiques > div:first-of-type > label > input[type="checkbox"],
-div.dommagesMagiques > div:first-of-type > label > input[type="checkbox"]
+div.sheet-dommagesPhysiques > div:first-of-type > label > input[type="checkbox"],
+div.sheet-dommagesMagiques > div:first-of-type > label > input[type="checkbox"]
 {
 	position:absolute;
 	width:30px;
@@ -2218,14 +2220,14 @@ div.dommagesMagiques > div:first-of-type > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.dommagesPhysiques > div:first-of-type > label > input[type="checkbox"] ~ span,
-div.dommagesMagiques > div:first-of-type > label > input[type="checkbox"] ~ span
+div.sheet-dommagesPhysiques > div:first-of-type > label > input[type="checkbox"] ~ span,
+div.sheet-dommagesMagiques > div:first-of-type > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.dommagesPhysiques > div:first-of-type > label > input[type="checkbox"] ~ span::before,
-div.dommagesMagiques > div:first-of-type > label > input[type="checkbox"] ~ span::before
+div.sheet-dommagesPhysiques > div:first-of-type > label > input[type="checkbox"] ~ span::before,
+div.sheet-dommagesMagiques > div:first-of-type > label > input[type="checkbox"] ~ span::before
 {
 	content:"";
 	width:26px;
@@ -2235,21 +2237,21 @@ div.dommagesMagiques > div:first-of-type > label > input[type="checkbox"] ~ span
 	line-height: 28px;
 }
 
-div.dommagesPhysiques > div:first-of-type > label > input[type="checkbox"]:checked ~ span::before,
-div.dommagesMagiques > div:first-of-type > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-dommagesPhysiques > div:first-of-type > label > input[type="checkbox"]:checked ~ span::before,
+div.sheet-dommagesMagiques > div:first-of-type > label > input[type="checkbox"]:checked ~ span::before
 {
 	content:"X";
 }
 
-div.dommagesPhysiques > div:first-of-type > label:nth-last-of-type(1) > input[type="checkbox"] ~ span::before,
-div.dommagesPhysiques > div:first-of-type > label:nth-last-of-type(2) > input[type="checkbox"] ~ span::before
+div.sheet-dommagesPhysiques > div:first-of-type > label:nth-last-of-type(1) > input[type="checkbox"] ~ span::before,
+div.sheet-dommagesPhysiques > div:first-of-type > label:nth-last-of-type(2) > input[type="checkbox"] ~ span::before
 {
 	color:rgb(122, 149, 063);
 	border-color:rgb(122, 149, 063);
 }
 
-div.dommagesPhysiques > span,
-div.dommagesMagiques > span
+div.sheet-dommagesPhysiques > span,
+div.sheet-dommagesMagiques > span
 {
 	font-size: 20px;
 	color: var(--brun);
@@ -2260,24 +2262,24 @@ div.dommagesMagiques > span
 	font-family: "Time New Roman";
 }
 
-div.dommagesPhysiques > div:not(:first-of-type),
-div.dommagesMagiques > div:not(:first-of-type)
+div.sheet-dommagesPhysiques > div:not(:first-of-type),
+div.sheet-dommagesMagiques > div:not(:first-of-type)
 {
 	justify-content:space-between;
 	padding-left:10px;
 	align-items:center;
 }
 
-div.dommagesPhysiques > div:nth-of-type(3),
-div.dommagesPhysiques > div:nth-of-type(4),
-div.dommagesMagiques > div:nth-of-type(3),
-div.dommagesMagiques > div:nth-of-type(4)
+div.sheet-dommagesPhysiques > div:nth-of-type(3),
+div.sheet-dommagesPhysiques > div:nth-of-type(4),
+div.sheet-dommagesMagiques > div:nth-of-type(3),
+div.sheet-dommagesMagiques > div:nth-of-type(4)
 {
 	margin-top:5px;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > span,
-div.dommagesMagiques > div:not(:first-of-type) > span
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > span,
+div.sheet-dommagesMagiques > div:not(:first-of-type) > span
 {
 	font-size: 14px;
 	font-variant: small-caps;
@@ -2286,27 +2288,27 @@ div.dommagesMagiques > div:not(:first-of-type) > span
 	color:black;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > span:first-of-type,
-div.dommagesMagiques > div:not(:first-of-type) > span:first-of-type
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > span:first-of-type,
+div.sheet-dommagesMagiques > div:not(:first-of-type) > span:first-of-type
 {
 	width:62px;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > span:last-of-type,
-div.dommagesMagiques > div:not(:first-of-type) > span:last-of-type
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > span:last-of-type,
+div.sheet-dommagesMagiques > div:not(:first-of-type) > span:last-of-type
 {
 	width:14px;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > label,
-div.dommagesMagiques > div:not(:first-of-type) > label
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > label,
+div.sheet-dommagesMagiques > div:not(:first-of-type) > label
 {
 	width:15px;
 	height:15px;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"],
-div.dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"]
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"],
+div.sheet-dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"]
 {
 	position:absolute;
 	width:15px;
@@ -2314,14 +2316,14 @@ div.dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span,
-div.dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span,
+div.sheet-dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span::before,
-div.dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span::before
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span::before,
+div.sheet-dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"] ~ span::before
 {
 	content:"";
 	width:11px;
@@ -2334,14 +2336,14 @@ div.dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"] 
 	display:flex;
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"]:checked ~ span::before,
-div.dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > label > input[type="checkbox"]:checked ~ span::before,
+div.sheet-dommagesMagiques > div:not(:first-of-type) > label > input[type="checkbox"]:checked ~ span::before
 {
 	content:"X";
 }
 
-div.dommagesPhysiques > div:not(:first-of-type) > input[type="text"],
-div.dommagesMagiques > div:not(:first-of-type) > input[type="text"]
+div.sheet-dommagesPhysiques > div:not(:first-of-type) > input[type="text"],
+div.sheet-dommagesMagiques > div:not(:first-of-type) > input[type="text"]
 {
 	width:calc(100% - 65px - 15px - 15px - 5px);
 	height:20px;
@@ -2351,8 +2353,8 @@ div.dommagesMagiques > div:not(:first-of-type) > input[type="text"]
 	background:transparent;
 }
 
-div.armes,
-div.armures
+div.sheet-armes,
+div.sheet-armures
 {
 	width:calc(100% - 5px);
 	flex-wrap:wrap;
@@ -2360,15 +2362,15 @@ div.armures
 	margin-top:10px;
 }
 
-div.armesFeu,
-div.armures
+div.sheet-armesFeu,
+div.sheet-armures
 {
 	border-left:2px solid var(--brun);
 	margin-left:auto;
 }
 
-div.armes > span,
-div.armures > span
+div.sheet-armes > span,
+div.sheet-armures > span
 {
 	font-size: 15px;
 	color: var(--brun);
@@ -2377,55 +2379,55 @@ div.armures > span
 	font-family: "Time New Roman";
 }
 
-div.armes > span:first-of-type
+div.sheet-armes > span:first-of-type
 {
 	width:calc(100% - 80px);
 	padding-left:5px;
 }
 
-div.armures > span:first-of-type
+div.sheet-armures > span:first-of-type
 {
 	width:calc(100% - 90px);
 	padding-left:5px;
 }
 
-div.armes > span:last-of-type
+div.sheet-armes > span:last-of-type
 {
 	width:70px;
 }
 
-div.armures > span:last-of-type
+div.sheet-armures > span:last-of-type
 {
 	width:80px;
 }
 
 
-div.armesFeu > .repcontainer,
-div.armures > .repcontainer
+div.sheet-armesFeu > .repcontainer,
+div.sheet-armures > .repcontainer
 {
 	margin-left:5px;
 }
 
-div.armesFeu > .repcontrol,
-div.armures > .repcontrol
+div.sheet-armesFeu > .repcontrol,
+div.sheet-armures > .repcontrol
 {
 	margin-left:5px;
 }
 
-div.armes > .repcontainer > .repitem,
-div.armures > .repcontainer > .repitem
+div.sheet-armes > .repcontainer > .repitem,
+div.sheet-armures > .repcontainer > .repitem
 {
 	justify-content:space-between;
 	height:30px;
 }
 
-div.armes > .repcontainer > .repitem:not(:first-of-type),
-div.armures > .repcontainer > .repitem:not(:first-of-type)
+div.sheet-armes > .repcontainer > .repitem:not(:first-of-type),
+div.sheet-armures > .repcontainer > .repitem:not(:first-of-type)
 {
 	margin-top:2px;
 }
 
-div.armes > .repcontainer > .repitem > input[type="text"]
+div.sheet-armes > .repcontainer > .repitem > input[type="text"]
 {
 	width:calc(100% - 75px);
 	border: 0px;
@@ -2436,7 +2438,7 @@ div.armes > .repcontainer > .repitem > input[type="text"]
 	padding-top: 12px;
 }
 
-div.armures > .repcontainer > .repitem > input[type="text"]
+div.sheet-armures > .repcontainer > .repitem > input[type="text"]
 {
 	width:calc(100% - 85px);
 	border: 0px;
@@ -2447,7 +2449,7 @@ div.armures > .repcontainer > .repitem > input[type="text"]
 	padding-top: 12px;
 }
 
-div.armes > .repcontainer > .repitem > input[type="number"]
+div.sheet-armes > .repcontainer > .repitem > input[type="number"]
 {
 	width: 30px;
 	height: 30px;
@@ -2458,7 +2460,7 @@ div.armes > .repcontainer > .repitem > input[type="number"]
 	margin-right:20px;
 }
 
-div.armures > .repcontainer > .repitem > input[type="number"]
+div.sheet-armures > .repcontainer > .repitem > input[type="number"]
 {
 	width: 30px;
 	height: 30px;
@@ -2469,8 +2471,8 @@ div.armures > .repcontainer > .repitem > input[type="number"]
 	margin-right:25px;
 }
 
-div.artefacts,
-div.alchimie
+div.sheet-artefacts,
+div.sheet-alchimie
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -2478,21 +2480,21 @@ div.alchimie
 	margin-top:10px;
 }
 
-div.artefacts > .repcontainer > .repitem,
-div.alchimie > .repcontainer > .repitem,
-div.equipement > .repcontainer > .repitem
+div.sheet-artefacts > .repcontainer > .repitem,
+div.sheet-alchimie > .repcontainer > .repitem,
+div.sheet-equipement > .repcontainer > .repitem
 {
 	justify-content:space-between;
 }
 
-div.artefacts > .repcontainer > .repitem:not(:first-of-type),
-div.alchimie > .repcontainer > .repitem:not(:first-of-type),
-div.equipement > .repcontainer > .repitem:not(:first-of-type)
+div.sheet-artefacts > .repcontainer > .repitem:not(:first-of-type),
+div.sheet-alchimie > .repcontainer > .repitem:not(:first-of-type),
+div.sheet-equipement > .repcontainer > .repitem:not(:first-of-type)
 {
 	margin-top:5px;
 }
 
-div.artefacts > .repcontainer > .repitem > input[type="text"]
+div.sheet-artefacts > .repcontainer > .repitem > input[type="text"]
 {
 	width:100%;
 	border: 0px;
@@ -2503,7 +2505,7 @@ div.artefacts > .repcontainer > .repitem > input[type="text"]
 	padding-top: 12px;
 }
 
-div.artefacts > .repcontainer > .repitem > select
+div.sheet-artefacts > .repcontainer > .repitem > select
 {
 	width:calc(100% - 35px);
 	border: 0px;
@@ -2513,7 +2515,7 @@ div.artefacts > .repcontainer > .repitem > select
 	padding-top: 12px;
 }
 
-div.artefacts > .repcontainer > .repitem > input[type="number"]
+div.sheet-artefacts > .repcontainer > .repitem > input[type="number"]
 {
 	width: 30px;
 	height: 30px;
@@ -2523,32 +2525,32 @@ div.artefacts > .repcontainer > .repitem > input[type="number"]
 	margin-bottom: -5px;
 }
 
-div.artefacts > .repcontainer > .repitem > div.autoex > textarea
+div.sheet-artefacts > .repcontainer > .repitem > div.sheet-autoex > textarea
 {
 	background:transparent;
 	border:1px dotted black;
 }
 
-div.alchimie > .repcontainer > .repitem > div.autoex
+div.sheet-alchimie > .repcontainer > .repitem > div.sheet-autoex
 {
 	background-image: linear-gradient(rgba(var(--blanc), 0.5), rgba(var(--blanc), 0.5));
 	border: 1px dotted var(--brun);
 }
 
-div.equipement > .repcontainer > .repitem > div > textarea,
-div.alchimie > .repcontainer > .repitem > div > textarea
+div.sheet-equipement > .repcontainer > .repitem > div > textarea,
+div.sheet-alchimie > .repcontainer > .repitem > div > textarea
 {
 	background:transparent;
 }
 
-div.arcadia
+div.sheet-arcadia
 {
 	width:100%;
 	flex-wrap:wrap;
 	justify-content:space-between;
 }
 
-div.arcadia > div:first-of-type
+div.sheet-arcadia > div:first-of-type
 {
 	font-family: "Kodchasan";
 	width: 100%;
@@ -2560,7 +2562,7 @@ div.arcadia > div:first-of-type
 	background-position-x: right;
 }
 
-div.arcadia > div > h1
+div.sheet-arcadia > div > h1
 {
 	font-family: "Kodchasan";
 	width: calc(100% - 10px - 155px);
@@ -2570,7 +2572,7 @@ div.arcadia > div > h1
 	text-shadow: 2px 3px 5px black;
 }
 
-div.arcadia > div > select
+div.sheet-arcadia > div > select
 {
 	width: 155px;
 	padding: 0px;
@@ -2586,7 +2588,7 @@ div.arcadia > div > select
 	margin-bottom:auto;
 }
 
-div.arcadia > span
+div.sheet-arcadia > span
 {
 	font-size: 15px;
 	color: var(--brun);
@@ -2595,34 +2597,34 @@ div.arcadia > span
 	font-family: "Time New Roman";
 }
 
-div.arcadia > span:nth-of-type(1)
+div.sheet-arcadia > span:nth-of-type(1)
 {
 	width:calc(100% - 120px - 120px - 120px - 50px - 140px - 10px);
 	border-right:2px solid var(--brun);
 }
 
-div.arcadia > span:nth-of-type(2),
-div.arcadia > span:nth-of-type(3)
+div.sheet-arcadia > span:nth-of-type(2),
+div.sheet-arcadia > span:nth-of-type(3)
 {
 	width:120px;
 	text-align:center;
 	justify-content:center;
 }
 
-div.arcadia > span:nth-of-type(3)
+div.sheet-arcadia > span:nth-of-type(3)
 {
 	border-right:2px solid var(--brun);
 	border-left:2px solid var(--brun);
 }
 
-div.arcadia > span:nth-of-type(4)
+div.sheet-arcadia > span:nth-of-type(4)
 {
 	width:50px;
 	text-align:center;
 	justify-content:center;
 }
 
-div.arcadia > span:nth-of-type(5)
+div.sheet-arcadia > span:nth-of-type(5)
 {
 	width:115px;
 	text-align:center;
@@ -2631,7 +2633,7 @@ div.arcadia > span:nth-of-type(5)
 	border-left:2px solid var(--brun);
 }
 
-div.arcadia > span:nth-of-type(6)
+div.sheet-arcadia > span:nth-of-type(6)
 {
 	width:100px;
 	text-align:center;
@@ -2639,12 +2641,12 @@ div.arcadia > span:nth-of-type(6)
 	margin-right:45px;
 }
 
-div.arcadia > .repcontainer > .repitem
+div.sheet-arcadia > .repcontainer > .repitem
 {
 	justify-content:space-between;
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(2)
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(2)
 {
 	width:calc(100% - 120px - 120px - 120px - 50px - 140px - 12px);
 	border-right:2px solid var(--brun);
@@ -2652,28 +2654,28 @@ div.arcadia > .repcontainer > .repitem > div:nth-of-type(2)
 	padding-right:2px;
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(3),
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(4)
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(3),
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(4)
 {
 	width:116px;
 	padding-right:2px;
 	padding-left:2px;
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(4)
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(4)
 {
 	border-right:2px solid var(--brun);
 	border-left:2px solid var(--brun);
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(5)
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(5)
 {
 	width:46px;
 	padding-right:2px;
 	padding-left:2px;
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(6)
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(6)
 {
 	width:111px;
 	padding-right:2px;
@@ -2682,14 +2684,14 @@ div.arcadia > .repcontainer > .repitem > div:nth-of-type(6)
 	border-left:2px solid var(--brun);
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(7)
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(7)
 {
 	width:96px;
 	padding-right:2px;
 	padding-left:2px;
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(2) > input[type="text"]
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(2) > input[type="text"]
 {
 	width:calc(100% - 35px);
 	border: 0px;
@@ -2700,7 +2702,7 @@ div.arcadia > .repcontainer > .repitem > div:nth-of-type(2) > input[type="text"]
 	padding-top: 12px;
 }
 
-div.arcadia > .repcontainer > .repitem > div:nth-of-type(2) > input[type="number"]
+div.sheet-arcadia > .repcontainer > .repitem > div:nth-of-type(2) > input[type="number"]
 {
 	width: 30px;
 	height: 30px;
@@ -2710,7 +2712,7 @@ div.arcadia > .repcontainer > .repitem > div:nth-of-type(2) > input[type="number
 	margin-bottom: -5px;
 }
 
-div.arcadia > .repcontainer > .repitem > div:not(:nth-of-type(2)) > textarea
+div.sheet-arcadia > .repcontainer > .repitem > div:not(:nth-of-type(2)) > textarea
 {
 	width:calc(100% - 2px);
 	border: 0px;
@@ -2721,14 +2723,14 @@ div.arcadia > .repcontainer > .repitem > div:not(:nth-of-type(2)) > textarea
 	padding-right:2px;
 }
 
-div.arcadia > .repcontainer > .repitem > div:not(:nth-of-type(2)) > span
+div.sheet-arcadia > .repcontainer > .repitem > div:not(:nth-of-type(2)) > span
 {
 	padding-right:0px;
 	padding-left:0px;
 	text-align:center;
 }
 
-div.arcadia > .repcontainer > .repitem > button[type="roll"]
+div.sheet-arcadia > .repcontainer > .repitem > button[type="roll"]
 {
 	width: 40px;
 	height: 30px;
@@ -2743,12 +2745,12 @@ div.arcadia > .repcontainer > .repitem > button[type="roll"]
 	margin-right: 5px;
 }
 
-div.arcadia > .repcontainer > .repitem > button[type="roll"]::before
+div.sheet-arcadia > .repcontainer > .repitem > button[type="roll"]::before
 {
 	content:"";
 }
 
-div.arcadia > .repcontainer > .repitem > div > label
+div.sheet-arcadia > .repcontainer > .repitem > div > label
 {
 	width: 30px;
 	height: 30px;
@@ -2756,7 +2758,7 @@ div.arcadia > .repcontainer > .repitem > div > label
 	margin:auto;
 }
 
-div.arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"]
+div.sheet-arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"]
 {
 	position:absolute;
 	width: 30px;
@@ -2764,12 +2766,12 @@ div.arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"] ~ span
+div.sheet-arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"] ~ span::before
+div.sheet-arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"] ~ span::before
 {
 	content:"";
 	width:100%;
@@ -2783,19 +2785,19 @@ div.arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"] ~ 
 	font-size: 32px;
 }
 
-div.arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-arcadia > .repcontainer > .repitem > div > label > input[type="checkbox"]:checked ~ span::before
 {
 	content:"X";
 }
 
-div.titre
+div.sheet-titre
 {
 	width:100%;
 	flex-wrap:wrap;
 	margin-top:10px;
 }
 
-div.titre > input[type="text"]
+div.sheet-titre > input[type="text"]
 {
 	width:100%;
 	border: 0px;
@@ -2806,14 +2808,14 @@ div.titre > input[type="text"]
 	padding-top: 12px;
 }
 
-h1.titreMagie,
-h1.titreKabbale,
-h1.titreAlchimie
+h1.sheet-titreMagie,
+h1.sheet-titreKabbale,
+h1.sheet-titreAlchimie
 {
 	margin-bottom:10px;
 }
 
-div.cercleMagie
+div.sheet-cercleMagie
 {
 	font-family: "Kodchasan";
 	width: 100%;
@@ -2829,29 +2831,29 @@ div.cercleMagie
 	background-color: rgba(222, 186, 13, 0.2);
 }
 
-div.cercleMagie1
+div.sheet-cercleMagie1
 {
 	background-position-y: 0px, calc(20%), 0px;
 }
 
-div.cercleMagie2
+div.sheet-cercleMagie2
 {
 	background-position-y: 0px, calc(40%), 0px;
 }
 
-div.cercleMagie3
+div.sheet-cercleMagie3
 {
 	background-position-y: 0px, calc(60%), 0px;
 }
 
-div.cercleMagie > label
+div.sheet-cercleMagie > label
 {
 	width:100%;
 	height:45px;
 	justify-content:space-between;
 }
 
-div.cercleMagie > label > h1
+div.sheet-cercleMagie > label > h1
 {
 	width:100%;
 	line-height:45px;
@@ -2860,7 +2862,7 @@ div.cercleMagie > label > h1
 	color:white;
 }
 
-div.cercleMagie > label > input[type="number"]
+div.sheet-cercleMagie > label > input[type="number"]
 {
 	text-align: center;
 	margin-top: 5px;
@@ -2869,28 +2871,28 @@ div.cercleMagie > label > input[type="number"]
 	border:2px solid var(--brun);
 }
 
-div.cercleMargin
+div.sheet-cercleMargin
 {
 	margin-top:2px;
 }
 
-div.vIEL,
-div.kMonde,
-div.kOrdonnance
+div.sheet-vIEL,
+div.sheet-kMonde,
+div.sheet-kOrdonnance
 {
 	width:100%;
 	border-left:2px solid var(--titreGris);
 	flex-wrap:wrap;
 }
 
-div.vIEL > h1,
-div.kMonde > h1,
-div.kOrdonnance > h1,
-div.alchimieSConstruct > h1,
-div.materiaePrimae > h1,
-div.constructs > h1,
-div.formules > h1,
-div.grandSecret > h1
+div.sheet-vIEL > h1,
+div.sheet-gsMaillons > h1,
+div.sheet-kMonde > h1,
+div.sheet-kOrdonnance > h1,
+div.sheet-alchimieSConstruct > h1,
+div.sheet-materiaePrimae > h1,
+div.sheet-constructs > h1,
+div.sheet-formules > h1
 {
 	font-family: "Kodchasan";
 	width: 100%;
@@ -2908,8 +2910,8 @@ div.grandSecret > h1
 	padding-left: 10px;
 }
 
-div.vIEL > select,
-div.kMonde > select
+div.sheet-vIEL > select,
+div.sheet-kMonde > select
 {
 	width:100%;
 	border:0px;
@@ -2919,9 +2921,9 @@ div.kMonde > select
 	background:transparent;
 }
 
-div.sorts,
-div.invocations,
-div.formules
+div.sheet-sorts,
+div.sheet-invocations,
+div.sheet-formules
 {
 	width:100%;
 	justify-content:space-between;
@@ -2929,12 +2931,12 @@ div.formules
 	margin-top:10px;
 }
 
-div.sorts > span,
-div.sorts > .repcontainer > .repitem > div > label > span,
-div.invocations > span,
-div.invocations > .repcontainer > .repitem > div:last-of-type > label > span,
-div.formules > span,
-div.formules > .repcontainer > .repitem > div:last-of-type > label > span
+div.sheet-sorts > span,
+div.sheet-sorts > .repcontainer > .repitem > div > label > span,
+div.sheet-invocations > span,
+div.sheet-invocations > .repcontainer > .repitem > div:last-of-type > label > span,
+div.sheet-formules > span,
+div.sheet-formules > .repcontainer > .repitem > div:last-of-type > label > span
 {
 	font-family: "Times New Roman";
 	min-height: max-content;
@@ -2947,92 +2949,92 @@ div.formules > .repcontainer > .repitem > div:last-of-type > label > span
 	margin-top:5px;
 }
 
-div.sorts > span:nth-of-type(1)
+div.sheet-sorts > span:nth-of-type(1)
 {
 	width:calc(100% - 65px - 65px - 65px - 130px - 130px - 25px - 25px - 25px - 45px);
 }
 
-div.sorts > span:nth-of-type(2),
-div.sorts > span:nth-of-type(3),
-div.sorts > span:nth-of-type(4)
+div.sheet-sorts > span:nth-of-type(2),
+div.sheet-sorts > span:nth-of-type(3),
+div.sheet-sorts > span:nth-of-type(4)
 {
 	width:65px;
 }
 
-div.sorts > span:nth-of-type(5)
+div.sheet-sorts > span:nth-of-type(5)
 {
 	width:130px;
 }
 
-div.sorts > span:nth-of-type(2),
-div.sorts > span:nth-of-type(4)
+div.sheet-sorts > span:nth-of-type(2),
+div.sheet-sorts > span:nth-of-type(4)
 {
 	width:61px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.sorts > span:nth-of-type(6)
+div.sheet-sorts > span:nth-of-type(6)
 {
 	width:128px;
 	border-left:2px solid var(--brun);
 }
 
-div.sorts > span:nth-of-type(7),
-div.sorts > span:nth-of-type(8),
-div.sorts > span:nth-of-type(9)
+div.sheet-sorts > span:nth-of-type(7),
+div.sheet-sorts > span:nth-of-type(8),
+div.sheet-sorts > span:nth-of-type(9)
 {
 	width:25px;
 	margin-top:0px;
 	padding-top:5px;
 }
 
-div.sorts > span:nth-of-type(7),
-div.sorts > span:nth-of-type(9)
+div.sheet-sorts > span:nth-of-type(7),
+div.sheet-sorts > span:nth-of-type(9)
 {
 	background-color:var(--colLR);
 }
 
-div.sorts > span:nth-of-type(8)
+div.sheet-sorts > span:nth-of-type(8)
 {
 	background-color:var(--colC);
 }
 
-div.sorts > span:nth-of-type(10)
+div.sheet-sorts > span:nth-of-type(10)
 {
 	width:45px;
 }
 
-div.sorts > .repcontainer,
-div.sorts > .repcontainer > .repitem,
-div.invocations > .repcontainer,
-div.invocations > .repcontainer > .repitem,
-div.formules > .repcontainer,
-div.formules > .repcontainer > .repitem
+div.sheet-sorts > .repcontainer,
+div.sheet-sorts > .repcontainer > .repitem,
+div.sheet-invocations > .repcontainer,
+div.sheet-invocations > .repcontainer > .repitem,
+div.sheet-formules > .repcontainer,
+div.sheet-formules > .repcontainer > .repitem
 {
 	width:100%;
 	flex-wrap:wrap;
 	justify-content:space-between;
 }
 
-div.sorts > .repcontainer > .repitem:not(:last-of-type),
-div.invocations > .repcontainer > .repitem:not(:last-of-type),
-div.formules > .repcontainer > .repitem:not(:last-of-type)
+div.sheet-sorts > .repcontainer > .repitem:not(:last-of-type),
+div.sheet-invocations > .repcontainer > .repitem:not(:last-of-type),
+div.sheet-formules > .repcontainer > .repitem:not(:last-of-type)
 {
 	padding-bottom:5px;
 	margin-bottom:5px;
 	border-bottom:5px double var(--brun);
 }
 
-div.sorts > .repcontainer > .repitem > input[type="text"],
-div.sorts > .repcontainer > .repitem > input[type="number"],
-div.sorts > .repcontainer > .repitem > div > label > input[type="number"],
-div.invocations > .repcontainer > .repitem > input[type="text"],
-div.invocations > .repcontainer > .repitem > input[type="number"],
-div.invocations > .repcontainer > .repitem > div > label > input[type="number"],
-div.formules > .repcontainer > .repitem > input[type="text"],
-div.formules > .repcontainer > .repitem > input[type="number"],
-div.formules > .repcontainer > .repitem > div > label > input[type="number"]
+div.sheet-sorts > .repcontainer > .repitem > input[type="text"],
+div.sheet-sorts > .repcontainer > .repitem > input[type="number"],
+div.sheet-sorts > .repcontainer > .repitem > div > label > input[type="number"],
+div.sheet-invocations > .repcontainer > .repitem > input[type="text"],
+div.sheet-invocations > .repcontainer > .repitem > input[type="number"],
+div.sheet-invocations > .repcontainer > .repitem > div > label > input[type="number"],
+div.sheet-formules > .repcontainer > .repitem > input[type="text"],
+div.sheet-formules > .repcontainer > .repitem > input[type="number"],
+div.sheet-formules > .repcontainer > .repitem > div > label > input[type="number"]
 {
 	border: 0px;
 	border-bottom: 1px dotted var(--brun);
@@ -3040,19 +3042,19 @@ div.formules > .repcontainer > .repitem > div > label > input[type="number"]
 	padding-top: 6px;
 }
 
-div.sorts > .repcontainer > .repitem > div > label > input[type="number"],
-div.invocations > .repcontainer > .repitem > div > label > input[type="number"],
-div.formules > .repcontainer > .repitem > div > label > input[type="number"]
+div.sheet-sorts > .repcontainer > .repitem > div > label > input[type="number"],
+div.sheet-invocations > .repcontainer > .repitem > div > label > input[type="number"],
+div.sheet-formules > .repcontainer > .repitem > div > label > input[type="number"]
 {
 	text-align:center;
 }
 
-div.sorts > .repcontainer > .repitem > select,
-div.sorts > .repcontainer > .repitem > div > label > select,
-div.invocations > .repcontainer > .repitem > select,
-div.invocations > .repcontainer > .repitem > div > label > select,
-div.formules > .repcontainer > .repitem > select,
-div.formules > .repcontainer > .repitem > div > label > select
+div.sheet-sorts > .repcontainer > .repitem > select,
+div.sheet-sorts > .repcontainer > .repitem > div > label > select,
+div.sheet-invocations > .repcontainer > .repitem > select,
+div.sheet-invocations > .repcontainer > .repitem > div > label > select,
+div.sheet-formules > .repcontainer > .repitem > select,
+div.sheet-formules > .repcontainer > .repitem > div > label > select
 {
 	border: 0px;
 	margin: 0px;
@@ -3064,7 +3066,7 @@ div.formules > .repcontainer > .repitem > div > label > select
 	height:30px;
 }
 
-div.invocations > .repcontainer > .repitem > div > select
+div.sheet-invocations > .repcontainer > .repitem > div > select
 {
 	border: 0px;
 	margin: 0px;
@@ -3075,17 +3077,17 @@ div.invocations > .repcontainer > .repitem > div > select
 	height:30px;
 }
 
-div.sorts > .repcontainer > .repitem > label:nth-of-type(1),
-div.invocations > .repcontainer > .repitem > label:nth-of-type(1),
-div.formules > .repcontainer > .repitem > label:nth-of-type(1)
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(1),
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(1),
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(1)
 {
 	width: 30px;
 	height: 30px;
 }
 
-div.sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"],
-div.invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"],
-div.formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"],
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"],
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]
 {
 	position: absolute;
 	opacity: 0;
@@ -3093,16 +3095,16 @@ div.formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="che
 	height: 30px;
 }
 
-div.sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span,
-div.invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span,
-div.formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span,
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span,
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span
 {
 	width: 100%;
 }
 
-div.sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span::before,
-div.invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span::before,
-div.formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span::before
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span::before,
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span::before,
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"] ~ span::before
 {
 	display: flex;
 	width: 100%;
@@ -3115,53 +3117,53 @@ div.formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="che
 	font-size: 20px;
 	transition: all 0.2s;
 }
-div.sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]:checked ~ span::before,
-div.invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]:checked ~ span::before,
-div.formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]:checked ~ span::before
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]:checked ~ span::before,
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]:checked ~ span::before,
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(1) > input[type="checkbox"]:checked ~ span::before
 {
 	content: "-";
 	box-shadow: 0px 0px 5px black inset;
 }
 
-div.sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(1)
+div.sheet-sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(1)
 {
 	width:calc(100% - 65px - 65px - 65px - 130px - 130px - 25px - 25px - 25px - 45px - 30px);
 	padding-left:5px;
 	font-weight:bold;
 }
 
-div.sorts > .repcontainer > .repitem > select:nth-of-type(1),
-div.sorts > .repcontainer > .repitem > select:nth-of-type(2),
-div.sorts > .repcontainer > .repitem > input[type="number"]:nth-of-type(2),
-div.sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(2),
-div.sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(3)
+div.sheet-sorts > .repcontainer > .repitem > select:nth-of-type(1),
+div.sheet-sorts > .repcontainer > .repitem > select:nth-of-type(2),
+div.sheet-sorts > .repcontainer > .repitem > input[type="number"]:nth-of-type(2),
+div.sheet-sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(2),
+div.sheet-sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(3)
 {
 	width:65px;
 }
 
-div.sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(3),
-div.sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(4)
+div.sheet-sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(3),
+div.sheet-sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(4)
 {
 	width:130px;
 }
 
-div.sorts > .repcontainer > .repitem > input[type="number"]:nth-of-type(2)
+div.sheet-sorts > .repcontainer > .repitem > input[type="number"]:nth-of-type(2)
 {
 	text-align:center;
 }
 
-div.sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)),
-div.invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)),
-div.formules > .repcontainer > .repitem > label:not(:nth-of-type(1))
+div.sheet-sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)),
+div.sheet-invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)),
+div.sheet-formules > .repcontainer > .repitem > label:not(:nth-of-type(1))
 {
 	width:25px;
 	justify-content:center;
 	align-items:center;
 }
 
-div.sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"],
-div.invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"],
-div.formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]
+div.sheet-sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"],
+div.sheet-invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"],
+div.sheet-formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]
 {
 	position:absolute;
 	width:15px;
@@ -3169,17 +3171,17 @@ div.formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[typ
 	opacity:0;
 }
 
-div.sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span,
-div.invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span,
-div.formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span
+div.sheet-sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span,
+div.sheet-invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span,
+div.sheet-formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span
 {
 	width:15px;
 	height:15px;
 }
 
-div.sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span::before,
-div.invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span::before,
-div.formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span::before
+div.sheet-sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span::before,
+div.sheet-invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span::before,
+div.sheet-formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"] ~ span::before
 {
 	content:"";
 	width:15px;
@@ -3189,38 +3191,38 @@ div.formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[typ
 	text-align: center;
 }
 
-div.sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]:checked ~ span::before,
-div.invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]:checked ~ span::before,
-div.formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]:checked ~ span::before
+div.sheet-sorts > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]:checked ~ span::before,
+div.sheet-invocations > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]:checked ~ span::before,
+div.sheet-formules > .repcontainer > .repitem > label:not(:nth-of-type(1)) > input[type="checkbox"]:checked ~ span::before
 {
 	background-color: var(--brun);
 }
 
-div.sorts > .repcontainer > .repitem > select:nth-of-type(1),
-div.sorts > .repcontainer > .repitem > input[type="number"]:nth-of-type(2)
+div.sheet-sorts > .repcontainer > .repitem > select:nth-of-type(1),
+div.sheet-sorts > .repcontainer > .repitem > input[type="number"]:nth-of-type(2)
 {
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(4)
+div.sheet-sorts > .repcontainer > .repitem > input[type="text"]:nth-of-type(4)
 {
 	border-left:2px solid var(--brun);
 }
 
 
-div.sorts > .repcontainer > .repitem > label:nth-of-type(2),
-div.sorts > .repcontainer > .repitem > label:nth-of-type(4)
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(2),
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(4)
 {
 	background-color:var(--colLR);
 }
 
-div.sorts > .repcontainer > .repitem > label:nth-of-type(3)
+div.sheet-sorts > .repcontainer > .repitem > label:nth-of-type(3)
 {
 	background-color:var(--colC);
 }
 
-div.sorts > .repcontainer > .repitem > button[type="roll"]
+div.sheet-sorts > .repcontainer > .repitem > button[type="roll"]
 {
 	width: 40px;
 	height: 30px;
@@ -3235,17 +3237,17 @@ div.sorts > .repcontainer > .repitem > button[type="roll"]
 	margin-left:auto;
 }
 
-div.sorts > .repcontainer > .repitem > button[type="roll"]::before
+div.sheet-sorts > .repcontainer > .repitem > button[type="roll"]::before
 {
 	content:"";
 }
 
-div.sorts > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div
+div.sheet-sorts > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div
 {
 	display:flex;
 }
 
-div.sorts > .repcontainer > .repitem > div
+div.sheet-sorts > .repcontainer > .repitem > div
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -3253,39 +3255,39 @@ div.sorts > .repcontainer > .repitem > div
 	display:none;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(1),
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(2)
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(1),
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(2)
 {
 	width:calc(50% - 75px - 35px);
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(1) > span,
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(2) > span
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(1) > span,
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(2) > span
 {
 	width:50px;
 	align-items:center;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(1) > select,
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(2) > select
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(1) > select,
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(2) > select
 {
 	width:calc(100% - 50px);
 	text-align:center;
 	border-bottom:0px;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(3)
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(3)
 {
 	width:150px;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(3) > span
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(3) > span
 {
 	width:100px;
 	align-items:center;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(3) > input[type="number"]
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(3) > input[type="number"]
 {
 	width:50px;
 	text-align:center;
@@ -3293,18 +3295,18 @@ div.sorts > .repcontainer > .repitem > div > label:nth-of-type(3) > input[type="
 	cursor:auto;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(4)
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(4)
 {
 	width:70px;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(4) > span
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(4) > span
 {
 	width:50px;
 	align-items:center;
 }
 
-div.sorts > .repcontainer > .repitem > div > label:nth-of-type(4) > input[type="number"]
+div.sheet-sorts > .repcontainer > .repitem > div > label:nth-of-type(4) > input[type="number"]
 {
 	width:20px;
 	text-align:center;
@@ -3312,26 +3314,26 @@ div.sorts > .repcontainer > .repitem > div > label:nth-of-type(4) > input[type="
 	cursor:auto;
 }
 
-div.sorts > .repcontainer > .repitem > div > div
+div.sheet-sorts > .repcontainer > .repitem > div > div
 {
 	width:100%;
 	margin-bottom:2px;
 }
 
-div.sorts > .repcontainer > .repitem > div > div > textarea
+div.sheet-sorts > .repcontainer > .repitem > div > div > textarea
 {
 	border:1px dotted black;
 	background:transparent;
 }
 
-div.cercleArbreKabbale
+div.sheet-cercleArbreKabbale
 {
 	height:455px;
 	width:100%;
 	flex-wrap:wrap;
 }
 
-div.cercleArbreKabbale > span
+div.sheet-cercleArbreKabbale > span
 {
 	font-family:"Kodchasan";
 	align-items:center;
@@ -3343,7 +3345,7 @@ div.cercleArbreKabbale > span
 	text-shadow: 2px 3px 5px black;
 }
 
-div.cercleArbreKabbale > span:nth-of-type(1)
+div.sheet-cercleArbreKabbale > span:nth-of-type(1)
 {
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%,rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png");
 	background-repeat: no-repeat;
@@ -3353,7 +3355,7 @@ div.cercleArbreKabbale > span:nth-of-type(1)
 	background-color:rgba(var(--C3Kabbale), 0.3);
 }
 
-div.cercleArbreKabbale > span:nth-of-type(2)
+div.sheet-cercleArbreKabbale > span:nth-of-type(2)
 {
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%,rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png");
 	background-repeat: no-repeat;
@@ -3363,7 +3365,7 @@ div.cercleArbreKabbale > span:nth-of-type(2)
 	background-color:rgba(var(--C2Kabbale), 0.9);
 }
 
-div.cercleArbreKabbale > span:nth-of-type(3)
+div.sheet-cercleArbreKabbale > span:nth-of-type(3)
 {
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%,rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png");
 	background-repeat: no-repeat;
@@ -3373,7 +3375,7 @@ div.cercleArbreKabbale > span:nth-of-type(3)
 	background-color:rgba(var(--C1Kabbale), 0.9);
 }
 
-div.colArbreKabbaleR
+div.sheet-colArbreKabbaleR
 {
 	position:absolute;
 	width:calc(50% - 35px);
@@ -3381,7 +3383,7 @@ div.colArbreKabbaleR
 	min-width:350px;
 }
 
-div.arbreKabbale
+div.sheet-arbreKabbale
 {
 	margin-left:auto;
 	background:var(--arbreKabbale);
@@ -3391,7 +3393,7 @@ div.arbreKabbale
 	background-repeat:no-repeat;
 }
 
-div.arbreKabbale > label
+div.sheet-arbreKabbale > label
 {
 	width: 70px;
 	flex-wrap: wrap;
@@ -3402,7 +3404,7 @@ div.arbreKabbale > label
 	position: absolute;
 }
 
-div.arbreKabbale > label > span
+div.sheet-arbreKabbale > label > span
 {
 	justify-content: center;
 	height: 20px;
@@ -3410,7 +3412,7 @@ div.arbreKabbale > label > span
 	width: 100%;
 }
 
-div.arbreKabbale > label > input[type="number"]
+div.sheet-arbreKabbale > label > input[type="number"]
 {
 	text-align: center;
 	border: 0px;
@@ -3427,86 +3429,86 @@ div.arbreKabbale > label > input[type="number"]
 	font-family: "Time New Roman";
 }
 
-div.arbreKabbale > label.malkuth
+div.sheet-arbreKabbale > label.sheet-malkuth
 {
 	margin-top: 400px;
 	margin-left: 81px;
 	color: rgb(036, 032, 033);
 }
 
-div.arbreKabbale > label.yesod
+div.sheet-arbreKabbale > label.sheet-yesod
 {
 	margin-top: 300px;
 	margin-left: 81px;
 	color: rgb(036, 032, 033);
 }
 
-div.arbreKabbale > label.hod
+div.sheet-arbreKabbale > label.sheet-hod
 {
 	margin-top: 252px;
 	margin-left: -5px;
 	color: rgb(036, 032, 033);
 }
 
-div.arbreKabbale > label.netzach
+div.sheet-arbreKabbale > label.sheet-netzach
 {
 	margin-top: 252px;
 	margin-left: 167px;
 	color: rgb(036, 032, 033);
 }
 
-div.arbreKabbale > label.tiphereth
+div.sheet-arbreKabbale > label.sheet-tiphereth
 {
 	margin-top: 202px;
 	margin-left: 81px;
 	color: rgb(096, 099, 100);
 }
 
-div.arbreKabbale > label.geburah
+div.sheet-arbreKabbale > label.sheet-geburah
 {
 	margin-top: 152px;
 	margin-left: -5px;
 	color: rgb(096, 099, 100);
 }
 
-div.arbreKabbale > label.chesed
+div.sheet-arbreKabbale > label.sheet-chesed
 {
 	margin-top: 152px;
 	margin-left: 167px;
 	color: rgb(096, 099, 100);
 }
 
-div.arbreKabbale > label.hokmah
+div.sheet-arbreKabbale > label.sheet-hokmah
 {
 	margin-top: 55px;
 	margin-left: 167px;
 	color: rgb(151, 129, 089);
 }
 
-div.arbreKabbale > label.binah
+div.sheet-arbreKabbale > label.sheet-binah
 {
 	margin-top: 55px;
 	margin-left: -5px;
 	color: rgb(151, 129, 089);
 }
 
-div.arbreKabbale > label.kether
+div.sheet-arbreKabbale > label.sheet-kether
 {
 	margin-top: 6px;
 	margin-left: 81px;
 	color: rgb(151, 129, 089);
 }
 
-div.kOrdonnance > .repcontainer,
-div.kOrdonnance > .repcontainer > .repitem
+div.sheet-kOrdonnance > .repcontainer,
+div.sheet-kOrdonnance > .repcontainer > .repitem
 {
 	width:100%;
 	flex-wrap:wrap;
 	justify-content:space-between;
 }
 
-div.kOrdonnance > .repcontainer > .repitem > input[type="number"],
-div.kOrdonnance > .repcontainer > .repitem > input[type="text"]
+div.sheet-kOrdonnance > .repcontainer > .repitem > input[type="number"],
+div.sheet-kOrdonnance > .repcontainer > .repitem > input[type="text"]
 {
 	border:0px;
 	padding:0px;
@@ -3517,20 +3519,20 @@ div.kOrdonnance > .repcontainer > .repitem > input[type="text"]
 	background:transparent;
 }
 
-div.kOrdonnance > .repcontainer > .repitem > input[type="number"]
+div.sheet-kOrdonnance > .repcontainer > .repitem > input[type="number"]
 {
 	width:25px;
 	text-align:center;
 	margin-left:5px;
 }
 
-div.kOrdonnance > .repcontainer > .repitem > input[type="text"]
+div.sheet-kOrdonnance > .repcontainer > .repitem > input[type="text"]
 {
 	width:calc(100% - 30px - 30px);
 }
 
 
-div.kOrdonnance > .repcontainer > .repitem > label
+div.sheet-kOrdonnance > .repcontainer > .repitem > label
 {
 	width:23px;
 	height:23px;
@@ -3538,7 +3540,7 @@ div.kOrdonnance > .repcontainer > .repitem > label
 	margin-top:2.5px;
 }
 
-div.kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"]
+div.sheet-kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"]
 {
 	position:absolute;
 	width:25px;
@@ -3546,12 +3548,12 @@ div.kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"]
 	opacity:0;
 }
 
-div.kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"] ~ span
+div.sheet-kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"] ~ span::before
+div.sheet-kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"] ~ span::before
 {
 	content:"";
 	width:100%;
@@ -3563,118 +3565,118 @@ div.kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"] ~ sp
 	border-radius:5px;
 }
 
-div.kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-kOrdonnance > .repcontainer > .repitem > label > input[type="checkbox"]:checked ~ span::before
 {
 	content:"✓";
 }
 
-div.invocations > span:nth-of-type(1)
+div.sheet-invocations > span:nth-of-type(1)
 {
 	width:calc(100% - 130px - 65px - 65px - 65px - 65px - 60px - 25px - 25px - 25px - 80px);
 }
 
-div.invocations > span:nth-of-type(2)
+div.sheet-invocations > span:nth-of-type(2)
 {
 	width:126px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.invocations > span:nth-of-type(4),
-div.invocations > span:nth-of-type(6)
+div.sheet-invocations > span:nth-of-type(4),
+div.sheet-invocations > span:nth-of-type(6)
 {
 	width:61px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.invocations > span:nth-of-type(3),
-div.invocations > span:nth-of-type(5)
+div.sheet-invocations > span:nth-of-type(3),
+div.sheet-invocations > span:nth-of-type(5)
 {
 	width:65px;
 }
 
-div.invocations > span:nth-of-type(11)
+div.sheet-invocations > span:nth-of-type(11)
 {
 	width:80px;
 	margin-left:auto;
 }
 
-div.invocations > span:nth-of-type(7)
+div.sheet-invocations > span:nth-of-type(7)
 {
 	width:60px;
 }
 
-div.invocations > span:nth-of-type(8),
-div.invocations > span:nth-of-type(9),
-div.invocations > span:nth-of-type(10)
+div.sheet-invocations > span:nth-of-type(8),
+div.sheet-invocations > span:nth-of-type(9),
+div.sheet-invocations > span:nth-of-type(10)
 {
 	width:25px;
 }
 
-div.invocations > span:nth-of-type(8),
-div.invocations > span:nth-of-type(10)
+div.sheet-invocations > span:nth-of-type(8),
+div.sheet-invocations > span:nth-of-type(10)
 {
 	background-color:var(--colLR);
 }
 
-div.invocations > span:nth-of-type(9)
+div.sheet-invocations > span:nth-of-type(9)
 {
 	background-color:var(--colC);
 }
 
-div.invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(1)
+div.sheet-invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(1)
 {
 	width:calc(100% - 30px - 130px - 65px - 65px - 65px - 65px - 60px - 25px - 25px - 25px - 80px);
 	padding-left:2px;
 	font-weight:bold;
 }
 
-div.invocations > .repcontainer > .repitem > select:nth-of-type(1)
+div.sheet-invocations > .repcontainer > .repitem > select:nth-of-type(1)
 {
 	width:130px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.invocations > .repcontainer > .repitem > input[type="number"]:nth-of-type(2),
-div.invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(2),
-div.invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(4)
+div.sheet-invocations > .repcontainer > .repitem > input[type="number"]:nth-of-type(2),
+div.sheet-invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(2),
+div.sheet-invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(4)
 {
 	width:65px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.invocations > .repcontainer > .repitem > select:nth-of-type(2)
+div.sheet-invocations > .repcontainer > .repitem > select:nth-of-type(2)
 {
 	width:65px;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(3),
-div.invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(5)
+div.sheet-invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(3),
+div.sheet-invocations > .repcontainer > .repitem > input[type="text"]:nth-of-type(5)
 {
 	width:65px;
 }
 
-div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2)
+div.sheet-invocations > .repcontainer > .repitem > div:nth-last-of-type(2)
 {
 	width:60px;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="number"]:nth-of-type(2)
+div.sheet-invocations > .repcontainer > .repitem > input[type="number"]:nth-of-type(2)
 {
 	text-align:center;
 }
 
-div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label
+div.sheet-invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label
 {
 	width: 23px;
 	height: 25px;
 	margin:auto;
 }
 
-div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"]
+div.sheet-invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"]
 {
 	position: absolute;
 	width: 25px;
@@ -3682,12 +3684,12 @@ div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > i
 	opacity: 0;
 }
 
-div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"] ~ span
+div.sheet-invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"] ~ span
 {
 	width:100%;
 }
 
-div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"] ~ span::before
+div.sheet-invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"] ~ span::before
 {
 	content: "";
 	width: 100%;
@@ -3699,33 +3701,33 @@ div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > i
 	border-radius: 5px;
 }
 
-div.invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"]:checked ~ span::before
+div.sheet-invocations > .repcontainer > .repitem > div:nth-last-of-type(2) > label > input[type="checkbox"]:checked ~ span::before
 {
 	content: "✓";
 }
 
-div.invocations > .repcontainer > .repitem > div:last-of-type
+div.sheet-invocations > .repcontainer > .repitem > div:last-of-type
 {
 	display:none;
 }
 
-div.invocations > .repcontainer > .repitem > label:nth-of-type(2),
-div.invocations > .repcontainer > .repitem > label:nth-of-type(4)
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(2),
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(4)
 {
     background-color: var(--colLR);
 }
 
-div.invocations > .repcontainer > .repitem > label:nth-of-type(3)
+div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(3)
 {
     background-color: var(--colC);
 }
 
-div.invocations > .repcontainer > .repitem > button[type="roll"]::before
+div.sheet-invocations > .repcontainer > .repitem > button[type="roll"]::before
 {
 	content:"";
 }
 
-div.invocations > .repcontainer > .repitem > button[type="roll"]
+div.sheet-invocations > .repcontainer > .repitem > button[type="roll"]
 {
 	height: 30px;
 	cursor: pointer;
@@ -3738,7 +3740,7 @@ div.invocations > .repcontainer > .repitem > button[type="roll"]
 	background-repeat:no-repeat;
 }
 
-div.invocations > .repcontainer > .repitem > button[type="roll"]:nth-of-type(1)
+div.sheet-invocations > .repcontainer > .repitem > button[type="roll"]:nth-of-type(1)
 {
 	background-image: var(--dice);
 	width: 40px;
@@ -3746,46 +3748,46 @@ div.invocations > .repcontainer > .repitem > button[type="roll"]:nth-of-type(1)
 	margin-right:5px;
 }
 
-div.invocations > .repcontainer > .repitem > button[type="roll"]:nth-of-type(2)
+div.sheet-invocations > .repcontainer > .repitem > button[type="roll"]:nth-of-type(2)
 {
 	width: 30px;
 	background-image: var(--opposition);
 	margin-right:5px;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div
 {
 	display:flex;
     width:100%;
 	flex-wrap:wrap;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label:not(:last-of-type)
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label:not(:last-of-type)
 {
 	width:160px;
 	justify-content:space-between;
 }
 
-div.invocations > .repcontainer > .repitem > div:last-of-type > label:last-of-type
+div.sheet-invocations > .repcontainer > .repitem > div:last-of-type > label:last-of-type
 {
 	width:80px;
 	margin-left:auto;
 }
 
-div.invocations > .repcontainer > .repitem > div:last-of-type > label:last-of-type > span
+div.sheet-invocations > .repcontainer > .repitem > div:last-of-type > label:last-of-type > span
 {
 	width:33px;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label > span
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label > span
 {
 	width:75px;
 	align-items:center;
 	justify-content:flex-start;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label > select,
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label > input[type="number"]
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label > select,
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label > input[type="number"]
 {
 	text-align:center;
 	width:85px;
@@ -3794,30 +3796,30 @@ div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ d
 	min-width:0px;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label:not(:first-of-type):not(:last-of-type)
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > label:not(:first-of-type):not(:last-of-type)
 {
 	margin-left:5px;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > div
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > div
 {
 	width:100%;
 	margin-bottom:2px;
 }
 
-div.invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > div > textarea
+div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div > div > textarea
 {
 	background:transparent;
 	border:1px dotted black;
 }
 
-div.oeuvres
+div.sheet-oeuvres
 {
 	width:100%;
 	justify-content:space-between;
 }
 
-div.oeuvres > label
+div.sheet-oeuvres > label
 {
 	width:calc((100% / 3) - 5px);
 	justify-content:center;
@@ -3827,7 +3829,7 @@ div.oeuvres > label
 	padding-top:5px;
 }
 
-div.oeuvres > label:nth-of-type(1)
+div.sheet-oeuvres > label:nth-of-type(1)
 {
 	background-repeat: no-repeat;
 	background-position-y: 0px, 100%, -1px;
@@ -3835,7 +3837,7 @@ div.oeuvres > label:nth-of-type(1)
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%,rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png"), linear-gradient(to right, rgba(0, 0, 0, 0.7),rgb(0, 0, 0));
 }
 
-div.oeuvres > label:nth-of-type(2)
+div.sheet-oeuvres > label:nth-of-type(2)
 {
 	background-repeat: no-repeat;
 	background-position-y: 0px, 100%, -1px;
@@ -3845,7 +3847,7 @@ div.oeuvres > label:nth-of-type(2)
 	border-right: 2px solid var(--titreGris);
 }
 
-div.oeuvres > label:nth-of-type(3)
+div.sheet-oeuvres > label:nth-of-type(3)
 {
 	margin-right:15px;
 	background-repeat: no-repeat;
@@ -3854,7 +3856,7 @@ div.oeuvres > label:nth-of-type(3)
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%,rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png"), linear-gradient(to right, rgba(194, 072, 049, 0.7),rgb(194, 072, 049));
 }
 
-div.oeuvres > label > span
+div.sheet-oeuvres > label > span
 {
 	font-family: "Kodchasan";
 	width: 80%;
@@ -3866,7 +3868,7 @@ div.oeuvres > label > span
 	font-weight:bold;
 }
 
-div.oeuvres > label > input[type="number"]
+div.sheet-oeuvres > label > input[type="number"]
 {
 	width:80%;
 	border: 2px solid var(--brun);
@@ -3876,7 +3878,7 @@ div.oeuvres > label > input[type="number"]
 	font-size:25px;
 }
 
-label.alchimieVoie
+label.sheet-alchimieVoie
 {
 	width:100%;
 	justify-content:space-between;
@@ -3885,7 +3887,7 @@ label.alchimieVoie
 	margin-right:15px;
 }
 
-label.alchimieVoie > span
+label.sheet-alchimieVoie > span
 {
 	width:100%;
 	font-family: "Times New Roman";
@@ -3897,7 +3899,7 @@ label.alchimieVoie > span
 	letter-spacing: 1px;
 }
 
-label.alchimieVoie > select
+label.sheet-alchimieVoie > select
 {
 	width: 100%;
 	border: 0px;
@@ -3907,14 +3909,14 @@ label.alchimieVoie > select
 	background: transparent;
 }
 
-div.alchimieSConstruct
+div.sheet-alchimieSConstruct
 {
 	width:100%;
 	justify-content:space-around;
 	flex-wrap:wrap;
 }
 
-div.alchimieSConstruct label
+div.sheet-alchimieSConstruct label
 {
 	width: 150px;
 	height: 25px;
@@ -3923,7 +3925,7 @@ div.alchimieSConstruct label
 	margin: 2px;
 }
 
-div.alchimieSConstruct label > input[type="checkbox"]
+div.sheet-alchimieSConstruct label > input[type="checkbox"]
 {
 	position: absolute;
 	width: 25px;
@@ -3931,12 +3933,12 @@ div.alchimieSConstruct label > input[type="checkbox"]
 	opacity: 0;
 }
 
-div.alchimieSConstruct label > span
+div.sheet-alchimieSConstruct label > span
 {
 	width:100%;
 }
 
-div.alchimieSConstruct label > span::before
+div.sheet-alchimieSConstruct label > span::before
 {
 	display: flex;
 	width: 100%;
@@ -3950,14 +3952,14 @@ div.alchimieSConstruct label > span::before
 }
 
 
-div.alchimieSConstruct label > input[type="checkbox"]:checked ~ span::before
+div.sheet-alchimieSConstruct label > input[type="checkbox"]:checked ~ span::before
 {
 	box-shadow: inset 1px 1px 3px black;
 	background: RGB(119, 89, 59);
 	color: white;
 }
 
-div.materiaePrimae
+div.sheet-materiaePrimae
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -3965,18 +3967,18 @@ div.materiaePrimae
 	justify-content:space-between;
 }
 
-div.materiaePrimae > div:first-of-type
+div.sheet-materiaePrimae > div:first-of-type
 {
 	margin-left:10px;
 }
 
-div.materiaePrimae > div
+div.sheet-materiaePrimae > div
 {
 	width:calc((100% / 5) - 10px);
 	flex-wrap:wrap;
 }
 
-div.materiaePrimae > div > label
+div.sheet-materiaePrimae > div > label
 {
 	width:100%;
 	justify-content:space-between;
@@ -3984,7 +3986,7 @@ div.materiaePrimae > div > label
 	margin-top:5px;
 }
 
-div.materiaePrimae > div > label > input[type="number"]
+div.sheet-materiaePrimae > div > label > input[type="number"]
 {
 	width:calc((100% / 2) - 2.5px);
 	text-align:center;
@@ -3995,7 +3997,7 @@ div.materiaePrimae > div > label > input[type="number"]
 	font-size:20px;
 }
 
-div.materiaePrimae > div > label > span
+div.sheet-materiaePrimae > div > label > span
 {
 	width:5px;
 	color:var(--brun);
@@ -4003,35 +4005,35 @@ div.materiaePrimae > div > label > span
 	font-size:20px;
 }
 
-div.constructs
+div.sheet-constructs
 {
 	width:100%;
 	flex-wrap:wrap;
 	justify-content:space-evenly;
 }
 
-div.constructs > h1
+div.sheet-constructs > h1
 {
 	margin-bottom:10px;
 }
 
-div.constructs > input[type="hidden"].cornue[value="0"] ~ div.cornue,
-div.constructs > input[type="hidden"].athanor[value="0"] ~ div.athanor,
-div.constructs > input[type="hidden"].aludel[value="0"] ~ div.aludel,
-div.constructs > input[type="hidden"].forge[value="0"] ~ div.forge,
-div.constructs > input[type="hidden"].alambic[value="0"] ~ div.alambic
+div.sheet-constructs > input[type="hidden"].sheet-cornue[value="0"] ~ div.sheet-cornue,
+div.sheet-constructs > input[type="hidden"].sheet-athanor[value="0"] ~ div.sheet-athanor,
+div.sheet-constructs > input[type="hidden"].sheet-aludel[value="0"] ~ div.sheet-aludel,
+div.sheet-constructs > input[type="hidden"].sheet-forge[value="0"] ~ div.sheet-forge,
+div.sheet-constructs > input[type="hidden"].sheet-alambic[value="0"] ~ div.sheet-alambic
 {
 	display:none;
 }
 
-div.constructs > div
+div.sheet-constructs > div
 {
 	width: 445px;
 	height: 450px;
 	margin-bottom:-50px;
 }
 
-div.constructs > div:nth-of-type(1)
+div.sheet-constructs > div:nth-of-type(1)
 {
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Cornue.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png');
 	background-size: 220px, contain;
@@ -4040,7 +4042,7 @@ div.constructs > div:nth-of-type(1)
 	background-position-y: center;
 }
 
-div.constructs > div:nth-of-type(2)
+div.sheet-constructs > div:nth-of-type(2)
 {
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/athanor.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png');
 	background-size: 150px, contain;
@@ -4049,7 +4051,7 @@ div.constructs > div:nth-of-type(2)
 	background-position-y: calc(50% - 25px), center;
 }
 
-div.constructs > div:nth-of-type(3)
+div.sheet-constructs > div:nth-of-type(3)
 {
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/aludel.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png');
 	background-size: 80px, contain;
@@ -4058,7 +4060,7 @@ div.constructs > div:nth-of-type(3)
 	background-position-y: calc(50% - 25px), center;
 }
 
-div.constructs > div:nth-of-type(4)
+div.sheet-constructs > div:nth-of-type(4)
 {
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Creuset-alchimique.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png');
 	background-size: 150px, contain;
@@ -4067,7 +4069,7 @@ div.constructs > div:nth-of-type(4)
 	background-position-y: calc(50% - 15px), center;
 }
 
-div.constructs > div:nth-of-type(5)
+div.sheet-constructs > div:nth-of-type(5)
 {
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Alambic.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png');
 	background-size: 135px, contain;
@@ -4076,7 +4078,7 @@ div.constructs > div:nth-of-type(5)
 	background-position-y: calc(50% - 25px), center;
 }
 
-div.constructs > div > span:not(:nth-last-of-type(2))
+div.sheet-constructs > div > span:not(:nth-last-of-type(2))
 {
 	position: absolute;
 	font-family: "Times New Roman";
@@ -4086,7 +4088,7 @@ div.constructs > div > span:not(:nth-last-of-type(2))
 	font-variant: small-caps;
 }
 
-div.constructs > div > input[type="number"]
+div.sheet-constructs > div > input[type="number"]
 {
 	position: absolute;
 	text-align: center;
@@ -4099,67 +4101,67 @@ div.constructs > div > input[type="number"]
 	color: black;
 }
 
-div.constructs > div > span:nth-of-type(1)
+div.sheet-constructs > div > span:nth-of-type(1)
 {
 	margin-left: 199px;
 	margin-top: -5px;
 }
 
-div.constructs > div > input[type="number"]:nth-of-type(1)
+div.sheet-constructs > div > input[type="number"]:nth-of-type(1)
 {
 	margin-left: 208px;
 	margin-top: 69px;
 }
 
-div.constructs > div > span:nth-of-type(2)
+div.sheet-constructs > div > span:nth-of-type(2)
 {
 	margin-top: 109px;
 	margin-left: 10px;
 }
 
-div.constructs > div > input[type="number"]:nth-of-type(2)
+div.sheet-constructs > div > input[type="number"]:nth-of-type(2)
 {
 	margin-left: 90px;
 	margin-top: 157px;
 }
 
-div.constructs > div > span:nth-of-type(3)
+div.sheet-constructs > div > span:nth-of-type(3)
 {
 	margin-top: 109px;
 	margin-left: 370px;
 }
 
-div.constructs > div > input[type="number"]:nth-of-type(3)
+div.sheet-constructs > div > input[type="number"]:nth-of-type(3)
 {
 	margin-left: 326px;
 	margin-top: 157px;
 }
 
-div.constructs > div > span:nth-of-type(4)
+div.sheet-constructs > div > span:nth-of-type(4)
 {
 	margin-top: 373px;
 	margin-left: 85px;
 }
 
-div.constructs > div > input[type="number"]:nth-of-type(4)
+div.sheet-constructs > div > input[type="number"]:nth-of-type(4)
 {
 	margin-top: 303px;
 	margin-left: 129px;
 }
 
-div.constructs > div > span:nth-of-type(6)
+div.sheet-constructs > div > span:nth-of-type(6)
 {
 	margin-top: 373px;
 	margin-left: 294px;
 }
 
-div.constructs > div > input[type="number"]:nth-of-type(5)
+div.sheet-constructs > div > input[type="number"]:nth-of-type(5)
 {
 	margin-top: 303px;
 	margin-left: 285px;
 }
 
-div.constructs > div > span:nth-of-type(5)
+div.sheet-constructs > div > span:nth-of-type(5)
 {
 	word-wrap: anywhere;
 	flex-wrap: wrap;
@@ -4174,7 +4176,7 @@ div.constructs > div > span:nth-of-type(5)
 	text-shadow: 1px 1px 5px white;
 }
 
-div.constructs > div:nth-of-type(4) > span:nth-of-type(5)
+div.sheet-constructs > div:nth-of-type(4) > span:nth-of-type(5)
 {
 	word-wrap: anywhere;
 	flex-wrap: wrap;
@@ -4190,7 +4192,7 @@ div.constructs > div:nth-of-type(4) > span:nth-of-type(5)
 	text-align: center;
 }
 
-div.constructs > div > span:nth-of-type(5) > span
+div.sheet-constructs > div > span:nth-of-type(5) > span
 {
 	width: 100%;
 	font-variant: small-caps;
@@ -4199,105 +4201,105 @@ div.constructs > div > span:nth-of-type(5) > span
 	font-size:20px;
 }
 
-div.formules > span:nth-of-type(1)
+div.sheet-formules > span:nth-of-type(1)
 {
 	width:calc(100% - 130px - 65px - 65px - 130px - 130px - 25px - 25px - 25px - 45px);
 }
 
-div.formules > span:nth-of-type(2)
+div.sheet-formules > span:nth-of-type(2)
 {
 	width:126px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.formules > span:nth-of-type(3)
+div.sheet-formules > span:nth-of-type(3)
 {
 	width:65px;
 }
 
-div.formules > span:nth-of-type(4)
+div.sheet-formules > span:nth-of-type(4)
 {
 	width:61px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.formules > span:nth-of-type(5)
+div.sheet-formules > span:nth-of-type(5)
 {
 	width:130px;
 }
 
-div.formules > span:nth-of-type(6)
+div.sheet-formules > span:nth-of-type(6)
 {
 	width:128px;
 	border-left:2px solid var(--brun);
 }
 
-div.formules > span:nth-of-type(7),
-div.formules > span:nth-of-type(8),
-div.formules > span:nth-of-type(9)
+div.sheet-formules > span:nth-of-type(7),
+div.sheet-formules > span:nth-of-type(8),
+div.sheet-formules > span:nth-of-type(9)
 {
 	width:25px;
 	margin-top:0px;
 	padding-top:5px;
 }
 
-div.formules > span:nth-of-type(7),
-div.formules > span:nth-of-type(9)
+div.sheet-formules > span:nth-of-type(7),
+div.sheet-formules > span:nth-of-type(9)
 {
 	background-color:var(--colLR);
 }
 
-div.formules > span:nth-of-type(8)
+div.sheet-formules > span:nth-of-type(8)
 {
 	background-color:var(--colC);
 }
 
-div.formules > span:nth-of-type(10)
+div.sheet-formules > span:nth-of-type(10)
 {
 	width:45px;
 }
 
-div.formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(1)
+div.sheet-formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(1)
 {
 	width:calc(100% - 130px - 65px - 65px - 130px - 130px - 25px - 25px - 25px - 45px - 30px);
 	padding-left:5px;
 	font-weight:bold;
 }
 
-div.formules > .repcontainer > .repitem > select:nth-of-type(1)
+div.sheet-formules > .repcontainer > .repitem > select:nth-of-type(1)
 {
 	width:130px;
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.formules > .repcontainer > .repitem > select:nth-of-type(2),
-div.formules > .repcontainer > .repitem > select:nth-of-type(3)
+div.sheet-formules > .repcontainer > .repitem > select:nth-of-type(2),
+div.sheet-formules > .repcontainer > .repitem > select:nth-of-type(3)
 {
 	width:65px;
 }
 
-div.formules > .repcontainer > .repitem > select:nth-of-type(3)
+div.sheet-formules > .repcontainer > .repitem > select:nth-of-type(3)
 {
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(2),
-div.formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(3)
+div.sheet-formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(2),
+div.sheet-formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(3)
 {
 	width:130px;
 	text-align:center;
 }
 
-div.formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(3)
+div.sheet-formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(3)
 {
 	border-left:2px solid var(--brun);
 }
 
-div.formules > .repcontainer > .repitem > button[type="roll"]
+div.sheet-formules > .repcontainer > .repitem > button[type="roll"]
 {
     width: 40px;
     height: 30px;
@@ -4312,34 +4314,34 @@ div.formules > .repcontainer > .repitem > button[type="roll"]
     margin-left: auto;
 }
 
-div.formules > .repcontainer > .repitem > button[type="roll"]::before
+div.sheet-formules > .repcontainer > .repitem > button[type="roll"]::before
 {
     content:"";
 }
 
-div.formules > .repcontainer > .repitem > select:nth-of-type(1)
+div.sheet-formules > .repcontainer > .repitem > select:nth-of-type(1)
 {
 	border-left:2px solid var(--brun);
 	border-right:2px solid var(--brun);
 }
 
-div.formules > .repcontainer > .repitem > label:nth-of-type(2),
-div.formules > .repcontainer > .repitem > label:nth-of-type(4)
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(2),
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(4)
 {
 	background-color:var(--colLR);
 }
 
-div.formules > .repcontainer > .repitem > label:nth-of-type(3)
+div.sheet-formules > .repcontainer > .repitem > label:nth-of-type(3)
 {
 	background-color:var(--colC);
 }
 
-div.formules > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div
+div.sheet-formules > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div
 {
 	display:flex;
 }
 
-div.formules > .repcontainer > .repitem > div
+div.sheet-formules > .repcontainer > .repitem > div
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -4347,20 +4349,20 @@ div.formules > .repcontainer > .repitem > div
 	display:none;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(1),
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(2)
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(1),
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(2)
 {
 	width:calc(50% - 115px);
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(1) > span
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(1) > span
 {
 	width:120px;
 	align-items:center;
 	justify-content:flex-start;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(2) > span
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(2) > span
 {
 	width:50px;
 	align-items:center;
@@ -4368,46 +4370,46 @@ div.formules > .repcontainer > .repitem > div > label:nth-of-type(2) > span
 	padding-left:5px;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(1) > select
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(1) > select
 {
 	width:calc(100% - 120px);
 	text-align:center;
 	border-bottom:0px;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(2) > select
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(2) > select
 {
 	width:calc(100% - 50px);
 	text-align:center;
 	border-bottom:0px;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(3)
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(3)
 {
 	width:150px;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(4)
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(4)
 {
 	width:80px;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(3) > span
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(3) > span
 {
 	width:100px;
 	align-items:center;
 	justify-content:flex-start;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(4) > span
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(4) > span
 {
 	width:33px;
 	align-items:center;
 	justify-content:flex-start;
 }
 
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(3) > input[type="number"],
-div.formules > .repcontainer > .repitem > div > label:nth-of-type(4) > input[type="number"]
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(3) > input[type="number"],
+div.sheet-formules > .repcontainer > .repitem > div > label:nth-of-type(4) > input[type="number"]
 {
 	width:50px;
 	text-align:center;
@@ -4415,38 +4417,38 @@ div.formules > .repcontainer > .repitem > div > label:nth-of-type(4) > input[typ
 	cursor:auto;
 }
 
-div.formules > .repcontainer > .repitem > div > div
+div.sheet-formules > .repcontainer > .repitem > div > div
 {
 	width:100%;
 }
 
-div.formules > .repcontainer > .repitem > div > div > textarea
+div.sheet-formules > .repcontainer > .repitem > div > div > textarea
 {
 	width:100%;
 	border:1px dotted black;
 	background:transparent;
 }
 
-div.fraternite
+div.sheet-fraternite
 {
 	width:100%;
 	justify-content:space-between;
 	flex-wrap:wrap;
 }
 
-div.fraternite > div.col2
+div.sheet-fraternite > div.sheet-col2
 {
 	margin-top:10px;
 }
 
-div.fraternite > div > label
+div.sheet-fraternite > div > label
 {
 	padding-right:10px;
 	flex-wrap:wrap;
 	border-left:2px solid var(--titreGris);
 }
 
-div.fraternite > div > label > input[type="text"]
+div.sheet-fraternite > div > label > input[type="text"]
 {
 	width:100%;
 	border: 0px;
@@ -4458,8 +4460,8 @@ div.fraternite > div > label > input[type="text"]
 	padding-left:5px;
 }
 
-div.fraternite > div:nth-of-type(1) > div,
-div.fraternite > div:nth-of-type(2) > div
+div.sheet-fraternite > div:nth-of-type(1) > div,
+div.sheet-fraternite > div:nth-of-type(2) > div
 {
 	border-left:2px solid var(--titreGris);
 	margin-left:10px;
@@ -4467,7 +4469,7 @@ div.fraternite > div:nth-of-type(2) > div
 	flex-wrap:wrap;
 }
 
-div.fraternite > div > div > input[type="text"]
+div.sheet-fraternite > div > div > input[type="text"]
 {
 	width:calc(100% - 40px);
 	border: 0px;
@@ -4479,7 +4481,7 @@ div.fraternite > div > div > input[type="text"]
 	padding-left:5px;
 }
 
-div.fraternite > div > div > input[type="number"]
+div.sheet-fraternite > div > div > input[type="number"]
 {
 	width: 30px;
 	height: 30px;
@@ -4489,46 +4491,46 @@ div.fraternite > div > div > input[type="number"]
 	margin-bottom: -5px;
 }
 
-div.fraternite > h1:not(:first-of-type)
+div.sheet-fraternite > h1:not(:first-of-type)
 {
 	margin-top:10px;
 }
 
-div.fraternite > .repcontainer,
-div.fraternite > .repcontainer > .repitem
+div.sheet-fraternite > .repcontainer,
+div.sheet-fraternite > .repcontainer > .repitem
 {
 	width:100%;
 	flex-wrap:wrap;
 }
 
-div.fraternite > .repcontainer > .repitem:not(:first-of-type)
+div.sheet-fraternite > .repcontainer > .repitem:not(:first-of-type)
 {
 	margin-top:5px;
 }
 
-div.fraternite > .repcontainer > .repitem > div
+div.sheet-fraternite > .repcontainer > .repitem > div
 {
 	margin-bottom:2px;
 }
 
-div.fraternite > .repcontainer > .repitem > div > textarea
+div.sheet-fraternite > .repcontainer > .repitem > div > textarea
 {
 	background:transparent;
 	border:1px dotted black;
 	padding-right:0px;
 }
 
-div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
+div.sheet-fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 {
 	padding-bottom:0px;
 }
 
-.rolltemplate-base,
-.rolltemplate-sort,
-.rolltemplate-invocation,
-.rolltemplate-opposition,
-.rolltemplate-formule,
-.rolltemplate-initiative
+.sheet-rolltemplate-base,
+.sheet-rolltemplate-sort,
+.sheet-rolltemplate-invocation,
+.sheet-rolltemplate-opposition,
+.sheet-rolltemplate-formule,
+.sheet-rolltemplate-initiative
 {
 	background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Fond-vieux-papier.jpg");
 	background-size: cover, cover, cover;
@@ -4540,12 +4542,12 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	padding: 4px;
 }
 
-.rolltemplate-base > h1,
-.rolltemplate-sort > h1,
-.rolltemplate-invocation > h1,
-.rolltemplate-opposition > h1,
-.rolltemplate-formule > h1,
-.rolltemplate-initiative > h1
+.sheet-rolltemplate-base > h1,
+.sheet-rolltemplate-sort > h1,
+.sheet-rolltemplate-invocation > h1,
+.sheet-rolltemplate-opposition > h1,
+.sheet-rolltemplate-formule > h1,
+.sheet-rolltemplate-initiative > h1
 {
 	display:flex;
 	width:100%;
@@ -4554,7 +4556,7 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	justify-content:center;
 }
 
-.rolltemplate-base > h2
+.sheet-rolltemplate-base > h2
 {
 	display:flex;
 	width:100%;
@@ -4564,12 +4566,12 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	line-height:14px;
 }
 
-.rolltemplate-base > div,
-.rolltemplate-sort > div,
-.rolltemplate-invocation > div,
-.rolltemplate-opposition > div,
-.rolltemplate-formule > div,
-.rolltemplate-initiative > div
+.sheet-rolltemplate-base > div,
+.sheet-rolltemplate-sort > div,
+.sheet-rolltemplate-invocation > div,
+.sheet-rolltemplate-opposition > div,
+.sheet-rolltemplate-formule > div,
+.sheet-rolltemplate-initiative > div
 {
 	display:flex;
 	width:100%;
@@ -4578,31 +4580,31 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	border-top:1px dotted black;
 }
 
-.rolltemplate-base > div > span,
-.rolltemplate-sort > div > span,
-.rolltemplate-invocation > div > span,
-.rolltemplate-opposition > div > span,
-.rolltemplate-formule > div > span,
-.rolltemplate-initiative > div > span
+.sheet-rolltemplate-base > div > span,
+.sheet-rolltemplate-sort > div > span,
+.sheet-rolltemplate-invocation > div > span,
+.sheet-rolltemplate-opposition > div > span,
+.sheet-rolltemplate-formule > div > span,
+.sheet-rolltemplate-initiative > div > span
 {
 	display:flex;
 	width:100%;
 	justify-content:center;
 }
 
-.rolltemplate-base > div:first-of-type > span:first-of-type,
-.rolltemplate-sort > div:first-of-type > span:first-of-type,
-.rolltemplate-invocation > div:first-of-type > span:first-of-type,
-.rolltemplate-opposition > div:first-of-type > span:first-of-type,
-.rolltemplate-formule > div:first-of-type > span:first-of-type,
-.rolltemplate-initiative > div:first-of-type > span:first-of-type
+.sheet-rolltemplate-base > div:first-of-type > span:first-of-type,
+.sheet-rolltemplate-sort > div:first-of-type > span:first-of-type,
+.sheet-rolltemplate-invocation > div:first-of-type > span:first-of-type,
+.sheet-rolltemplate-opposition > div:first-of-type > span:first-of-type,
+.sheet-rolltemplate-formule > div:first-of-type > span:first-of-type,
+.sheet-rolltemplate-initiative > div:first-of-type > span:first-of-type
 {
 	margin-top:10px;
 }
 
-.rolltemplate-base > div:first-of-type > span:nth-of-type(2),
-.rolltemplate-sort > div:first-of-type > span:nth-of-type(2),
-.rolltemplate-invocation > div:first-of-type > span:nth-of-type(2)
+.sheet-rolltemplate-base > div:first-of-type > span:nth-of-type(2),
+.sheet-rolltemplate-sort > div:first-of-type > span:nth-of-type(2),
+.sheet-rolltemplate-invocation > div:first-of-type > span:nth-of-type(2)
 {
 	font-weight:bold;
 	font-size:15px;
@@ -4613,15 +4615,15 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	word-wrap:anywhere;
 }
 
-.rolltemplate-sort > div:first-of-type > span:nth-of-type(2),
-.rolltemplate-invocation > div:first-of-type > span:nth-of-type(2)
+.sheet-rolltemplate-sort > div:first-of-type > span:nth-of-type(2),
+.sheet-rolltemplate-invocation > div:first-of-type > span:nth-of-type(2)
 {
 	width:50%;
 	justify-content:flex-end;
 }
 
-.rolltemplate-sort > div:first-of-type > span:last-of-type,
-.rolltemplate-invocation > div:first-of-type > span:last-of-type
+.sheet-rolltemplate-sort > div:first-of-type > span:last-of-type,
+.sheet-rolltemplate-invocation > div:first-of-type > span:last-of-type
 {
 	width:calc(50% - 5px);
 	justify-content:flex-start;
@@ -4633,8 +4635,8 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	margin-left:5px;
 }
 
-.rolltemplate-opposition > div:first-of-type > span:last-of-type,
-.rolltemplate-formule > div:first-of-type > span:last-of-type
+.sheet-rolltemplate-opposition > div:first-of-type > span:last-of-type,
+.sheet-rolltemplate-formule > div:first-of-type > span:last-of-type
 {
 	width:100%;
 	justify-content:flex-start;
@@ -4647,57 +4649,57 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	justify-content:center;
 }
 
-.rolltemplate-base > div:first-of-type > span:last-of-type,
-.rolltemplate-sort > div:first-of-type > span:last-of-type,
-.rolltemplate-invocation > div:first-of-type > span:last-of-type,
-.rolltemplate-opposition > div:first-of-type > span:last-of-type,
-.rolltemplate-formule > div:first-of-type > span:last-of-type
+.sheet-rolltemplate-base > div:first-of-type > span:last-of-type,
+.sheet-rolltemplate-sort > div:first-of-type > span:last-of-type,
+.sheet-rolltemplate-invocation > div:first-of-type > span:last-of-type,
+.sheet-rolltemplate-opposition > div:first-of-type > span:last-of-type,
+.sheet-rolltemplate-formule > div:first-of-type > span:last-of-type
 {
 	margin-top:5px;
 	margin-bottom:10px;
 }
 
-.rolltemplate-base > div:last-of-type > span:first-of-type,
-.rolltemplate-sort > div:nth-of-type(2) > span:first-of-type,
-.rolltemplate-invocation > div:nth-of-type(2) > span:first-of-type,
-.rolltemplate-formule > div:nth-of-type(2) > span:first-of-type,
-.rolltemplate-initiative > div > span:last-of-type
+.sheet-rolltemplate-base > div:last-of-type > span:first-of-type,
+.sheet-rolltemplate-sort > div:nth-of-type(2) > span:first-of-type,
+.sheet-rolltemplate-invocation > div:nth-of-type(2) > span:first-of-type,
+.sheet-rolltemplate-formule > div:nth-of-type(2) > span:first-of-type,
+.sheet-rolltemplate-initiative > div > span:last-of-type
 {
 	margin-top:10px;
 }
 
-.rolltemplate-base > div:last-of-type > span:last-of-type,
-.rolltemplate-sort > div:nth-of-type(2) > span:last-of-type,
-.rolltemplate-invocation > div:nth-of-type(2) > span:last-of-type,
-.rolltemplate-formule > div:nth-of-type(2) > span:last-of-type,
-.rolltemplate-initiative > div > span:last-of-type
+.sheet-rolltemplate-base > div:last-of-type > span:last-of-type,
+.sheet-rolltemplate-sort > div:nth-of-type(2) > span:last-of-type,
+.sheet-rolltemplate-invocation > div:nth-of-type(2) > span:last-of-type,
+.sheet-rolltemplate-formule > div:nth-of-type(2) > span:last-of-type,
+.sheet-rolltemplate-initiative > div > span:last-of-type
 {
 	margin-bottom:10px;
 }
 
-.rolltemplate-base > div:last-of-type > span:not(:first-of-type):not(:last-of-type),
-.rolltemplate-sort > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type),
-.rolltemplate-invocation > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type),
-.rolltemplate-formule > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type)
+.sheet-rolltemplate-base > div:last-of-type > span:not(:first-of-type):not(:last-of-type),
+.sheet-rolltemplate-sort > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type),
+.sheet-rolltemplate-invocation > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type),
+.sheet-rolltemplate-formule > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type)
 {
 	width:calc(50% - 5px);
 	line-height:25px;
 }
 
-.rolltemplate-base > div:last-of-type > span:nth-of-type(2),
-.rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(2),
-.rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(2),
-.rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(2)
+.sheet-rolltemplate-base > div:last-of-type > span:nth-of-type(2),
+.sheet-rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(2),
+.sheet-rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(2),
+.sheet-rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(2)
 {
 	justify-content:flex-end;
 	padding-right:5px;
 	margin-top:5px;
 }
 
-.rolltemplate-base > div:last-of-type > span:nth-of-type(3),
-.rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(3),
-.rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(3),
-.rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(3)
+.sheet-rolltemplate-base > div:last-of-type > span:nth-of-type(3),
+.sheet-rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(3),
+.sheet-rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(3),
+.sheet-rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(3)
 {
 	justify-content:flex-start;
 	padding-left:5px;
@@ -4707,10 +4709,10 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	font-size:x-large;
 }
 
-.rolltemplate-base > div:last-of-type > span:nth-of-type(4),
-.rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(4),
-.rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(4),
-.rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(4)
+.sheet-rolltemplate-base > div:last-of-type > span:nth-of-type(4),
+.sheet-rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(4),
+.sheet-rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(4),
+.sheet-rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(4)
 {
 	font-size:20px;
 	line-height:25px;
@@ -4719,26 +4721,26 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	font-style:italic;
 }
 
-.rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(1),
-.rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(3),
-.rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(5),
-.rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(1),
-.rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(3),
-.rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(5),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(1),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(3),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(5),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(6)
+.sheet-rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(1),
+.sheet-rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(3),
+.sheet-rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(5),
+.sheet-rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(1),
+.sheet-rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(3),
+.sheet-rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(5),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(1),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(3),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(5),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(6)
 {
 	margin-top:10px;
 }
 
-.rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(2),
-.rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(4),
-.rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(2),
-.rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(4),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(2),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(4)
+.sheet-rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(2),
+.sheet-rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(4),
+.sheet-rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(2),
+.sheet-rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(4),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(2),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(4)
 {
 	font-weight: bold;
 	font-size: 15px;
@@ -4750,27 +4752,27 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	text-align:justify;
 }
 
-.rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(5),
-.rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(5),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(5),
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(6)
+.sheet-rolltemplate-sort > div:nth-of-type(3) > span:nth-of-type(5),
+.sheet-rolltemplate-invocation > div:nth-of-type(3) > span:nth-of-type(5),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(5),
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(6)
 {
 	text-align:justify;
 }
 
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(5) > span
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(5) > span
 {
 	display:contents;
 	font-weight:bold;
 }
 
-.rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(6)
+.sheet-rolltemplate-formule > div:nth-of-type(3) > span:nth-of-type(6)
 {
 	justify-content:flex-start;
 	word-wrap:anywhere;
 }
 
-.rolltemplate-opposition > div:last-of-type > span
+.sheet-rolltemplate-opposition > div:last-of-type > span
 {
 	width:25px;
 	height:25px;
@@ -4781,32 +4783,32 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	color:black;
 }
 
-.rolltemplate-opposition > div:last-of-type > div
+.sheet-rolltemplate-opposition > div:last-of-type > div
 {
 	width:calc(50% - 12.5px);
 	flex-wrap:wrap;
 }
 
-.rolltemplate-opposition > div:last-of-type > div > span
+.sheet-rolltemplate-opposition > div:last-of-type > div > span
 {
 	display:flex;
 	width:100%;
 	justify-content:center;
 }
 
-.rolltemplate-opposition > div:last-of-type > div > span:first-of-type
+.sheet-rolltemplate-opposition > div:last-of-type > div > span:first-of-type
 {
 	margin-top:10px;
 	word-wrap:anywhere;
 }
 
-.rolltemplate-opposition > div:last-of-type > div > span:nth-of-type(2)
+.sheet-rolltemplate-opposition > div:last-of-type > div > span:nth-of-type(2)
 {
 	line-height:25px;
 	margin-top:5px;
 }
 
-.rolltemplate-opposition > div:last-of-type > div > span:last-of-type
+.sheet-rolltemplate-opposition > div:last-of-type > div > span:last-of-type
 {
 	font-size: 20px;
 	line-height: 25px;
@@ -4815,7 +4817,7 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	font-style: italic;
 }
 
-.rolltemplate-opposition > div:last-of-type > div:last-of-type
+.sheet-rolltemplate-opposition > div:last-of-type > div:last-of-type
 {
 	display:flex;
 	width:100%;
@@ -4823,25 +4825,25 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	margin-top:10px;
 }
 
-.rolltemplate-opposition > div:last-of-type > div:last-of-type > span
+.sheet-rolltemplate-opposition > div:last-of-type > div:last-of-type > span
 {
 	display:flex;
 	width:100%;
 	justify-content:center;
 }
 
-.rolltemplate-opposition > div:last-of-type > div:last-of-type > span:first-of-type
+.sheet-rolltemplate-opposition > div:last-of-type > div:last-of-type > span:first-of-type
 {
 	word-wrap:anywhere;
 }
 
-.rolltemplate-opposition > div:last-of-type > div:last-of-type > span:nth-of-type(2)
+.sheet-rolltemplate-opposition > div:last-of-type > div:last-of-type > span:nth-of-type(2)
 {
 	line-height:25px;
 	margin-top:5px;
 }
 
-.rolltemplate-opposition > div:last-of-type > div:last-of-type > span:last-of-type
+.sheet-rolltemplate-opposition > div:last-of-type > div:last-of-type > span:last-of-type
 {
 	font-size: 20px;
 	line-height: 25px;
@@ -4850,30 +4852,30 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	font-style: italic;
 }
 
-.rolltemplate-base .fail,
-.rolltemplate-sort .fail,
-.rolltemplate-invocation .fail,
-.rolltemplate-opposition .fail,
-.rolltemplate-formule .fail
+.sheet-rolltemplate-base .sheet-fail,
+.sheet-rolltemplate-sort .sheet-fail,
+.sheet-rolltemplate-invocation .sheet-fail,
+.sheet-rolltemplate-opposition .sheet-fail,
+.sheet-rolltemplate-formule .sheet-fail
 {
 	color:red;
 }
 
-.rolltemplate-base .success,
-.rolltemplate-sort .success,
-.rolltemplate-invocation .success,
-.rolltemplate-opposition .success,
-.rolltemplate-formule .success
+.sheet-rolltemplate-base .sheet-success,
+.sheet-rolltemplate-sort .sheet-success,
+.sheet-rolltemplate-invocation .sheet-success,
+.sheet-rolltemplate-opposition .sheet-success,
+.sheet-rolltemplate-formule .sheet-success
 {
 	color:green;
 }
 
-.rolltemplate-base .inlinerollresult,
-.rolltemplate-sort .inlinerollresult,
-.rolltemplate-invocation .inlinerollresult,
-.rolltemplate-opposition .inlinerollresult,
-.rolltemplate-formule .inlinerollresult,
-.rolltemplate-initiative .inlinerollresult
+.sheet-rolltemplate-base .inlinerollresult,
+.sheet-rolltemplate-sort .inlinerollresult,
+.sheet-rolltemplate-invocation .inlinerollresult,
+.sheet-rolltemplate-opposition .inlinerollresult,
+.sheet-rolltemplate-formule .inlinerollresult,
+.sheet-rolltemplate-initiative .inlinerollresult
 {
 	padding:0px;
 	margin:0px;
@@ -4884,35 +4886,48 @@ div.fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	font-size:x-large;
 }
 
-.rolltemplate-base .inlinerollresult.fullcrit,
-.rolltemplate-sort .inlinerollresult.fullcrit,
-.rolltemplate-invocation .inlinerollresult.fullcrit,
-.rolltemplate-opposition .inlinerollresult.fullcrit,
-.rolltemplate-formule .inlinerollresult.fullcrit,
-.rolltemplate-initiative .inlinerollresult.fullcrit
+.sheet-rolltemplate-base .inlinerollresult.fullcrit,
+.sheet-rolltemplate-sort .inlinerollresult.fullcrit,
+.sheet-rolltemplate-invocation .inlinerollresult.fullcrit,
+.sheet-rolltemplate-opposition .inlinerollresult.fullcrit,
+.sheet-rolltemplate-formule .inlinerollresult.fullcrit,
+.sheet-rolltemplate-initiative .inlinerollresult.fullcrit
 {
 	color:red;
 	border:0px;
 }
 
-.rolltemplate-base .inlinerollresult.fullfail,
-.rolltemplate-sort .inlinerollresult.fullfail,
-.rolltemplate-invocation .inlinerollresult.fullfail,
-.rolltemplate-opposition .inlinerollresult.fullfail,
-.rolltemplate-formule .inlinerollresult.fullfail,
-.rolltemplate-initiative .inlinerollresult.fullfail
+.sheet-rolltemplate-base .inlinerollresult.fullfail,
+.sheet-rolltemplate-sort .inlinerollresult.fullfail,
+.sheet-rolltemplate-invocation .inlinerollresult.fullfail,
+.sheet-rolltemplate-opposition .inlinerollresult.fullfail,
+.sheet-rolltemplate-formule .inlinerollresult.fullfail,
+.sheet-rolltemplate-initiative .inlinerollresult.fullfail
 {
 	color:green;
 	border:0px;
 }
 
-.rolltemplate-base .inlinerollresult.importantroll,
-.rolltemplate-sort .inlinerollresult.importantroll,
-.rolltemplate-invocation .inlinerollresult.importantroll,
-.rolltemplate-opposition .inlinerollresult.importantroll,
-.rolltemplate-formule .inlinerollresult.importantroll,
-.rolltemplate-initiative .inlinerollresult.importantroll
+.sheet-rolltemplate-base .inlinerollresult.importantroll,
+.sheet-rolltemplate-sort .inlinerollresult.importantroll,
+.sheet-rolltemplate-invocation .inlinerollresult.importantroll,
+.sheet-rolltemplate-opposition .inlinerollresult.importantroll,
+.sheet-rolltemplate-formule .inlinerollresult.importantroll,
+.sheet-rolltemplate-initiative .inlinerollresult.importantroll
 {
 	color:blue;
 	border:0px;
+}
+
+div.sheet-gsMaillons
+{
+    border-left:2px solid var(--titreGris);
+	flex-wrap:wrap;
+}
+
+div.sheet-gsMaillons .repcontainer,
+div.sheet-gsMaillons .repcontainer > .repitem
+{
+    flex-wrap: wrap;
+    width: 100%;
 }
