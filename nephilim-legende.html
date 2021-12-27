@@ -1,13 +1,13 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="nephilim-legende2.css"/>
+	<link rel="stylesheet" type="text/css" href="nephilim-legende2.css"/>
 </head>
 <body>
-    <!-- remove ahead of this point ! -->
+	<!-- remove ahead of this point ! -->
 <script type="text/worker">
-    /* * * * * * * * * * * * * * * *
-    * Unused semaphore functions  *
-    * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * *
+	* Unused semaphore functions  *
+	* * * * * * * * * * * * * * * */
 	function Semaphore(callback, initial, context)
 	{
 		var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
@@ -35,9 +35,9 @@
 		}
 	};
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Reinits the Ka values of the Pentacle when Dominant Ka changes  *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Reinits the Ka values of the Pentacle when Dominant Ka changes  *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("sheet:opened change:degreMetamorphe change:KaDominant", function()
 	{
 		getAttrs(["degreMetamorphe", "KaDominant"], function(values)
@@ -102,9 +102,9 @@
 		});
 	});
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Performs inits on Select lists (Incarnations, quests, lores)  *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Performs inits on Select lists (Incarnations, quests, lores)  *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("sheet:opened", function() {
 		getAttrs(["version"], function(value)
 		{
@@ -267,10 +267,10 @@
 		});
 	});
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Updates Bonus damage and Veil values on KA updates. *
-     * This should have been splitted into two functions   *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Updates Bonus damage and Veil values on KA updates. *
+	 * This should have been splitted into two functions   *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:kafeu change:kalune sheet:opened", function()
 	{
 		getAttrs([
@@ -299,11 +299,11 @@
 				["voile"]: voile
 			});
 		});
-    });
+	});
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Executes logic on Spell repeating sections (computes bona, mala, default degrees etc) *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Executes logic on Spell repeating sections (computes bona, mala, default degrees etc) *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_mag-sort:mag-sort-ka change:repeating_mag-sort:mag-sort-degre change:repeating_mag-sort:mag-sort-cercle change:kaeau change:kafeu change:katerre change:kaair change:kalune change:mag-basse-degre change:mag-haute-degre change:mag-secret-degre change:KADFeu change:KADEau change:KADTerre change:KADAir change:KADLune change:malusMag sheet:opened", function()
 	{
 		getSectionIDs("repeating_mag-sort", function(idarray)
@@ -358,11 +358,11 @@
 			});
 		});
 
-    });
+	});
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Executes logic on Kabbalah repeating sections (bona, mala, degrees etc) *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Executes logic on Kabbalah repeating sections (bona, mala, degrees etc) *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_kabb-invoc:kabb-invoc-ka change:repeating_kabb-invoc:kabb-invoc-sephira change:kaeau change:kafeu change:katerre change:kaair change:kalune change:malkut change:yesod change:hod change:netzah change:tiphereth change:chesed change:geburah change:binah change:hokmah change:kheter change:ordonnanceBonus change:KADFeu change:KADEau change:KADTerre change:KADAir change:KADLune change:malusMag sheet:opened", function()
 	{
 		getSectionIDs("repeating_kabb-invoc", function(idarray)
@@ -419,11 +419,11 @@
 				});
 			});
 		});
-    });
+	});
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Executes logic on Alchemy reapeating sections & tabs  *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Executes logic on Alchemy reapeating sections & tabs  *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_alch-form:alch-form-art change:repeating_alch-form:alch-form-ka-1 change:repeating_alch-form:alch-form-ka-2 change:repeating_alch-form:alch-form-subs change:repeating_alch-form:alch-form-degre change:repeating_alch-form:alch-oeuvre-noir change:repeating_alch-form:alch-oeuvre-blanc change:repeating_alch-form:alch-oeuvre-rouge change:kaeau change:kafeu change:katerre change:kaair change:kalune change:alch-athanor-kafeu change:alch-athanor-kaeau change:alch-athanor-katerre change:alch-athanor-kalune change:alch-athanor-kaair change:alch-aludel-kafeu change:alch-aludel-kaeau change:alch-aludel-katerre change:alch-aludel-kalune change:alch-aludel-kaair change:alch-alambic-kafeu change:alch-alambic-kaeau change:alch-alambic-katerre change:alch-alambic-kalune change:alch-alambic-kaair change:alch-cornue-kafeu change:alch-cornue-kaeau change:alch-cornue-katerre change:alch-cornue-kalune change:alch-cornue-kaair change:alch-creuset-kafeu change:alch-creuset-kaeau change:alch-creuset-katerre change:alch-creuset-kalune change:alch-creuset-kaair change:alch-oeuvre-noir change:alch-oeuvre-blanc change:alch-oeuvre-rouge sheet:opened", function()
 	{
 		getSectionIDs("repeating_alch-form", function(idarray)
@@ -479,12 +479,12 @@
 				});
 			});
 		});
-    });
+	});
 
-    /* * * * * * * * * * * * * * * * * * *
-     * Computes total Consequences malus *
-     * Should be splitted in 2 functions *
-     * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * *
+	 * Computes total Consequences malus *
+	 * Should be splitted in 2 functions *
+	 * * * * * * * * * * * * * * * * * * */
 	on("change:cons-min change:cons-ser change:cons-gra change:cons-mag-min change:cons-mag-ser change:cons-mag-gra sheet:opened", function()
 	{
 		getAttrs([
@@ -524,9 +524,9 @@
 		});
 	});
 
-    /* * * * * * * * * * * * * * *
-     * Computes ordonnance bonus *
-     * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * *
+	 * Computes ordonnance bonus *
+	 * * * * * * * * * * * * * * */
 	on("remove:repeating_kabb-ord change:repeating_kabb-ord change:repeating_kabb-ord:kabb-ord-respect sheet:opened", function()
 	{
 
@@ -559,9 +559,9 @@
 
 	});
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Beautify Lore display. Such operation seems to be needed for every RS.  *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Beautify Lore display. Such operation seems to be needed for every RS.  *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("sheet:opened change:repeating_savoir-eso", function()
 	{
 		getSectionIDs("repeating_savoir-eso", function(idarray)
@@ -590,9 +590,9 @@
 		});
 	});
 
-    /* * * * * * * * * * * * * * *
-     * Beautify Quests display.  *
-     * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * *
+	 * Beautify Quests display.  *
+	 * * * * * * * * * * * * * * */
 	on("sheet:opened change:repeating_quetes-eso", function()
 	{
 		getSectionIDs("repeating_quetes-eso", function(idarray)
@@ -621,9 +621,9 @@
 		});
 	});
 
-    /* * * * * * * * * * * * * * * * *
-     * Computes length of metamorphe *
-     * * * * * * * * * * * * * * * * */
+	/* * * * * * * * * * * * * * * * *
+	 * Computes length of metamorphe *
+	 * * * * * * * * * * * * * * * * */
 	on("sheet:opened change:repeating_metamorphose remove:repeating_metamorphose", function()
 	{
 		getSectionIDs("repeating_metamorphose", function(idarray)
@@ -1332,15 +1332,15 @@
 						<option value="premiers-megalithes">Les premiers mégalithes</option>
 						<option value="thuatha-danann">Les Tuatha de Danann</option>
 						<option value="mahabharata">Le Mahabharata</option>
-                        <option value="guerre-dieux">La guerre des Dieux</option>
-                        <option value="seigneurs-nuit">Les Seigneurs de la Nuit</option>
+						<option value="guerre-dieux">La guerre des Dieux</option>
+						<option value="seigneurs-nuit">Les Seigneurs de la Nuit</option>
 						<option value="labyrinthe-minos">Le labyrinthe de Minos</option>
 						<option value="reve-akhenathon">Le rêve d'Akhenathon</option>
 						<option value="chute-troie">La Chute de Troie</option>
 						<option value="empire-perse">L'empire perse</option>
-                        <option value="rois-monde">Les Rois du Monde</option>
+						<option value="rois-monde">Les Rois du Monde</option>
 						<option value="empire-babylone">L'empire de Babylone</option>
-                        <option value="siecle-or-athenien">Le siècle d'or athénien</option>
+						<option value="siecle-or-athenien">Le siècle d'or athénien</option>
 						<option value="empire-lexandre">L'empire d'Alexandre</option>
 						<option value="empire-carthage">L'empire de Carthage</option>
 						<option value="empire-rome">L'empire de Rome</option>
@@ -1349,12 +1349,12 @@
 						<option value="croisades">Les croisades</option>
 						<option value="buchers-cathares">Les bûchers cathares</option>
 						<option value="chute-temple">La chute du Temple</option>
-                        <option value="guerre-cent-ans">La guerre de Cent Ans</option>
-                        <option value="chute-grenade">La chute de Grenade</option>
+						<option value="guerre-cent-ans">La guerre de Cent Ans</option>
+						<option value="chute-grenade">La chute de Grenade</option>
 						<option value="arcanes-renaissance">Les arcanes de la Renaissance</option>
 						<option value="secret-porte">Les secrets de la Sublime Porte</option>
-                        <option value="londres-elisabethain">Le londres élisabéthain</option>
-                        <option value="prague-rodolphienne">La Prague rodolphienne</option>
+						<option value="londres-elisabethain">Le londres élisabéthain</option>
+						<option value="prague-rodolphienne">La Prague rodolphienne</option>
 						<option value="cour-roi-soleil">La cour du Roi-Soleil</option>
 						<option value="conspiration-revolution">Les conspirations de la Révolution</option>
 						<option value="vapeurs-victoriennes">Les vapeurs victoriennes</option>
@@ -1724,15 +1724,15 @@
 						<option value="premiers-megalithes">Les premiers mégalithes</option>
 						<option value="thuatha-danann">Les Tuatha de Danann</option>
 						<option value="mahabharata">Le Mahabharata</option>
-                        <option value="guerre-dieux">La guerre des Dieux</option>
-                        <option value="seigneurs-nuit">Les Seigneurs de la Nuit</option>
+						<option value="guerre-dieux">La guerre des Dieux</option>
+						<option value="seigneurs-nuit">Les Seigneurs de la Nuit</option>
 						<option value="labyrinthe-minos">Le labyrinthe de Minos</option>
 						<option value="reve-akhenathon">Le rêve d'Akhenathon</option>
 						<option value="chute-troie">La Chute de Troie</option>
 						<option value="empire-perse">L'empire perse</option>
-                        <option value="rois-monde">Les Rois du Monde</option>
+						<option value="rois-monde">Les Rois du Monde</option>
 						<option value="empire-babylone">L'empire de Babylone</option>
-                        <option value="siecle-or-athenien">Le siècle d'or athénien</option>
+						<option value="siecle-or-athenien">Le siècle d'or athénien</option>
 						<option value="empire-lexandre">L'empire d'Alexandre</option>
 						<option value="empire-carthage">L'empire de Carthage</option>
 						<option value="empire-rome">L'empire de Rome</option>
@@ -1741,12 +1741,12 @@
 						<option value="croisades">Les croisades</option>
 						<option value="buchers-cathares">Les bûchers cathares</option>
 						<option value="chute-temple">La chute du Temple</option>
-                        <option value="guerre-cent-ans">La guerre de Cent Ans</option>
-                        <option value="chute-grenade">La chute de Grenade</option>
+						<option value="guerre-cent-ans">La guerre de Cent Ans</option>
+						<option value="chute-grenade">La chute de Grenade</option>
 						<option value="arcanes-renaissance">Les arcanes de la Renaissance</option>
 						<option value="secret-porte">Les secrets de la Sublime Porte</option>
-                        <option value="londres-elisabethain">Le londres élisabéthain</option>
-                        <option value="prague-rodolphienne">La Prague rodolphienne</option>
+						<option value="londres-elisabethain">Le londres élisabéthain</option>
+						<option value="prague-rodolphienne">La Prague rodolphienne</option>
 						<option value="cour-roi-soleil">La cour du Roi-Soleil</option>
 						<option value="conspiration-revolution">Les conspirations de la Révolution</option>
 						<option value="vapeurs-victoriennes">Les vapeurs victoriennes</option>
@@ -1984,38 +1984,38 @@
 			</label>
 		</div>
 
-        <input type="hidden" name="attr_mag-secret-degre" value="0"/>
+		<input type="hidden" name="attr_mag-secret-degre" value="0"/>
 
-        <div class="gsMaillons col60">
-            <h1>Maillons</h1>
-            <fieldset class="repeating_maillon">
-                <input name="attr_maillon" type="text"/>
-            </fieldset>
-        </div>
+		<div class="gsMaillons col60">
+			<h1>Maillons</h1>
+			<fieldset class="repeating_maillon">
+				<input name="attr_maillon" type="text"/>
+			</fieldset>
+		</div>
 
-        <div class="gsDomains col40">
-            <h1>Domaines</h1>
-            <label>
-                <span>Domaine 1</span>
-                <select name="attr_mag-gs-dom1">
-                    <option value="comprendre">Comprendre</option>
-                    <option value="controler">Contrôler</option>
-                    <option value="creer">Créer</option>
-                    <option value="detruire">Détruire</option>
-                    <option value="transformer">Transformer</option>
-                </select>
-            </label>
-            <label>
-                <span>Domaine 2</span>
-                <select name="attr_mag-gs-dom2">
-                    <option value="comprendre">Comprendre</option>
-                    <option value="controler">Contrôler</option>
-                    <option value="creer">Créer</option>
-                    <option value="detruire">Détruire</option>
-                    <option value="transformer">Transformer</option>
-                </select>
-            </label>
-        </div>
+		<div class="gsDomains col40">
+			<h1>Domaines</h1>
+			<label>
+				<span>Domaine 1</span>
+				<select name="attr_mag-gs-dom1">
+					<option value="comprendre">Comprendre</option>
+					<option value="controler">Contrôler</option>
+					<option value="creer">Créer</option>
+					<option value="detruire">Détruire</option>
+					<option value="transformer">Transformer</option>
+				</select>
+			</label>
+			<label>
+				<span>Domaine 2</span>
+				<select name="attr_mag-gs-dom2">
+					<option value="comprendre">Comprendre</option>
+					<option value="controler">Contrôler</option>
+					<option value="creer">Créer</option>
+					<option value="detruire">Détruire</option>
+					<option value="transformer">Transformer</option>
+				</select>
+			</label>
+		</div>
 
 		<div class="sorts">
 			<h1>Sorts</h1>
@@ -2092,7 +2092,7 @@
 					<label>
 						<span>Difficulté</span>
 						<input type="number" name="attr_mag-sort-current" value="0" readonly />
-                    </label>
+					</label>
 					<label>
 						<span>Page</span>
 						<input type="number" name="attr_mag-sort-page" value="0" />
@@ -2528,7 +2528,7 @@
 						<span>Page</span>
 						<input type="number" name="attr_alch-form-page" value="0" />
 					</label>
-                    <div class="autoex autoex22">
+					<div class="autoex autoex22">
 						<textarea name="attr_alch-form-desc"></textarea>
 						<span name="attr_alch-form-desc"></span>
 					</div>
