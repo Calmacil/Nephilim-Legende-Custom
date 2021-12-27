@@ -5,7 +5,7 @@
 [ ] 3. Sanitize Vecu checks with checkbox en/dis-abling the use of Mnemos
 [ ] 4. Add repeating section for Simulacre Vecus
 [ ] 4b. Duplicate Simulacre Vecus on Action tab
-[ ] 5. Sanitize CSS to match CSE standard
+[?] 5. Sanitize CSS to match CSE standard
 
 [ ] 6. Add config option to display Nephilim / Human
 [ ] 7. Add Selenim tab

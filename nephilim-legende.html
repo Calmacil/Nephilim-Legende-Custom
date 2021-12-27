@@ -1,5 +1,14 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="nephilim-legende2.css"/>
+</head>
+<body>
+    <!-- remove ahead of this point ! -->
 <script type="text/worker">
-	function Semaphore(callback, initial, context) 
+    /* * * * * * * * * * * * * * * *
+    * Unused semaphore functions  *
+    * * * * * * * * * * * * * * * */
+	function Semaphore(callback, initial, context)
 	{
 		var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 
@@ -8,7 +17,7 @@
 		this.context = context || callback;
 		this.args = args.slice(3);
 	}
-	
+
 	Semaphore.prototype = {
 		v: function() { this.lock++; },
 		p: function() {
@@ -25,14 +34,17 @@
 			}
 		}
 	};
-	
-	on("sheet:opened change:degreMetamorphe change:KaDominant", function() 
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * Reinits the Ka values of the Pentacle when Dominant Ka changes  *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	on("sheet:opened change:degreMetamorphe change:KaDominant", function()
 	{
-		getAttrs(["degreMetamorphe", "KaDominant"], function(values) 
+		getAttrs(["degreMetamorphe", "KaDominant"], function(values)
 		{
 			var KAD = values["KaDominant"];
 			var degre = parseInt(values["degreMetamorphe"], 10)||0;
-			
+
 			if(KAD == "Feu")
 			{
 				setAttrs({
@@ -43,7 +55,7 @@
 					KADEau: 0
 				});
 			}
-			
+
 			if(KAD == "Terre")
 			{
 				setAttrs({
@@ -54,7 +66,7 @@
 					KADEau: 0
 				});
 			}
-			
+
 			if(KAD == "Air")
 			{
 				setAttrs({
@@ -65,7 +77,7 @@
 					KADEau: 0
 				});
 			}
-			
+
 			if(KAD == "Lune")
 			{
 				setAttrs({
@@ -76,7 +88,7 @@
 					KADEau: 0
 				});
 			}
-			
+
 			if(KAD == "Eau")
 			{
 				setAttrs({
@@ -89,37 +101,40 @@
 			}
 		});
 	});
-	
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * Performs inits on Select lists (Incarnations, quests, lores)  *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("sheet:opened", function() {
-		getAttrs(["version"], function(value) 
+		getAttrs(["version"], function(value)
 		{
 			var version = value["version"];
-			
+
 			if(version < 2)
 			{
-				getSectionIDs("repeating_epoques-incarnation", function(idarray) 
+				getSectionIDs("repeating_epoques-incarnation", function(idarray)
 				{
-					_.each(idarray,function(id) 
+					_.each(idarray,function(id)
 					{
-						getAttrs(["repeating_epoques-incarnation_"+id+"_epoque", "repeating_epoques-incarnation_"+id+"_vecus-passe1", "repeating_epoques-incarnation_"+id+"_degres_vecu_passe1", "repeating_epoques-incarnation_"+id+"_vecus-passe2", "repeating_epoques-incarnation_"+id+"_degres_vecu_passe2"], function (v) 
+						getAttrs(["repeating_epoques-incarnation_"+id+"_epoque", "repeating_epoques-incarnation_"+id+"_vecus-passe1", "repeating_epoques-incarnation_"+id+"_degres_vecu_passe1", "repeating_epoques-incarnation_"+id+"_vecus-passe2", "repeating_epoques-incarnation_"+id+"_degres_vecu_passe2"], function (v)
 						{
 							var epoque = v["repeating_epoques-incarnation_"+id+"_epoque"];
 							var vecus1 = v["repeating_epoques-incarnation_"+id+"_vecus-passe1"];
 							var vecus2 = v["repeating_epoques-incarnation_"+id+"_vecus-passe2"];
 							var vecusD1 = v["repeating_epoques-incarnation_"+id+"_degres_vecu_passe1"];
 							var vecusD2 = v["repeating_epoques-incarnation_"+id+"_degres_vecu_passe2"];
-							
+
 							setAttrs({
 								["repeating_epoques-incarnation_"+id+"_vecu"]: vecus1,
-								["repeating_epoques-incarnation_"+id+"_degres_vecu_passe"]: vecusD1								
+								["repeating_epoques-incarnation_"+id+"_degres_vecu_passe"]: vecusD1
 							});
-							
+
 							console.log(epoque);
 							console.log(vecus1);
 							console.log(vecusD1);
 							console.log(vecus2);
 							console.log(vecusD2);
-							
+
 							var newrowid = generateRowID();
 							var newrowattrs = {};
 							newrowattrs["repeating_epoques-incarnation_" + newrowid + "_epoque"] = epoque;
@@ -127,19 +142,19 @@
 							newrowattrs["repeating_epoques-incarnation_" + newrowid + "_degres_vecu_passe"] = vecusD2;
 							setAttrs(newrowattrs);
 						});
-						
+
 					});
 				});
-				
-				getSectionIDs("repeating_quetes-eso", function(idarray) 
+
+				getSectionIDs("repeating_quetes-eso", function(idarray)
 				{
-					_.each(idarray,function(id) 
+					_.each(idarray,function(id)
 					{
-						getAttrs(["repeating_quetes-eso_"+id+"_quete_eso"], function (v) 
+						getAttrs(["repeating_quetes-eso_"+id+"_quete_eso"], function (v)
 						{
 							var quete = v["repeating_quetes-eso_"+id+"_quete_eso"];
 							var result;
-							
+
 							if(quete == "0")
 								result = "";
 							else if(quete == "arcadia")
@@ -174,24 +189,24 @@
 								result = "Toison d'Or";
 							else if(quete == "tresor-templiers")
 								result = "Trésor des Templiers";
-							
+
 							setAttrs({
-								["repeating_quetes-eso_"+id+"_quete_eso"]: result							
+								["repeating_quetes-eso_"+id+"_quete_eso"]: result
 							});
 						});
-						
+
 					});
 				});
-				
-				getSectionIDs("repeating_savoir-eso", function(idarray) 
+
+				getSectionIDs("repeating_savoir-eso", function(idarray)
 				{
-					_.each(idarray,function(id) 
+					_.each(idarray,function(id)
 					{
-						getAttrs(["repeating_savoir-eso_"+id+"_savoir_eso"], function (v) 
+						getAttrs(["repeating_savoir-eso_"+id+"_savoir_eso"], function (v)
 						{
 							var savoir = v["repeating_savoir-eso_"+id+"_savoir_eso"];
 							var result;
-							
+
 							if(savoir == "0")
 								result = "";
 							else if(savoir == "666")
@@ -236,61 +251,68 @@
 								result = "Synarchie";
 							else if(savoir == "templiers")
 								result = "Templiers";
-								
+
 							setAttrs({
-								["repeating_savoir-eso_"+id+"_savoir_eso"]: result							
+								["repeating_savoir-eso_"+id+"_savoir_eso"]: result
 							});
 						});
-						
+
 					});
 				});
-				
+
 				setAttrs({
-					["version"]: "2"						
+					["version"]: "2"
 				});
 			}
 		});
 	});
-	
-	on("change:kafeu change:kalune sheet:opened", function() 
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * Updates Bonus damage and Veil values on KA updates. *
+     * This should have been splitted into two functions   *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	on("change:kafeu change:kalune sheet:opened", function()
 	{
 		getAttrs([
 		"kafeu", "kalune"
-		], function(values) 
+		], function(values)
 		{
 
 			var kaFeu = parseInt(values["kafeu"], 10)||0;
 			var kaLune = parseInt(values["kalune"], 10)||0;
 			var bonusDom = 0;
 			var voile = 0;
-			
+
 			if(kaFeu >= 5 && kaFeu < 10)
 				bonusDom = 1;
 			else if(kaFeu >= 10)
 				bonusDom = 2;
-				
+
 			if(kaLune >= 5 && kaLune < 10)
 				voile = 1;
 			else if(kaLune >= 10)
 				voile = 2;
-				
-			
+
+
 			setAttrs({
-				["bonus-dom"]: bonusDom,			
-				["voile"]: voile		
+				["bonus-dom"]: bonusDom,
+				["voile"]: voile
 			});
 		});
     });
 
-	on("change:repeating_mag-sort:mag-sort-ka change:repeating_mag-sort:mag-sort-degre change:repeating_mag-sort:mag-sort-cercle change:kaeau change:kafeu change:katerre change:kaair change:kalune change:mag-basse-degre change:mag-haute-degre change:mag-secret-degre change:KADFeu change:KADEau change:KADTerre change:KADAir change:KADLune change:malusMag sheet:opened", function() 
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * Executes logic on Spell repeating sections (computes bona, mala, default degrees etc) *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	on("change:repeating_mag-sort:mag-sort-ka change:repeating_mag-sort:mag-sort-degre change:repeating_mag-sort:mag-sort-cercle change:kaeau change:kafeu change:katerre change:kaair change:kalune change:mag-basse-degre change:mag-haute-degre change:mag-secret-degre change:KADFeu change:KADEau change:KADTerre change:KADAir change:KADLune change:malusMag sheet:opened", function()
 	{
-		getSectionIDs("repeating_mag-sort", function(idarray) 
+		getSectionIDs("repeating_mag-sort", function(idarray)
 		{
-			_.each(idarray,function(id) 
+			_.each(idarray,function(id)
 			{
 				getAttrs([
 				"repeating_mag-sort_"+id+"_mag-sort-ka", "repeating_mag-sort_"+id+"_mag-sort-degre", "repeating_mag-sort_"+id+"_mag-sort-cercle",
-				"kaeau", "kafeu", "katerre", "kaair", "kalune", "KADFeu", "KADEau", "KADTerre", "KADAir", "KADLune", 
+				"kaeau", "kafeu", "katerre", "kaair", "kalune", "KADFeu", "KADEau", "KADTerre", "KADAir", "KADLune",
 				"mag-basse-degre", "mag-haute-degre", "mag-secret-degre", "malusMag"
 				], function(values) {
 
@@ -299,121 +321,127 @@
 					var KADT = parseInt(values["KADTerre"], 10)||0;
 					var KADA = parseInt(values["KADAir"], 10)||0;
 					var KADL = parseInt(values["KADLune"], 10)||0;
-					
+
 					var malusMag = parseInt(values["malusMag"], 10)||0;
 
 					var ka_element = values["repeating_mag-sort_"+id+"_mag-sort-ka"];
 					var ka_element_value = parseInt(values[ka_element], 10)||0;
-				   
+
 					var mag_voie = values["repeating_mag-sort_"+id+"_mag-sort-cercle"];
 					var mag_voie_value = parseInt(values[mag_voie], 10)||0;
 
 					var degre = parseInt(values["repeating_mag-sort_"+id+"_mag-sort-degre"], 10)||0;
-					
+
 					var metamorphose = 0;
-					
+
 					if(ka_element == "kaair")
 						metamorphose = KADA;
-					
+
 					if(ka_element == "kafeu")
 						metamorphose = KADF;
-						
+
 					if(ka_element == "kaeau")
 						metamorphose = KADE;
-						
+
 					if(ka_element == "katerre")
-						metamorphose = KADT;	
-						
+						metamorphose = KADT;
+
 					if(ka_element == "kalune")
 						metamorphose = KADL;
 
 					var total = (ka_element_value + mag_voie_value + metamorphose - malusMag) - degre;
-					
+
 					setAttrs({
-						["repeating_mag-sort_"+id+"_mag-sort-current"]: total							
+						["repeating_mag-sort_"+id+"_mag-sort-current"]: total
 					});
 				});
 			});
 		});
-        
+
     });
-	
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * Executes logic on Kabbalah repeating sections (bona, mala, degrees etc) *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_kabb-invoc:kabb-invoc-ka change:repeating_kabb-invoc:kabb-invoc-sephira change:kaeau change:kafeu change:katerre change:kaair change:kalune change:malkut change:yesod change:hod change:netzah change:tiphereth change:chesed change:geburah change:binah change:hokmah change:kheter change:ordonnanceBonus change:KADFeu change:KADEau change:KADTerre change:KADAir change:KADLune change:malusMag sheet:opened", function()
-	{		
-		getSectionIDs("repeating_kabb-invoc", function(idarray) 
+	{
+		getSectionIDs("repeating_kabb-invoc", function(idarray)
 		{
 			console.log("Metamorphose");
-			_.each(idarray,function(id) 
+			_.each(idarray,function(id)
 			{
 				getAttrs([
 				"repeating_kabb-invoc_"+id+"_kabb-invoc-ka", "repeating_kabb-invoc_"+id+"_kabb-invoc-sephira",
 				"kaeau", "kafeu", "katerre", "kaair", "kalune", "KADFeu", "KADEau", "KADTerre", "KADAir", "KADLune",
 				"malkut", "yesod", "hod", "netzah", "tiphereth", "chesed", "geburah", "binah", "hokmah", "kheter", "ordonnanceBonus", "malusMag"
 				], function(values) {
-				
+
 					var KADF = parseInt(values["KADFeu"], 10)||0;
 					var KADE = parseInt(values["KADEau"], 10)||0;
 					var KADT = parseInt(values["KADTerre"], 10)||0;
 					var KADA = parseInt(values["KADAir"], 10)||0;
 					var KADL = parseInt(values["KADLune"], 10)||0;
-					
+
 					var malusMag = parseInt(values["malusMag"], 10)||0;
-				
+
 					var ka_element = values["repeating_kabb-invoc_"+id+"_kabb-invoc-ka"];
 					var ka_element_value = parseInt(values[ka_element], 10)||0;
 
 					var kabb_sephira = values["repeating_kabb-invoc_"+id+"_kabb-invoc-sephira"];
 					var kabb_sephira_value = parseInt(values[kabb_sephira], 10)||0;
-					
+
 					var ordonnance = parseInt(values["ordonnanceBonus"], 10)||0;
-					
+
 					var metamorphose = 0;
-					
+
 					if(ka_element == "kaair")
 						metamorphose = KADA;
-					
+
 					if(ka_element == "kafeu")
 						metamorphose = KADF;
-						
+
 					if(ka_element == "kaeau")
 						metamorphose = KADE;
-						
+
 					if(ka_element == "katerre")
-						metamorphose = KADT;	
-						
+						metamorphose = KADT;
+
 					if(ka_element == "kalune")
 						metamorphose = KADL;
-					
+
 					console.log("Metamorphose : "+metamorphose);
 
 					var total = (ka_element_value + kabb_sephira_value + ordonnance + metamorphose - malusMag);
 
 					setAttrs({
-						["repeating_kabb-invoc_"+id+"_kabb-invoc-current"]: total							
+						["repeating_kabb-invoc_"+id+"_kabb-invoc-current"]: total
 					});
 				});
 			});
 		});
     });
-	
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * Executes logic on Alchemy reapeating sections & tabs  *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_alch-form:alch-form-art change:repeating_alch-form:alch-form-ka-1 change:repeating_alch-form:alch-form-ka-2 change:repeating_alch-form:alch-form-subs change:repeating_alch-form:alch-form-degre change:repeating_alch-form:alch-oeuvre-noir change:repeating_alch-form:alch-oeuvre-blanc change:repeating_alch-form:alch-oeuvre-rouge change:kaeau change:kafeu change:katerre change:kaair change:kalune change:alch-athanor-kafeu change:alch-athanor-kaeau change:alch-athanor-katerre change:alch-athanor-kalune change:alch-athanor-kaair change:alch-aludel-kafeu change:alch-aludel-kaeau change:alch-aludel-katerre change:alch-aludel-kalune change:alch-aludel-kaair change:alch-alambic-kafeu change:alch-alambic-kaeau change:alch-alambic-katerre change:alch-alambic-kalune change:alch-alambic-kaair change:alch-cornue-kafeu change:alch-cornue-kaeau change:alch-cornue-katerre change:alch-cornue-kalune change:alch-cornue-kaair change:alch-creuset-kafeu change:alch-creuset-kaeau change:alch-creuset-katerre change:alch-creuset-kalune change:alch-creuset-kaair change:alch-oeuvre-noir change:alch-oeuvre-blanc change:alch-oeuvre-rouge sheet:opened", function()
-	{		
-		getSectionIDs("repeating_alch-form", function(idarray) 
+	{
+		getSectionIDs("repeating_alch-form", function(idarray)
 		{
-			_.each(idarray,function(id) 
+			_.each(idarray,function(id)
 			{
 				getAttrs([
 				"repeating_alch-form_"+id+"_alch-form-art", "repeating_alch-form_"+id+"_alch-form-ka-1", "repeating_alch-form_"+id+"_alch-form-ka-2", "repeating_alch-form_"+id+"_alch-form-subs", "repeating_alch-form_"+id+"_alch-form-degre",
-				"kaeau", "kafeu", "katerre", "kaair", "kalune", 
+				"kaeau", "kafeu", "katerre", "kaair", "kalune",
 				"alch-oeuvre-noir", "alch-oeuvre-blanc", "alch-oeuvre-rouge",
 				"alch-athanor-kafeu", "alch-athanor-kaeau", "alch-athanor-katerre", "alch-athanor-kalune", "alch-athanor-kaair",
 				"alch-aludel-kafeu", "alch-aludel-kaeau", "alch-aludel-katerre", "alch-aludel-kalune", "alch-aludel-kaair",
 				"alch-alambic-kafeu", "alch-alambic-kaeau", "alch-alambic-katerre", "alch-alambic-kalune", "alch-alambic-kaair",
 				"alch-cornue-kafeu", "alch-cornue-kaeau", "alch-cornue-katerre", "alch-cornue-kalune", "alch-cornue-kaair",
 				"alch-creuset-kafeu", "alch-creuset-kaeau", "alch-creuset-katerre", "alch-creuset-kalune", "alch-creuset-kaair"
-				], function(values) 
+				], function(values)
 				{
-				
+
 					// On récupère la valeur de la substance qui correspondt à l'id du construct
 					var construct = values["repeating_alch-form_"+id+"_alch-form-subs"];
 					var ka_element1 = values["repeating_alch-form_"+id+"_alch-form-ka-1"];
@@ -422,13 +450,13 @@
 					// On construit l'id du ka concerné du construct sous la forme : "contruct-kaelement". Cela permet de récupérer la bonne valeur
 					var ka_element_value1 = parseInt(values[construct + "-" + ka_element1], 10)||0;
 					var ka_element_value2 = parseInt(values[construct + "-" + ka_element2], 10)||0;
-				   
+
 					var alch_oeuvre = values["repeating_alch-form_"+id+"_alch-form-art"];
 					var alch_oeuvre_value = parseInt(values[alch_oeuvre], 10)||0;
 					var degre = parseInt(values["repeating_alch-form_"+id+"_alch-form-degre"], 10)||0;
-					
+
 					var totalKa = 0;
-					
+
 					if(alch_oeuvre == "alch-oeuvre-blanc")
 					{
 						if(ka_element1 != "0" && ka_element2 != "0")
@@ -442,108 +470,118 @@
 						totalKa = ka_element_value1 + ka_element_value2;
 
 					var total = (totalKa + alch_oeuvre_value) - degre;
-										
+
 					setAttrs({
-						["repeating_alch-form_"+id+"_alch-form-current"]: total							
+						["repeating_alch-form_"+id+"_alch-form-current"]: total
 					});
-					
-					
+
+
 				});
 			});
 		});
     });
 
-	on("change:cons-min change:cons-ser change:cons-gra change:cons-mag-min change:cons-mag-ser change:cons-mag-gra sheet:opened", function() 
+    /* * * * * * * * * * * * * * * * * * *
+     * Computes total Consequences malus *
+     * Should be splitted in 2 functions *
+     * * * * * * * * * * * * * * * * * * */
+	on("change:cons-min change:cons-ser change:cons-gra change:cons-mag-min change:cons-mag-ser change:cons-mag-gra sheet:opened", function()
 	{
 		getAttrs([
 		"cons-min", "cons-ser", "cons-gra",
 		"cons-mag-min", "cons-mag-ser", "cons-mag-gra"
-		], function(values) 
+		], function(values)
 		{
 			const phyM = values["cons-min"];
 			const phyS = values["cons-ser"];
 			const phyG = values["cons-gra"];
-			
+
 			const magM = values["cons-mag-min"];
 			const magS = values["cons-mag-ser"];
 			const magG = values["cons-mag-gra"];
-			
+
 			var totalPhy = 0;
 			var totalMag = 0;
-			
+
 			if(phyM == "on")
 				totalPhy += 2;
 			if(phyS == "on")
 				totalPhy += 4;
 			if(phyG == "on")
 				totalPhy += 6;
-				
+
 			if(magM == "on")
 				totalMag += 2;
 			if(magS == "on")
 				totalMag += 4;
 			if(magG == "on")
 				totalMag += 6;
-				
+
 			setAttrs({
-				["malusMag"]: totalMag,	
-				["malusPhy"]: totalPhy		
+				["malusMag"]: totalMag,
+				["malusPhy"]: totalPhy
 			});
 		});
 	});
-	
-	on("remove:repeating_kabb-ord change:repeating_kabb-ord change:repeating_kabb-ord:kabb-ord-respect sheet:opened", function() 
+
+    /* * * * * * * * * * * * * * *
+     * Computes ordonnance bonus *
+     * * * * * * * * * * * * * * */
+	on("remove:repeating_kabb-ord change:repeating_kabb-ord change:repeating_kabb-ord:kabb-ord-respect sheet:opened", function()
 	{
-		
+
 		var total = 0;
-		
+
 		setAttrs({
-			ordonnanceBonus: 0						
+			ordonnanceBonus: 0
 		});
-		
-		getSectionIDs("repeating_kabb-ord", function(idarray) 
+
+		getSectionIDs("repeating_kabb-ord", function(idarray)
 		{
-			_.each(idarray,function(id) 
+			_.each(idarray,function(id)
 			{
 				getAttrs([
 				"repeating_kabb-ord_"+id+"_kabb-ord-respect"
-				], function(values) 
+				], function(values)
 				{
 					var ordonnanceR = values["repeating_kabb-ord_"+id+"_kabb-ord-respect"];
 
 					if(ordonnanceR != "on")
 						total += 1;
-						
+
 					setAttrs({
-						ordonnanceBonus: total						
+						ordonnanceBonus: total
 					});
 				});
 			});
 		});
-		
-		
+
+
 	});
 
-	on("sheet:opened change:repeating_savoir-eso", function() 
-	{			
-		getSectionIDs("repeating_savoir-eso", function(idarray) 
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * Beautify Lore display. Such operation seems to be needed for every RS.  *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	on("sheet:opened change:repeating_savoir-eso", function()
+	{
+		getSectionIDs("repeating_savoir-eso", function(idarray)
 		{
-			_.each(idarray,function(id) 
+			_.each(idarray,function(id)
 			{
 				getAttrs([
 				"repeating_savoir-eso_"+id+"_savoir_eso"
-				], function(values) 
+				], function(values)
 				{
 					const savoir = values["repeating_savoir-eso_"+id+"_savoir_eso"];
 					var result = "";
-					
+
 					if(savoir == "0")
 						result = "";
 					else
 						result = savoir;
-					
+
 					console.log(result);
-					
+
 					setAttrs({
 						["repeating_savoir-eso_"+id+"_savoir_eso_perso"]: result
 					});
@@ -551,27 +589,30 @@
 			});
 		});
 	});
-	
-	on("sheet:opened change:repeating_quetes-eso", function() 
-	{			
-		getSectionIDs("repeating_quetes-eso", function(idarray) 
+
+    /* * * * * * * * * * * * * * *
+     * Beautify Quests display.  *
+     * * * * * * * * * * * * * * */
+	on("sheet:opened change:repeating_quetes-eso", function()
+	{
+		getSectionIDs("repeating_quetes-eso", function(idarray)
 		{
-			_.each(idarray,function(id) 
+			_.each(idarray,function(id)
 			{
 				getAttrs([
 				"repeating_quetes-eso_"+id+"_quete_eso"
-				], function(values) 
+				], function(values)
 				{
 					const quete = values["repeating_quetes-eso_"+id+"_quete_eso"];
 					var result = "";
-					
+
 					if(quete == "0")
 						result = "";
 					else
 						result = quete;
-					
+
 					console.log(result);
-					
+
 					setAttrs({
 						["repeating_quetes-eso_"+id+"_quete_eso_perso"]: result
 					});
@@ -580,15 +621,18 @@
 		});
 	});
 
-	on("sheet:opened change:repeating_metamorphose remove:repeating_metamorphose", function() 
+    /* * * * * * * * * * * * * * * * *
+     * Computes length of metamorphe *
+     * * * * * * * * * * * * * * * * */
+	on("sheet:opened change:repeating_metamorphose remove:repeating_metamorphose", function()
 	{
-		getSectionIDs("repeating_metamorphose", function(idarray) 
+		getSectionIDs("repeating_metamorphose", function(idarray)
 		{
 			var length = idarray.length;
-			
+
 			getAttrs([
 			"degreMetamorphe"
-			], function(values) 
+			], function(values)
 			{
 				const meta = values["degreMetamorphe"];
 				if(meta > length)
@@ -598,11 +642,11 @@
 						degreMetamorphe:0
 					});
 				}
-				
+
 				setAttrs({
 					dMeta: length
 				});
-				
+
 				console.log("Meta : "+meta);
 			});
 		});
@@ -627,10 +671,10 @@
 		</label>
 		<div class="options">
 			<label>
-				<input type="checkbox" name="attr_options" value="1" />
+				<input type="checkbox" name="attr_options" value="0" />
 				<span></span>
 			</label>
-			<input type="hidden" name="attr_options" value="1" />
+			<input type="hidden" name="attr_options" value="0" />
 			<div>
 				<label>
 					<input type="checkbox" name="attr_gm" value="/w gm" />
@@ -655,65 +699,65 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<input type="hidden" name="attr_practice_magie" class="magie" value="0" />
 	<input type="hidden" name="attr_practice_kabb" class="kabbale" value="0" />
 	<input type="hidden" name="attr_practice_alch" class="alchimie" value="0" />
-	
+
 	<div class="menu">
 		<label>
 			<input type="radio" name="attr_tab" value="1" />
 			<span title="Nephilim"></span>
 		</label>
-		
+
 		<label>
 			<input type="radio" name="attr_tab" value="2" />
 			<span title="Simulacre"></span>
 		</label>
-		
+
 		<label>
 			<input type="radio" name="attr_tab" value="3" />
 			<span title="Epoques d'incarnation"></span>
 		</label>
-		
+
 		<label>
 			<input type="radio" name="attr_tab" value="4" />
 			<span title="Combat"></span>
 		</label>
-		
+
 		<label>
 			<input type="radio" name="attr_tab" value="10" />
 			<span title="Arcadia"></span>
-		</label>		
-		
+		</label>
+
 		<label>
 			<input type="radio" name="attr_tab" value="5" />
 			<span title="Magie"></span>
 		</label>
-		
+
 		<label>
 			<input type="radio" name="attr_tab" value="6" />
 			<span title="Kabbale"></span>
 		</label>
-			
+
 		<label>
 			<input type="radio" name="attr_tab" value="7" />
 			<span title="Alchimie"></span>
 		</label>
-		
+
 		<label>
 			<input type="radio" name="attr_tab" value="8" />
 			<span title="Constructs"></span>
 		</label>
-		
+
 		<label>
 			<input type="radio" name="attr_tab" value="9" />
 			<span title="Fraternité"></span>
 		</label>
 	</div>
-	
+
 	<input type="hidden" name="attr_tab" class="menu" value="1" />
-	
+
 	<div class="tab1">
 		<div class="col">
 			<label class="headerName">
@@ -756,47 +800,47 @@
 					<input type="checkbox" name="attr_degreMetamorphe" value="1" />
 					<span title="1"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="2" />
 					<span title="2"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="3" />
 					<span title="3"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="4" />
 					<span title="4"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="5" />
 					<span title="5"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="6" />
 					<span title="6"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="7" />
 					<span title="7"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="8" />
 					<span title="8"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="9" />
 					<span title="9"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 					<span title="10"></span>
@@ -810,22 +854,22 @@
 					<span>Ka-Feu</span>
 				</button>
 				<input type="number" name="attr_kafeu" value="1" min="1" />
-				
+
 				<button type="roll" name="roll_katerre" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Terre}} {{seuil=[[(@{katerre}+(?{Bonus/Malus ?|0}+@{KADTerre})-@{malusMag})*10]]}}">
 					<span>Ka-Terre</span>
 				</button>
 				<input type="number" name="attr_katerre" value="1" min="1" />
-				
+
 				<button type="roll" name="roll_kaair" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Air}} {{seuil=[[(@{kaair}+(?{Bonus/Malus ?|0}+@{KADAir})-@{malusMag})*10]]}}">
 					<span>Ka-Air</span>
 				</button>
 				<input type="number" name="attr_kaair" value="1" min="1" />
-				
+
 				<button type="roll" name="roll_kalune" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Lune}} {{seuil=[[(@{kalune}+(?{Bonus/Malus ?|0}+@{KADLune})-@{malusMag})*10]]}}">
 					<span>Ka-Lune</span>
 				</button>
 				<input type="number" name="attr_kalune" value="1" min="1" />
-				
+
 				<button type="roll" name="roll_kaeau" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Eau}} {{seuil=[[(@{kaeau}+(?{Bonus/Malus ?|0}+@{KADEau})-@{malusMag})*10]]}}">
 					<span>Ka-Eau</span>
 				</button>
@@ -1073,7 +1117,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="tab2">
 		<div class="simulacreVecu">
 			<h1>Simulacre</h1>
@@ -1089,46 +1133,46 @@
 			</select>
 			<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu}}} {{jet=[[1d100]]}} @{approche}"></button>
 		</div>
-		
+
 		<div class="col2">
 			<div class="simulacreIdentite1">
 				<label>
 					<span>Nom</span>
 					<input type="text" name="attr_simu_name" />
 				</label>
-				
+
 				<label>
 					<span>Ka-Soleil</span>
 					<input type="number" name="attr_simu-kasoleil" value="0" />
 				</label>
 			</div>
-		
+
 			<div class="simulacreDescription">
 				<h1>Description</h1>
-				
+
 				<div class="autoex autoex40">
 					<textarea name="attr_simu-descr"></textarea>
 					<span name="attr_simu-descr"></span>
 				</div>
 			</div>
-			
+
 			<div class="simulacreProches">
 				<h1>Proches</h1>
-				
+
 				<div class="autoex autoex40">
 					<textarea name="attr_simu-proches"></textarea>
 					<span name="attr_simu-proches"></span>
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="col2">
 			<div class="simulacreIdentite2">
 				<label>
 					<span>Genre</span>
 					<input type="text" name="attr_simu_genre" />
 				</label>
-				
+
 				<label>
 					<span>Âge</span>
 					<input type="number" name="attr_simu_age" value="0" />
@@ -1140,13 +1184,13 @@
 					<h1>Ressources et possessions notables</h1>
 					<input type="number" name="simu_ressources_value" value="0" />
 				</label>
-				
+
 				<div class="autoex autoex40">
 					<textarea name="attr_simu-ress"></textarea>
 					<span name="attr_simu-ress"></span>
 				</div>
 			</div>
-			
+
 			<div class="degreMetamorphe">
 				<h1>Degré de métamorphe actif</h1>
 				<input type="hidden" name="attr_dMeta" value="0" />
@@ -1154,53 +1198,53 @@
 					<input type="checkbox" name="attr_degreMetamorphe" value="1" />
 					<span title="1"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="2" />
 					<span title="2"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="3" />
 					<span title="3"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="4" />
 					<span title="4"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="5" />
 					<span title="5"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="6" />
 					<span title="6"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="7" />
 					<span title="7"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="8" />
 					<span title="8"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="9" />
 					<span title="9"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 					<span title="10"></span>
 				</label>
 			</div>
-		
+
 			<div class="equipement">
 				<h1>Équipements</h1>
 				<fieldset class="repeating_equipements">
@@ -1212,7 +1256,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="tab3">
 		<div class="degreMetamorphe">
 			<h1>Degré de métamorphe actif</h1>
@@ -1221,53 +1265,53 @@
 				<input type="checkbox" name="attr_degreMetamorphe" value="1" />
 				<span title="1"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="2" />
 				<span title="2"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="3" />
 				<span title="3"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="4" />
 				<span title="4"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="5" />
 				<span title="5"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="6" />
 				<span title="6"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="7" />
 				<span title="7"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="8" />
 				<span title="8"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="9" />
 				<span title="9"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 				<span title="10"></span>
 			</label>
 		</div>
-		
+
 		<div class="epoquesIncarnation">
 			<h1>Époques d'incarnation</h1>
 			<h1>Vécus passés</h1>
@@ -1288,11 +1332,15 @@
 						<option value="premiers-megalithes">Les premiers mégalithes</option>
 						<option value="thuatha-danann">Les Tuatha de Danann</option>
 						<option value="mahabharata">Le Mahabharata</option>
+                        <option value="guerre-dieux">La guerre des Dieux</option>
+                        <option value="seigneurs-nuit">Les Seigneurs de la Nuit</option>
 						<option value="labyrinthe-minos">Le labyrinthe de Minos</option>
 						<option value="reve-akhenathon">Le rêve d'Akhenathon</option>
 						<option value="chute-troie">La Chute de Troie</option>
 						<option value="empire-perse">L'empire perse</option>
+                        <option value="rois-monde">Les Rois du Monde</option>
 						<option value="empire-babylone">L'empire de Babylone</option>
+                        <option value="siecle-or-athenien">Le siècle d'or athénien</option>
 						<option value="empire-lexandre">L'empire d'Alexandre</option>
 						<option value="empire-carthage">L'empire de Carthage</option>
 						<option value="empire-rome">L'empire de Rome</option>
@@ -1301,8 +1349,12 @@
 						<option value="croisades">Les croisades</option>
 						<option value="buchers-cathares">Les bûchers cathares</option>
 						<option value="chute-temple">La chute du Temple</option>
+                        <option value="guerre-cent-ans">La guerre de Cent Ans</option>
+                        <option value="chute-grenade">La chute de Grenade</option>
 						<option value="arcanes-renaissance">Les arcanes de la Renaissance</option>
 						<option value="secret-porte">Les secrets de la Sublime Porte</option>
+                        <option value="londres-elisabethain">Le londres élisabéthain</option>
+                        <option value="prague-rodolphienne">La Prague rodolphienne</option>
 						<option value="cour-roi-soleil">La cour du Roi-Soleil</option>
 						<option value="conspiration-revolution">Les conspirations de la Révolution</option>
 						<option value="vapeurs-victoriennes">Les vapeurs victoriennes</option>
@@ -1373,7 +1425,7 @@
 				</div>
 			</fieldset>
 		</div>
-		
+
 		<div class="col2">
 			<div class="quetesEsoteriques">
 				<h1>Quêtes ésotériques</h1>
@@ -1405,7 +1457,7 @@
 				</fieldset>
 			</div>
 		</div>
-		
+
 		<div class="col2">
 			<div class="savoirsEsoteriques">
 				<h1>Savoirs ésotériques</h1>
@@ -1481,31 +1533,31 @@
 				<h1>Dommages physiques</h1>
 				<div>
 					<input type="hidden" name="attr_katerre" value="0" />
-								
+
 					<label>
 						<span>1</span>
 						<input type="checkbox" name="attr_dom1" value="1" />
 						<span></span>
 					</label>
-					
+
 					<label>
 						<span>2</span>
 						<input type="checkbox" name="attr_dom2" value="2" />
 						<span></span>
 					</label>
-					
+
 					<label>
 						<span>3</span>
 						<input type="checkbox" name="attr_dom3" value="3" />
 						<span></span>
 					</label>
-					
+
 					<label>
 						<span>1</span>
 						<input type="checkbox" name="attr_dom4" value="4" />
 						<span></span>
 					</label>
-					
+
 					<label>
 						<span>1</span>
 						<input type="checkbox" name="attr_dom5" value="5" />
@@ -1540,27 +1592,27 @@
 					</label>
 					<input type="text" name="attr_cons-gra-desc" />
 				</div>
-			</div>	
+			</div>
 		</div>
-	
+
 		<div class="col">
 			<div class="dommagesMagiques">
 				<h1>Dommages magiques</h1>
 				<div>
 					<input type="hidden" name="attr_dom-mag" value="0" />
-					
+
 					<label>
 						<span>1</span>
 						<input type="checkbox" name="attr_dom-mag1" value="1" />
 						<span></span>
 					</label>
-					
+
 					<label>
 						<span>2</span>
 						<input type="checkbox" name="attr_dom-mag2" value="2" />
 						<span></span>
 					</label>
-					
+
 					<label>
 						<span>3</span>
 						<input type="checkbox" name="attr_dom-mag3" value="3" />
@@ -1597,7 +1649,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="degreMetamorphe">
 			<h1>Degré de métamorphe actif</h1>
 			<input type="hidden" name="attr_dMeta" value="0" />
@@ -1605,53 +1657,53 @@
 				<input type="checkbox" name="attr_degreMetamorphe" value="1" />
 				<span title="1"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="2" />
 				<span title="2"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="3" />
 				<span title="3"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="4" />
 				<span title="4"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="5" />
 				<span title="5"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="6" />
 				<span title="6"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="7" />
 				<span title="7"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="8" />
 				<span title="8"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="9" />
 				<span title="9"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 				<span title="10"></span>
 			</label>
 		</div>
-		
+
 		<div class="epoquesIncarnation">
 			<h1>Époques d'incarnation</h1>
 			<h1>Vécus passés</h1>
@@ -1672,11 +1724,15 @@
 						<option value="premiers-megalithes">Les premiers mégalithes</option>
 						<option value="thuatha-danann">Les Tuatha de Danann</option>
 						<option value="mahabharata">Le Mahabharata</option>
+                        <option value="guerre-dieux">La guerre des Dieux</option>
+                        <option value="seigneurs-nuit">Les Seigneurs de la Nuit</option>
 						<option value="labyrinthe-minos">Le labyrinthe de Minos</option>
 						<option value="reve-akhenathon">Le rêve d'Akhenathon</option>
 						<option value="chute-troie">La Chute de Troie</option>
 						<option value="empire-perse">L'empire perse</option>
+                        <option value="rois-monde">Les Rois du Monde</option>
 						<option value="empire-babylone">L'empire de Babylone</option>
+                        <option value="siecle-or-athenien">Le siècle d'or athénien</option>
 						<option value="empire-lexandre">L'empire d'Alexandre</option>
 						<option value="empire-carthage">L'empire de Carthage</option>
 						<option value="empire-rome">L'empire de Rome</option>
@@ -1685,8 +1741,12 @@
 						<option value="croisades">Les croisades</option>
 						<option value="buchers-cathares">Les bûchers cathares</option>
 						<option value="chute-temple">La chute du Temple</option>
+                        <option value="guerre-cent-ans">La guerre de Cent Ans</option>
+                        <option value="chute-grenade">La chute de Grenade</option>
 						<option value="arcanes-renaissance">Les arcanes de la Renaissance</option>
 						<option value="secret-porte">Les secrets de la Sublime Porte</option>
+                        <option value="londres-elisabethain">Le londres élisabéthain</option>
+                        <option value="prague-rodolphienne">La Prague rodolphienne</option>
 						<option value="cour-roi-soleil">La cour du Roi-Soleil</option>
 						<option value="conspiration-revolution">Les conspirations de la Révolution</option>
 						<option value="vapeurs-victoriennes">Les vapeurs victoriennes</option>
@@ -1757,7 +1817,7 @@
 				</div>
 			</fieldset>
 		</div>
-		
+
 		<div class="col2">
 			<div class="armes">
 				<h1>Armes de mêlée</h1>
@@ -1768,7 +1828,7 @@
 					<input type="number" name="attr_poss-arme-degre" value="0" />
 				</fieldset>
 			</div>
-			
+
 			<div class="artefacts">
 				<h1>Artefacts</h1>
 				<fieldset class="repeating_posse-artefact-eso">
@@ -1788,7 +1848,7 @@
 					</div>
 				</fieldset>
 			</div>
-		
+
 			<div class="alchimie">
 				<h1>Objets d'alchimie synthétisés</h1>
 				<fieldset class="repeating_objets-alchimie">
@@ -1809,7 +1869,7 @@
 					<input type="number" name="attr_poss-arme-degre" value="0" />
 				</fieldset>
 			</div>
-			
+
 			<div class="armures">
 				<h1>Armures</h1>
 				<span>Type</span>
@@ -1820,11 +1880,11 @@
 				</fieldset>
 			</div>
 		</div>
-	</div>	
+	</div>
 
 	<div class="tab5">
 		<h1 class="titreMagie">Magie</h1>
-	
+
 		<div class="col40">
 			<div class="cercleMagie cercleMagie1">
 				<label>
@@ -1869,7 +1929,7 @@
 				</select>
 			</div>
 		</div>
-		
+
 		<div class="degreMetamorphe">
 			<h1>Degré de métamorphe actif</h1>
 			<input type="hidden" name="attr_dMeta" value="0" />
@@ -1877,53 +1937,86 @@
 				<input type="checkbox" name="attr_degreMetamorphe" value="1" />
 				<span title="1"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="2" />
 				<span title="2"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="3" />
 				<span title="3"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="4" />
 				<span title="4"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="5" />
 				<span title="5"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="6" />
 				<span title="6"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="7" />
 				<span title="7"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="8" />
 				<span title="8"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="9" />
 				<span title="9"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 				<span title="10"></span>
 			</label>
 		</div>
-	
+
+        <input type="hidden" name="attr_mag-secret-degre" value="0"/>
+
+        <div class="gsMaillons col60">
+            <h1>Maillons</h1>
+            <fieldset class="repeating_maillon">
+                <input name="attr_maillon" type="text"/>
+            </fieldset>
+        </div>
+
+        <div class="gsDomains col40">
+            <h1>Domaines</h1>
+            <label>
+                <span>Domaine 1</span>
+                <select name="attr_mag-gs-dom1">
+                    <option value="comprendre">Comprendre</option>
+                    <option value="controler">Contrôler</option>
+                    <option value="creer">Créer</option>
+                    <option value="detruire">Détruire</option>
+                    <option value="transformer">Transformer</option>
+                </select>
+            </label>
+            <label>
+                <span>Domaine 2</span>
+                <select name="attr_mag-gs-dom2">
+                    <option value="comprendre">Comprendre</option>
+                    <option value="controler">Contrôler</option>
+                    <option value="creer">Créer</option>
+                    <option value="detruire">Détruire</option>
+                    <option value="transformer">Transformer</option>
+                </select>
+            </label>
+        </div>
+
 		<div class="sorts">
 			<h1>Sorts</h1>
 			<span>Nom du sort</span>
@@ -1941,7 +2034,7 @@
 					<input type="checkbox" name="attr_expand" value="1" checked />
 					<span></span>
 				</label>
-				<input type="text" name="attr_mag-sort-nom" /> 
+				<input type="text" name="attr_mag-sort-nom" />
 				<select name="attr_mag-sort-ka">
 					<option value="0"></option>
 					<option value="kaair">Air</option>
@@ -2011,7 +2104,7 @@
 				</div>
 			</fieldset>
 		</div>
-	
+
 	</div>
 
 	<div class="tab6">
@@ -2097,47 +2190,47 @@
 					<input type="checkbox" name="attr_degreMetamorphe" value="1" />
 					<span title="1"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="2" />
 					<span title="2"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="3" />
 					<span title="3"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="4" />
 					<span title="4"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="5" />
 					<span title="5"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="6" />
 					<span title="6"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="7" />
 					<span title="7"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="8" />
 					<span title="8"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="9" />
 					<span title="9"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 					<span title="10"></span>
@@ -2150,7 +2243,7 @@
 			<h1>Invocations</h1>
 			<span>Nom de l'invocation</span>
 			<span>Séphira</span>
-			
+
 			<span>Ka</span>
 			<span>Degré</span>
 			<span>Portée</span>
@@ -2209,9 +2302,9 @@
 					<span></span>
 				</label>
 				<button type="roll" name="roll_simu-roll-vecu" title="Invocation" value="&{template:invocation} {{name=@{character_name}}} {{nom_creature=@{kabb-invoc-nom}}} {{descrip_sort=@{kabb-invoc-desc}}} {{portee_sort=@{kabb-invoc-portee}}} {{duree_sort=@{kabb-invoc-duree}}} {{degre=@{kabb-invoc-degre}}} {{jet=[[1d100]] }}{{seuil=[[(?{Bonus / malus ?|0}[ Bonus, malus, vécus, etc. ]+@{kabb-invoc-current}[ Kabbale + Ka + Ordonnances ])*10]]}}"></button>
-				
+
 				<button type="roll" name="roll_simu-roll-opposition" title="Nouer un pacte" value="&{template:opposition} {{name=@{character_name}}} {{creature=@{kabb-invoc-nom}}} {{jet=[[1d100]]}} {{seuil=[[(?{Bonus / malus ?|0}[Bonus, malus, vécus, etc.]+[[@{kabb-invoc-current}]][Kabbale + Ka])*10 ]]}} {{jet_creature=[[1d100]]}} {{degre=[[@{kabb-invoc-degre}[Degré]*10 ]]}}"></button>
-				
+
 				<input type="hidden" name="attr_expand" value="1" />
 				<div>
 					<label>
@@ -2248,7 +2341,7 @@
 
 	<div class="tab7">
 		<h1 class="titreAlchimie">Alchimie</h1>
-	
+
 		<div class="col2">
 			<div class="oeuvres">
 				<label>
@@ -2264,7 +2357,7 @@
 					<input type="number" name="attr_alch-oeuvre-rouge" value="0" />
 				</label>
 			</div>
-			
+
 			<label class="alchimieVoie">
 				<span>Voie initiatique</span>
 				<select name="attr_alch-voie">
@@ -2276,29 +2369,29 @@
 					<option value="pagirie">Spagirie</option>
 				</select>
 			</label>
-			
+
 			<div class="alchimieSConstruct">
 				<h1>Constructs utilisables</h1>
 				<label>
 					<input type="checkbox" name="attr_sCornue" value="1" checked />
 					<span title="Cornue"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_sAthanor" value="1" checked />
 					<span title="Athanor"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_sAludel" value="1" checked />
 					<span title="Aludel"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_sForge" value="1" checked />
 					<span title="Forge ou Creuset"></span>
 				</label>
-				
+
 				<label>
 					<input type="checkbox" name="attr_sAlambic" value="1" checked />
 					<span title="Alambic"></span>
@@ -2316,7 +2409,7 @@
 						<input type="number" name="attr_alch-mp-feu-max" value="0" />
 					</label>
 				</div>
-				
+
 				<div>
 					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Air.png" alt="Air" />
 					<label>
@@ -2325,7 +2418,7 @@
 						<input type="number" name="attr_alch-mp-air-max" value="0" />
 					</label>
 				</div>
-				
+
 				<div>
 					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Terre.png" alt="Terre" />
 					<label>
@@ -2334,7 +2427,7 @@
 						<input type="number" name="attr_alch-mp-terre-max" value="0" />
 					</label>
 				</div>
-				
+
 				<div>
 					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Eau.png" alt="Eau" />
 					<label>
@@ -2343,7 +2436,7 @@
 						<input type="number" name="attr_alch-mp-eau-max" value="0" />
 					</label>
 				</div>
-				
+
 				<div>
 					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Lune.png" alt="Lune" />
 					<label>
@@ -2354,7 +2447,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<div class="formules">
 			<h1>Formules</h1>
 			<span>Nom de la formule</span>
@@ -2452,8 +2545,8 @@
 			<input type="hidden" name="attr_sAludel" class="aludel" value="1" />
 			<input type="hidden" name="attr_sForge" class="forge" value="1" />
 			<input type="hidden" name="attr_sAlambic" class="alambic" value="1" />
-			
-			<div class="cornue">				
+
+			<div class="cornue">
 				<span>Ka-Feu</span>
 				<input type="number" name="attr_alch-cornue-kafeu" value="0" />
 				<span>Ka-Terre</span>
@@ -2466,8 +2559,8 @@
 				<span>Ka-Eau</span>
 				<input type="number" name="attr_alch-cornue-kaeau" value="0" />
 			</div>
-			
-			<div class="athanor">			
+
+			<div class="athanor">
 				<span>Ka-Feu</span>
 				<input type="number" name="attr_alch-athanor-kafeu" value="0" />
 				<span>Ka-Terre</span>
@@ -2480,7 +2573,7 @@
 				<span>Ka-Eau</span>
 				<input type="number" name="attr_alch-athanor-kaeau" value="0" />
 			</div>
-			
+
 			<div class="aludel">
 				<span>Ka-Feu</span>
 				<input type="number" name="attr_alch-aludel-kafeu" value="0" />
@@ -2494,8 +2587,8 @@
 				<span>Ka-Eau</span>
 				<input type="number" name="attr_alch-aludel-kaeau" value="0" />
 			</div>
-			
-			<div class="forge">			
+
+			<div class="forge">
 				<span>Ka-Feu</span>
 				<input type="number" name="attr_alch-creuset-kafeu" value="0" />
 				<span>Ka-Terre</span>
@@ -2508,8 +2601,8 @@
 				<span>Ka-Eau</span>
 				<input type="number" name="attr_alch-creuset-kaeau" value="0" />
 			</div>
-			
-			<div class="alambic">			
+
+			<div class="alambic">
 				<span>Ka-Feu</span>
 				<input type="number" name="attr_alch-alambic-kafeu" value="0" />
 				<span>Ka-Terre</span>
@@ -2573,47 +2666,47 @@
 				<input type="checkbox" name="attr_degreMetamorphe" value="1" />
 				<span title="1"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="2" />
 				<span title="2"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="3" />
 				<span title="3"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="4" />
 				<span title="4"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="5" />
 				<span title="5"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="6" />
 				<span title="6"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="7" />
 				<span title="7"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="8" />
 				<span title="8"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="9" />
 				<span title="9"></span>
 			</label>
-			
+
 			<label>
 				<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 				<span title="10"></span>
@@ -2645,11 +2738,11 @@
 				</div>
 				<div class="autoex autoex22">
 					<textarea name="attr_quartier"></textarea>
-					<span name="attr_quartier"></span>					
+					<span name="attr_quartier"></span>
 				</div>
 				<div class="autoex autoex22">
 					<textarea name="attr_quadrant"></textarea>
-					<span name="attr_quadrant"></span>					
+					<span name="attr_quadrant"></span>
 				</div>
 				<div>
 					<label>
@@ -2659,16 +2752,16 @@
 				</div>
 				<div class="autoex autoex22">
 					<textarea name="attr_passages"></textarea>
-					<span name="attr_passages"></span>					
+					<span name="attr_passages"></span>
 				</div>
 				<div class="autoex autoex22">
 					<textarea name="attr_cle"></textarea>
-					<span name="attr_cle"></span>					
+					<span name="attr_cle"></span>
 				</div>
 				<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{vecuArcadien}}}  {{jet=[[1d100]]}} {{seuil=[[(@{vecuArcadienScore}-@{malusPhy}+@{approche}}}"></button>
 			</fieldset>
 		</div>
-	
+
 		<div class="titre">
 			<h1>Titre</h1>
 			<input type="text" name="attr_titre" />
@@ -2709,7 +2802,7 @@
 		<span>{{jet}}</span><span>({{seuil}})</span>
 		{{#^rollTotal() jet 100}}
 			{{#rollBetween() jet 1 seuil}}
-				{{#^rollTotal() jet 11}}	
+				{{#^rollTotal() jet 11}}
 					{{#^rollTotal() jet 22}}
 						{{#^rollTotal() jet 33}}
 							{{#^rollTotal() jet 44}}
@@ -2758,7 +2851,7 @@
 			{{/rollBetween() jet 1 seuil}}
 			{{#rollGreater() jet seuil}}
 				{{#^rollTotal() jet 100}}
-					{{#^rollTotal() jet 11}}	
+					{{#^rollTotal() jet 11}}
 						{{#^rollTotal() jet 22}}
 							{{#^rollTotal() jet 33}}
 								{{#^rollTotal() jet 44}}
@@ -2824,7 +2917,7 @@
 		<span>{{jet}}</span><span>({{seuil}})</span>
 		{{#^rollTotal() jet 100}}
 			{{#rollBetween() jet 1 seuil}}
-				{{#^rollTotal() jet 11}}	
+				{{#^rollTotal() jet 11}}
 					{{#^rollTotal() jet 22}}
 						{{#^rollTotal() jet 33}}
 							{{#^rollTotal() jet 44}}
@@ -2873,7 +2966,7 @@
 			{{/rollBetween() jet 1 seuil}}
 			{{#rollGreater() jet seuil}}
 				{{#^rollTotal() jet 100}}
-					{{#^rollTotal() jet 11}}	
+					{{#^rollTotal() jet 11}}
 						{{#^rollTotal() jet 22}}
 							{{#^rollTotal() jet 33}}
 								{{#^rollTotal() jet 44}}
@@ -2944,7 +3037,7 @@
 		<span>{{jet}}</span><span>({{seuil}})</span>
 		{{#^rollTotal() jet 100}}
 			{{#rollBetween() jet 1 seuil}}
-				{{#^rollTotal() jet 11}}	
+				{{#^rollTotal() jet 11}}
 					{{#^rollTotal() jet 22}}
 						{{#^rollTotal() jet 33}}
 							{{#^rollTotal() jet 44}}
@@ -2993,7 +3086,7 @@
 			{{/rollBetween() jet 1 seuil}}
 			{{#rollGreater() jet seuil}}
 				{{#^rollTotal() jet 100}}
-					{{#^rollTotal() jet 11}}	
+					{{#^rollTotal() jet 11}}
 						{{#^rollTotal() jet 22}}
 							{{#^rollTotal() jet 33}}
 								{{#^rollTotal() jet 44}}
@@ -3064,7 +3157,7 @@
 			<span>{{name}}</span>
 			<span>{{jet}}</span>
 			{{#rollBetween() jet 1 seuil}}
-				{{#^rollTotal() jet 11}}	
+				{{#^rollTotal() jet 11}}
 					{{#^rollTotal() jet 22}}
 						{{#^rollTotal() jet 33}}
 							{{#^rollTotal() jet 44}}
@@ -3083,7 +3176,7 @@
 						{{/^rollTotal() jet 33}}
 					{{/^rollTotal() jet 22}}
 				{{/^rollTotal() jet 11}}
-				
+
 				{{#rollTotal() jet 11}}
 					<span class="success">Critique</span>
 				{{/rollTotal() jet 11}}
@@ -3112,10 +3205,10 @@
 					<span class="success">Critique</span>
 				{{/rollTotal() jet 99}}
 			{{/rollBetween() jet 1 seuil}}
-			
+
 			{{#rollGreater() jet seuil}}
 				{{#^rollTotal() jet 100}}
-					{{#^rollTotal() jet 11}}	
+					{{#^rollTotal() jet 11}}
 						{{#^rollTotal() jet 22}}
 							{{#^rollTotal() jet 33}}
 								{{#^rollTotal() jet 44}}
@@ -3172,7 +3265,7 @@
 			<span>{{creature}}</span>
 			<span>{{jet_creature}}</span>
 			{{#rollBetween() jet_creature 1 degre}}
-				{{#^rollTotal() jet_creature 11}}	
+				{{#^rollTotal() jet_creature 11}}
 					{{#^rollTotal() jet_creature 22}}
 						{{#^rollTotal() jet_creature 33}}
 							{{#^rollTotal() jet_creature 44}}
@@ -3191,7 +3284,7 @@
 						{{/^rollTotal() jet_creature 33}}
 					{{/^rollTotal() jet_creature 22}}
 				{{/^rollTotal() jet_creature 11}}
-				
+
 				{{#rollTotal() jet_creature 11}}
 					<span class="success">Critique</span>
 				{{/rollTotal() jet_creature 11}}
@@ -3220,10 +3313,10 @@
 					<span class="success">Critique</span>
 				{{/rollTotal() jet_creature 99}}
 			{{/rollBetween() jet_creature 1 degre}}
-			
+
 			{{#rollGreater() jet_creature degre}}
 				{{#^rollTotal() jet_creature 100}}
-					{{#^rollTotal() jet_creature 11}}	
+					{{#^rollTotal() jet_creature 11}}
 						{{#^rollTotal() jet_creature 22}}
 							{{#^rollTotal() jet_creature 33}}
 								{{#^rollTotal() jet_creature 44}}
@@ -3306,7 +3399,7 @@
 								{{/^rollTotal() jet 11}}
 							{{/^rollTotal() jet_creature 11}}
 						{{/rollBetween() jet_creature 1 21}}
-						
+
 						{{#rollBetween() jet_creature 22 32}}
 							{{#^rollTotal() jet_creature 22}}
 								{{#^rollTotal() jet 11}}
@@ -3330,7 +3423,7 @@
 								{{/^rollTotal() jet 11}}
 							{{/^rollTotal() jet_creature 22}}
 						{{/rollBetween() jet_creature 22 32}}
-						
+
 						{{#rollBetween() jet_creature 33 43}}
 							{{#^rollTotal() jet_creature 33}}
 								{{#^rollTotal() jet 11}}
@@ -3354,7 +3447,7 @@
 								{{/^rollTotal() jet 11}}
 							{{/^rollTotal() jet_creature 33}}
 						{{/rollBetween() jet_creature 33 43}}
-						
+
 						{{#rollBetween() jet_creature 44 54}}
 							{{#^rollTotal() jet_creature 44}}
 								{{#^rollTotal() jet 11}}
@@ -3378,7 +3471,7 @@
 								{{/^rollTotal() jet 11}}
 							{{/^rollTotal() jet_creature 44}}
 						{{/rollBetween() jet_creature 44 54}}
-						
+
 						{{#rollBetween() jet_creature 55 65}}
 							{{#^rollTotal() jet_creature 55}}
 								{{#^rollTotal() jet 11}}
@@ -3402,7 +3495,7 @@
 								{{/^rollTotal() jet 11}}
 							{{/^rollTotal() jet_creature 55}}
 						{{/rollBetween() jet_creature 55 65}}
-						
+
 						{{#rollBetween() jet_creature 66 76}}
 							{{#^rollTotal() jet_creature 66}}
 								{{#^rollTotal() jet 11}}
@@ -3426,7 +3519,7 @@
 								{{/^rollTotal() jet 11}}
 							{{/^rollTotal() jet_creature 66}}
 						{{/rollBetween() jet_creature 66 76}}
-						
+
 						{{#rollBetween() jet_creature 77 87}}
 							{{#^rollTotal() jet_creature 77}}
 								{{#^rollTotal() jet 11}}
@@ -3450,7 +3543,7 @@
 								{{/^rollTotal() jet 11}}
 							{{/^rollTotal() jet_creature 77}}
 						{{/rollBetween() jet_creature 77 87}}
-						
+
 						{{#rollBetween() jet_creature 88 98}}
 							{{#^rollTotal() jet_creature 88}}
 								{{#^rollTotal() jet 11}}
@@ -3475,7 +3568,7 @@
 							{{/^rollTotal() jet_creature 88}}
 						{{/rollBetween() jet_creature 88 98}}
 					{{/rollGreater() jet jet_creature}}
-					
+
 					{{#rollTotal() jet 11}}
 						{{#^rollTotal() jet_creature 22}}
 							{{#^rollTotal() jet_creature 33}}
@@ -3495,7 +3588,7 @@
 							{{/^rollTotal() jet_creature 33}}
 						{{/^rollTotal() jet_creature 22}}
 					{{/rollTotal() jet 11}}
-					
+
 					{{#rollTotal() jet 22}}
 						{{#^rollTotal() jet_creature 33}}
 							{{#^rollTotal() jet_creature 44}}
@@ -3513,7 +3606,7 @@
 							{{/^rollTotal() jet_creature 44}}
 						{{/^rollTotal() jet_creature 33}}
 					{{/rollTotal() jet 22}}
-					
+
 					{{#rollTotal() jet 33}}
 						{{#^rollTotal() jet_creature 44}}
 							{{#^rollTotal() jet_creature 55}}
@@ -3529,7 +3622,7 @@
 							{{/^rollTotal() jet_creature 55}}
 						{{/^rollTotal() jet_creature 44}}
 					{{/rollTotal() jet 33}}
-					
+
 					{{#rollTotal() jet 44}}
 						{{#^rollTotal() jet_creature 55}}
 							{{#^rollTotal() jet_creature 66}}
@@ -3543,7 +3636,7 @@
 							{{/^rollTotal() jet_creature 66}}
 						{{/^rollTotal() jet_creature 55}}
 					{{/rollTotal() jet 44}}
-					
+
 					{{#rollTotal() jet 55}}
 						{{#^rollTotal() jet_creature 66}}
 							{{#^rollTotal() jet_creature 77}}
@@ -3555,7 +3648,7 @@
 							{{/^rollTotal() jet_creature 77}}
 						{{/^rollTotal() jet_creature 66}}
 					{{/rollTotal() jet 55}}
-					
+
 					{{#rollTotal() jet 66}}
 						{{#^rollTotal() jet_creature 77}}
 							{{#^rollTotal() jet_creature 88}}
@@ -3565,7 +3658,7 @@
 							{{/^rollTotal() jet_creature 88}}
 						{{/^rollTotal() jet_creature 77}}
 					{{/rollTotal() jet 66}}
-					
+
 					{{#rollTotal() jet 77}}
 						{{#^rollTotal() jet_creature 88}}
 							{{#^rollTotal() jet_creature 99}}
@@ -3573,19 +3666,19 @@
 							{{/^rollTotal() jet_creature 99}}
 						{{/^rollTotal() jet_creature 88}}
 					{{/rollTotal() jet 77}}
-					
+
 					{{#rollTotal() jet 88}}
 						{{#^rollTotal() jet_creature 99}}
 							<span class="success">{{name}}</span>
 						{{/^rollTotal() jet_creature 99}}
 					{{/rollTotal() jet 88}}
-					
+
 					{{#rollTotal() jet 99}}
 							<span class="success">{{name}}</span>
 					{{/rollTotal() jet 99}}
 				{{/rollBetween() jet_creature 1 degre}}
 			{{/rollBetween() jet 1 seuil}}
-			
+
 			{{#rollBetween() jet_creature 1 degre}}
 				{{#^rollBetween() jet 1 seuil}}
 					<span class="success">{{creature}}</span>
@@ -3614,7 +3707,7 @@
 							{{/^rollTotal() jet_creature 11}}
 						{{/^rollTotal() jet 11}}
 					{{/rollBetween() jet 1 21}}
-					
+
 					{{#rollBetween() jet 22 32}}
 						{{#^rollTotal() jet 22}}
 							{{#^rollTotal() jet_creature 11}}
@@ -3638,7 +3731,7 @@
 							{{/^rollTotal() jet_creature 11}}
 						{{/^rollTotal() jet 22}}
 					{{/rollBetween() jet 22 32}}
-					
+
 					{{#rollBetween() jet 33 43}}
 						{{#^rollTotal() jet 33}}
 							{{#^rollTotal() jet_creature 11}}
@@ -3662,7 +3755,7 @@
 							{{/^rollTotal() jet_creature 11}}
 						{{/^rollTotal() jet 33}}
 					{{/rollBetween() jet 33 43}}
-					
+
 					{{#rollBetween() jet 44 54}}
 						{{#^rollTotal() jet 44}}
 							{{#^rollTotal() jet_creature 11}}
@@ -3686,7 +3779,7 @@
 							{{/^rollTotal() jet_creature 11}}
 						{{/^rollTotal() jet 44}}
 					{{/rollBetween() jet 44 54}}
-					
+
 					{{#rollBetween() jet 55 65}}
 						{{#^rollTotal() jet 55}}
 							{{#^rollTotal() jet_creature 11}}
@@ -3710,7 +3803,7 @@
 							{{/^rollTotal() jet_creature 11}}
 						{{/^rollTotal() jet 55}}
 					{{/rollBetween() jet 55 65}}
-					
+
 					{{#rollBetween() jet 66 76}}
 						{{#^rollTotal() jet 66}}
 							{{#^rollTotal() jet_creature 11}}
@@ -3734,7 +3827,7 @@
 							{{/^rollTotal() jet_creature 11}}
 						{{/^rollTotal() jet 66}}
 					{{/rollBetween() jet 66 76}}
-					
+
 					{{#rollBetween() jet 77 87}}
 						{{#^rollTotal() jet 77}}
 							{{#^rollTotal() jet_creature 11}}
@@ -3758,7 +3851,7 @@
 							{{/^rollTotal() jet_creature 11}}
 						{{/^rollTotal() jet 77}}
 					{{/rollBetween() jet 77 87}}
-					
+
 					{{#rollBetween() jet 88 98}}
 						{{#^rollTotal() jet 88}}
 							{{#^rollTotal() jet_creature 11}}
@@ -3783,7 +3876,7 @@
 						{{/^rollTotal() jet 88}}
 					{{/rollBetween() jet 88 98}}
 				{{/rollGreater() jet_creature jet}}
-				
+
 				{{#rollTotal() jet_creature 11}}
 					{{#^rollTotal() jet 22}}
 						{{#^rollTotal() jet 33}}
@@ -3803,7 +3896,7 @@
 						{{/^rollTotal() jet 33}}
 					{{/^rollTotal() jet 22}}
 				{{/rollTotal() jet_creature 11}}
-				
+
 				{{#rollTotal() jet_creature 22}}
 					{{#^rollTotal() jet 33}}
 						{{#^rollTotal() jet 44}}
@@ -3821,7 +3914,7 @@
 						{{/^rollTotal() jet 44}}
 					{{/^rollTotal() jet 33}}
 				{{/rollTotal() jet_creature 22}}
-				
+
 				{{#rollTotal() jet_creature 33}}
 					{{#^rollTotal() jet 44}}
 						{{#^rollTotal() jet 55}}
@@ -3837,7 +3930,7 @@
 						{{/^rollTotal() jet 55}}
 					{{/^rollTotal() jet 44}}
 				{{/rollTotal() jet_creature 33}}
-				
+
 				{{#rollTotal() jet_creature 44}}
 					{{#^rollTotal() jet 55}}
 						{{#^rollTotal() jet 66}}
@@ -3851,7 +3944,7 @@
 						{{/^rollTotal() jet 66}}
 					{{/^rollTotal() jet 55}}
 				{{/rollTotal() jet_creature 44}}
-				
+
 				{{#rollTotal() jet_creature 55}}
 					{{#^rollTotal() jet 66}}
 						{{#^rollTotal() jet 77}}
@@ -3863,7 +3956,7 @@
 						{{/^rollTotal() jet 77}}
 					{{/^rollTotal() jet 66}}
 				{{/rollTotal() jet_creature 55}}
-				
+
 				{{#rollTotal() jet_creature 66}}
 					{{#^rollTotal() jet 77}}
 						{{#^rollTotal() jet 88}}
@@ -3873,7 +3966,7 @@
 						{{/^rollTotal() jet 88}}
 					{{/^rollTotal() jet 77}}
 				{{/rollTotal() jet_creature 66}}
-				
+
 				{{#rollTotal() jet_creature 77}}
 					{{#^rollTotal() jet 88}}
 						{{#^rollTotal() jet 99}}
@@ -3881,13 +3974,13 @@
 						{{/^rollTotal() jet 99}}
 					{{/^rollTotal() jet 88}}
 				{{/rollTotal() jet_creature 77}}
-				
+
 				{{#rollTotal() jet_creature 88}}
 					{{#^rollTotal() jet 99}}
 						<span class="success">{{creature}}</span>
 					{{/^rollTotal() jet 99}}
 				{{/rollTotal() jet_creature 88}}
-				
+
 				{{#rollTotal() jet_creature 99}}
 					<span class="success">{{creature}}</span>
 				{{/rollTotal() jet_creature 99}}
@@ -3913,7 +4006,7 @@
 		<span>{{jet}}</span><span>({{seuil}})</span>
 		{{#^rollTotal() jet 100}}
 			{{#rollBetween() jet 1 seuil}}
-				{{#^rollTotal() jet 11}}	
+				{{#^rollTotal() jet 11}}
 					{{#^rollTotal() jet 22}}
 						{{#^rollTotal() jet 33}}
 							{{#^rollTotal() jet 44}}
@@ -3962,7 +4055,7 @@
 			{{/rollBetween() jet 1 seuil}}
 			{{#rollGreater() jet seuil}}
 				{{#^rollTotal() jet 100}}
-					{{#^rollTotal() jet 11}}	
+					{{#^rollTotal() jet 11}}
 						{{#^rollTotal() jet 22}}
 							{{#^rollTotal() jet 33}}
 								{{#^rollTotal() jet 44}}
@@ -4030,3 +4123,5 @@
 		<span>{{jet}}</span>
 	</div>
 </rolltemplate>
+<!-- Remove below this point ! -->
+</body></html>
