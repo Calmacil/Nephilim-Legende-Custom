@@ -1,9 +1,3 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="nephilim-legende2.css"/>
-</head>
-<body>
-	<!-- remove ahead of this point ! -->
 <script type="text/worker">
 	/* * * * * * * * * * * * * * * *
 	* Unused semaphore functions  *
@@ -651,6 +645,32 @@
 			});
 		});
 	});
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Computes max allowed links (maillon) allowed by Grand Secret degree *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	on("sheet:opened change:attr_mag-secret-degre", function()
+	{
+		getAttrs(["mag-secret-degre"], function(values) {
+			const degre = values["mag-secret-degre"];
+			var allowedLinks = 0;
+			switch (degre) {
+				case 2: allowedLinks = 4; break;
+				case 3: allowedLinks = 5; break;
+				case 4: allowedLinks = 6; break;
+				case 5: allowedLinks = 8; break;
+				case 6: allowedLinks = 10; break;
+				case 7: allowedLinks = 12; break;
+				case 8: allowedLinks = 14; break;
+				case 9: allowedLinks = 16; break;
+				case 10: allowedLinks = 18; break;
+				default: allowedLinks = 20;
+			}
+			setAttrs({
+				magSecretAllowedLinks: allowedLinks;
+			})
+		});
+	});
 </script>
 
 <input type="hidden" name="attr_version" value="1" />
@@ -671,10 +691,10 @@
 		</label>
 		<div class="options">
 			<label>
-				<input type="checkbox" name="attr_options" value="0" />
+				<input type="checkbox" name="attr_options" value="1" />
 				<span></span>
 			</label>
-			<input type="hidden" name="attr_options" value="0" />
+			<input type="hidden" name="attr_options" value="1" />
 			<div>
 				<label>
 					<input type="checkbox" name="attr_gm" value="/w gm" />
@@ -1987,10 +2007,17 @@
 		<input type="hidden" name="attr_mag-secret-degre" value="0"/>
 
 		<div class="gsMaillons col60">
-			<h1>Maillons</h1>
-			<fieldset class="repeating_maillon">
-				<input name="attr_maillon" type="text"/>
-			</fieldset>
+			<h1>
+				Maillons
+				<span class="magSecretCountLinks"></span>
+				/
+				<input type="text" name="attr_magSecretAllowedLinks" disabled/>
+			</h1>
+			<div class="repeating-maillon-wrapper">
+				<fieldset class="repeating_maillon">
+					<input name="attr_maillon" type="text"/>
+				</fieldset>
+			</div>
 		</div>
 
 		<div class="gsDomains col40">
@@ -4123,5 +4150,3 @@
 		<span>{{jet}}</span>
 	</div>
 </rolltemplate>
-<!-- Remove below this point ! -->
-</body></html>
