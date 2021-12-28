@@ -4954,3 +4954,9 @@ div.sheet-gsMaillons .repcontainer > .repitem input[type="text"]
 	padding-left: 5px;
 	background: transparent;
 }
+
+input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsMaillons,
+input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsDomains
+{
+    display: none;
+}
