@@ -649,11 +649,12 @@
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	 * Computes max allowed links (maillon) allowed by Grand Secret degree *
 	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-	on("sheet:opened change:attr_mag-secret-degre", function()
+	on("change:mag-secret-degre sheet:opened", function()
 	{
+		console.warn("Je change ma valeur !");
 		getAttrs(["mag-secret-degre"], function(values) {
-			const degre = values["mag-secret-degre"];
-			var allowedLinks = 0;
+			let degre = parseInt(values["mag-secret-degre"],10)||0;
+			let allowedLinks = 0;
 			switch (degre) {
 				case 2: allowedLinks = 4; break;
 				case 3: allowedLinks = 5; break;
@@ -663,12 +664,21 @@
 				case 7: allowedLinks = 12; break;
 				case 8: allowedLinks = 14; break;
 				case 9: allowedLinks = 16; break;
-				case 10: allowedLinks = 18; break;
-				default: allowedLinks = 20;
+				case 10: allowedLinks = 20; break;
+				default: allowedLinks = 0;
 			}
 			setAttrs({
-				magSecretAllowedLinks: allowedLinks;
+				magSecretAllowedLinks: allowedLinks
 			});
+		});
+	});
+
+	on("change:repeating_maillon remove:repeating_maillon sheet:opened", function()
+	{
+		getSectionIDs("repeating_maillon", function(idarray) {
+			setAttrs({
+				magSecretCurrentLinks: idarray.length
+			})
 		});
 	});
 </script>
@@ -2036,7 +2046,7 @@
 				<div>
 					<input type="number" name="attr_magSecretCurrentLinks" readonly />
 					&nbsp;/&nbsp;
-					<input type="number" name="attr_magSecretAllowedLinks" readonly/>
+					<input type="number" name="attr_magSecretAllowedLinks"/>
 				</div>
 			</h1>
 			<div class="repeating-maillon-wrapper">

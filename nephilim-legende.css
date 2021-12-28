@@ -2,7 +2,7 @@
 
 .charsheet
 {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Fond-vieux-papier.jpg");
+	background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Fond-vieux-papier.jpg");
 	background-size:cover;
 	--brun: RGB(151,129,089);
 	--marron:136, 115, 71;
@@ -75,14 +75,14 @@ input[type="number"]
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button
 {
-    -webkit-appearance: none;
-    margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input[type=number],
 input[type=text]
 {
-    -moz-appearance:textfield;
+	-moz-appearance:textfield;
 	border-radius:0px;
 }
 
@@ -1868,8 +1868,8 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div select
 	border:0px;
 	border-bottom:1px dotted var(--brun);
 	font-size: 14px;
-    font-weight: bold;
-    background: transparent;
+	font-weight: bold;
+	background: transparent;
 	height:30px;
 	padding-top:12px;
 }
@@ -1892,8 +1892,8 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="text"]
 	border:0px;
 	border-bottom:1px dotted var(--brun);
 	font-size: 14px;
-    font-weight: bold;
-    background: transparent;
+	font-weight: bold;
+	background: transparent;
 	height:30px;
 	padding-top:12px;
 }
@@ -1969,8 +1969,8 @@ div.sheet-quetesEsoteriques > .repcontainer > .repitem > select
 	border:0px;
 	border-bottom:1px dotted var(--brun);
 	font-size: 14px;
-    font-weight: bold;
-    background: transparent;
+	font-weight: bold;
+	background: transparent;
 	height:30px;
 	padding-top:12px;
 	font-size:13px;
@@ -3714,12 +3714,12 @@ div.sheet-invocations > .repcontainer > .repitem > div:last-of-type
 div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(2),
 div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(4)
 {
-    background-color: var(--colLR);
+	background-color: var(--colLR);
 }
 
 div.sheet-invocations > .repcontainer > .repitem > label:nth-of-type(3)
 {
-    background-color: var(--colC);
+	background-color: var(--colC);
 }
 
 div.sheet-invocations > .repcontainer > .repitem > button[type="roll"]::before
@@ -3758,7 +3758,7 @@ div.sheet-invocations > .repcontainer > .repitem > button[type="roll"]:nth-of-ty
 div.sheet-invocations > .repcontainer > .repitem > input[type="hidden"][value="1"] ~ div
 {
 	display:flex;
-    width:100%;
+	width:100%;
 	flex-wrap:wrap;
 }
 
@@ -4301,22 +4301,22 @@ div.sheet-formules > .repcontainer > .repitem > input[type="text"]:nth-of-type(3
 
 div.sheet-formules > .repcontainer > .repitem > button[type="roll"]
 {
-    width: 40px;
-    height: 30px;
-    background-image: var(--dice);
-    cursor: pointer;
-    background-size: contain;
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-    background-position: 0px;
-    background-color: transparent;
-    margin-left: auto;
+	width: 40px;
+	height: 30px;
+	background-image: var(--dice);
+	cursor: pointer;
+	background-size: contain;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	background-position: 0px;
+	background-color: transparent;
+	margin-left: auto;
 }
 
 div.sheet-formules > .repcontainer > .repitem > button[type="roll"]::before
 {
-    content:"";
+	content:"";
 }
 
 div.sheet-formules > .repcontainer > .repitem > select:nth-of-type(1)
@@ -4920,35 +4920,37 @@ div.sheet-fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 }
 
 div.sheetDomains select {
-    background: transparent;
+	background: transparent;
 }
 
 div.sheet-gsMaillons
 {
-    border-left:2px solid var(--titreGris);
+	border-left:2px solid var(--titreGris);
 	flex-wrap:wrap;
 }
 
 div.sheet-gsMaillons > h1 {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 div.sheet-gsMaillons > h1 input[type="number"] {
-    background: transparent;
+	background: transparent;
+	text-shadow: 2px 3px 5px black;
+	color:white;
 }
 
 div.sheet-repeating-maillon-wrapper {
-    flex-direction: column;
+	flex-direction: column;
 }
 div.sheet-gsMaillons .repcontainer {
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 div.sheet-gsMaillons .repcontainer > .repitem
 {
-    width: 20%;
+	width: 20%;
 }
 div.sheet-gsMaillons .repcontainer > .repitem input[type="text"]
 {
-    width: 100%;
-    padding-left: 5px;
-    background: transparent;
+	width: 100%;
+	padding-left: 5px;
+	background: transparent;
 }
