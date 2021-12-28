@@ -4919,15 +4919,29 @@ div.sheet-fraternite > .repcontainer > .repitem > .itemcontrol > .btn
 	border:0px;
 }
 
+div.sheetDomains select {
+    background: transparent;
+}
+
 div.sheet-gsMaillons
 {
     border-left:2px solid var(--titreGris);
 	flex-wrap:wrap;
 }
 
-div.sheet-gsMaillons .repcontainer,
+div.sheet-repeating-maillon-wrapper {
+    flex-direction: column;
+}
+div.sheet-gsMaillons .repcontainer {
+    flex-wrap: wrap;
+}
 div.sheet-gsMaillons .repcontainer > .repitem
 {
-    flex-wrap: wrap;
+    width: 20%;
+}
+div.sheet-gsMaillons .repcontainer > .repitem input[type="text"]
+{
     width: 100%;
+    padding-left: 5px;
+    background: transparent;
 }
