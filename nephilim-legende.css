@@ -333,7 +333,7 @@ div.sheet-options > div > label > input[type="checkbox"]:checked ~ span::before
 div.sheet-menu
 {
 	width:100%;
-	justify-content:space-between;
+	justify-content:flex-start;
 	min-height:80px;
 	flex-wrap:wrap;
 	margin-top:5px;
@@ -412,7 +412,8 @@ input[type="hidden"].sheet-menu[value="10"] ~ div.sheet-tab10
 input[type="hidden"].sheet-magie[value="0"] ~ div.sheet-menu > label:nth-of-type(6),
 input[type="hidden"].sheet-kabbale[value="0"] ~ div.sheet-menu > label:nth-of-type(7),
 input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(8),
-input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(9)
+input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(9),
+input[type="hidden"].sheet-arcadia[value="0"] ~ div.sheet-menu > label:nth-of-type(5)
 {
 	display:none;
 }
