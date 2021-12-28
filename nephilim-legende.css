@@ -4929,6 +4929,13 @@ div.sheet-gsMaillons
 	flex-wrap:wrap;
 }
 
+div.sheet-gsMaillons > h1 {
+    justify-content: space-between;
+}
+div.sheet-gsMaillons > h1 input[type="number"] {
+    background: transparent;
+}
+
 div.sheet-repeating-maillon-wrapper {
     flex-direction: column;
 }

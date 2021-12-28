@@ -2032,10 +2032,12 @@
 
 		<div class="gsMaillons">
 			<h1>
-				Maillons
-				<span class="magSecretCountLinks"></span>
-				/
-				<input type="text" name="attr_magSecretAllowedLinks" disabled/>
+				<div>Maillons</div>
+				<div>
+					<input type="number" name="attr_magSecretCurrentLinks" readonly />
+					&nbsp;/&nbsp;
+					<input type="number" name="attr_magSecretAllowedLinks" readonly/>
+				</div>
 			</h1>
 			<div class="repeating-maillon-wrapper">
 				<fieldset class="repeating_maillon">
