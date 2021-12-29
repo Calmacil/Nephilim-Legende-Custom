@@ -1470,7 +1470,10 @@
 							<input type="checkbox" name="attr_expandMnemos1" value="1" />
 							<span></span>
 						</label>
-						<input type="checkbox" name="attr_use_mnemos1"/>
+						<label class="checkSign">
+							<input type="checkbox" name="attr_use_mnemos1"/>
+							<span></span>
+						</label>
 						<input type="text" name="attr_mnemos1" />
 						<input type="number" name="attr_degres_mnemos1" value="0" />
 						<input type="hidden" name="attr_expandMnemos1" value="1" />
@@ -1484,7 +1487,10 @@
 							<input type="checkbox" name="attr_expandMnemos2" value="1" />
 							<span></span>
 						</label>
-						<input type="checkbox" name="attr_use_mnemos2" />
+						<label class="checkSign">
+							<input type="checkbox" name="attr_use_mnemos2" />
+							<span></span>
+						</label>
 						<input type="text" name="attr_mnemos2" />
 						<input type="number" name="attr_degres_mnemos2" value="0" />
 						<input type="hidden" name="attr_expandMnemos2" value="1" />
@@ -1848,20 +1854,26 @@
 						<textarea name="attr_vecu_description"></textarea>
 						<span name="attr_vecu_description"></span>
 					</div>
+					<input type="hidden" name="attr_effectiveMnemos" value="@{degres_mnemos1}+@{degres_mnemos2}"/>
 					<select name="attr_approche">
-						<option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0}+@{degres_mnemos1}+@{degres_mnemos2}-@{malusPhy})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
-						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}+@{degres_mnemos1}+@{degres_mnemos2}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
-						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}+@{degres_mnemos1}+@{degres_mnemos2}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
-						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}+@{degres_mnemos1}+@{degres_mnemos2}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
-						<option value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}+@{degres_mnemos1}+@{degres_mnemos2}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
-						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}+@{degres_mnemos1}+@{degres_mnemos2}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0}+@{effectiveMnemos}-@{malusPhy})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
 					</select>
-					<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{mnemos1=@{mnemos1}}} {{mnemos2=@{mnemos2}}} {{jet=[[1d100]]}} @{approche}"></button>
+					<input type="hidden" name="attr_effectiveRoll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{mnemos1=@{mnemos1}}} {{mnemos2=@{mnemos2}}} {{jet=[[1d100]]}} @{approche}"/>
+					<button type="roll" name="roll_vecu" value="@{effectiveRoll}"></button>
 				</div>
 				<div>
 					<div>
 						<label>
 							<input type="checkbox" name="attr_expandMnemos1" value="1" />
+							<span></span>
+						</label>
+						<label class="checkSign">
+							<input type="checkbox" name="attr_use_mnemos1"/>
 							<span></span>
 						</label>
 						<input type="text" name="attr_mnemos1" />
@@ -1875,6 +1887,10 @@
 					<div>
 						<label>
 							<input type="checkbox" name="attr_expandMnemos2" value="1" />
+							<span></span>
+						</label>
+						<label class="checkSign">
+							<input type="checkbox" name="attr_use_mnemos2" />
 							<span></span>
 						</label>
 						<input type="text" name="attr_mnemos2" />
