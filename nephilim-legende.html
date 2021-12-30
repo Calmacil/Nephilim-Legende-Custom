@@ -1607,17 +1607,21 @@
 		<div class="col">
 			<div class="actionsAttributs">
 				<h1>Actions et attributs</h1>
+				<input type="hidden" name="attr_nature" class="nature"/>
 				<div>
 					<button type="roll" name="roll_initiative" value="@{gm} &{template:initiative} {{name=@{character_name}}} {{jet=[[ [[@{init}]]+@{initiative_variable} &{tracker}]]}}"><span>Initiative</span></button>
-					<input type="number" name="attr_init" value="@{kaeau}*2" disabled />
+					<input type="number" name="attr_init" value="@{kaeau}*2" disabled class="hideHumain"/>
+					<input type="number" name="attr_init" value="@{simu-kasoleil}" disabled class="hideNephilim"/>
 				</div>
 				<label>
 					<span>Récupération</span>
-					<input type="number" name="attr_recup" value="11-@{katerre}" disabled />
+					<input type="number" name="attr_recup" value="11-@{katerre}" disabled class="hideHumain" />
+					<input type="number" name="attr_recup" value="11-@{simu-kasoleil}" disabled class="hideNephilim" />
 				</label>
 				<label>
 					<span>Mouvement</span>
-					<input type="number" name="attr_mouv" value="@{kaeau}*2" disabled />
+					<input type="number" name="attr_mouv" value="@{kaeau}*2" disabled class="hideHumain"/>
+					<input type="number" name="attr_mouv" value="@{simu-kasoleil}" disabled class="hideNephilim"/>
 				</label>
 				<label>
 					<span>Bonus de Dommages</span>
