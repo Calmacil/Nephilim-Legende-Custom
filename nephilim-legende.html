@@ -1235,6 +1235,22 @@
 			</select>
 			<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu}}} {{jet=[[1d100]]}} @{approche}"></button>
 		</div>
+		<div class="simulacreVecus">
+			<label>Vécu secondaire</label>
+			<input type="text" name="attr_simu_vecu2" placeholder="Vécu" />
+			<input type="number" name="attr_simu-vecu-nbr2" value="0" />
+			<input type="hidden" class="nature" name="attr_nature"/>
+			<select name="attr_approche2">
+				<option value="{{seuil=[[(@{simu-vecu-nbr2}+0+?{Bonus/Malus ?|0})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
+				<option class="hideNephilim" value="{{seuil=[[(@{simu-vecu-nbr2}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
+			</select>
+			<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu2}}} {{jet=[[1d100]]}} @{approche2}"></button>
+		</div>
 
 		<div class="col2">
 
@@ -1792,6 +1808,39 @@
 				<input type="checkbox" name="attr_degreMetamorphe" value="10" />
 				<span title="10"></span>
 			</label>
+		</div>
+
+		<div class="simulacreVecus">
+			<label>Vécu principal</label>
+			<input type="text" name="attr_simu_vecu" placeholder="Vécu" />
+			<input type="number" name="attr_simu-vecu-nbr" value="0" />
+			<input type="hidden" class="nature" name="attr_nature"/>
+			<select name="attr_approche">
+				<option value="{{seuil=[[(@{simu-vecu-nbr}+0+?{Bonus/Malus ?|0})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
+				<option class="hideNephilim" value="{{seuil=[[(@{simu-vecu-nbr}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
+			</select>
+			<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu}}} {{jet=[[1d100]]}} @{approche}"></button>
+		</div>
+		<div class="simulacreVecus">
+			<label>Vécu secondaire</label>
+			<input type="text" name="attr_simu_vecu2" placeholder="Vécu" />
+			<input type="number" name="attr_simu-vecu-nbr2" value="0" />
+			<input type="hidden" class="nature" name="attr_nature"/>
+			<select name="attr_approche2">
+				<option value="{{seuil=[[(@{simu-vecu-nbr2}+0+?{Bonus/Malus ?|0})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
+				<option class="hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
+				<option class="hideNephilim" value="{{seuil=[[(@{simu-vecu-nbr2}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
+			</select>
+			<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu2}}} {{jet=[[1d100]]}} @{approche2}"></button>
 		</div>
 
 		<div class="epoquesIncarnation">
