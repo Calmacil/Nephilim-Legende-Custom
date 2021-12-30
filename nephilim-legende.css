@@ -306,7 +306,8 @@ div.sheet-options > div > label > input[type="checkbox"] ~ span
 	width:100%;
 }
 
-div.sheet-options > div > label > input[type="checkbox"] ~ span::before
+div.sheet-options > div > label > input[type="checkbox"] ~ span::before,
+div.sheet-options > div > label > select
 {
 	content:attr(title);
 	width:100%;
@@ -321,6 +322,12 @@ div.sheet-options > div > label > input[type="checkbox"] ~ span::before
 	border: 1px solid var(--brun);
 	font-size:14px;
 	box-shadow: 1px 1px 1px black;
+}
+
+div.sheet-options > div > label > select
+{
+	width: 140px;
+	height: 22px;
 }
 
 div.sheet-options > div > label > input[type="checkbox"]:checked ~ span::before
@@ -413,7 +420,10 @@ input[type="hidden"].sheet-magie[value="0"] ~ div.sheet-menu > label:nth-of-type
 input[type="hidden"].sheet-kabbale[value="0"] ~ div.sheet-menu > label:nth-of-type(7),
 input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(8),
 input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(9),
-input[type="hidden"].sheet-arcadia[value="0"] ~ div.sheet-menu > label:nth-of-type(5)
+input[type="hidden"].sheet-arcadia[value="0"] ~ div.sheet-menu > label:nth-of-type(5),
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(1),
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(3),
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(10)
 {
 	display:none;
 }
@@ -5043,7 +5053,9 @@ div.sheet-gsMaillons .repcontainer > .repitem input[type="text"]
 }
 
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsMaillons,
-input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsDomains
+input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsDomains,
+input[type="hidden"].sheet-nature[value="humain"] ~ select > option.sheet-hideHumain,
+input[type="hidden"].sheet-nature[value="nephilim"] ~ select > option.sheet-hideNephilim
 {
     display: none;
 }
