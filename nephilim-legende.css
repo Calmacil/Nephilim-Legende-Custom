@@ -1378,9 +1378,9 @@ div.sheet-simulacreVecu > h1
 {
 	color:white;
 	font-family:"Kodchasan";
+	text-shadow: 2px 3px 5px black;
 	padding-left:5px;
 	padding-right:25px;
-	text-shadow: 2px 3px 5px black;
 	font-size:25px;
 }
 
@@ -1439,12 +1439,71 @@ div.sheet-simulacreVecu > button[type="roll"]::before
 	content:"";
 }
 
+div.sheet-simulacreVecus
+{
+	width: 100%;
+}
+
+div.sheet-simulacreVecus > input[type="text"]
+{
+	padding: 0px;
+	border: 1px solid var(--brun);
+	height: 25px;
+	width:40%;
+	padding-left:5px;
+}
+
+div.sheet-simulacreVecus > input[type="number"]
+{
+	height: 30px;
+	width: 30px;
+	border-radius: 25px;
+	border: 2px solid var(--brun);
+	margin-left: -10px;
+	z-index: 99;
+	text-align:center;
+}
+
+div.sheet-simulacreVecus > select
+{
+	width: 200px;
+	padding: 0px;
+	padding-left: 2px;
+	border: 0px;
+	border-bottom: 1px dotted var(--brun);
+	font-size: 14px;
+	font-weight: bold;
+	background: white;
+	height: 25px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+div.sheet-simulacreVecus > button[type="roll"]
+{
+	width: 40px;
+	height: 30px;
+	background-image: var(--dice);
+	cursor: pointer;
+	background-size: contain;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	background-position: 0px;
+	background-color: transparent;
+	margin-right: auto;
+}
+
+div.sheet-simulacreVecus > button[type="roll"]::before
+{
+	content:"";
+}
+
 div.sheet-simulacreIdentite1,
 div.sheet-simulacreIdentite2
 {
 	width:100%;
 	justify-content:space-between;
-	margin-top:5px;
 }
 
 div.sheet-simulacreIdentite1
@@ -1472,23 +1531,26 @@ div.sheet-simulacreIdentite2 > label:nth-of-type(1)
 div.sheet-simulacreIdentite1 > label:nth-of-type(1) > span
 {
 	width:40px;
-	font-family:"Time New Roman";
 	font-variant:small-caps;
-	color:var(--brun);
+	color:white;
+	font-family:"Kodchasan";
+	text-shadow: 2px 3px 5px black;
 	align-items:center;
 	font-weight:bold;
-	font-size:20px;
+	font-size:17px;
+	margin-top: 7px;
 }
 
 div.sheet-simulacreIdentite2 > label:nth-of-type(1) > span
 {
 	width:80px;
-	font-family:"Time New Roman";
 	font-variant:small-caps;
-	color:var(--brun);
+	color:white;
+	font-family:"Kodchasan";
+	text-shadow: 2px 3px 5px black;
 	align-items:flex-end;
 	font-weight:bold;
-	font-size:20px;
+	font-size:17px;
 }
 
 div.sheet-simulacreIdentite1 > label:nth-of-type(1) > input[type="text"],
@@ -1496,9 +1558,10 @@ div.sheet-simulacreIdentite2 > label:nth-of-type(1) > input[type="text"]
 {
 	width:calc(100% - 40px - 5px);
 	border:0px;
-	border-bottom:1px dotted var(--brun);
-	background:transparent;
-	padding-top:6px;
+	border-bottom:1px dotted var(--blanc);
+	background: rgba(255,255,255,0.8);
+	padding-top:4px;
+	padding-left: 4px;
 	min-width:0px;
 }
 
@@ -1516,22 +1579,27 @@ div.sheet-simulacreIdentite2 > label:nth-of-type(2)
 
 div.sheet-simulacreIdentite1 > label:nth-of-type(2) > span
 {
-	width:80px;
-	font-family:"Time New Roman";
-	color:var(--brun);
+	width:100px;
+	color:white;
+	font-family:"Kodchasan";
+	font-variant: small-caps;
+	text-shadow: 2px 3px 5px black;
 	align-items:flex-end;
 	font-weight:bold;
-	font-size:20px;
+	font-size:17px;
 }
 
 div.sheet-simulacreIdentite2 > label:nth-of-type(2) > span
 {
 	width:35px;
-	font-family:"Time New Roman";
-	color:var(--brun);
-	align-items:flex-end;
+	color:white;
+	font-family:"Kodchasan";
+	font-variant: small-caps;
+	text-shadow: 2px 3px 5px black;
+	margin-top: 7px;
+	align-items:flex-start;
 	font-weight:bold;
-	font-size:20px;
+	font-size:17px;
 }
 
 div.sheet-simulacreIdentite1 > label:nth-of-type(2) > input[type="number"],
