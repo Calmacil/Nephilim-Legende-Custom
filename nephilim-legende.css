@@ -1363,7 +1363,7 @@ div.sheet-adoption > div:last-of-type > textarea
 	border-bottom:1px dotted black;
 }
 
-div.sheet-simulacreVecu
+div.sheet-simulacreTitre
 {
 	width:100%;
 	background-image: linear-gradient(to right, rgba(var(--blanc), 0) 50%, rgba(var(--blanc), 0.8)), linear-gradient(to right, rgba(var(--marron), 0.8),rgba(var(--marron), 0.8)), var(--astrolabe);
@@ -1374,7 +1374,7 @@ div.sheet-simulacreVecu
 	height:36px;
 }
 
-div.sheet-simulacreVecu > h1
+div.sheet-simulacreTitre > h1
 {
 	color:white;
 	font-family:"Kodchasan";
@@ -1384,42 +1384,7 @@ div.sheet-simulacreVecu > h1
 	font-size:25px;
 }
 
-div.sheet-simulacreVecu > input[type="text"]
-{
-	padding: 0px;
-	border: 1px solid var(--brun);
-	height: 25px;
-	width:40%;
-	padding-left:5px;
-}
-
-div.sheet-simulacreVecu > input[type="number"]
-{
-	height: 30px;
-	width: 30px;
-	border-radius: 25px;
-	border: 2px solid var(--brun);
-	margin-left: -10px;
-	z-index: 99;
-	text-align:center;
-}
-
-div.sheet-simulacreVecu > select
-{
-	width: 200px;
-	padding: 0px;
-	padding-left: 2px;
-	border: 0px;
-	border-bottom: 1px dotted var(--brun);
-	font-size: 14px;
-	font-weight: bold;
-	background: white;
-	height: 25px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-div.sheet-simulacreVecu > button[type="roll"]
+div.sheet-simulacreTitre > button[type="roll"]
 {
 	width: 40px;
 	height: 30px;
@@ -1434,20 +1399,33 @@ div.sheet-simulacreVecu > button[type="roll"]
 	margin-right: auto;
 }
 
-div.sheet-simulacreVecu > button[type="roll"]::before
+div.sheet-simulacreTitre > button[type="roll"]::before
 {
 	content:"";
 }
 
 div.sheet-simulacreVecus
 {
+	padding-top: 4px;
 	width: 100%;
+}
+
+div.sheet-simulacreVecus > label
+{
+	width: calc(100% - 655px);
+	font-size: 15px;
+	color: var(--brun);
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: "Times New Roman";
+	padding-left: 6px;
 }
 
 div.sheet-simulacreVecus > input[type="text"]
 {
 	padding: 0px;
-	border: 1px solid var(--brun);
+	border: none;
+	border-bottom: 1px dotted var(--brun);
 	height: 25px;
 	width:40%;
 	padding-left:5px;
@@ -1459,7 +1437,8 @@ div.sheet-simulacreVecus > input[type="number"]
 	width: 30px;
 	border-radius: 25px;
 	border: 2px solid var(--brun);
-	margin-left: -10px;
+	margin-top: -2px;
+	margin-left: 10px;
 	z-index: 99;
 	text-align:center;
 }
@@ -1492,6 +1471,7 @@ div.sheet-simulacreVecus > button[type="roll"]
 	background-position: 0px;
 	background-color: transparent;
 	margin-right: auto;
+	margin-top: -2px;
 }
 
 div.sheet-simulacreVecus > button[type="roll"]::before

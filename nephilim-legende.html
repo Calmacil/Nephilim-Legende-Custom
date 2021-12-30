@@ -1186,7 +1186,7 @@
 	</div>
 
 	<div class="tab2">
-		<div class="simulacreVecu">
+		<div class="simulacreTitre">
 			<h1>Simulacre</h1>
 			<div class="simulacreIdentite1">
 				<label>
@@ -1213,6 +1213,7 @@
 		</div>
 
 		<div class="simulacreVecus">
+			<label>Vécu principal</label>
 			<input type="text" name="attr_simu_vecu" placeholder="Vécu" />
 			<input type="number" name="attr_simu-vecu-nbr" value="0" />
 			<select name="attr_approche">
@@ -1222,6 +1223,7 @@
 				<option value="{{seuil=[[(@{simu-vecu-nbr}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
 				<option value="{{seuil=[[(@{simu-vecu-nbr}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
 				<option value="{{seuil=[[(@{simu-vecu-nbr}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
+				<option value="{{seuil=[[(@{simu-vecu-nbr}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
 			</select>
 			<button type="roll" name="roll_vecu" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu}}} {{jet=[[1d100]]}} @{approche}"></button>
 		</div>
