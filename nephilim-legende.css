@@ -411,19 +411,29 @@ input[type="hidden"].sheet-menu[value="6"] ~ div.sheet-tab6,
 input[type="hidden"].sheet-menu[value="7"] ~ div.sheet-tab7,
 input[type="hidden"].sheet-menu[value="8"] ~ div.sheet-tab8,
 input[type="hidden"].sheet-menu[value="9"] ~ div.sheet-tab9,
-input[type="hidden"].sheet-menu[value="10"] ~ div.sheet-tab10
+input[type="hidden"].sheet-menu[value="10"] ~ div.sheet-tab10,
+input[type="hidden"].sheet-menu[value="11"] ~ div.sheet-tab11,
+input[type="hidden"].sheet-menu[value="12"] ~ div.sheet-tab12,
+input[type="hidden"].sheet-menu[value="13"] ~ div.sheet-tab13,
+input[type="hidden"].sheet-menu[value="14"] ~ div.sheet-tab14
 {
 	display:flex;
 }
 
-input[type="hidden"].sheet-magie[value="0"] ~ div.sheet-menu > label:nth-of-type(6),
-input[type="hidden"].sheet-kabbale[value="0"] ~ div.sheet-menu > label:nth-of-type(7),
-input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(8),
+input[type="hidden"].sheet-magie[value="0"] ~ div.sheet-menu > label:nth-of-type(7),
+input[type="hidden"].sheet-kabbale[value="0"] ~ div.sheet-menu > label:nth-of-type(8),
 input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(9),
-input[type="hidden"].sheet-arcadia[value="0"] ~ div.sheet-menu > label:nth-of-type(5),
+input[type="hidden"].sheet-alchimie[value="0"] ~ div.sheet-menu > label:nth-of-type(10),
+input[type="hidden"].sheet-necro[value="0"] ~ div.sheet-menu > label:nth-of-type(11),
+input[type="hidden"].sheet-kabnoire[value="0"] ~ div.sheet-menu > label:nth-of-type(12),
+input[type="hidden"].sheet-imago[value="0"] ~ div.sheet-menu > label:nth-of-type(13),
+input[type="hidden"].sheet-arcadia[value="0"] ~ div.sheet-menu > label:nth-of-type(6),
 input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(1),
-input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(3),
-input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(10)
+input[type="hidden"].sheet-nature[value="selenim"] ~ div.sheet-menu > label:nth-of-type(1),
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(2),
+input[type="hidden"].sheet-nature[value="nephilim"] ~ div.sheet-menu > label:nth-of-type(2),
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(4),
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-menu > label:nth-of-type(14)
 {
 	display:none;
 }
@@ -437,7 +447,11 @@ div.sheet-tab6,
 div.sheet-tab7,
 div.sheet-tab8,
 div.sheet-tab9,
-div.sheet-tab10
+div.sheet-tab10,
+div.sheet-tab11,
+div.sheet-tab12,
+div.sheet-tab13,
+div.sheet-tab14
 {
 	display:none;
 	width:100%;
@@ -5052,6 +5066,204 @@ div.sheet-gsMaillons .repcontainer > .repitem input[type="text"]
 	width: 100%;
 	padding-left: 5px;
 	background: transparent;
+}
+
+
+div.sheet-selenimPhrase
+{
+	width:100%;
+	flex-wrap:wrap;
+	border:2px solid var(--brun);
+	background:white;
+	flex-wrap:wrap;
+	margin-top:5px;
+}
+
+div.sheet-selenimPhrase > span
+{
+	width:100%;
+	font-variant:small-caps;
+	color:var(--brun);
+	font-size:14px;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	padding-left:5px;
+	letter-spacing:1px;
+}
+
+div.sheet-selenimPhrase > div
+{
+	width:100%;
+}
+
+div.sheet-noyauCompetence
+{
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+
+div.sheet-noyauCompetence > label
+{
+	width: 100%;
+	justify-content: space-between;
+}
+
+div.sheet-noyauCompetence > label > div > input[type="number"]
+{
+	height: 28px;
+	width: 40px;
+	border: var(--brun) solid 2px;
+	margin-top: -3px;
+	margin-right: 5px;
+	padding: 4px;
+	text-align: center;
+}
+
+div.sheet-noyauCompetence > label > div > button[type="roll"]
+{
+	width: 40px;
+	height: 30px;
+	background-image: var(--dice);
+	cursor: pointer;
+	background-size: contain;
+	margin: 0px;
+	margin-top: -3px;
+	border: 0px;
+	padding: 0px;
+	background-position: 0px;
+	background-color: transparent;
+	margin-right: auto;
+}
+
+div.sheet-noyauCompetence > label > div > button[type="roll"]::before
+{
+	content: "";
+}
+
+div.sheet-tab11 div.sheet-chutes h2 {
+	width: 100%;
+}
+
+div.sheet-tab11 div.sheet-chutes label {
+	margin-bottom: 5px;
+}
+
+div.sheet-noyau
+{
+	width: 445px;
+	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende-Selenim/images/noyau.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-y: 35px;
+	margin-left:auto;
+	margin-right:auto;
+	height:470px;
+	margin-top:-30px;
+}
+
+div.sheet-noyau > input[type="number"]
+{
+	position:absolute;
+	text-align: center;
+	border: 0px;
+	height: 51px;
+	border-radius: 25px;
+	width: 50px;
+	background: transparent;
+	font-size: 15px;
+	color: black;
+}
+
+div.sheet-noyau > button[type="roll"]
+{
+	position:absolute;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	background:none;
+}
+
+div.sheet-noyau > button[type="roll"]::before
+{
+	content:"";
+}
+
+div.sheet-noyau > button[type="roll"] > span
+{
+	font-family: "Times New Roman";
+	font-size: 18px;
+	color: white;
+	text-shadow: 1px 1px 5px white;
+	min-width: max-content;
+	font-variant:small-caps;
+}
+
+div.sheet-noyau > button[type="roll"]:nth-of-type(1)
+{
+	margin-left: 182px;
+	margin-top: 145px;
+}
+
+div.sheet-noyau > button[type="roll"]:nth-of-type(1)::before
+{
+	font-family: "dicefontd10";
+	font-size: 1.5em;
+	content: "t";
+	color: white;
+	padding-right:5px;
+	width: 25px;
+	shadow: 1px 1px 5px white;
+}
+
+div.sheet-noyau > input[type="number"]:nth-of-type(1)
+{
+	margin-left: 124px;
+	margin-top: 131px;
+}
+
+div.sheet-noyau > button[type="roll"]:nth-of-type(2)
+{
+	margin-top: 347px;
+	margin-left: 180px;
+}
+
+div.sheet-noyau > button[type="roll"]:nth-of-type(2)::after
+{
+	font-family: "dicefontd10";
+	font-size: 1.5em;
+	content:"t";
+	color: white;
+	width: 25px;
+	padding-left:5px;
+}
+
+div.sheet-noyau > input[type="number"]:nth-of-type(2)
+{
+	margin-left: 279px;
+	margin-top: 333px;
+	background-color: white;
+	z-index: 100;
+}
+
+div.sheet-noyau > button[type="roll"]:nth-of-type(3)
+{
+	margin-top: 319px;
+	margin-left: 260px;
+}
+
+div.sheet-noyau > button[type="roll"]:nth-of-type(3)::after
+{
+	content:"";
+	padding-left:5px;
+	width: 5px;
+}
+
+div.sheet-noyau > input[type="number"]:nth-of-type(3)
+{
+	margin-left: 307px;
+	margin-top: 305px;
+	color: white;
+	border: solid white 2px;
 }
 
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsMaillons,

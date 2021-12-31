@@ -742,6 +742,7 @@
 					<select name="attr_nature" title="Nature ?">
 						<option value="nephilim" selected>Nephilim</option>
 						<option value="humain">Humain</option>
+						<option value="selenim">Selenim</option>
 					</select>
 				</label>
 				<label>
@@ -765,6 +766,18 @@
 					<span title="Pratique l'alchimie"></span>
 				</label>
 				<label>
+					<input type="checkbox" name="attr_practice_necro" />
+					<span title="Pratique la nécro."></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_practice_kabnoire" />
+					<span title="Kabbale noire"></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_practice_imago" />
+					<span title="Imago"></span>
+				</label>
+				<label>
 					<input type="checkbox" name="attr_view_arcadia" />
 					<span title="Arcadia"></span>
 				</label>
@@ -777,11 +790,19 @@
 	<input type="hidden" name="attr_practice_alch" class="alchimie" value="0" />
 	<input type="hidden" name="attr_view_arcadia" class="arcadia" value="0" />
 	<input type="hidden" name="attr_nature" class="nature" value="nephilim" />
+	<input type="hidden" name="attr_practice_necro" class="necro" value="0" />
+	<input type="hidden" name="attr_practice_kabnoire" class="kabnoire" value="0" />
+	<input type="hidden" name="attr_practice_imago" class="imago" value="0" />
 
 	<div class="menu">
 		<label>
 			<input type="radio" name="attr_tab" value="1" />
 			<span title="Nephilim"></span>
+		</label>
+
+		<label>
+			<input type="radio" name="attr_tab" value="11">
+			<span title="Selenim"></span>
 		</label>
 
 		<label>
@@ -822,6 +843,21 @@
 		<label>
 			<input type="radio" name="attr_tab" value="8" />
 			<span title="Constructs"></span>
+		</label>
+
+		<label>
+			<input type="radio" name="attr_tab" value="12" />
+			<span title="Nécromancie"></span>
+		</label>
+
+		<label>
+			<input type="radio" name="attr_tab" value="13" />
+			<span title="Kabbale noire"></span>
+		</label>
+
+		<label>
+			<input type="radio" name="attr_tab" value="14" />
+			<span title="Imago"></span>
 		</label>
 
 		<label>
@@ -2929,6 +2965,226 @@
 			<h1>Titre</h1>
 			<input type="text" name="attr_titre" />
 		</div>
+	</div>
+
+	<div class="tab11">
+		<div class="col">
+			<label class="headerName">
+				<span>Nom</span>
+				<input type="text" name="attr_character_name">
+			</label>
+
+			<div class="selenimPhrase">
+				<span>Votre Selenim en une phrase :</span>
+				<div class="autoex autoex24">
+					<textarea name="attr_en_une_phrase"></textarea>
+					<span name="attr_en_une_phrase"></span>
+				</div>
+			</div>
+
+			<div class="noyauCompetence">
+				<label>
+					<span>Pavane</span>
+					<div>
+						<input type="number" name="attr_pavane" value="3"/>
+						<button type="roll" name="sheet-roll-pavane"></button>
+					</div>
+				</label>
+				<label>
+					<span>Changement de peau</span>
+					<div>
+						<input type="number" name="attr_chmtPeau" value="1"/>
+						<button type="roll" name="sheet-roll-chmtPeau"></button>
+					</div>
+				</label>
+			</div>
+
+			<div class="chutes">
+				<h1>Chutes</h1>
+				<div>
+					<div>
+						<h2>Effet Ahasvérus</h2>
+						<input type="hidden" name="attr_ahasverus" value="0" />
+						<label>
+							<input type="radio" name="attr_ahasverus" value="0" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="1" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="2" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="3" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="4" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="5" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="6" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="7" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="8" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="9" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_ahasverus" value="10" />
+							<span></span>
+						</label>
+					</div>
+					<input type="text" name="attr_ahasverus_form" />
+				</div>
+				<div>
+					<div>
+						<h2>Souillure orichalquienne</h2>
+						<input type="hidden" name="attr_orichism" value="0" />
+						<label>
+							<input type="radio" name="attr_orichism" value="0" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="1" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="2" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="3" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="4" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="5" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="6" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="7" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="8" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="9" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_orichism" value="10" />
+							<span></span>
+						</label>
+					</div>
+					<input type="text" name="attr_orichism_form" />
+				</div><div>
+					<div>
+						<h2>Entropie</h2>
+						<input type="hidden" name="attr_entropie" value="0" />
+						<label>
+							<input type="radio" name="attr_entropie" value="0" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="1" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="2" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="3" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="4" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="5" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="6" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="7" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="8" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="9" />
+							<span></span>
+						</label>
+						<label>
+							<input type="radio" name="attr_entropie" value="10" />
+							<span></span>
+						</label>
+					</div>
+					<input type="text" name="attr_entropie_form" />
+				</div>
+			</div>
+		</div>
+		<div class="2colT1">
+			<div class="noyau">
+				<button type="roll" name="roll_kanoyau">
+					<span>Noyau</span>
+				</button>
+				<input type="number" name="attr_kaln" value="1" min="1">
+
+				<button type="roll" name="roll_kareserve">
+					<span>Réserve</span>
+				</button>
+				<input type="number" name="attr_reserve" value="0" min="0">
+
+				<button type="roll" name="roll_kareservemax">
+					<span>Max </span>
+				</button>
+				<input type="number" name="attr_reserveMax" value="0" min="0">
+			</div>
+		</div>
+	</div>
+
+	<div class="tab12">
+		<h1 class="titreNecromancie">Nécromancie</h1>
+	</div>
+
+	<div class="tab13">
+		<h1 class="titreKabbNoire">Kabbale noire</h1>
+	</div>
+
+	<div class="tab14">
+		<h1 class="titreImago">Imago</h1>
 	</div>
 </div>
 <!------------------------------------- Begin Roll Templates ------------------------------------->

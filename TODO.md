@@ -12,8 +12,59 @@
 [x] 6b. Mauvais ajustement de la largeur de la zone des Maillons (Grand Secret)
 [x] 6c. Faire disparaître les zones Métamorphe actif quand on sélectionne humain
 
-[ ] 7. Add Selenim tab
+[x] 7. Add Selenim tab
+[ ] 7a. Calcul des caracs secondaires d'après le KLN
 [ ] 8. Add Necromancie tab
 [ ] 9. Add Kabbale noire tab
 [ ] 10. Add Imago tab
-[ ] 11. Add config option to display Nephilim / Selenim
+[x] 11. Add config option to display Nephilim / Selenim
+
+
+## Noyau
+Nom
+Selenim en une phrase
+Noyau
+Réserve
+Réserve max
+Skill: Pavane
+Skill: Changement de Peau
+Chute: Effet Ahasvérus
+Chute: Orichalquisme
+-- Pas d’entropie, elle est mesurée en degré de noyau négatif ?!
+
+## Nécromancie - colonne
+- Compétence Nécromancie
+- Réserve
+
+- Nom
+- Voie
+- Coût
+- Durée
+- Seuil
+- Lancer
+- Effet/Description
+
+## Kabbale Noire
+- Compétence Kabbale Noire
+- Réserve
+
+Nom
+KLN
+DMG
+Protec.
+Entropie
+Contrôle O/N
+Seuil
+Lancer
+Effets
+
+## Imago
+- Réserve
+- Description
+
+- Nom
+- Coût
+- KLN investi
+- Durée (dynamique)
+- Actif O/N
+- Description
