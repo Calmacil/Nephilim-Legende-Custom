@@ -5024,6 +5024,7 @@ div.sheet-gsMaillons
 {
 	border-left:2px solid var(--titreGris);
 	flex-wrap:wrap;
+	width: 100%;
 }
 
 div.sheet-gsMaillons > h1 {
@@ -5037,6 +5038,7 @@ div.sheet-gsMaillons > h1 input[type="number"] {
 
 div.sheet-repeating-maillon-wrapper {
 	flex-direction: column;
+	width: 100%;
 }
 div.sheet-gsMaillons .repcontainer {
 	flex-wrap: wrap;
@@ -5055,11 +5057,12 @@ div.sheet-gsMaillons .repcontainer > .repitem input[type="text"]
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsMaillons,
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsDomains,
 input[type="hidden"].sheet-nature[value="humain"] ~ select > option.sheet-hideHumain,
-input[type="hidden"].sheet-nature[value="humain"] ~ select > option.sheet-hideHumain,
-input[type="hidden"].sheet-nature[value="nephilim"] ~ div > input[type="number"].sheet-hideNephilim,
-input[type="hidden"].sheet-nature[value="nephilim"] ~ label > input[type="number"].sheet-hideNephilim,
-input[type="hidden"].sheet-nature[value="humain"] ~ div > input[type="number"].sheet-hideHumain,
-input[type="hidden"].sheet-nature[value="humain"] ~ label > input[type="number"].sheet-hideHumain
+input[type="hidden"].sheet-nature[value="nephilim"] ~ select > option.sheet-hideNephilim,
+input[type="hidden"].sheet-nature[value="nephilim"] ~ div div > input[type="number"].sheet-hideNephilim,
+input[type="hidden"].sheet-nature[value="nephilim"] ~ div label > input[type="number"].sheet-hideNephilim,
+input[type="hidden"].sheet-nature[value="humain"] ~ div div > input[type="number"].sheet-hideHumain,
+input[type="hidden"].sheet-nature[value="humain"] ~ div label > input[type="number"].sheet-hideHumain,
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-degreMetamorphe
 {
     display: none;
 }

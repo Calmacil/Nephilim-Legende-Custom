@@ -8,6 +8,10 @@
 [?] 5. Sanitize CSS to match CSE standard
 
 [x] 6. Add config option to display Nephilim / Human
+[x] 6a. Approche solaire ne se cache pas quand on sélectionne Nephilim (CSS)
+[x] 6b. Mauvais ajustement de la largeur de la zone des Maillons (Grand Secret)
+[x] 6c. Faire disparaître les zones Métamorphe actif quand on sélectionne humain
+
 [ ] 7. Add Selenim tab
 [ ] 8. Add Necromancie tab
 [ ] 9. Add Kabbale noire tab

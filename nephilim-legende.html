@@ -1287,6 +1287,7 @@
 				</div>
 			</div>
 
+			<input type="hidden" class="nature" name="attr_nature"/>
 			<div class="degreMetamorphe">
 				<h1>Degré de métamorphe actif</h1>
 				<input type="hidden" name="attr_dMeta" value="0" />
@@ -1604,10 +1605,10 @@
 	</div>
 
 	<div class="tab4">
+		<input type="hidden" name="attr_nature" class="nature"/>
 		<div class="col">
 			<div class="actionsAttributs">
 				<h1>Actions et attributs</h1>
-				<input type="hidden" name="attr_nature" class="nature"/>
 				<div>
 					<button type="roll" name="roll_initiative" value="@{gm} &{template:initiative} {{name=@{character_name}}} {{jet=[[ [[@{init}]]+@{initiative_variable} &{tracker}]]}}"><span>Initiative</span></button>
 					<input type="number" name="attr_init" value="@{kaeau}*2" disabled class="hideHumain"/>
