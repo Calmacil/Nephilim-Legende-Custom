@@ -2987,14 +2987,16 @@
 					<span>Pavane</span>
 					<div>
 						<input type="number" name="attr_pavane" value="3"/>
-						<button type="roll" name="sheet-roll-pavane"></button>
+						<button type="roll" name="sheet-roll-pavane" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{approche=Aucune approche}} {{vecu=Pavane}} {{seuil=[[(@{pavane}+?{Bonus/Malus ?|0}-@{malusMag})*10]]}}"></button>
 					</div>
 				</label>
 				<label>
+					<input type="checkbox" name="attr_approcheKLN" value="1" title="Approche de KLN"/>
 					<span>Changement de peau</span>
 					<div>
 						<input type="number" name="attr_chmtPeau" value="1"/>
-						<button type="roll" name="sheet-roll-chmtPeau"></button>
+						<button type="roll" name="sheet-roll-chmtPeau" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{vecu=Changement de peau}} {{approche=Aucune approche}} {{seuil=[[(@{chmtPeau}+?{Bonus/Malus ?|0}-@{malusPhy})*10]]}}"></button>
+						<button type="roll" name="sheet-roll-chmtPeau" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{vecu=Changement de peau}} {{approche=Approche de KLN}} {{seuil=[[(@{chmtPeau}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}}"></button>
 					</div>
 				</label>
 			</div>
@@ -3157,12 +3159,12 @@
 		</div>
 		<div class="2colT1">
 			<div class="noyau">
-				<button type="roll" name="roll_kanoyau">
+				<button type="roll" name="roll_kanoyau" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Noyau de KLN}} {{seuil=[[(@{kaln}+?{Bonus/Malus ?|0}-@{malusMag})*10]]}}">
 					<span>Noyau</span>
 				</button>
 				<input type="number" name="attr_kaln" value="1" min="1">
 
-				<button type="roll" name="roll_kareserve">
+				<button type="roll" name="roll_kareserve" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=KLN total}} {{seuil=[[(@{kaln}+@{reserve}+?{Bonus/Malus ?|0}-@{malusMag})*10]]}}">
 					<span>Réserve</span>
 				</button>
 				<input type="number" name="attr_reserve" value="0" min="0">

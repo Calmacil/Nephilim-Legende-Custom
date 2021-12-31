@@ -5140,6 +5140,43 @@ div.sheet-noyauCompetence > label > div > button[type="roll"]::before
 	content: "";
 }
 
+div.sheet-noyauCompetence > label:nth-of-type(2) > input[type="checkbox"]
+{
+	position:absolute;
+	width:25px;
+	height:25px;
+	margin-right: 3px;
+	opacity:0;
+}
+
+div.sheet-noyauCompetence > label:nth-of-type(2) > input[type="checkbox"] ~ span
+{
+	width:100%;
+}
+
+div.sheet-noyauCompetence > label:nth-of-type(2) > input[type="checkbox"] ~ span::before
+{
+	content:"";
+	width:23px;
+	height:23px;
+	border:1px solid black;
+	font-size: 28px;
+	line-height: 23px;
+	color:black;
+	border-radius:5px;
+}
+
+div.sheet-noyauCompetence > label:nth-of-type(2) > input[type="checkbox"]:checked ~ div > button[type="roll"]:nth-of-type(1),
+div.sheet-noyauCompetence > label:nth-of-type(2) > input[type="checkbox"]:not(:checked) ~ div > button[type="roll"]:nth-of-type(2)
+{
+	display: none;
+}
+
+div.sheet-noyauCompetence > label:nth-of-type(2) > input[type="checkbox"]:checked ~ span::before
+{
+	content:"✓";
+}
+
 div.sheet-tab11 div.sheet-chutes h2 {
 	width: 100%;
 }
