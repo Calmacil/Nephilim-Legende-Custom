@@ -5303,6 +5303,68 @@ div.sheet-noyau > input[type="number"]:nth-of-type(3)
 	border: solid white 2px;
 }
 
+div.sheet-titleNecro,
+div.sheet-titleKabbNoire,
+div.sheet-titleImago
+{
+	width: calc(100% - 10px);
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5),rgba(48, 59, 56, 0.5));
+	background-repeat: no-repeat;
+	background-position: 0px, calc(90%), 0px;
+	background-size: auto, 100%, auto, auto;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+	text-shadow: 2px 3px 5px black;
+	padding-left: 10px;
+	flex-wrap: nowrap;
+}
+
+div.sheet-titleNecro > h1,
+div.sheet-titleKabbNoire > h1,
+div.sheet-titleImago > h1,
+{
+	color: white;
+	font-family: "Kodchasan";
+	font-size: 18px;
+	line-height: 40px;
+	white-space: nowrap;
+}
+
+div.sheet-titleNecro > label,
+div.sheet-titleKabbNoire > label,
+div.sheet-titleImago > label
+{
+	margin-left: 260px;
+}
+
+div.sheet-titleNecro > label > span,
+div.sheet-titleKabbNoire > label > span,
+div.sheet-titleImago > label > span
+{
+	color: white;
+	font-family: "Kodchasan";
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+div.sheet-titleNecro > input[type="number"],
+div.sheet-titleNecro > label > input[type="number"],
+div.sheet-titleKabbNoire > input[type="number"],
+div.sheet-titleKabbNoire > label > input[type="number"],
+div.sheet-titleImago > label > input[type="number"]
+{
+	margin-left: 15px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	border: black solid 2px;
+	text-align: center;
+	line-height: 40px;
+}
+
+
+
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsMaillons,
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsDomains,
 input[type="hidden"].sheet-nature[value="humain"] ~ select > option.sheet-hideHumain,
