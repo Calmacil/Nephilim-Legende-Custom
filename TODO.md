@@ -14,7 +14,7 @@
 
 [x] 7. Add Selenim tab
 [ ] 7a. Calcul des caracs secondaires d'après le KLN
-[ ] 8. Add Necromancie tab
+[x] 8. Add Necromancie tab
 [ ] 9. Add Kabbale noire tab
 [ ] 10. Add Imago tab
 [x] 11. Add config option to display Nephilim / Selenim

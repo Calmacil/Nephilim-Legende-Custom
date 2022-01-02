@@ -3179,18 +3179,64 @@
 
 	<div class="tab12">
 		<div class="titleNecro">
-			<h1 class="titreNecromancie">Nécromancie</h1>
+			<h1>Nécromancie</h1>
 			<input type="number" name="attr_necromancie" value="0"/>
 			<label>
 				<span>Réserve</span>
 				<input type="number" name="attr_reserve"/>
 			</label>
 		</div>
+
+		<div class="rites">
+			<h1>Rites</h1>
+			<span>Nom du Rite</span>
+			<span>Voie</span>
+			<span>Coût</span>
+			<span>Durée</span>
+			<span title="Appris">A</span>
+			<span title="Tatoué">T</span>
+			<span title="Sur focus">F</span>
+			<span></span>
+
+			<fieldset class="repeating_rites">
+				<label>
+					<input type="checkbox" name="attr_expand" value="1" checked />
+					<span></span>
+				</label>
+				<input type="text" name="attr_nom" />
+				<select name="attr_voie">
+					<option value="0" selected></option>
+					<option value="apaisement">Apaisement</option>
+					<option value="communication">Communication</option>
+					<option value="controler">Contrôle</option>
+				</select>
+				<input type="number" name="attr_cout" value="0" />
+				<input type="text" name="attr_duree" />
+				<label>
+					<input type="checkbox" name="attr_rite_a" value="1">
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_rite_t" value="1">
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_rite_f" value="1">
+					<span></span>
+				</label>
+				<button type="roll" name="sheet_rite_roll" value="@{gm} &{template:rite} {{name=@{character_name}}} {{nom_rite=@{nom}}} {{jet=[[1d100]]}} {{seuil=[[(@{necromancie}+?{Bonus/Malus ?|0}-@{malusMag})]]}} {{duree_sort=@{duree}}} {{descrip_sort=@{rite_description}}}"></button>
+				<input type="hidden" name="attr_expand" value="1"/>
+				<div class="autoex autoex22">
+					<textarea name="attr_rite_description" placeholder="description"></textarea>
+					<span name="attr_rite_description"></span>
+				</div>
+			</fieldset>
+		</div>
 	</div>
 
 	<div class="tab13">
 		<div class="titleKabbNoire">
-			<h1 class="titreKabbNoire">Kabbale noire</h1>
+			<h1>Kabbale noire</h1>
 			<input type="number" name="attr_kabbNoire" value="0"/>
 			<label>
 				<span>Réserve</span>
@@ -3201,7 +3247,7 @@
 
 	<div class="tab14">
 		<div class="titleImago">
-			<h1 class="titreImago">Imago</h1>
+			<h1>Imago</h1>
 			<label>
 				<span>Réserve</span>
 				<input type="number" name="attr_reserve"/>
@@ -4562,5 +4608,124 @@
 	<div>
 		<span>Initiative</span>
 		<span>{{jet}}</span>
+	</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-rite">
+	<h1>{{name}}</h1>
+	<div>
+		<span>Exécute le rite :</span>
+		<span>{{nom_rite}}</span>
+	</div>
+	<div>
+		<span>Résultat</span>
+		<span>{{jet}}</span><span>({{seuil}})</span>
+		{{#^rollTotal() jet 100}}
+			{{#rollBetween() jet 1 seuil}}
+				{{#^rollTotal() jet 11}}
+					{{#^rollTotal() jet 22}}
+						{{#^rollTotal() jet 33}}
+							{{#^rollTotal() jet 44}}
+								{{#^rollTotal() jet 55}}
+									{{#^rollTotal() jet 66}}
+										{{#^rollTotal() jet 77}}
+											{{#^rollTotal() jet 88}}
+												{{#^rollTotal() jet 99}}
+													<span class="success">Réussite</span>
+												{{/^rollTotal() jet 99}}
+											{{/^rollTotal() jet 88}}
+										{{/^rollTotal() jet 77}}
+									{{/^rollTotal() jet 66}}
+								{{/^rollTotal() jet 55}}
+							{{/^rollTotal() jet 44}}
+						{{/^rollTotal() jet 33}}
+					{{/^rollTotal() jet 22}}
+				{{/^rollTotal() jet 11}}
+				{{#rollTotal() jet 11}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 11}}
+				{{#rollTotal() jet 22}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 22}}
+				{{#rollTotal() jet 33}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 33}}
+				{{#rollTotal() jet 44}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 44}}
+				{{#rollTotal() jet 55}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 55}}
+				{{#rollTotal() jet 66}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 66}}
+				{{#rollTotal() jet 77}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 77}}
+				{{#rollTotal() jet 88}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 88}}
+				{{#rollTotal() jet 99}}
+					<span class="success">Critique</span>
+				{{/rollTotal() jet 99}}
+			{{/rollBetween() jet 1 seuil}}
+			{{#rollGreater() jet seuil}}
+				{{#^rollTotal() jet 100}}
+					{{#^rollTotal() jet 11}}
+						{{#^rollTotal() jet 22}}
+							{{#^rollTotal() jet 33}}
+								{{#^rollTotal() jet 44}}
+									{{#^rollTotal() jet 55}}
+										{{#^rollTotal() jet 66}}
+											{{#^rollTotal() jet 77}}
+												{{#^rollTotal() jet 88}}
+													{{#^rollTotal() jet 99}}
+														<span class="fail">Échec</span>
+													{{/^rollTotal() jet 99}}
+												{{/^rollTotal() jet 88}}
+											{{/^rollTotal() jet 77}}
+										{{/^rollTotal() jet 66}}
+									{{/^rollTotal() jet 55}}
+								{{/^rollTotal() jet 44}}
+							{{/^rollTotal() jet 33}}
+						{{/^rollTotal() jet 22}}
+					{{/^rollTotal() jet 11}}
+				{{/^rollTotal() jet 100}}
+				{{#rollTotal() jet 11}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 11}}
+				{{#rollTotal() jet 22}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 22}}
+				{{#rollTotal() jet 33}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 33}}
+				{{#rollTotal() jet 44}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 44}}
+				{{#rollTotal() jet 55}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 55}}
+				{{#rollTotal() jet 66}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 66}}
+				{{#rollTotal() jet 77}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 77}}
+				{{#rollTotal() jet 88}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 88}}
+				{{#rollTotal() jet 99}}
+					<span class="fail">Maladresse</span>
+				{{/rollTotal() jet 99}}
+			{{/rollGreater() jet seuil}}
+		{{/^rollTotal() jet 100}}
+		{{#rollTotal() jet 100}}
+			<span class="fail">Maladresse</span>
+		{{/rollTotal() jet 100}}
+	</div>
+	<div>
+		<span>Durée : </span><span>{{duree_sort}}</span>
+		<span>{{descrip_sort}}</span>
 	</div>
 </rolltemplate>
