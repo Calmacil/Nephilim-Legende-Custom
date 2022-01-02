@@ -3243,6 +3243,56 @@
 				<input type="number" name="attr_reserve"/>
 			</label>
 		</div>
+
+		<div class="entites">
+			<h1>Entités</h1>
+			<span>Nom de l’Entité</span>
+			<span>Degré</span>
+			<span>Dmg.</span>
+			<span>Protec.</span>
+			<span>Entropie</span>
+			<span>Contrôle</span>
+			<span title="Appris">A</span>
+			<span title="Tatoué">T</span>
+			<span title="Sur focus">F</span>
+			<span></span>
+			<span></span>
+
+			<fieldset class="repeating_entites">
+				<label>
+					<input type="checkbox" name="attr_expand" value="1">
+					<span></span>
+				</label>
+				<input type="text" name="attr_nom" />
+				<input type="number" name="attr_degre" value="0" />
+				<input type="text" name="attr_dom" />
+				<input type="text" name="attr_protec" />
+				<input type="text" name="attr_entropie" />
+				<label>
+					<input type="checkbox" name="attr_controle" value="1">
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_entite_a" value="1">
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_entite_t" value="1">
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_entite_f" value="1">
+					<span></span>
+				</label>
+				<button type="roll" name="roll_invoc" value=""></button>
+				<button type="roll" name="roll_controle" value=""></button>
+				<input type="hidden" name="attr_expand" value="1">
+				<div class="autoex autoex24">
+					<textarea name="attr_ent_description" placeholder="Description"></textarea>
+					<span name="attr_ent_description"></span>
+				</div>
+			</fieldset>
+		</div>
 	</div>
 
 	<div class="tab14">
