@@ -3284,8 +3284,8 @@
 					<input type="checkbox" name="attr_entite_f" value="1">
 					<span></span>
 				</label>
-				<button type="roll" name="roll_invoc" value=""></button>
-				<button type="roll" name="roll_controle" value=""></button>
+				<button type="roll" name="roll_invoc" value="@{gm} &{template:invocation} {{name=@{character_name}}} {{jet=[[1d100]]}} {{nom_creature=@{nom}}} {{seuil=[[(@{kabbNoire}+?{Bonus/Malus ?|0}-@{malusMag})*10]]}} {{degre=@{degre}}} {{descrip_sort=@{ent_description}}}"></button>
+				<button type="roll" name="roll_controle" value="@{gm} &{template:opposition} {{name=@{character_name}}} {{creature=@{nom}}} {{jet=[[1d100]]}} {{seuil=[[(@{kaln}+?{Bonus/Malus ?|0}-@{malusMag})*10]]}} {{jet_creature=[[1d100]]}} {{degre=[[@{degre}*10]]}} {{entite=1}}"></button>
 				<input type="hidden" name="attr_expand" value="1">
 				<div class="autoex autoex24">
 					<textarea name="attr_ent_description" placeholder="Description"></textarea>
@@ -3677,8 +3677,8 @@
 		{{/rollTotal() jet 100}}
 	</div>
 	<div>
-		<span>Portée : </span><span>{{portee_sort}}</span>
-		<span>Durée : </span><span>{{duree_sort}}</span>
+		{{^portee_sort}}<span>Portée : </span><span>{{portee_sort}}</span>{{/portee_sort}}
+		{{^duree_sort}}<span>Durée : </span><span>{{duree_sort}}</span>{{/duree_sort}}
 		<span>{{descrip_sort}}</span>
 	</div>
 </rolltemplate>
@@ -3686,7 +3686,12 @@
 <rolltemplate class="sheet-rolltemplate-opposition">
 	<h1>{{name}}</h1>
 	<div>
-		<span>Vous nouez un pacte avec :</span>
+		{{^entite}}
+			<span>Vous nouez un pacte avec :</span>
+		{{/entite}}
+		{{#entite}}
+			<span>Tente de contrôler :</span>
+		{{/entite}}
 		<span>{{creature}}</span>
 	</div>
 	<div>
