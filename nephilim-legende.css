@@ -5777,11 +5777,15 @@ input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsMail
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsDomains,
 input[type="hidden"].sheet-nature[value="humain"] ~ select > option.sheet-hideHumain,
 input[type="hidden"].sheet-nature[value="nephilim"] ~ select > option.sheet-hideNephilim,
+input[type="hidden"].sheet-nature[value="selenim"] ~ select > option.sheet-hideSelenim,
 input[type="hidden"].sheet-nature[value="nephilim"] ~ div div > input[type="number"].sheet-hideNephilim,
 input[type="hidden"].sheet-nature[value="nephilim"] ~ div label > input[type="number"].sheet-hideNephilim,
 input[type="hidden"].sheet-nature[value="humain"] ~ div div > input[type="number"].sheet-hideHumain,
 input[type="hidden"].sheet-nature[value="humain"] ~ div label > input[type="number"].sheet-hideHumain,
-input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-degreMetamorphe
+input[type="hidden"].sheet-nature[value="selenim"] ~ div div > input[type="number"].sheet-hideSelenim,
+input[type="hidden"].sheet-nature[value="selenim"] ~ div label > input[type="number"].sheet-hideSelenim,
+input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-degreMetamorphe,
+input[type="hidden"].sheet-nature[value="selenim"] ~ div.sheet-degreMetamorphe
 {
     display: none;
 }
