@@ -689,21 +689,26 @@
 	 * * * * * * * * * * * * * * * * */
 	on("change:repeating_epoques-incarnation:use_mnemos1 change:repeating_epoques-incarnation:use_mnemos2 sheet:opened", function(data)
 	{
+		console.log("Dés-activer le Mnemos")
 		getSectionIDs("repeating_epoques-incarnation", function(idarray) {
 			_.each(idarray, function(id) {
 				getAttrs(["repeating_epoques-incarnation_"+id+"_use_mnemos1", "repeating_epoques-incarnation_"+id+"_use_mnemos2"], function(values) {
+					console.log("Je suis dans la boucle !");
 					let useMnemos1 = values["repeating_epoques-incarnation_"+id+"_use_mnemos1"] == 'on';
 					let useMnemos2 = values["repeating_epoques-incarnation_"+id+"_use_mnemos2"] == 'on'
+					console.log("Mémos 1 " + useMnemos1 + "; Mnémos 2 " + useMnemos2);
 
 					let effectiveMnemos = "";
 					effectiveMnemos += useMnemos1 ? "@{degres_mnemos1}+" : "0+";
 					effectiveMnemos += useMnemos2 ? "@{degres_mnemos2}" : "0";
+					console.log("Effective mnemos: " + effectiveMnemos);
 
 					let effectiveRoll = "@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{jet=[[1d100]]}} @{approche}"
 					if (useMnemos1)
 						effectiveRoll += " {{mnemos1=@{mnemos1}}}";
 					if (useMnemos2)
 						effectiveRoll += " {{mnemos2=@{mnemos2}}}";
+					console.log("Effective roll: " + effectiveRoll);
 
 					setAttrs({
 						["repeating_epoques-incarnation_"+id+"_effectiveMnemos"]: effectiveMnemos,
@@ -1521,15 +1526,16 @@
 						<span name="attr_vecu_description"></span>
 					</div>
 					<input type="hidden" name="attr_effectiveMnemos" value="@{degres_mnemos1}+@{degres_mnemos2}"/>
+					<input type="hidden" name="attr_nature" value="nephilim">
 					<select name="attr_approche">
-						<option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
-						<option class="hideNephilim hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
-						<option class="hideNephilim hideHumain" value="{{seuil=[[(@{degres_vecu_passe}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0}+@{effectiveMnemos})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
+						<option class="hideNephilim hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{simu-kasoleil}+?{Bonus/Malus ?|0}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
+						<option class="hideNephilim hideHumain" value="{{seuil=[[(@{degres_vecu_passe}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}+@{effectiveMnemos}-@{malusMag})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
 					</select>
 					<input type="hidden" name="attr_effectiveRoll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{mnemos1=@{mnemos1}}} {{mnemos2=@{mnemos2}}} {{jet=[[1d100]]}} @{approche}"/>
 					<button type="roll" name="roll_vecu" value="@{effectiveRoll}"></button>
@@ -1967,15 +1973,16 @@
 						<span name="attr_vecu_description"></span>
 					</div>
 					<input type="hidden" name="attr_effectiveMnemos" value="@{degres_mnemos1}+@{degres_mnemos2}"/>
+					<input type="hidden" name="attr_nature" value="nephilim">
 					<select name="attr_approche">
-						<option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
-						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
-						<option class="hideNephilim hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
-						<option class="hideNephilim hideHumain" value="{{seuil=[[(@{degres_vecu_passe}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
+						<option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0}+@{effectiveMnemos})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
+						<option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
+						<option class="hideNephilim hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{simu-kasoleil}+?{Bonus/Malus ?|0}+@{effectiveMnemos}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche Solaire</option>
+						<option class="hideNephilim hideHumain" value="{{seuil=[[(@{degres_vecu_passe}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}+@{effectiveMnemos}-@{malusMag})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
 					</select>
 					<input type="hidden" name="attr_effectiveRoll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{mnemos1=@{mnemos1}}} {{mnemos2=@{mnemos2}}} {{jet=[[1d100]]}} @{approche}"/>
 					<button type="roll" name="roll_vecu" value="@{effectiveRoll}"></button>
