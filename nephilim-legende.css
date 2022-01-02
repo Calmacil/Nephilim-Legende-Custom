@@ -5673,14 +5673,16 @@ div.sheet-entites > .repcontainer > .repitem > input[type="text"]:nth-of-type(4)
 	border-right: 2px solid var(--brun);
 }
 
-div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2)
+div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2),
+div.sheet-aspects > .repcontainer > .repitem > label:nth-of-type(2)
 {
 	width: 75px;
 	border-left: solid 2px var(--brun);
 	text-align: center;
 }
 
-div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"]
+div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"],
+div.sheet-aspects > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"]
 {
 	position: absolute;
 	width: 25px;
@@ -5688,12 +5690,14 @@ div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type
 	opacity: 0;
 }
 
-div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"] ~ span
+div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"] ~ span,
+div.sheet-aspects > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"] ~ span
 {
 	width: 100%;
 }
 
-div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"] ~ span::before
+div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"] ~ span::before,
+div.sheet-aspects > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"] ~ span::before
 {
 	margin-top: -2px;
 	margin-left: 24px;
@@ -5707,9 +5711,66 @@ div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type
 	border-radius: 5px;
 }
 
-div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"]:checked ~ span::before
+div.sheet-entites > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"]:checked ~ span::before,
+div.sheet-aspects > .repcontainer > .repitem > label:nth-of-type(2) > input[type="checkbox"]:checked ~ span::before
 {
 	content: "✓";
+}
+
+div.sheet-aspects > span:nth-of-type(1)
+{
+	width: calc(100% - 102px - 102px - 152px - 62px)
+}
+
+div.sheet-aspects > span:nth-of-type(2),
+div.sheet-aspects > span:nth-of-type(3)
+{
+	width:100px;
+	border-left: solid 2px var(--brun);
+}
+
+div.sheet-aspects > span:nth-of-type(4)
+{
+	width: 150px;
+	border-left: solid 2px var(--brun);
+}
+
+div.sheet-aspects > span:nth-of-type(5)
+{
+	width: 60px;
+	border-left: solid 2px var(--brun);
+}
+
+div.sheet-aspects > .repcontainer > .repitem > input:nth-of-type(1)
+{
+	width: calc(100% - 102px - 102px - 152px - 62px - 34px);
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+div.sheet-aspects > .repcontainer > .repitem > input:nth-of-type(2),
+div.sheet-aspects > .repcontainer > .repitem > input:nth-of-type(3)
+{
+	width: 100px;
+	border-left: solid 2px var(--brun);
+	text-align: center;
+}
+
+div.sheet-aspects > .repcontainer > .repitem > input:nth-of-type(4)
+{
+	width: 150px;
+	border-left: solid 2px var(--brun);
+}
+
+div.sheet-aspects > .repcontainer > .repitem > label:nth-of-type(2)
+{
+	width: 60px;
+	border-left: solid 2px var(--brun);
+}
+
+div.sheet-aspects > .repcontainer > .repitem > label:nth-of-type(2) > input[type=checkbox] ~ span::before
+{
+	margin-left: 18px;
 }
 
 input[type="hidden"][name="attr_mag-secret-degre"][value="0"] ~ div.sheet-gsMaillons,

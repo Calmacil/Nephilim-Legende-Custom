@@ -3303,6 +3303,41 @@
 				<input type="number" name="attr_reserve"/>
 			</label>
 		</div>
+		<div class="nephilimPhrase">
+			<span>Description de l’Imago</span>
+			<div class="autoex autoex24">
+				<textarea name="attr_imago_descr"></textarea>
+				<span></span>
+			</div>
+		</div>
+		<div class="aspects">
+			<h1>Aspects</h1>
+			<span>Nom de l’aspect</span>
+			<span>Coût</span>
+			<span>KLN Investi</span>
+			<span>Durée</span>
+			<span>Actif ?</span>
+
+			<fieldset class="repeating_aspects">
+				<label>
+					<input type="checkbox" name="attr_expand" value="1">
+					<span></span>
+				</label>
+				<input type="text" name="attr_nom" value="">
+				<input type="number" name="attr_cout" value="0"/>
+				<input type="number" name="attr_investi" value="0"/>
+				<input type="text" name="attr_duree" value="">
+				<label>
+					<input type="checkbox" name="attr_controle" value="1">
+					<span></span>
+				</label>
+				<input type="hidden" name="attr_expand" value="1">
+				<div class="autoex autoex24">
+					<textarea name="attr_aspect_description" placeholder="Description"></textarea>
+					<span name=attr_aspect_description></span>
+				</div>
+			</fieldset>
+		</div>
 	</div>
 </div>
 <!------------------------------------- Begin Roll Templates ------------------------------------->
