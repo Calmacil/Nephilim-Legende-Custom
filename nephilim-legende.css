@@ -5787,6 +5787,12 @@ input[type="hidden"].sheet-nature[value="humain"] ~ div div > input[type="number
 input[type="hidden"].sheet-nature[value="humain"] ~ div label > input[type="number"].sheet-hideHumain,
 input[type="hidden"].sheet-nature[value="selenim"] ~ div div > input[type="number"].sheet-hideSelenim,
 input[type="hidden"].sheet-nature[value="selenim"] ~ div label > input[type="number"].sheet-hideSelenim,
+input[type="hidden"].sheet-nature[value="nephilim"] ~ div div > button[type="roll"].sheet-hideNephilim,
+input[type="hidden"].sheet-nature[value="nephilim"] ~ div label > button[type="roll"].sheet-hideNephilim,
+input[type="hidden"].sheet-nature[value="humain"] ~ div div > button[type="roll"].sheet-hideHumain,
+input[type="hidden"].sheet-nature[value="humain"] ~ div label > button[type="roll"].sheet-hideHumain,
+input[type="hidden"].sheet-nature[value="selenim"] ~ div div > button[type="roll"].sheet-hideSelenim,
+input[type="hidden"].sheet-nature[value="selenim"] ~ div label > button[type="roll"].sheet-hideSelenim,
 input[type="hidden"].sheet-nature[value="humain"] ~ div.sheet-degreMetamorphe,
 input[type="hidden"].sheet-nature[value="selenim"] ~ div.sheet-degreMetamorphe
 {

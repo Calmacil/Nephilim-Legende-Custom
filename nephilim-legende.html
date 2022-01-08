@@ -1,7 +1,4 @@
 <script type="text/worker">
-	/* * * * * * * * * * * * * * * *
-	* Unused semaphore functions  *
-	* * * * * * * * * * * * * * * */
 	function Semaphore(callback, initial, context)
 	{
 		var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
@@ -29,9 +26,6 @@
 		}
 	};
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Reinits the Ka values of the Pentacle when Dominant Ka changes  *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("sheet:opened change:degreMetamorphe change:KaDominant", function()
 	{
 		getAttrs(["degreMetamorphe", "KaDominant"], function(values)
@@ -96,9 +90,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Performs inits on Select lists (Incarnations, quests, lores)  *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("sheet:opened", function() {
 		getAttrs(["version"], function(value)
 		{
@@ -261,10 +252,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Updates Bonus damage and Veil values on KA updates. *
-	 * This should have been splitted into two functions   *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:kafeu change:kalune sheet:opened", function()
 	{
 		getAttrs([
@@ -295,9 +282,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Executes logic on Spell repeating sections (computes bona, mala, default degrees etc) *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_mag-sort:mag-sort-ka change:repeating_mag-sort:mag-sort-degre change:repeating_mag-sort:mag-sort-cercle change:kaeau change:kafeu change:katerre change:kaair change:kalune change:mag-basse-degre change:mag-haute-degre change:mag-secret-degre change:KADFeu change:KADEau change:KADTerre change:KADAir change:KADLune change:malusMag sheet:opened", function()
 	{
 		getSectionIDs("repeating_mag-sort", function(idarray)
@@ -354,9 +338,6 @@
 
 	});
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Executes logic on Kabbalah repeating sections (bona, mala, degrees etc) *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_kabb-invoc:kabb-invoc-ka change:repeating_kabb-invoc:kabb-invoc-sephira change:kaeau change:kafeu change:katerre change:kaair change:kalune change:malkut change:yesod change:hod change:netzah change:tiphereth change:chesed change:geburah change:binah change:hokmah change:kheter change:ordonnanceBonus change:KADFeu change:KADEau change:KADTerre change:KADAir change:KADLune change:malusMag sheet:opened", function()
 	{
 		getSectionIDs("repeating_kabb-invoc", function(idarray)
@@ -415,9 +396,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Executes logic on Alchemy reapeating sections & tabs  *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_alch-form:alch-form-art change:repeating_alch-form:alch-form-ka-1 change:repeating_alch-form:alch-form-ka-2 change:repeating_alch-form:alch-form-subs change:repeating_alch-form:alch-form-degre change:repeating_alch-form:alch-oeuvre-noir change:repeating_alch-form:alch-oeuvre-blanc change:repeating_alch-form:alch-oeuvre-rouge change:kaeau change:kafeu change:katerre change:kaair change:kalune change:alch-athanor-kafeu change:alch-athanor-kaeau change:alch-athanor-katerre change:alch-athanor-kalune change:alch-athanor-kaair change:alch-aludel-kafeu change:alch-aludel-kaeau change:alch-aludel-katerre change:alch-aludel-kalune change:alch-aludel-kaair change:alch-alambic-kafeu change:alch-alambic-kaeau change:alch-alambic-katerre change:alch-alambic-kalune change:alch-alambic-kaair change:alch-cornue-kafeu change:alch-cornue-kaeau change:alch-cornue-katerre change:alch-cornue-kalune change:alch-cornue-kaair change:alch-creuset-kafeu change:alch-creuset-kaeau change:alch-creuset-katerre change:alch-creuset-kalune change:alch-creuset-kaair change:alch-oeuvre-noir change:alch-oeuvre-blanc change:alch-oeuvre-rouge sheet:opened", function()
 	{
 		getSectionIDs("repeating_alch-form", function(idarray)
@@ -475,10 +453,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * * * *
-	 * Computes total Consequences malus *
-	 * Should be splitted in 2 functions *
-	 * * * * * * * * * * * * * * * * * * */
 	on("change:cons-min change:cons-ser change:cons-gra change:cons-mag-min change:cons-mag-ser change:cons-mag-gra sheet:opened", function()
 	{
 		getAttrs([
@@ -518,9 +492,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * *
-	 * Computes ordonnance bonus *
-	 * * * * * * * * * * * * * * */
 	on("remove:repeating_kabb-ord change:repeating_kabb-ord change:repeating_kabb-ord:kabb-ord-respect sheet:opened", function()
 	{
 
@@ -553,9 +524,6 @@
 
 	});
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Beautify Lore display. Such operation seems to be needed for every RS.  *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("sheet:opened change:repeating_savoir-eso", function()
 	{
 		getSectionIDs("repeating_savoir-eso", function(idarray)
@@ -584,9 +552,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * *
-	 * Beautify Quests display.  *
-	 * * * * * * * * * * * * * * */
 	on("sheet:opened change:repeating_quetes-eso", function()
 	{
 		getSectionIDs("repeating_quetes-eso", function(idarray)
@@ -615,9 +580,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * *
-	 * Computes length of metamorphe *
-	 * * * * * * * * * * * * * * * * */
 	on("sheet:opened change:repeating_metamorphose remove:repeating_metamorphose", function()
 	{
 		getSectionIDs("repeating_metamorphose", function(idarray)
@@ -646,9 +608,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Computes max allowed links (maillon) allowed by Grand Secret degree *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	on("change:mag-secret-degre sheet:opened", function()
 	{
 		getAttrs(["mag-secret-degre"], function(values) {
@@ -672,9 +631,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * * * *
-	 * Computes current active maillons  *
-	 * * * * * * * * * * * * * * * * * * */
 	on("change:repeating_maillon remove:repeating_maillon sheet:opened", function()
 	{
 		getSectionIDs("repeating_maillon", function(idarray) {
@@ -684,9 +640,6 @@
 		});
 	});
 
-	/* * * * * * * * * * * * * * * * *
-	 * Switches Vecu rolls formulas  *
-	 * * * * * * * * * * * * * * * * */
 	on("change:repeating_epoques-incarnation:use_mnemos1 change:repeating_epoques-incarnation:use_mnemos2 sheet:opened", function(data)
 	{
 		console.log("Dés-activer le Mnemos")
@@ -1656,7 +1609,9 @@
 			<div class="actionsAttributs">
 				<h1>Actions et attributs</h1>
 				<div>
-					<button type="roll" name="roll_initiative" value="@{gm} &{template:initiative} {{name=@{character_name}}} {{jet=[[ [[@{init}]]+@{initiative_variable} &{tracker}]]}}"><span>Initiative</span></button>
+					<button type="roll" name="roll_initiative" value="@{gm} &{template:initiative} {{name=@{character_name}}} {{jet=[[ [[@{kaeau}*2]]+@{initiative_variable} &{tracker}]]}}" class="hideHumain hideSelenim"><span>Initiative</span></button>
+					<button type="roll" name="roll_initiative" value="@{gm} &{template:initiative} {{name=@{character_name}}} {{jet=[[ [[@{simu-kasoleil}]]+@{initiative_variable} &{tracker}]]}}" class="hideNephilim hideSelenim"><span>Initiative</span></button>
+					<button type="roll" name="roll_initiative" value="@{gm} &{template:initiative} {{name=@{character_name}}} {{jet=[[ [[@{kaln}]]+@{initiative_variable} &{tracker}]]}}" class="hideHumain hideNephilim"><span>Initiative</span></button>
 					<input type="number" name="attr_init" value="@{kaeau}*2" disabled class="hideHumain hideSelenim"/>
 					<input type="number" name="attr_init" value="@{simu-kasoleil}" disabled class="hideNephilim hideSelenim"/>
 					<input type="number" name="attr_init" value="@{kaln}" disabled class="hideNephilim hideHumain"/>
