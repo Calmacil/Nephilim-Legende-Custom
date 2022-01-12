@@ -1722,7 +1722,8 @@ div.sheet-simulacreProches > div.sheet-autoex > textarea
 	background:transparent;
 }
 
-div.sheet-epoquesIncarnation
+div.sheet-epoquesIncarnation,
+.sheet-tab4 > .sheet-simulacreVecus
 {
 	width:100%;
 	flex-wrap:wrap;
@@ -1742,6 +1743,7 @@ div.sheet-dommagesMagiques
 }
 
 div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type),
+.sheet-tab4 > .sheet-simulacreVecus > div > div:not(:first-of-type),
 div.sheet-savoirsEsoteriques
 {
 	border-left:2px solid var(--titre);
@@ -1754,7 +1756,8 @@ div.sheet-dommagesMagiques
 	border-left:2px solid var(--titreGris);
 }
 
-div.sheet-epoquesIncarnation > h1
+div.sheet-epoquesIncarnation > h1,
+.sheet-tab4 > .sheet-simulacreVecus > h1
 {
 	font-family: "Kodchasan";
 	width: calc((100% / 3) - 10px);
@@ -1845,7 +1848,8 @@ div.sheet-arcadia > .repcontainer > .repitem,
 	flex-wrap:wrap;
 }
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem
+div.sheet-epoquesIncarnation > .repcontainer > .repitem,
+.sheet-tab4 > .sheet-simulacreVecus > div
 {
 	width:100%;
 	flex-wrap:nowrap;
@@ -1863,7 +1867,8 @@ div.sheet-quetesEsoteriques > .repcontainer > .repitem
 	margin-bottom:5px;
 }
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type)
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type),
+.sheet-tab4 > .sheet-simulacreVecus > div > div
 {
 	width:calc(100% / 3);
 	flex-wrap:wrap;
@@ -1886,6 +1891,15 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label
 {
 	width:30px;
 	height:30px;
+}
+
+.sheet-tab4 > .sheet-simulacreVecus > div label
+{
+	height: 16px;
+	width: 100%;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 12px;
 }
 
 div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label > input[type="checkbox"]
@@ -1971,7 +1985,8 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div label.sheet-checkS
 }
 
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div select
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div select,
+.sheet-tab4 > .sheet-simulacreVecus > div select
 {
 	padding:0px;
 	padding-left:2px;
@@ -1989,12 +2004,14 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:nth-of-type(2) sel
 	width:calc(100% - 30px);
 }
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:nth-of-type(3) select
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:nth-of-type(3) select,
+.sheet-tab4 > .sheet-simulacreVecus > div > div:last-of-type select
 {
 	width:calc(100% - 50px);
 }
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="text"]
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="text"],
+.sheet-tab4 > .sheet-simulacreVecus > div > div input[type="text"]
 {
 	width:calc(100% - 65px);
 	padding:0px;
@@ -2007,12 +2024,17 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="text"]
 	height:30px;
 	padding-top:12px;
 }
+.sheet-tab4 > .sheet-simulacreVecus > div > div input[type="text"]
+{
+	width: calc(100% - 35px);
+}
 
 div.sheet-epoquesIncarnation > .repcontainer > .repitem div label.sheet-checkSign ~ input[type="text"] {
 	width: calc(100% - 95px);
 }
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="number"]
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type="number"],
+.sheet-tab4 > .sheet-simulacreVecus > div > div input[type="number"]
 {
 	height: 30px;
 	width: 30px;
@@ -2032,12 +2054,14 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem div.sheet-autoex
 	margin-right:1px;
 }
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]::before
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]::before,
+.sheet-tab4 > .sheet-simulacreVecus > div > div button[type="roll"]:before
 {
 	content:"";
 }
 
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"]
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type="roll"],
+.sheet-tab4 > .sheet-simulacreVecus > div > div button[type="roll"]
 {
 	width: 40px;
 	height: 30px;
