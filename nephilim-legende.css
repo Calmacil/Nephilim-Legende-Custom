@@ -1743,7 +1743,7 @@ div.sheet-dommagesMagiques
 }
 
 div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type),
-.sheet-tab4 > .sheet-simulacreVecus > div > div:not(:first-of-type),
+.sheet-tab4 > .sheet-simulacreVecus > div > div,
 div.sheet-savoirsEsoteriques
 {
 	border-left:2px solid var(--titre);
@@ -1877,6 +1877,8 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:not(:first-of-type
 	justify-content:space-between;
 	padding-bottom:5px;
 }
+
+
 
 div.sheet-epoquesIncarnation > .repcontainer > .repitem > div:last-of-type > div
 {
