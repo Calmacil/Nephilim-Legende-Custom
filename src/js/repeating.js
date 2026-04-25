@@ -29,19 +29,19 @@ on("change:repeating_mag-sort:mag-sort-ka change:repeating_mag-sort:mag-sort-deg
 
                 var metamorphose = 0;
 
-                if(ka_element == "kaair")
+                if (ka_element == "kaair")
                     metamorphose = KADA;
 
-                if(ka_element == "kafeu")
+                if (ka_element == "kafeu")
                     metamorphose = KADF;
 
-                if(ka_element == "kaeau")
+                if (ka_element == "kaeau")
                     metamorphose = KADE;
 
-                if(ka_element == "katerre")
+                if (ka_element == "katerre")
                     metamorphose = KADT;
 
-                if(ka_element == "kalune")
+                if (ka_element == "kalune")
                     metamorphose = KADL;
 
                 var total = (ka_element_value + mag_voie_value + metamorphose - malusMag) - degre;
@@ -351,3 +351,59 @@ on("change:repeating_epoques-incarnation:use_mnemos1 change:repeating_epoques-in
         });
     });
 });
+
+on("change:repeating_habitus:syntaxe change:repeating_habitus:portee change:repeating_habitus:duree change:repeating_habitus:appris change:repeating_habitus:tatoue change:repeating_habitus:focus change:mag-secret-degre sheet:opened", data => {
+    getSectionIDs("repeating_habitus", idarray => {
+        _.each(idarray, id => {
+            let syntaxAttr = 'repeating_habitus_' + id + '_syntaxe'
+            let porteeAttr = 'repeating_habitus_' + id + '_portee'
+            let dureeAttr = 'repeating_habitus_' + id + '_duree'
+            let maillonsAttr = 'repeating_habitus_' + id + '_maillons'
+            let elemAttr = 'repeating_habitus_' + id + '_elem'
+            let diffAttr = 'repeating_habitus_' + id + '_difficulte'
+            let degreAttr = 'repeating_habitus_' + id + '_degre'
+            let apprisAttr = 'repeating_habitus_' + id + '_appris'
+            let tatoueAttr = 'repeating_habitus_' + id + '_tatoue'
+            let focusAttr = 'repeating_habitus_' + id + '_focus'
+
+            getAttrs([syntaxAttr, porteeAttr, dureeAttr, elemAttr, apprisAttr, tatoueAttr, focusAttr, 'KADAir', 'KADEau', 'KADFeu', 'KADLune', 'KADTerre', 'mag-secret-degre', 'malusMag', 'kaair', 'kaeau', 'kafeu', 'kalune', 'katerre'], values => {
+                let maillons = values[syntaxAttr].split('+').length
+                let portee = parseInt(values[porteeAttr])||0
+                let duree = parseInt(values[dureeAttr])||0
+                let degre = portee + duree + maillons - 1
+
+                let kaElem = values[elemAttr]
+                let grandSecret = parseInt(values['mag-secret-degre'])||0
+                let kaElemValue = parseInt(values[kaElem])||0
+                let malusMag = parseInt(values['malusMag'])||0
+
+                let KADA = parseInt(values['KADAir'])||0
+                let KADE = parseInt(values['KADEau'])||0
+                let KADF = parseInt(values['KADFeu'])||0
+                let KADL = parseInt(values['KADLune'])||0
+                let KADT = parseInt(values['KADTerre'])||0
+
+                let isHabitus = parseInt(values[apprisAttr])||
+                    parseInt(values[tatoueAttr])||
+                    parseInt(values[focusAttr])||
+                    0
+                console.log(isHabitus)
+
+                let metamorphose = 0
+                if (kaElem == 'kaair') metamorphose = KADA
+                if (kaElem == 'kaeau') metamorphose = KADE
+                if (kaElem == 'kafeu') metamorphose = KADF
+                if (kaElem == 'kalune') metamorphose = KADL
+                if (kaElem == 'katerre') metamorphose = KADT
+
+                // Bonus de 1 parce que c’est un Habitus
+                let diff = kaElemValue + grandSecret + isHabitus + metamorphose - malusMag - degre
+                setAttrs({
+                    [maillonsAttr]: maillons,
+                    [degreAttr]: degre,
+                    [diffAttr]: diff
+                })
+            })
+        })
+    })
+})

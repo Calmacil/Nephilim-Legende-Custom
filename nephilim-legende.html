@@ -50,6 +50,9 @@
           <input name="attr_practice_imago" type="checkbox"><span title="Imago"></span>
         </label>
         <label>
+          <input name="attr_practice_draco" type="checkbox"><span title="Dracomachie"></span>
+        </label>
+        <label>
           <input name="attr_view_arcadia" type="checkbox"><span title="Arcadia"></span>
         </label>
       </div>
@@ -63,6 +66,8 @@
   <input class="necro" name="attr_practice_necro" type="hidden" value="0">
   <input class="kabnoire" name="attr_practice_kabnoire" type="hidden" value="0">
   <input class="imago" name="attr_practice_imago" type="hidden" value="0">
+  <input class="magSecret" name="attr_mag-secret-degre" type="hidden" value="0">
+  <input class="dracomachie" name="attr_practice_draco" type="hidden" value="0">
   <div class="menu">
     <label>
       <input name="attr_tab" value="1" type="radio"><span title="Nephilim"></span>
@@ -86,6 +91,9 @@
       <input name="attr_tab" value="5" type="radio"><span title="Magie"></span>
     </label>
     <label>
+      <input name="attr_tab" value="15" type="radio"><span title="Grand Secret"></span>
+    </label>
+    <label>
       <input name="attr_tab" value="6" type="radio"><span title="Kabbale"></span>
     </label>
     <label>
@@ -102,6 +110,9 @@
     </label>
     <label>
       <input name="attr_tab" value="14" type="radio"><span title="Imago"></span>
+    </label>
+    <label>
+      <input name="attr_tab" value="16" type="radio"><span title="Dracomachie"></span>
     </label>
     <label>
       <input name="attr_tab" value="9" type="radio"><span title="Fraternité"></span>
@@ -659,7 +670,7 @@
           <input name="attr_quete_eso" type="hidden" value="">
           <button name="roll_roll_quetesEsoteriques" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{quete_eso}}} {{jet=[[1d100]]}} {{@{quete_eso}=@{quete_eso}}} {{vecuP=@{quete_eso_perso}}} {{special=special}} {{seuil=[[(@{quete_eso_degres}+?{Bonus/Malus ?|0})*10]]}}">
           </button>
-          <input name="attr_quete_eso_perso" type="text" value="">
+          <input name="attr_quete-eso-perso" type="text" value="">
         </fieldset>
       </div>
     </div>
@@ -668,7 +679,7 @@
         <h1>Savoirs ésotériques</h1>
         <fieldset class="repeating_savoir-eso">
           <select name="attr_savoir_eso">
-            <option value="0">-- Savoir --</option>
+            <option value="">-- Savoir --</option>
             <option value="666">666</option>
             <option value="Akasha">Akasha</option>
             <option value="Ar-Kaim">Ar-Kaim</option>
@@ -697,7 +708,7 @@
           <input name="attr_savoir_eso" type="hidden" value="">
           <button name="roll_roll_savoirsEsoteriques" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{savoir_eso}}} {{jet=[[1d100]]}} {{vecuP=@{savoir_eso_perso}}} {{special=special}} {{seuil=[[(@{savoir_eso_degres}+?{Bonus/Malus ?|0})*10]]}}">
           </button>
-          <input name="attr_savoir_eso_perso" type="text" value="">
+          <input name="attr_savoir-eso-perso" type="text" value="">
         </fieldset>
       </div>
     </div>
@@ -1234,7 +1245,7 @@
         <label>
           <input name="attr_mag-sort-f" type="checkbox" value="1"><span title="Sur Focus"></span>
         </label>
-        <button name="roll_sheet-simu-roll-vecu" type="roll" value="&{template:sort} {{name=@{character_name}}} {{nom_sort=@{mag-sort-nom}}} {{descrip_sort=@{mag-sort-desc}}} {{porte_sort=@{mag-sort-portee}}} {{duree_sort=@{mag-sort-duree}}} {{degre=@{mag-sort-degre}}} {{jet=[[1d100]]}} {{seuil=[[(?{Bonus/malus ?|0}[ Bonus, malus, vécus, etc. ]+@{mag-sort-current}[ Cerce + Ka - Degré ])*10]]}}">
+        <button name="roll_sheet-simu-roll-vecu" type="roll" value="&{template:sort} {{name=@{character_name}}} {{nom_sort=@{mag-sort-nom}}} {{descrip_sort=@{mag-sort-desc}}} {{porte_sort=@{mag-sort-portee}}} {{duree_sort=@{mag-sort-duree}}} {{degre=@{mag-sort-degre}}} {{jet=[[1d100]]}} {{seuil=[[(?{Bonus/malus ?|0}[ Bonus, malus, vécus, etc. ]+@{mag-sort-current}[ Cercle + Ka - Degré ])*10]]}}">
         </button>
         <input name="attr_expand" type="hidden" value="1">
         <div>
@@ -1955,6 +1966,211 @@
           <textarea name="attr_aspect_description" placeholder="Description"></textarea><span name="attr_aspect_description"></span>
         </div>
       </fieldset>
+    </div>
+  </div>
+  <div class="tab15">
+    <h1 class="titreSecret">Grand Secret
+      <input name="attr_mag-secret-degre" type="number" value="0">
+    </h1>
+    <div class="gsDomains col40">
+      <div class="vIEL">
+        <h1>Voie Initiatique</h1>
+        <select name="attr_mag-voie">
+          <option value="0" selected></option>
+          <option value="sentier-sinueux">Sentier sinueux</option>
+          <option value="spirale-elevation">Spirale d'élévation</option>
+          <option value="principe-egarants">Principes égarants</option>
+          <option value="labyrinthe-ame">Labyrinthe schématique</option>
+          <option value="dedale-ame">Dédale de l'âme</option>
+        </select>
+      </div>
+      <div class="vIEL">
+        <h1>Domaines</h1>
+        <select name="attr_mag-gs-dom1">
+          <option value="0" selected></option>
+          <option value="comprendre">Comprendre</option>
+          <option value="controler">Contrôler</option>
+          <option value="creer">Créer</option>
+          <option value="detruire">Détruire</option>
+          <option value="transformer">Transformer</option>
+        </select>
+        <select name="attr_mag-gs-dom2">
+          <option value="0" selected></option>
+          <option value="comprendre">Comprendre</option>
+          <option value="controler">Contrôler</option>
+          <option value="creer">Créer</option>
+          <option value="detruire">Détruire</option>
+          <option value="transformer">Transformer</option>
+        </select>
+        <div class="degreMetamorphe">
+          <h1>Degré de métamorphe actif</h1>
+          <input name="attr_dMeta" type="hidden" value="0">
+          <label>
+            <input name="attr_degreMetamorphe" value="1" type="checkbox"><span title="1"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="2" type="checkbox"><span title="2"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="3" type="checkbox"><span title="3"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="4" type="checkbox"><span title="4"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="5" type="checkbox"><span title="5"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="6" type="checkbox"><span title="6"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="7" type="checkbox"><span title="7"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="8" type="checkbox"><span title="8"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="9" type="checkbox"><span title="9"></span>
+          </label>
+          <label>
+            <input name="attr_degreMetamorphe" value="10" type="checkbox"><span title="10"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="col60">
+      <div class="gsMaillons">
+        <h1>
+          <div>Maillons</div>
+          <div>
+            <input name="attr_magSecretCurrentLinks" type="number" value="" readonly>&nbsp;/&nbsp;
+            <input name="attr_magSecretAllowedLinks" type="number" value="">
+          </div>
+        </h1>
+        <div class="repeating-maillon-wrapper">
+          <fieldset class="repeating_maillon">
+            <select name="attr_maillon-ka">
+              <option value="0"></option>
+              <option value="kaair">Air</option>
+              <option value="kaeau">Eau</option>
+              <option value="kafeu">Feu</option>
+              <option value="kalune">Lune</option>
+              <option value="katerre">Terre</option>
+            </select>
+            <input name="attr_maillon" type="text" value="">
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="habitus">
+      <h1>Habitus</h1><span>Nom de l’Habitus</span><span>Voie</span><span>Ka</span><span>Portée</span><span>Durée</span><span>Degré</span><span title="Appris">A</span><span title="Tatoué">T</span><span title="Sur Focus">F</span><span></span>
+      <fieldset class="repeating_habitus">
+        <label>
+          <input name="attr_expand" value="1" type="checkbox" checked><span></span>
+        </label>
+        <input name="attr_nom" type="text" value="">
+        <select name="attr_voie">
+          <option value="0" selected></option>
+          <option value="sentier-sinueux">Sentier sinueux</option>
+          <option value="spirale-elevation">Spirale d'élévation</option>
+          <option value="principe-egarants">Principes égarants</option>
+          <option value="labyrinthe-ame">Labyrinthe schématique</option>
+          <option value="dedale-ame">Dédale de l'âme</option>
+        </select>
+        <select name="attr_ka">
+          <option value="0"></option>
+          <option value="kaair">Air</option>
+          <option value="kaeau">Eau</option>
+          <option value="kafeu">Feu</option>
+          <option value="kalune">Lune</option>
+          <option value="katerre">Terre</option>
+        </select>
+        <select name="attr_portee">
+          <option value="" selected></option>
+          <option value="0">Personnelle (partie)</option>
+          <option value="1">Personnelle (entier)</option>
+          <option value="2">Contact</option>
+          <option value="3">Ka-elem mètres</option>
+          <option value="4">Ka-elem kilomètres</option>
+          <option value="4.0">Portée de vue</option>
+          <option value="5">Région</option>
+          <option value="6">Continent</option>
+          <option value="7">Illimitée (monde physique)</option>
+          <option value="8">Illimitée (monde magique)</option>
+          <option value="9">Extra-terrestre</option>
+          <option value="10">Temporelle</option>
+        </select>
+        <select name="attr_duree">
+          <option value="" selected></option>
+          <option value="0">Ka-elem rounds</option>
+          <option value="1">Ka-elem minutes</option>
+          <option value="2">Ka-elem heures</option>
+          <option value="3">Ka-elem jours</option>
+          <option value="4">Ka-elem semaines</option>
+          <option value="5">Ka-elem mois</option>
+          <option value="6">Ka-elem années</option>
+          <option value="7">Ka-elem décennies</option>
+          <option value="8">Ka-elem siècles</option>
+          <option value="9">Ka-elem millénaires</option>
+          <option value="10">Ka-elem ères</option>
+        </select>
+        <input name="attr_degre" type="number" value="" readonly>
+        <label>
+          <input name="attr_appris" type="checkbox" value="1"><span title="Appris"></span>
+        </label>
+        <label>
+          <input name="attr_tatoue" type="checkbox" value="1"><span title="Tatoué"></span>
+        </label>
+        <label>
+          <input name="attr_focus" type="checkbox" value="1"><span title="Sur Focus"></span>
+        </label>
+        <button name="roll_sheet-simu-roll-vecu" type="roll" value="&{template:sort} {{name=@{character_name}}} {{nom_sort=@{nom}}} {{descrip_sort=@{habitus-desc}}} {{porte_sort=@{portee}}} {{duree_sort=@{duree}}} {{degre=@{degre}}} {{jet=[[1d100]]}} {{seuil=[[(?{Bonus/malus ?|0}[ Bonus, malus, vécus, etc. ]+@{difficulte}[ Cercle + Ka - Degré])*10]]}}">
+        </button>
+        <input name="attr_expand" type="hidden" value="1">
+        <div>
+          <label><span>Syntaxe</span>
+            <input name="attr_syntaxe" type="text" value="">
+          </label>
+          <label><span>Maillons</span>
+            <input name="attr_maillons" type="number" value="0" readonly>
+          </label>
+          <label><span>Difficulté</span>
+            <input name="attr_difficulte" type="number" value="0" readonly>
+          </label>
+          <div class="autoex autoex22">
+            <textarea name="attr_habitus-desc" placeholder="Description"></textarea><span name="attr_habitus-desc"></span>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <div class="tab16">
+    <div class="col">
+      <div class="draco-passes">
+        <h1>Passes
+          <label>
+            <input name="attr_passes" type="number" value="">
+          </label>
+        </h1>
+      </div>
+    </div>
+    <div class="col">
+      <div class="draco-rites">
+        <h1>Rites
+          <label>
+            <input name="attr_rites" type="number" value="">
+          </label>
+        </h1>
+      </div>
+    </div>
+    <div class="col">
+      <div class="draco-charmes">
+        <h1>Charmes
+          <label>
+            <input name="attr_charmes" type="number" value="">
+          </label>
+        </h1>
+      </div>
     </div>
   </div><rolltemplate class="sheet-rolltemplate-base">
 	<h1>{{name}}</h1>
@@ -3749,19 +3965,19 @@ on("change:repeating_mag-sort:mag-sort-ka change:repeating_mag-sort:mag-sort-deg
 
                 var metamorphose = 0;
 
-                if(ka_element == "kaair")
+                if (ka_element == "kaair")
                     metamorphose = KADA;
 
-                if(ka_element == "kafeu")
+                if (ka_element == "kafeu")
                     metamorphose = KADF;
 
-                if(ka_element == "kaeau")
+                if (ka_element == "kaeau")
                     metamorphose = KADE;
 
-                if(ka_element == "katerre")
+                if (ka_element == "katerre")
                     metamorphose = KADT;
 
-                if(ka_element == "kalune")
+                if (ka_element == "kalune")
                     metamorphose = KADL;
 
                 var total = (ka_element_value + mag_voie_value + metamorphose - malusMag) - degre;
@@ -4071,4 +4287,60 @@ on("change:repeating_epoques-incarnation:use_mnemos1 change:repeating_epoques-in
         });
     });
 });
+
+on("change:repeating_habitus:syntaxe change:repeating_habitus:portee change:repeating_habitus:duree change:repeating_habitus:appris change:repeating_habitus:tatoue change:repeating_habitus:focus change:mag-secret-degre sheet:opened", data => {
+    getSectionIDs("repeating_habitus", idarray => {
+        _.each(idarray, id => {
+            let syntaxAttr = 'repeating_habitus_' + id + '_syntaxe'
+            let porteeAttr = 'repeating_habitus_' + id + '_portee'
+            let dureeAttr = 'repeating_habitus_' + id + '_duree'
+            let maillonsAttr = 'repeating_habitus_' + id + '_maillons'
+            let elemAttr = 'repeating_habitus_' + id + '_elem'
+            let diffAttr = 'repeating_habitus_' + id + '_difficulte'
+            let degreAttr = 'repeating_habitus_' + id + '_degre'
+            let apprisAttr = 'repeating_habitus_' + id + '_appris'
+            let tatoueAttr = 'repeating_habitus_' + id + '_tatoue'
+            let focusAttr = 'repeating_habitus_' + id + '_focus'
+
+            getAttrs([syntaxAttr, porteeAttr, dureeAttr, elemAttr, apprisAttr, tatoueAttr, focusAttr, 'KADAir', 'KADEau', 'KADFeu', 'KADLune', 'KADTerre', 'mag-secret-degre', 'malusMag', 'kaair', 'kaeau', 'kafeu', 'kalune', 'katerre'], values => {
+                let maillons = values[syntaxAttr].split('+').length
+                let portee = parseInt(values[porteeAttr])||0
+                let duree = parseInt(values[dureeAttr])||0
+                let degre = portee + duree + maillons - 1
+
+                let kaElem = values[elemAttr]
+                let grandSecret = parseInt(values['mag-secret-degre'])||0
+                let kaElemValue = parseInt(values[kaElem])||0
+                let malusMag = parseInt(values['malusMag'])||0
+
+                let KADA = parseInt(values['KADAir'])||0
+                let KADE = parseInt(values['KADEau'])||0
+                let KADF = parseInt(values['KADFeu'])||0
+                let KADL = parseInt(values['KADLune'])||0
+                let KADT = parseInt(values['KADTerre'])||0
+
+                let isHabitus = parseInt(values[apprisAttr])||
+                    parseInt(values[tatoueAttr])||
+                    parseInt(values[focusAttr])||
+                    0
+                console.log(isHabitus)
+
+                let metamorphose = 0
+                if (kaElem == 'kaair') metamorphose = KADA
+                if (kaElem == 'kaeau') metamorphose = KADE
+                if (kaElem == 'kafeu') metamorphose = KADF
+                if (kaElem == 'kalune') metamorphose = KADL
+                if (kaElem == 'katerre') metamorphose = KADT
+
+                // Bonus de 1 parce que c’est un Habitus
+                let diff = kaElemValue + grandSecret + isHabitus + metamorphose - malusMag - degre
+                setAttrs({
+                    [maillonsAttr]: maillons,
+                    [degreAttr]: degre,
+                    [diffAttr]: diff
+                })
+            })
+        })
+    })
+})
 </script>
