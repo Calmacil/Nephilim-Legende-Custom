@@ -59,7 +59,6 @@ on("change:repeating_kabb-invoc:kabb-invoc-ka change:repeating_kabb-invoc:kabb-i
 {
     getSectionIDs("repeating_kabb-invoc", function(idarray)
     {
-        console.log("Metamorphose");
         _.each(idarray,function(id)
         {
             getAttrs([
@@ -101,7 +100,6 @@ on("change:repeating_kabb-invoc:kabb-invoc-ka change:repeating_kabb-invoc:kabb-i
                 if(ka_element == "kalune")
                     metamorphose = KADL;
 
-                console.log("Metamorphose : "+metamorphose);
 
                 var total = (ka_element_value + kabb_sephira_value + ordonnance + metamorphose - malusMag);
 
@@ -220,7 +218,6 @@ on("sheet:opened change:repeating_savoir-eso", function()
                 else
                     result = savoir;
 
-                console.log(result);
 
                 setAttrs({
                     ["repeating_savoir-eso_"+id+"_savoir_eso_perso"]: result
@@ -248,7 +245,6 @@ on("sheet:opened change:repeating_quetes-eso", function()
                 else
                     result = quete;
 
-                console.log(result);
 
                 setAttrs({
                     ["repeating_quetes-eso_"+id+"_quete_eso_perso"]: result
@@ -281,7 +277,6 @@ on("sheet:opened change:repeating_metamorphose remove:repeating_metamorphose", f
                 dMeta: length
             });
 
-            console.log("Meta : "+meta);
         });
     });
 });
@@ -320,19 +315,15 @@ on("change:repeating_maillon remove:repeating_maillon sheet:opened", function()
 
 on("change:repeating_epoques-incarnation:use_mnemos1 change:repeating_epoques-incarnation:use_mnemos2 sheet:opened", function(data)
 {
-    console.log("Dés-activer le Mnemos")
     getSectionIDs("repeating_epoques-incarnation", function(idarray) {
         _.each(idarray, function(id) {
             getAttrs(["repeating_epoques-incarnation_"+id+"_use_mnemos1", "repeating_epoques-incarnation_"+id+"_use_mnemos2"], function(values) {
-                console.log("Je suis dans la boucle !");
                 let useMnemos1 = values["repeating_epoques-incarnation_"+id+"_use_mnemos1"] == 'on';
                 let useMnemos2 = values["repeating_epoques-incarnation_"+id+"_use_mnemos2"] == 'on'
-                console.log("Mémos 1 " + useMnemos1 + "; Mnémos 2 " + useMnemos2);
 
                 let effectiveMnemos = "";
                 effectiveMnemos += useMnemos1 ? "@{degres_mnemos1}+" : "0+";
                 effectiveMnemos += useMnemos2 ? "@{degres_mnemos2}" : "0";
-                console.log("Effective mnemos: " + effectiveMnemos);
 
                 let effectiveRoll = "@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{jet=[[1d100]]}} @{approche}"
                 if (useMnemos1) {
@@ -341,7 +332,6 @@ on("change:repeating_epoques-incarnation:use_mnemos1 change:repeating_epoques-in
                 if (useMnemos2) {
                     effectiveRoll += " {{mnemos2=@{mnemos2}}}";
                 }
-                console.log("Effective roll: " + effectiveRoll);
 
                 setAttrs({
                     ["repeating_epoques-incarnation_"+id+"_effectiveMnemos"]: effectiveMnemos,
@@ -387,7 +377,6 @@ on("change:repeating_habitus:syntaxe change:repeating_habitus:portee change:repe
                     parseInt(values[tatoueAttr])||
                     parseInt(values[focusAttr])||
                     0
-                console.log(isHabitus)
 
                 let metamorphose = 0
                 if (kaElem == 'kaair') metamorphose = KADA
@@ -403,6 +392,27 @@ on("change:repeating_habitus:syntaxe change:repeating_habitus:portee change:repe
                     [degreAttr]: degre,
                     [diffAttr]: diff
                 })
+            })
+        })
+    })
+})
+
+// Update rebellion gauge value
+on('change:repeating_dracoart:degre remove:repeating_dracoart sheet:opened', data => {
+    getSectionIDs('repeating_dracoart', idarray => {
+
+        const attrArray = idarray.map(id => `repeating_dracoart_${id}_degre`)
+
+        getAttrs(attrArray, values => {
+            let gauge = 0
+
+            idarray.forEach(id => {
+                const degre = parseInt(values[`repeating_dracoart_${id}_degre`])||0
+                gauge += degre
+            });
+
+            setAttrs({
+                perteControle: gauge
             })
         })
     })

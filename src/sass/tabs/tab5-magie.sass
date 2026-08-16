@@ -117,7 +117,7 @@ div.sheet-sorts
                 @extend %soRepExpandCb
 
             &> label:not(:nth-of-type(1))
-                @extend %soRepLabelNotLast
+                @include soRepLabelNotLast
 
             &> input[type="text"]:nth-of-type(1)
                 width: calc(100% - 65px - 65px - 65px - 130px - 130px - 25px - 25px - 25px - 45px - 30px)
