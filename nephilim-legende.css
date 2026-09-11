@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Kodchasan&display=swap");
 .charsheet {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/Fond-vieux-papier.jpg");
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Fond-vieux-papier.jpg");
   background-size: cover;
   --brun: rgb(151, 129, 89);
   --marron: 136, 115, 71;
@@ -13,10 +13,10 @@
   --colC: rgb(209, 197, 175);
   --titre: rgb(208, 175, 152);
   --titreGris: rgba(48, 59, 56, .5);
-  --astrolabe: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/Astrolabe.png");
-  --dice: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/dices.png");
-  --opposition: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/opposition.png");
-  --arbreKabbale: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/arbreKabbale.png");
+  --astrolabe: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Astrolabe.png");
+  --dice: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/dices.png");
+  --opposition: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/opposition.png");
+  --arbreKabbale: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/arbreKabbale.png");
   min-width: 700px;
 }
 
@@ -380,7 +380,7 @@ div.sheet-tab5 > .sheet-degreMetamorphe > h1,
 div.sheet-tab5 > .sheet-gsDomains > h1,
 div.sheet-tab6 > .sheet-col2 > .sheet-degreMetamorphe > h1,
 div.sheet-tab7 > .sheet-degreMetamorphe > h1 {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0px, 90%, 0px;
   background-size: auto, 100% auto, auto;
@@ -437,7 +437,7 @@ img.sheet-logo {
 
 div.sheet-titleImago, div.sheet-titleKabbNoire, div.sheet-titleNecro {
   width: calc(100% - 10px);
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(58, 59, 56, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(58, 59, 56, 0.5));
   background-repeat: no-repeat;
   background-position: 0 90%, 0;
   background-size: auto, 100%, auto, auto;
@@ -591,7 +591,7 @@ div.sheet-chutes > h1 {
   width: 100%;
   font-size: 25px;
   line-height: 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0px, 75%, 0px;
   background-size: auto, 100% auto, auto;
@@ -615,7 +615,7 @@ div.sheet-chutes > div > div {
   width: 100%;
   flex-wrap: wrap;
   line-height: 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0px, 90%, 0px;
   background-size: auto, 100% auto, auto;
@@ -710,7 +710,7 @@ div.sheet-kOrdonnance > h1 {
   font-size: 18px;
   flex-wrap: wrap;
   line-height: 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0, 90%, 0;
   background-size: auto, 100% auto, auto;
@@ -851,7 +851,7 @@ div.sheet-metamorphe {
 }
 div.sheet-metamorphe > div:first-of-type {
   width: 100%;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0px, 75%, 0px;
   background-size: auto, 100% auto, auto;
@@ -956,7 +956,7 @@ div.sheet-metamorphe > .repcontainer > .repitem > label > input[type=checkbox]:c
 
 div.sheet-kaElement {
   width: 445px;
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/ka-element.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: 35px;
@@ -1109,7 +1109,7 @@ div.sheet-adoption {
 div.sheet-stase > div:first-of-type,
 div.sheet-adoption > div:first-of-type {
   width: 100%;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0px, 75%, 0px;
   background-size: auto, 100% auto, auto;
@@ -1437,7 +1437,7 @@ div.sheet-tab4 > .sheet-simulacreVecus > h1 {
   width: calc(33.3333333333% - 10px);
   font-size: 18px;
   line-height: 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0, 75%, 0;
   background-size: auto, 100% auto, auto;
@@ -1455,7 +1455,7 @@ div.sheet-savoirsEsoteriques > h1 {
   width: calc(100% - 10px);
   font-size: 18px;
   line-height: 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0, 75%, 0;
   background-size: auto, 100% auto, auto;
@@ -1473,7 +1473,7 @@ div.sheet-dommagesMagiques > h1, div.sheet-titre > h1 {
   font-size: 18px;
   flex-wrap: nowrap;
   line-height: 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.5), rgba(48, 59, 56, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0, 90%, 0;
   background-size: auto, 100% auto, auto;
@@ -2153,7 +2153,7 @@ div.sheet-cercleMagie {
   flex-wrap: wrap;
   height: 45px;
   line-height: 45px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.2), rgba(48, 59, 56, 0.2));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitreNB.png"), linear-gradient(to right, rgba(48, 59, 56, 0.2), rgba(48, 59, 56, 0.2));
   background-repeat: no-repeat;
   background-size: auto, 100% auto, auto;
   justify-content: flex-start;
@@ -2366,7 +2366,7 @@ div.sheet-cercleArbreKabbale > span {
   color: white;
   padding-left: 10px;
   text-shadow: 2px 3px 5px black;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fond3.png");
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png");
   background-repeat: no-repeat;
   background-position-x: right;
 }
@@ -2742,16 +2742,16 @@ div.sheet-oeuvres > label {
   background-position-x: 0, -190px;
 }
 div.sheet-oeuvres > label:nth-of-type(1) {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fond3.png"), linear-gradient(to right, rgba(0, 0, 0, 0.7), rgb(0, 0, 0));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png"), linear-gradient(to right, rgba(0, 0, 0, 0.7), rgb(0, 0, 0));
 }
 div.sheet-oeuvres > label:nth-of-type(2) {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fond3.png"), linear-gradient(to right, rgba(234, 235, 236, 0.7), rgb(234, 235, 236));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png"), linear-gradient(to right, rgba(234, 235, 236, 0.7), rgb(234, 235, 236));
   border-left: 2px solid var(--titreGris);
   border-right: 2px solid var(--titreGris);
 }
 div.sheet-oeuvres > label:nth-of-type(3) {
   margin-right: 15px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fond3.png"), linear-gradient(to right, rgba(194, 72, 49, 0.7), rgb(194, 72, 49));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fond3.png"), linear-gradient(to right, rgba(194, 72, 49, 0.7), rgb(194, 72, 49));
 }
 div.sheet-oeuvres > label > span {
   font-family: "Kodchasan";
@@ -3059,28 +3059,28 @@ div.sheet-constructs > div {
   margin-bottom: -50px;
 }
 div.sheet-constructs > div:nth-of-type(1) {
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/Cornue.png"), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/ka-element-sans-homme.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Cornue.png"), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png");
   background-size: 220px, contain;
   background-repeat: no-repeat;
   background-position-x: calc(50% + 5px), 0;
   background-position-y: center;
 }
 div.sheet-constructs > div:nth-of-type(2) {
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/athanor.png"), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/ka-element-sans-homme.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/athanor.png"), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png");
   background-size: 150px, contain;
   background-repeat: no-repeat;
   background-position-x: calc(50% + 3px), 0;
   background-position-y: calc(50% - 25px), center;
 }
 div.sheet-constructs > div:nth-of-type(3) {
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/aludel.png"), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/ka-element-sans-homme.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/aludel.png"), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png");
   background-size: 80px, contain;
   background-repeat: no-repeat;
   background-position-x: calc(50% - 5px), center;
   background-position-y: calc(50% - 25px), center;
 }
 div.sheet-constructs > div:nth-of-type(4) {
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/Creuset-alchimique.png"), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/ka-element-sans-homme.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Creuset-alchimique.png"), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png");
   background-size: 150px, contain;
   background-repeat: no-repeat;
   background-position-x: calc(50% - 5px), 0;
@@ -3100,7 +3100,7 @@ div.sheet-constructs > div:nth-of-type(4) > span:nth-of-type(5) {
   text-align: center;
 }
 div.sheet-constructs > div:nth-of-type(5) {
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/Alambic.png"), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/ka-element-sans-homme.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Alambic.png"), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/ka-element-sans-homme.png");
   background-size: 135px, contain;
   background-repeat: no-repeat;
   background-position-x: calc(50% - 13px), 0;
@@ -3274,7 +3274,7 @@ div.sheet-arcadia > div:first-of-type {
   font-family: "Kodchasan";
   width: 100%;
   height: 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/fondTitre.png"), linear-gradient(to right, rgb(208, 175, 152), rgba(208, 175, 152, 0.5));
   background-repeat: no-repeat;
   background-position-y: 0, 75%, 0;
   padding-left: 10px;
@@ -3559,7 +3559,7 @@ div.sheet-tab11 div.sheet-chutes label {
 
 div.sheet-noyau {
   width: 445px;
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/noyau.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/noyau.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: 35px;
@@ -4253,7 +4253,7 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 .sheet-triskel-wrapper .sheet-triskel {
   height: 240px;
   width: 240px;
-  background-image: url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/triskel.png");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/triskel.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -4481,7 +4481,7 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 .sheet-rolltemplate-dracoterrain, .sheet-rolltemplate-invocation, .sheet-rolltemplate-sort,
 .sheet-rolltemplate-dracotech, .sheet-rolltemplate-base,
 .sheet-rolltemplate-dracocontrole {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Calmacil/Nephilim-Legende-Custom/officiel/img/Fond-vieux-papier.jpg");
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Fond-vieux-papier.jpg");
   background-size: cover, cover, cover;
   display: flex;
   justify-content: space-between;
