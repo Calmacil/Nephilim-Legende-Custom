@@ -7,8 +7,9 @@ mixin kaSelectorNeph(attrName)
         option(value='Lune') Ka dominant : Lune
         option(value='Eau') Ka dominant : Eau
 
+//- Deprecated
 mixin kaSelectorVecuSimu(attrName, carac, idc="", withMemos=false)
-    - 
+    -
         var nbidc = "-nbr" +idc
         var effectiveMnemos = ''
         if (withMemos) {
@@ -20,6 +21,14 @@ mixin kaSelectorVecuSimu(attrName, carac, idc="", withMemos=false)
             option(value=roll_simu_appr_elem.replace('__ATTR__', carac).replace('__MNEMOS__', effectiveMnemos).replace('__KA__', ka).replace('__KAD__',appr[0]).replace('__APPR__',appr[1]).replace('-nbr', nbidc)).hideHumain.hideSelenim #{appr[1]}
         option(value=roll_simu_appr_ksol.replace('__ATTR__', carac).replace('__MNEMOS__', effectiveMnemos)).hideNephilim.hideSelenim Approche solaire
         option(value=roll_simu_appr_kln.replace('__ATTR__', carac).replace('__MNEMOS__', effectiveMnemos)).hideNephilim.hideHumain Approche de KLN
+
+mixin kaSelectorVecuCrp(attrName)
+    select(name=`attr_${attrName}`)
+        option(value='') Aucune approche
+        each appr, ka in approches
+            option(value=ka).hideHumain.hideSelenim #{appr[1]}
+        option(value='simu-kasoleil').hideNephilim.hideSelenim Approche solaire
+        option(value='kaln').hideNephilim.hideHumain Approche de KLN
 
 mixin kaSelectorArcadia(attrName)
     select(name=`attr_${attrName}`)

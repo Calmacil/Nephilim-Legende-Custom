@@ -136,9 +136,10 @@
             <input name="attr_metamorphose_desc" type="text" value="">
           </label>
           <label>
-            <input name="attr_permanent" type="checkbox"><span></span>
+            <input name="attr_permanent" value="1" type="checkbox"><span title=""></span>
           </label>
         </fieldset>
+        <input name="attr_permanentMeta" type="hidden" value="0">
       </div>
       <div class="degreMetamorphe">
         <h1>Degré de métamorphe actif</h1>
@@ -187,19 +188,19 @@
     </div>
     <div class="2colT1">
       <div class="kaElement">
-        <button name="roll_kafeu" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Feu}} {{seuil=[[(@{kafeu}+(?{Bonus/Malus ?|0}+@{KADFeu})-@{malusMag})*10]]}}"><span>Ka-Feu</span>
+        <button name="act_kafeu" type="action" value="Ka Feu"><span>Ka-Feu</span>
         </button>
         <input name="attr_kafeu" type="number" value="1" min="1">
-        <button name="roll_katerre" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Terre}} {{seuil=[[(@{katerre}+(?{Bonus/Malus ?|0}+@{KADTerre})-@{malusMag})*10]]}}"><span>Ka-Terre</span>
+        <button name="act_katerre" type="action" value="Ka Feu"><span>Ka-Terre</span>
         </button>
         <input name="attr_katerre" type="number" value="1" min="1">
-        <button name="roll_kaair" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Air}} {{seuil=[[(@{kaair}+(?{Bonus/Malus ?|0}+@{KADAir})-@{malusMag})*10]]}}"><span>Ka-Air</span>
+        <button name="act_kaair" type="action" value="Ka Air"><span>Ka-Air</span>
         </button>
         <input name="attr_kaair" type="number" value="1" min="1">
-        <button name="roll_kalune" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Lune}} {{seuil=[[(@{kalune}+(?{Bonus/Malus ?|0}+@{KADLune})-@{malusMag})*10]]}}"><span>Ka-Lune</span>
+        <button name="act_kalune" type="action" value="Ka Lune"><span>Ka-Lune</span>
         </button>
         <input name="attr_kalune" type="number" value="1" min="1">
-        <button name="roll_kaeau" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{jet=[[1d100]]}} {{ka=Ka-Eau}} {{seuil=[[(@{kaeau}+(?{Bonus/Malus ?|0}+@{KADEau})-@{malusMag})*10]]}}"><span>Ka-Eau</span>
+        <button name="act_kaeau" type="action" value="Ka Eau"><span>Ka-Eau</span>
         </button>
         <input name="attr_kaeau" type="number" value="1" min="1">
       </div>
@@ -374,39 +375,39 @@
       </div>
     </div>
     <div class="simulacreVecus">
-      <label>Vécu principal</label>
+      <label for="simu_vecu">Vécu principal</label>
       <input name="attr_simu_vecu" type="text" value="" placeholder="Vécu">
       <input name="attr_simu-vecu-nbr" type="number" value="0">
       <input class="nature" name="attr_nature" type="hidden" value="nephilim">
       <select name="attr_approche1">
-        <option value="{{seuil=[[(@{simu-vecu-nbr}+0+?{Bonus/Malus ?|0}-@{malusPhy})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
-        <option class="hideNephilim hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche solaire</option>
-        <option class="hideNephilim hideHumain" value="{{seuil=[[(@{simu-vecu-nbr}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
+        <option value="">Aucune approche</option>
+        <option class="hideHumain hideSelenim" value="kafeu">Approche de Feu</option>
+        <option class="hideHumain hideSelenim" value="kaair">Approche d'Air</option>
+        <option class="hideHumain hideSelenim" value="kaeau">Approche d'Eau</option>
+        <option class="hideHumain hideSelenim" value="katerre">Approche de Terre</option>
+        <option class="hideHumain hideSelenim" value="kalune">Approche de Lune</option>
+        <option class="hideNephilim hideSelenim" value="simu-kasoleil">Approche solaire</option>
+        <option class="hideNephilim hideHumain" value="kaln">Approche de KLN</option>
       </select>
-      <button name="roll_vecu" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu}}} {{jet=[[1d100]]}} @{approche1}">
+      <button name="act_vecu" type="action" value="">
       </button>
     </div>
     <div class="simulacreVecus">
-      <label>Vécu d’Initié</label>
+      <label for="simu_vecu2">Vécu d’Initié</label>
       <input name="attr_simu_vecu2" type="text" value="" placeholder="Vécu">
       <input name="attr_simu-vecu-nbr2" type="number" value="0">
       <input class="nature" name="attr_nature" type="hidden" value="nephilim">
       <select name="attr_approche2">
-        <option value="{{seuil=[[(@{simu-vecu-nbr2}+0+?{Bonus/Malus ?|0}-@{malusPhy})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr22}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr22}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr22}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr22}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
-        <option class="hideHumain hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr22}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
-        <option class="hideNephilim hideSelenim" value="{{seuil=[[(@{simu-vecu-nbr2}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche Solaire}}">Approche solaire</option>
-        <option class="hideNephilim hideHumain" value="{{seuil=[[(@{simu-vecu-nbr2}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
+        <option value="">Aucune approche</option>
+        <option class="hideHumain hideSelenim" value="kafeu">Approche de Feu</option>
+        <option class="hideHumain hideSelenim" value="kaair">Approche d'Air</option>
+        <option class="hideHumain hideSelenim" value="kaeau">Approche d'Eau</option>
+        <option class="hideHumain hideSelenim" value="katerre">Approche de Terre</option>
+        <option class="hideHumain hideSelenim" value="kalune">Approche de Lune</option>
+        <option class="hideNephilim hideSelenim" value="simu-kasoleil">Approche solaire</option>
+        <option class="hideNephilim hideHumain" value="kaln">Approche de KLN</option>
       </select>
-      <button name="roll_vecu2" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{simu_vecu2}}} {{jet=[[1d100]]}} @{approche2}">
+      <button name="act_vecu2" type="action" value="">
       </button>
     </div>
     <div class="col2">
@@ -596,19 +597,17 @@
           <div class="autoex autoex24">
             <textarea name="attr_vecu_description"></textarea><span name="attr_vecu_description"></span>
           </div>
-          <input name="attr_effectiveMnemos" type="hidden" value="@{degres_mnemos1}+@{degres_mnemos2}">
           <select name="attr_approche">
-            <option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0}-@{malusPhy}+@{effectiveMnemos})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
-            <option class="hideNephilim hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche Solaire}}">Approche solaire</option>
-            <option class="hideNephilim hideHumain" value="{{seuil=[[(@{degres_vecu_passe}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
+            <option value="">Aucune approche</option>
+            <option class="hideHumain hideSelenim" value="kafeu">Approche de Feu</option>
+            <option class="hideHumain hideSelenim" value="kaair">Approche d'Air</option>
+            <option class="hideHumain hideSelenim" value="kaeau">Approche d'Eau</option>
+            <option class="hideHumain hideSelenim" value="katerre">Approche de Terre</option>
+            <option class="hideHumain hideSelenim" value="kalune">Approche de Lune</option>
+            <option class="hideNephilim hideSelenim" value="simu-kasoleil">Approche solaire</option>
+            <option class="hideNephilim hideHumain" value="kaln">Approche de KLN</option>
           </select>
-          <input name="attr_effectiveRoll" type="hidden" value="@{gm} &amp;{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{jet=[[1d100]]}} @{approche}">
-          <button name="roll_vecu" type="roll" value="@{effectiveRoll}">
+          <button name="act_vecu" type="action" value="">
           </button>
         </div>
         <div>
@@ -669,7 +668,7 @@
           </select>
           <input name="attr_quete_eso_degres" type="number" value="">
           <input name="attr_quete_eso" type="hidden" value="">
-          <button name="roll_roll_quetesEsoteriques" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{quete_eso}}} {{jet=[[1d100]]}} {{@{quete_eso}=@{quete_eso}}} {{vecuP=@{quete_eso_perso}}} {{special=special}} {{seuil=[[(@{quete_eso_degres}+?{Bonus/Malus ?|0})*10]]}}">
+          <button name="act_roll_quetesEsoteriques" type="action" value="">
           </button>
           <input name="attr_quete-eso-perso" type="text" value="">
         </fieldset>
@@ -707,7 +706,7 @@
           </select>
           <input name="attr_savoir_eso_degres" type="number" value="0">
           <input name="attr_savoir_eso" type="hidden" value="">
-          <button name="roll_roll_savoirsEsoteriques" type="roll" value="@{gm} &{template:base} {{name=@{character_name}}} {{vecu=@{savoir_eso}}} {{jet=[[1d100]]}} {{vecuP=@{savoir_eso_perso}}} {{special=special}} {{seuil=[[(@{savoir_eso_degres}+?{Bonus/Malus ?|0})*10]]}}">
+          <button name="act_roll_savoirsEsoteriques" type="action" value="">
           </button>
           <input name="attr_savoir-eso-perso" type="text" value="">
         </fieldset>
@@ -998,19 +997,17 @@
           <div class="autoex autoex24">
             <textarea name="attr_vecu_description"></textarea><span name="attr_vecu_description"></span>
           </div>
-          <input name="attr_effectiveMnemos" type="hidden" value="@{degres_mnemos1}+@{degres_mnemos2}">
           <select name="attr_approche">
-            <option value="{{seuil=[[(@{degres_vecu_passe}+0+?{Bonus/Malus ?|0}-@{malusPhy}+@{effectiveMnemos})*10]]}} {{approche=Aucune approche}}" selected>Aucune approche</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kafeu}+?{Bonus/Malus ?|0}+@{KADFeu}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Feu}}">Approche de Feu</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaair}+?{Bonus/Malus ?|0}+@{KADAir}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche d'Air}}">Approche d'Air</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kaeau}+?{Bonus/Malus ?|0}+@{KADEau}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche d'Eau}}">Approche d'Eau</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{katerre}+?{Bonus/Malus ?|0}+@{KADTerre}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Terre}}">Approche de Terre</option>
-            <option class="hideHumain hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{kalune}+?{Bonus/Malus ?|0}+@{KADLune}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Lune}}">Approche de Lune</option>
-            <option class="hideNephilim hideSelenim" value="{{seuil=[[(@{degres_vecu_passe}+@{simu-kasoleil}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche Solaire}}">Approche solaire</option>
-            <option class="hideNephilim hideHumain" value="{{seuil=[[(@{degres_vecu_passe}+@{kaln}+?{Bonus/Malus ?|0}-@{malusPhy}-@{malusMag}+@{effectiveMnemos})*10]]}} {{approche=Approche de Ka Lune Noire}}">Approche de KLN</option>
+            <option value="">Aucune approche</option>
+            <option class="hideHumain hideSelenim" value="kafeu">Approche de Feu</option>
+            <option class="hideHumain hideSelenim" value="kaair">Approche d'Air</option>
+            <option class="hideHumain hideSelenim" value="kaeau">Approche d'Eau</option>
+            <option class="hideHumain hideSelenim" value="katerre">Approche de Terre</option>
+            <option class="hideHumain hideSelenim" value="kalune">Approche de Lune</option>
+            <option class="hideNephilim hideSelenim" value="simu-kasoleil">Approche solaire</option>
+            <option class="hideNephilim hideHumain" value="kaln">Approche de KLN</option>
           </select>
-          <input name="attr_effectiveRoll" type="hidden" value="@{gm} &amp;{template:base} {{name=@{character_name}}} {{vecu=@{vecu}}} {{jet=[[1d100]]}} @{approche}">
-          <button name="roll_vecu" type="roll" value="@{effectiveRoll}">
+          <button name="act_vecu" type="action" value="">
           </button>
         </div>
         <div>
@@ -2343,6 +2340,59 @@
 			<span class="fail">Maladresse</span>
 		{{/rollTotal() jet 100}}
 	</div>
+</rolltemplate><rolltemplate class="sheet-rolltemplate-base2">
+    <h1>{{name}}</h1>
+    <div class="rt-header">
+        <span>{{titleLabel}}</span>
+        <span>{{rollTitle}}</span>
+    </div>
+    <div class="rt-result">
+        <div class="rt-result-main">
+            <span>Résultat: </span>
+            <span>{{jet}}</span>
+
+            {{#rollTotal() computed::isSuccess 1}}
+                <span class="success">
+                    {{#rollTotal() computed::isCritical 1}}
+                    Critique
+                    {{/rollTotal() computed::isCritical 1}}
+                    {{#rollTotal() computed::isCritical 0}}
+                    Réussite
+                    {{/rollTotal() computed::isCritical 0}}
+                </span>
+            {{/rollTotal() computed::isSuccess 1}}
+            {{#rollTotal() computed::isSuccess 0}}
+                <span class="fail">
+                    {{#rollTotal() computed::isCritical 1}}
+                    Maladresse
+                    {{/rollTotal() computed::isCritical 1}}
+                    {{#rollTotal() computed::isCritical 0}}
+                    Échec
+                    {{/rollTotal() computed::isCritical 0}}
+                </span>
+            {{/rollTotal() computed::isSuccess 0}}
+        </div>
+
+        <div class="rt-result-details">
+            <span>Seuil {{computed::seuil}}</span>
+            <span>Marge {{computed::margin}}</span>
+        </div>
+    </div>
+
+    <div class="rt-extra">
+        {{#approche}}
+            <span>Approche de {{approche}}</span>
+        {{/approche}}
+        {{#metamorphe}}
+            <span>{{metamorphe}}</span>
+        {{/metamorphe}}
+        {{#mnemos1}}
+            <span>effet Mnémos: {{mnemos1}}</span>
+        {{/mnemos1}}
+        {{#mnemos2}}
+            <span>effet Mnémos: {{mnemos2}}</span>
+        {{/mnemos2}}
+    </div>
 </rolltemplate><rolltemplate class="sheet-rolltemplate-sort">
 	<h1>{{name}}</h1>
 	<div>
@@ -4756,7 +4806,125 @@
 </rolltemplate>
 </div>
 <script type="text/worker">
-  
+  /**
+ * Useful to build long change:thing strings
+ * @param {Array} stats A list of stats to load in change string
+ * @param {boolean} sheet_open Add sheet:opened or not
+ * @returns string
+ */
+const build_changes = (stats, sheet_open=false) =>
+    stats.reduce((all, stat) =>
+        `${all} change:${stat.toLowerCase()}`, sheet_open ? 'sheet:opened' : '');
+
+/**
+ * Combine elements to create a full section attribute name
+ * @param {string} section section name
+ * @param {string} id row id
+ * @param {string} field field name
+ * @returns string
+ */
+const section_name = (section, id, field) =>
+    `${section.startsWith('repeating_') ? section :
+        `repeating_${section}`}_${id}_${field}`;
+
+/**
+ * break a full repeating section attribute name into its parts
+ * @param {string} full_name The full section name
+ * @param {string} part The section part you want
+ * @returns string
+ */
+const section_parts = (full_name, part='section') => {
+    let [stub, section, row, ...field] = full_name.split('_')
+    if (part === 'section' || part === 1) return section
+    else if (part === 'row' || part === 'id' || part === 2) return row
+    else return field.join('_')
+}
+
+/**
+ * Watch changes to build an event changes string
+ * Use it like this:
+ * const myFields = {
+ *   globals: ['strength', 'constitution'],
+ *   buffs: ['mod', 'cost'],
+ *   gear: ['mod', 'cost]
+ * }
+ * on(section_changes(myFields), () => {
+ *   getSectionObject(myFields, data => {
+ *     getAttrs(data.fields, values => {})
+ *   })
+ * })
+ * @param {Object} section_object An object containing the fields to watch
+ * @returns string
+ */
+const section_changes = (section_object, sheet_open=false) => {
+    let output = sheet_open ? 'sheet:opened ' : ''
+    Object.keys(section_object).forEach((key, index) => {
+        if (index) section += ' '
+        section_object[key].forEach(field => {
+            output += key === 'globals' ? field : `change:repeating_${key}:${field}`
+        })
+    })
+    return output
+}
+
+const sum_section = (section, ids, fields, v) => {
+    if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split('.')]
+    console.warn(v)
+    let total = 0
+    const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}` === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`])||0]
+    ids.forEach(id => {
+        let subtotal = 1;
+        fields.forEach(field => subtotal *= getValue(section, id, field))
+        total += subtotal
+    })
+    return total
+}
+
+/**
+ * operate on multiple repeating sections at a time, getting a data object
+ * which contains data.fields and data.each_section
+ * @param {Array} sections The sections to fetch
+ * @param {CallableFunction} callback The callback
+ */
+const getSectionObject = (sections, callback) => {
+    const fields_object = {}
+    fields_object.fields = []
+    let keys = Object.keys(sections)
+    const burndown = () => {
+        let section = keys.shift()
+        getSectionIDs(`repeating_${section}`, ids => {
+            ids.forEach(id =>
+                sections[section].forEach(field =>
+                    fields_object.fields.push(`repeating_${section}_${id}_${field}`)
+                )
+            )
+            fields_object[section] = ids
+            if (keys.length) burndown();
+            else callback(fields_object);
+        })
+    }
+    burndown()
+}
+
+/**
+ * Parses a var name from a trigger name (actButton)
+ * @param {string} name The trigger name
+ * @returns string
+ */
+const parseTriggerName = name => {
+    return name.split(':')[1]
+}
+
+/**
+ * Returns the full letters ka name from the ka attr name
+ * @param {string} ka The ka attr name
+ * @returns string
+ */
+const kapitalize = ka => {
+    if (ka === 'kaln') return 'Lune Noire'
+    if (ka === 'simu-kasoleil') return 'Soleil'
+    return ka.charAt(2).toUpperCase() + ka.slice(3)
+}
 on("sheet:opened change:degreMetamorphe change:KaDominant", function()
 {
     getAttrs(["degreMetamorphe", "KaDominant"], function(values)
@@ -5524,6 +5692,291 @@ on('change:repeating_dracoart:degre remove:repeating_dracoart sheet:opened', dat
                 perteControle: gauge
             })
         })
+    })
+})/**
+ * Computes a roll's quality and margin
+ *
+ * @param {integer} degre The difficulty of the roll
+ * @param {integer} result The numeric result of the roll
+ * @param {boolean} isPulp Computation mode
+ * @returns Object
+ */
+const _computeRollResult = (degre, result, isPulp=false) => {
+    let isSuccess = 0, isCritical = 0, margin = 0
+    let percent = 10 * degre
+
+    if (isPulp && result >= 90 || result == 100) {
+        isSuccess = 0
+        isCritical = 1
+    } else if (isPulp && result <= 10) {
+        isSuccess = 1
+        isCritical = 1
+    } else {
+        if (result <= percent) isSuccess = 1;
+        if (result%11 == 0) isCritical = 1
+    }
+
+    if (isSuccess) {
+        margin = Math.floor(result / 10) + Math.max(0, (degre - 10));
+    }
+
+    return {
+        isSuccess: isSuccess,
+        isCritical: isCritical,
+        margin: margin
+    }
+}
+
+/**
+ * Performs a roll
+ * @param {string} template The rolltemplate name
+ * @param {Object} opts The mandatory options
+ * @param {Object} messages An object of additional messages meant for display only
+ */
+const doRoll = (template = 'base', opts={}, messages={}) => {
+    opts = {
+        ...{
+            seuil: 0,
+            jet: '[[1d100]]',
+            useMetamorphe: false,
+            useMagicalWounds: false,
+            usePhysicalWounds: false,
+            approche: undefined,
+        },
+        ...opts
+    }
+
+    messages = {
+        ...{
+            rollTitle: '',
+            titleLabel: 'Utilise son'
+        },
+        ...messages
+    }
+
+    let rollParts = [`&{template:${template}}`]
+    let attrsToGet = ['character_name'];
+
+    // Extra variables to check
+    if (opts.useMetamorphe) attrsToGet.push('metamorphe', 'degreMetamorphe', 'permanentMeta')
+    if (opts.usePhysicalWounds) attrsToGet.push('cons-min', 'cons-ser', 'cons-gra')
+    if (opts.useMagicalWounds) attrsToGet.push('cons-mag-min', 'cons-mag-ser', 'cons-mag-gra')
+    if (opts.approche !== undefined) attrsToGet.push(opts.approche)
+
+    getAttrs(attrsToGet, v => {
+        // Metamorphe management
+        let seuil = parseInt(opts.seuil)||0;
+        let activeMeta = parseInt(v.degreMetamorphe)||0
+        let maxMeta = parseInt(v.metamorphe)||0
+        let permanentMeta = parseInt(v.permanentMeta)||0
+
+        if (opts.useMetamorphe && activeMeta) {
+            let realActiveMeta = Math.min(activeMeta, (maxMeta - permanentMeta))
+            seuil += realActiveMeta
+            rollParts.push(`{{metamorphe=${realActiveMeta} degrés de métamorphe actifs}}`)
+        }
+
+        // Wounds management
+        if (opts.usePhysicalWounds) {
+            seuil -= v['cons-min'] == 'on' ? 2 : 0
+            seuil -= v['cons-ser'] == 'on' ? 4 : 0
+            seuil -= v['cons-gra'] == 'on' ? 6 : 0
+        }
+
+        if (opts.useMagicalWounds) {
+            seuil -= v['cons-mag-min'] == 'on' ? 2 : 0
+            seuil -= v['cons-mag-ser'] == 'on' ? 4 : 0
+            seuil -= v['cons-mag-gra'] == 'on' ? 6 : 0
+        }
+        seuil = Math.max(0, seuil)
+
+        if (opts.approche !== undefined) {
+            let approche = parseInt(v[opts.approche])||0
+            seuil += approche
+            rollParts.push(`{{approche=Ka ${kapitalize(opts.approche)}}}`)
+        }
+
+        // Building the rollstring
+        rollParts.push(
+            `{{name=${v.character_name}}}`,
+            `{{jet=${opts.jet}}}`,
+            `{{seuil=[[${seuil}]]}}`,
+            `{{mod=[[?{Bonus / Malus ?|0}]]}}`, // Automatically integrate mod here, simpler to remove it later
+            `{{margin=[[0]]}}`,
+            `{{isCritical=[[0]]}}`,
+            `{{isSuccess=[[0]]}}`
+        )
+
+        const dynamicMessages = Object.entries(messages).map(([key, value]) => {return `{{${key}=${value}}}`})
+        rollParts.push(dynamicMessages.join(' '))
+
+        let rollString = rollParts.join(' ')
+        console.log(rollString)
+
+        // Fire !
+        startRoll(rollString, rs => {
+            seuil += parseInt(rs.results.mod.result)||0
+            let results = _computeRollResult(seuil, rs.results.jet.result)
+            let data = {
+                isSuccess: results.isSuccess,
+                isCritical: results.isCritical,
+                margin: results.margin,
+                seuil: 10 * seuil
+            }
+            // TODO add rk computations
+
+            finishRoll(rs.rollId, data)
+        })
+    })
+}
+const metaFieldsChange = {metamorphose: ['permanent']}
+on(section_changes(metaFieldsChange, true), () => {
+    getSectionObject(metaFieldsChange, data => {
+        getAttrs(data.fields, v => {
+            let total = 0;
+            data.fields.forEach(field => {
+                total += parseInt(v[field])||0
+            })
+            setAttrs({permanentMeta: total})
+        })
+    })
+})
+
+// Raw ka elem rolls
+on('clicked:kafeu clicked:katerre clicked:kaair clicked:kalune clicked:kaeau', evt => {
+    let attrKa = parseTriggerName(evt.triggerName)
+    getAttrs([attrKa, 'KaDominant'], v => {
+        let degreKa = parseInt(v[attrKa])||0
+        let useMetamorphe = 'ka' + v.KaDominant.toLowerCase() == attrKa
+        doRoll('base2', {seuil: degreKa, useMetamorphe: useMetamorphe}, {rollTitle: evt.htmlAttributes.value})
+    })
+})
+// Simulacre rolls
+/**
+ * Fait un jet de vécu contemporain
+ * @param {string} vecu Le nom du vécu mis en jeu
+ * @param {number} vecuDegre Le degré du vécu
+ * @param {string} approche L'approche élémentaire mise en jeu, si elle existe
+ * @param {string} kadom L'élément dominant du neph. Oui, c'est nécessaire.
+ */
+const rollSimulacre = (vecu, vecuDegre, approche, kadom) => {
+    let useMetamorphe = approche === 'ka' + kadom.toLowerCase()
+
+    let opts = {
+        seuil: vecuDegre,
+        usePhysicalWounds: true,
+        approche: (approche === '') ? undefined : approche,
+        useMagicalWounds: (approche !== ''),
+        useMetamorphe: useMetamorphe
+    }
+
+    doRoll('base2', opts, {'rollTitle': vecu, 'titleLabel': 'Utilise son expérience de'})
+}
+
+on('clicked:vecu', () => {
+    getAttrs(['simu_vecu', 'simu-vecu-nbr', 'approche1', 'KaDominant'], v => {
+        rollSimulacre(v.simu_vecu, v['simu-vecu-nbr'], v.approche1, v.KaDominant)
+    })
+})
+
+on('clicked:vecu2', () => {
+    getAttrs(['simu_vecu2', 'simu-vecu-nbr2', 'approche2', 'KaDominant'], v => {
+        rollSimulacre(v.simu_vecu2, v['simu-vecu-nbr2'], v.approche2, v.KaDominant)
+    })
+})
+  
+// Jet vécus passés, quêtes et savoirs ésos
+
+on('clicked:repeating_epoques-incarnation:vecu', evt => {
+    let rowId = evt.triggerName.split('_')[2]
+    const field = value => `repeating_epoques-incarnation_${rowId}_${value}`
+
+    let attrs = [
+        'vecu', 'degres_vecu_passe', 'approche',
+        'use_mnemos1', 'degres_mnemos1', 'mnemos1',
+        'use_mnemos2', 'degres_mnemos2', 'mnemos2'
+    ].map(value => field(`${value}`))
+
+    // Ka Dom is not row dependant
+    attrs.push('KaDominant')
+
+    getAttrs(attrs, v => {
+
+        // Messages
+        let messages = {
+            rollTitle: v[field('vecu')],
+            titleLabel: 'Utilise son expérience de'
+        }
+
+        // Basic parsing
+        let approche = v[field('approche')]
+        let degres_vecu_passe = parseInt(v[field('degres_vecu_passe')])||0
+        let useMetamorphe = approche == 'ka' + v['KaDominant'].toLowerCase()
+
+        // Mnemos management
+        let degres_mnemos1 = parseInt(v[field('degres_mnemos1')])||0
+        if (v[field('use_mnemos1')] == 'on') {
+            degres_vecu_passe += degres_mnemos1
+            messages.mnemos1 = v[field('mnemos1')]
+        }
+
+        let degres_mnemos2 = parseInt(v[field('degres_mnemos2')])||0
+        if (v[field('use_mnemos2')] == 'on') {
+            degres_vecu_passe += degres_mnemos2
+            messages.mnemos2 = v[field('mnemos2')]
+        }
+
+        // Final opts object
+        let opts = {
+            seuil: degres_vecu_passe,
+            usePhysicalWounds: true,
+            approche: approche === '' ? undefined : approche,
+            useMagicalWounds: approche !== '',
+            useMetamorphe: useMetamorphe
+        }
+
+        doRoll('base2', opts, messages)
+    })
+})
+
+on('clicked:repeating_quetes-eso', evt => {
+    let rowId = evt.triggerName.split('_')[2]
+    const field = value => `repeating_quetes-eso_${rowId}_${value}`
+
+    let attrs = ['quete_eso', 'quete_eso_degres', 'quete-eso-perso']
+        .map(value => field(`${value}`))
+
+    getAttrs(attrs, v => {console.log(v)
+        let title = v[field('quete_eso')]
+        if (title === "0") title = v[field('quete-eso-perso')]
+        let degre = parseInt(v[field('quete_eso_degres')])||0
+
+        doRoll(
+            'base2',
+            {seuil: degre, usePhysicalWounds: true},
+            {rollTitle: title, titleLabel: 'Fait appel à son savoir'}
+        )
+    })
+})
+
+
+on('clicked:repeating_savoir-eso', evt => {
+    let rowId = evt.triggerName.split('_')[2]
+    const field = value => `repeating_savoir-eso_${rowId}_${value}`
+
+    let attrs = ['savoir_eso', 'savoir_eso_degres', 'savoir-eso-perso']
+        .map(value => field(`${value}`))
+
+    getAttrs(attrs, v => {
+        let title = v[field('savoir_eso')]
+        if (title === "0") title = v[field('savoir-eso-perso')]
+        let degre = parseInt(v[field('savoir_eso_degres')])||0
+
+        doRoll(
+            'base2',
+            {seuil: degre, usePhysicalWounds: true},
+            {rollTitle: title, titleLabel: 'Fait appel à son savoir'}
+        )
     })
 })
 </script>

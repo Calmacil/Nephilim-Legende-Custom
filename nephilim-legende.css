@@ -996,28 +996,28 @@ div.sheet-kaElement > input[type=number]:nth-of-type(5) {
   margin-top: 335px;
   margin-left: 285px;
 }
-div.sheet-kaElement > button[type=roll] {
+div.sheet-kaElement > button[type=roll], div.sheet-kaElement > button[type=action] {
   position: absolute;
   margin: 0;
   padding: 0;
   border: 0;
   background: none;
 }
-div.sheet-kaElement > button[type=roll]::before {
+div.sheet-kaElement > button[type=roll]::before, div.sheet-kaElement > button[type=action]::before {
   content: "";
 }
-div.sheet-kaElement > button[type=roll] > span {
+div.sheet-kaElement > button[type=roll] > span, div.sheet-kaElement > button[type=action] > span {
   font-family: "Times New Roman";
   font-size: 18px;
   text-shadow: 1px 1px 5px white;
   min-width: max-content;
   font-variant: small-caps;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(1) {
+div.sheet-kaElement > button[type=roll]:nth-of-type(1), div.sheet-kaElement > button[type=action]:nth-of-type(1) {
   margin-left: 164px;
   margin-top: 28px;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(1)::before {
+div.sheet-kaElement > button[type=roll]:nth-of-type(1)::before, div.sheet-kaElement > button[type=action]:nth-of-type(1)::before {
   content: "t";
   padding-right: 5px;
   width: 25px;
@@ -1025,11 +1025,11 @@ div.sheet-kaElement > button[type=roll]:nth-of-type(1)::before {
   background-size: contain;
   background-repeat: no-repeat;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(2) {
+div.sheet-kaElement > button[type=roll]:nth-of-type(2), div.sheet-kaElement > button[type=action]:nth-of-type(2) {
   margin-left: -10px;
   margin-top: 142px;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(2)::before {
+div.sheet-kaElement > button[type=roll]:nth-of-type(2)::before, div.sheet-kaElement > button[type=action]:nth-of-type(2)::before {
   content: "t";
   padding-right: 5px;
   width: 25px;
@@ -1037,11 +1037,11 @@ div.sheet-kaElement > button[type=roll]:nth-of-type(2)::before {
   background-size: contain;
   background-repeat: no-repeat;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(3) {
+div.sheet-kaElement > button[type=roll]:nth-of-type(3), div.sheet-kaElement > button[type=action]:nth-of-type(3) {
   margin-left: 370px;
   margin-top: 142px;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(3)::after {
+div.sheet-kaElement > button[type=roll]:nth-of-type(3)::after, div.sheet-kaElement > button[type=action]:nth-of-type(3)::after {
   content: "t";
   padding-right: 5px;
   width: 25px;
@@ -1050,11 +1050,11 @@ div.sheet-kaElement > button[type=roll]:nth-of-type(3)::after {
   background-repeat: no-repeat;
   background-position-x: right;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(4) {
+div.sheet-kaElement > button[type=roll]:nth-of-type(4), div.sheet-kaElement > button[type=action]:nth-of-type(4) {
   margin-top: 410px;
   margin-left: 60px;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(4)::before {
+div.sheet-kaElement > button[type=roll]:nth-of-type(4)::before, div.sheet-kaElement > button[type=action]:nth-of-type(4)::before {
   content: "t";
   padding-right: 5px;
   width: 25px;
@@ -1062,11 +1062,11 @@ div.sheet-kaElement > button[type=roll]:nth-of-type(4)::before {
   background-size: contain;
   background-repeat: no-repeat;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(5) {
+div.sheet-kaElement > button[type=roll]:nth-of-type(5), div.sheet-kaElement > button[type=action]:nth-of-type(5) {
   margin-top: 410px;
   margin-left: 293px;
 }
-div.sheet-kaElement > button[type=roll]:nth-of-type(5)::after {
+div.sheet-kaElement > button[type=roll]:nth-of-type(5)::after, div.sheet-kaElement > button[type=action]:nth-of-type(5)::after {
   content: "t";
   padding-right: 5px;
   width: 25px;
@@ -1226,7 +1226,7 @@ div.sheet-simulacreVecus > select {
   margin-left: 10px;
   margin-right: 10px;
 }
-div.sheet-simulacreVecus > button[type=roll] {
+div.sheet-simulacreVecus > button[type=action] {
   width: 40px;
   height: 30px;
   background-image: var(--dice);
@@ -1240,7 +1240,7 @@ div.sheet-simulacreVecus > button[type=roll] {
   margin-top: -2px;
   margin-left: 10px;
 }
-div.sheet-simulacreVecus > button[type=roll]::before {
+div.sheet-simulacreVecus > button[type=action]::before {
   content: "";
 }
 
@@ -1623,7 +1623,7 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div .sheet-autoex {
 div.sheet-epoquesIncarnation > .repcontainer > .repitem > div .sheet-autoex > textarea {
   background: transparent;
 }
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type=roll] {
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type=action] {
   width: 40px;
   height: 30px;
   background-image: var(--dice);
@@ -1635,7 +1635,7 @@ div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type=roll] 
   margin-right: 5px;
   background-size: contain;
 }
-div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type=roll]::before {
+div.sheet-epoquesIncarnation > .repcontainer > .repitem > div button[type=action]::before {
   content: "";
 }
 div.sheet-epoquesIncarnation > .repcontainer > .repitem > div input[type=hidden][value=perso] ~ input[type=text].sheet-perso {
@@ -1688,8 +1688,8 @@ div.sheet-quetesEsoteriques > .repcontainer > .repitem > input[type=number] {
   margin-left: auto;
   margin-right: 3px;
 }
-div.sheet-savoirsEsoteriques > .repcontainer > .repitem > button[type=roll],
-div.sheet-quetesEsoteriques > .repcontainer > .repitem > button[type=roll] {
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > button[type=action],
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > button[type=action] {
   width: 40px;
   height: 30px;
   background-image: var(--dice);
@@ -1701,8 +1701,8 @@ div.sheet-quetesEsoteriques > .repcontainer > .repitem > button[type=roll] {
   margin-right: 5px;
   background-size: contain;
 }
-div.sheet-savoirsEsoteriques > .repcontainer > .repitem > button[type=roll]::before,
-div.sheet-quetesEsoteriques > .repcontainer > .repitem > button[type=roll]::before {
+div.sheet-savoirsEsoteriques > .repcontainer > .repitem > button[type=action]::before,
+div.sheet-quetesEsoteriques > .repcontainer > .repitem > button[type=action]::before {
   content: "";
 }
 
@@ -4479,7 +4479,7 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 
 .sheet-rolltemplate-initiative, .sheet-rolltemplate-rite, .sheet-rolltemplate-formule, .sheet-rolltemplate-opposition,
 .sheet-rolltemplate-dracoterrain, .sheet-rolltemplate-invocation, .sheet-rolltemplate-sort,
-.sheet-rolltemplate-dracotech, .sheet-rolltemplate-base,
+.sheet-rolltemplate-dracotech, .sheet-rolltemplate-base2, .sheet-rolltemplate-base,
 .sheet-rolltemplate-dracocontrole {
   background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)), url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Nephilim-Legende/img/Fond-vieux-papier.jpg");
   background-size: cover, cover, cover;
@@ -4492,7 +4492,7 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 }
 .sheet-rolltemplate-initiative > h1, .sheet-rolltemplate-rite > h1, .sheet-rolltemplate-formule > h1, .sheet-rolltemplate-opposition > h1,
 .sheet-rolltemplate-dracoterrain > h1, .sheet-rolltemplate-invocation > h1, .sheet-rolltemplate-sort > h1,
-.sheet-rolltemplate-dracotech > h1, .sheet-rolltemplate-base > h1,
+.sheet-rolltemplate-dracotech > h1, .sheet-rolltemplate-base2 > h1, .sheet-rolltemplate-base > h1,
 .sheet-rolltemplate-dracocontrole > h1 {
   display: flex;
   width: 100%;
@@ -4502,33 +4502,48 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 }
 .sheet-rolltemplate-initiative > div, .sheet-rolltemplate-rite > div, .sheet-rolltemplate-formule > div, .sheet-rolltemplate-opposition > div,
 .sheet-rolltemplate-dracoterrain > div, .sheet-rolltemplate-invocation > div, .sheet-rolltemplate-sort > div,
-.sheet-rolltemplate-dracotech > div, .sheet-rolltemplate-base > div,
+.sheet-rolltemplate-dracotech > div, .sheet-rolltemplate-base2 > div, .sheet-rolltemplate-base > div,
 .sheet-rolltemplate-dracocontrole > div {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 6px;
   flex-wrap: wrap;
   border-top: 1px dotted black;
 }
 .sheet-rolltemplate-initiative > div > span, .sheet-rolltemplate-rite > div > span, .sheet-rolltemplate-formule > div > span, .sheet-rolltemplate-opposition > div > span,
 .sheet-rolltemplate-dracoterrain > div > span, .sheet-rolltemplate-invocation > div > span, .sheet-rolltemplate-sort > div > span,
-.sheet-rolltemplate-dracotech > div > span, .sheet-rolltemplate-base > div > span,
+.sheet-rolltemplate-dracotech > div > span, .sheet-rolltemplate-base2 > div > span, .sheet-rolltemplate-base > div > span,
 .sheet-rolltemplate-dracocontrole > div > span {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  align-self: center;
 }
-.sheet-rolltemplate-initiative > div:first-of-type > span:first-of-type, .sheet-rolltemplate-rite > div:first-of-type > span:first-of-type, .sheet-rolltemplate-formule > div:first-of-type > span:first-of-type, .sheet-rolltemplate-opposition > div:first-of-type > span:first-of-type,
-.sheet-rolltemplate-dracoterrain > div:first-of-type > span:first-of-type, .sheet-rolltemplate-invocation > div:first-of-type > span:first-of-type, .sheet-rolltemplate-sort > div:first-of-type > span:first-of-type,
-.sheet-rolltemplate-dracotech > div:first-of-type > span:first-of-type, .sheet-rolltemplate-base > div:first-of-type > span:first-of-type,
-.sheet-rolltemplate-dracocontrole > div:first-of-type > span:first-of-type {
-  margin-top: 10px;
+.sheet-rolltemplate-initiative > div.sheet-rt-header, .sheet-rolltemplate-rite > div.sheet-rt-header, .sheet-rolltemplate-formule > div.sheet-rt-header, .sheet-rolltemplate-opposition > div.sheet-rt-header,
+.sheet-rolltemplate-dracoterrain > div.sheet-rt-header, .sheet-rolltemplate-invocation > div.sheet-rt-header, .sheet-rolltemplate-sort > div.sheet-rt-header,
+.sheet-rolltemplate-dracotech > div.sheet-rt-header, .sheet-rolltemplate-base2 > div.sheet-rt-header, .sheet-rolltemplate-base > div.sheet-rt-header,
+.sheet-rolltemplate-dracocontrole > div.sheet-rt-header {
+  padding: 3px 0;
+}
+.sheet-rolltemplate-initiative > div.sheet-rt-header > span:nth-of-type(2), .sheet-rolltemplate-rite > div.sheet-rt-header > span:nth-of-type(2), .sheet-rolltemplate-formule > div.sheet-rt-header > span:nth-of-type(2), .sheet-rolltemplate-opposition > div.sheet-rt-header > span:nth-of-type(2),
+.sheet-rolltemplate-dracoterrain > div.sheet-rt-header > span:nth-of-type(2), .sheet-rolltemplate-invocation > div.sheet-rt-header > span:nth-of-type(2), .sheet-rolltemplate-sort > div.sheet-rt-header > span:nth-of-type(2),
+.sheet-rolltemplate-dracotech > div.sheet-rt-header > span:nth-of-type(2), .sheet-rolltemplate-base2 > div.sheet-rt-header > span:nth-of-type(2), .sheet-rolltemplate-base > div.sheet-rt-header > span:nth-of-type(2),
+.sheet-rolltemplate-dracocontrole > div.sheet-rt-header > span:nth-of-type(2) {
+  font-weight: bold;
+}
+.sheet-rolltemplate-initiative > div.sheet-rt-extra, .sheet-rolltemplate-rite > div.sheet-rt-extra, .sheet-rolltemplate-formule > div.sheet-rt-extra, .sheet-rolltemplate-opposition > div.sheet-rt-extra,
+.sheet-rolltemplate-dracoterrain > div.sheet-rt-extra, .sheet-rolltemplate-invocation > div.sheet-rt-extra, .sheet-rolltemplate-sort > div.sheet-rt-extra,
+.sheet-rolltemplate-dracotech > div.sheet-rt-extra, .sheet-rolltemplate-base2 > div.sheet-rt-extra, .sheet-rolltemplate-base > div.sheet-rt-extra,
+.sheet-rolltemplate-dracocontrole > div.sheet-rt-extra {
+  font-size: x-small;
+  flex-direction: column;
+  display: flex;
 }
 
 .sheet-rolltemplate-rite > div:first-of-type > span:nth-of-type(2), .sheet-rolltemplate-formule > div:first-of-type > span:nth-of-type(2), .sheet-rolltemplate-opposition > div:first-of-type > span:nth-of-type(2),
 .sheet-rolltemplate-dracoterrain > div:first-of-type > span:nth-of-type(2), .sheet-rolltemplate-invocation > div:first-of-type > span:nth-of-type(2), .sheet-rolltemplate-sort > div:first-of-type > span:nth-of-type(2),
-.sheet-rolltemplate-dracotech > div:first-of-type > span:nth-of-type(2), .sheet-rolltemplate-base > div:first-of-type > span:nth-of-type(2),
-.sheet-rolltemplate-dracocontrole > div:first-of-type > span:nth-of-type(2) {
+.sheet-rolltemplate-dracotech > div:first-of-type > span:nth-of-type(2), .sheet-rolltemplate-base > div:first-of-type > span:nth-of-type(2), .sheet-rolltemplate-base > div:nth-of-type(3) > span:nth-of-type(2),
+.sheet-rolltemplate-dracocontrole > div:first-of-type > span:nth-of-type(2),
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(3) > span:nth-of-type(2) {
   font-weight: bold;
   font-size: 15px;
   line-height: 16px;
@@ -4564,31 +4579,31 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 }
 
 .sheet-rolltemplate-rite > div:nth-of-type(2) > span:first-of-type, .sheet-rolltemplate-formule > div:nth-of-type(2) > span:first-of-type, .sheet-rolltemplate-invocation > div:nth-of-type(2) > span:first-of-type, .sheet-rolltemplate-sort > div:nth-of-type(2) > span:first-of-type,
-.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:first-of-type, .sheet-rolltemplate-base > div:last-of-type > span:first-of-type,
-.sheet-rolltemplate-dracocontrole > div:last-of-type > span:first-of-type {
+.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:first-of-type, .sheet-rolltemplate-base > div:nth-of-type(2) > span:first-of-type,
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(2) > span:first-of-type {
   margin-top: 10px;
 }
 .sheet-rolltemplate-rite > div:nth-of-type(2) > span:last-of-type, .sheet-rolltemplate-formule > div:nth-of-type(2) > span:last-of-type, .sheet-rolltemplate-invocation > div:nth-of-type(2) > span:last-of-type, .sheet-rolltemplate-sort > div:nth-of-type(2) > span:last-of-type,
-.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:last-of-type, .sheet-rolltemplate-base > div:last-of-type > span:last-of-type,
-.sheet-rolltemplate-dracocontrole > div:last-of-type > span:last-of-type {
+.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:last-of-type, .sheet-rolltemplate-base > div:nth-of-type(2) > span:last-of-type,
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(2) > span:last-of-type {
   margin-bottom: 10px;
 }
 .sheet-rolltemplate-rite > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type), .sheet-rolltemplate-formule > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type), .sheet-rolltemplate-invocation > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type), .sheet-rolltemplate-sort > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type),
-.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type), .sheet-rolltemplate-base > div:last-of-type > span:not(:first-of-type):not(:last-of-type),
-.sheet-rolltemplate-dracocontrole > div:last-of-type > span:not(:first-of-type):not(:last-of-type) {
+.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type), .sheet-rolltemplate-base > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type),
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(2) > span:not(:first-of-type):not(:last-of-type) {
   width: calc(50% - 5px);
   line-height: 25px;
 }
 .sheet-rolltemplate-rite > div:nth-of-type(2) > span:nth-of-type(2), .sheet-rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(2), .sheet-rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(2), .sheet-rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(2),
-.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:nth-of-type(2), .sheet-rolltemplate-base > div:last-of-type > span:nth-of-type(2),
-.sheet-rolltemplate-dracocontrole > div:last-of-type > span:nth-of-type(2) {
+.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:nth-of-type(2), .sheet-rolltemplate-base > div:nth-of-type(2) > span:nth-of-type(2),
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(2) > span:nth-of-type(2) {
   justify-content: flex-end;
   padding-right: 5px;
   margin-top: 5px;
 }
 .sheet-rolltemplate-rite > div:nth-of-type(2) > span:nth-of-type(3), .sheet-rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(3), .sheet-rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(3), .sheet-rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(3),
-.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:nth-of-type(3), .sheet-rolltemplate-base > div:last-of-type > span:nth-of-type(3),
-.sheet-rolltemplate-dracocontrole > div:last-of-type > span:nth-of-type(3) {
+.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:nth-of-type(3), .sheet-rolltemplate-base > div:nth-of-type(2) > span:nth-of-type(3),
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(2) > span:nth-of-type(3) {
   justify-content: flex-start;
   padding-left: 5px;
   margin-top: 5px;
@@ -4597,8 +4612,8 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
   font-style: x-large;
 }
 .sheet-rolltemplate-rite > div:nth-of-type(2) > span:nth-of-type(4), .sheet-rolltemplate-formule > div:nth-of-type(2) > span:nth-of-type(4), .sheet-rolltemplate-invocation > div:nth-of-type(2) > span:nth-of-type(4), .sheet-rolltemplate-sort > div:nth-of-type(2) > span:nth-of-type(4),
-.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:nth-of-type(4), .sheet-rolltemplate-base > div:last-of-type > span:nth-of-type(4),
-.sheet-rolltemplate-dracocontrole > div:last-of-type > span:nth-of-type(4) {
+.sheet-rolltemplate-dracotech > div:nth-of-type(2) > span:nth-of-type(4), .sheet-rolltemplate-base > div:nth-of-type(2) > span:nth-of-type(4),
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(2) > span:nth-of-type(4) {
   font-size: 20px;
   line-height: 25px;
   margin-top: 5px;
@@ -4628,20 +4643,20 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 
 .sheet-rolltemplate-rite .sheet-fail, .sheet-rolltemplate-formule .sheet-fail, .sheet-rolltemplate-opposition .sheet-fail,
 .sheet-rolltemplate-dracoterrain .sheet-fail, .sheet-rolltemplate-invocation .sheet-fail, .sheet-rolltemplate-sort .sheet-fail,
-.sheet-rolltemplate-dracotech .sheet-fail, .sheet-rolltemplate-base .sheet-fail,
+.sheet-rolltemplate-dracotech .sheet-fail, .sheet-rolltemplate-base2 .sheet-fail, .sheet-rolltemplate-base .sheet-fail,
 .sheet-rolltemplate-dracocontrole .sheet-fail {
   color: red;
 }
 .sheet-rolltemplate-rite .sheet-success, .sheet-rolltemplate-formule .sheet-success, .sheet-rolltemplate-opposition .sheet-success,
 .sheet-rolltemplate-dracoterrain .sheet-success, .sheet-rolltemplate-invocation .sheet-success, .sheet-rolltemplate-sort .sheet-success,
-.sheet-rolltemplate-dracotech .sheet-success, .sheet-rolltemplate-base .sheet-success,
+.sheet-rolltemplate-dracotech .sheet-success, .sheet-rolltemplate-base2 .sheet-success, .sheet-rolltemplate-base .sheet-success,
 .sheet-rolltemplate-dracocontrole .sheet-success {
   color: green;
 }
 
 .sheet-rolltemplate-initiative .inlinerollresult, .sheet-rolltemplate-rite .inlinerollresult, .sheet-rolltemplate-formule .inlinerollresult, .sheet-rolltemplate-opposition .inlinerollresult,
 .sheet-rolltemplate-dracoterrain .inlinerollresult, .sheet-rolltemplate-invocation .inlinerollresult, .sheet-rolltemplate-sort .inlinerollresult,
-.sheet-rolltemplate-dracotech .inlinerollresult, .sheet-rolltemplate-base .inlinerollresult,
+.sheet-rolltemplate-dracotech .inlinerollresult, .sheet-rolltemplate-base2 .inlinerollresult, .sheet-rolltemplate-base .inlinerollresult,
 .sheet-rolltemplate-dracocontrole .inlinerollresult {
   padding: 0;
   margin: 0;
@@ -4653,24 +4668,49 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
 }
 .sheet-rolltemplate-initiative .inlinerollresult.fullcrit, .sheet-rolltemplate-rite .inlinerollresult.fullcrit, .sheet-rolltemplate-formule .inlinerollresult.fullcrit, .sheet-rolltemplate-opposition .inlinerollresult.fullcrit,
 .sheet-rolltemplate-dracoterrain .inlinerollresult.fullcrit, .sheet-rolltemplate-invocation .inlinerollresult.fullcrit, .sheet-rolltemplate-sort .inlinerollresult.fullcrit,
-.sheet-rolltemplate-dracotech .inlinerollresult.fullcrit, .sheet-rolltemplate-base .inlinerollresult.fullcrit,
-.sheet-rolltemplate-dracocontrole .inlinerollresult.fullcrit {
-  color: red;
-  border: 0;
-}
-.sheet-rolltemplate-initiative .inlinerollresult.fullfail, .sheet-rolltemplate-rite .inlinerollresult.fullfail, .sheet-rolltemplate-formule .inlinerollresult.fullfail, .sheet-rolltemplate-opposition .inlinerollresult.fullfail,
+.sheet-rolltemplate-dracotech .inlinerollresult.fullcrit, .sheet-rolltemplate-base2 .inlinerollresult.fullcrit, .sheet-rolltemplate-base .inlinerollresult.fullcrit,
+.sheet-rolltemplate-dracocontrole .inlinerollresult.fullcrit, .sheet-rolltemplate-initiative .inlinerollresult.fullfail, .sheet-rolltemplate-rite .inlinerollresult.fullfail, .sheet-rolltemplate-formule .inlinerollresult.fullfail, .sheet-rolltemplate-opposition .inlinerollresult.fullfail,
 .sheet-rolltemplate-dracoterrain .inlinerollresult.fullfail, .sheet-rolltemplate-invocation .inlinerollresult.fullfail, .sheet-rolltemplate-sort .inlinerollresult.fullfail,
-.sheet-rolltemplate-dracotech .inlinerollresult.fullfail, .sheet-rolltemplate-base .inlinerollresult.fullfail,
-.sheet-rolltemplate-dracocontrole .inlinerollresult.fullfail {
-  color: red;
+.sheet-rolltemplate-dracotech .inlinerollresult.fullfail, .sheet-rolltemplate-base2 .inlinerollresult.fullfail, .sheet-rolltemplate-base .inlinerollresult.fullfail,
+.sheet-rolltemplate-dracocontrole .inlinerollresult.fullfail, .sheet-rolltemplate-initiative .inlinerollresult.importantroll, .sheet-rolltemplate-rite .inlinerollresult.importantroll, .sheet-rolltemplate-formule .inlinerollresult.importantroll, .sheet-rolltemplate-opposition .inlinerollresult.importantroll,
+.sheet-rolltemplate-dracoterrain .inlinerollresult.importantroll, .sheet-rolltemplate-invocation .inlinerollresult.importantroll, .sheet-rolltemplate-sort .inlinerollresult.importantroll,
+.sheet-rolltemplate-dracotech .inlinerollresult.importantroll, .sheet-rolltemplate-base2 .inlinerollresult.importantroll, .sheet-rolltemplate-base .inlinerollresult.importantroll,
+.sheet-rolltemplate-dracocontrole .inlinerollresult.importantroll {
   border: 0;
 }
-.sheet-rolltemplate-initiative .inlinerollresult.importantroll, .sheet-rolltemplate-rite .inlinerollresult.importantroll, .sheet-rolltemplate-formule .inlinerollresult.importantroll, .sheet-rolltemplate-opposition .inlinerollresult.importantroll,
-.sheet-rolltemplate-dracoterrain .inlinerollresult.importantroll, .sheet-rolltemplate-invocation .inlinerollresult.importantroll, .sheet-rolltemplate-sort .inlinerollresult.importantroll,
-.sheet-rolltemplate-dracotech .inlinerollresult.importantroll, .sheet-rolltemplate-base .inlinerollresult.importantroll,
-.sheet-rolltemplate-dracocontrole .inlinerollresult.importantroll {
-  color: blue;
-  border: 0;
+.sheet-rolltemplate-initiative .sheet-rt-result, .sheet-rolltemplate-rite .sheet-rt-result, .sheet-rolltemplate-formule .sheet-rt-result, .sheet-rolltemplate-opposition .sheet-rt-result,
+.sheet-rolltemplate-dracoterrain .sheet-rt-result, .sheet-rolltemplate-invocation .sheet-rt-result, .sheet-rolltemplate-sort .sheet-rt-result,
+.sheet-rolltemplate-dracotech .sheet-rt-result, .sheet-rolltemplate-base2 .sheet-rt-result, .sheet-rolltemplate-base .sheet-rt-result,
+.sheet-rolltemplate-dracocontrole .sheet-rt-result {
+  flex-direction: column;
+  row-gap: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sheet-rolltemplate-initiative .sheet-rt-result-main, .sheet-rolltemplate-rite .sheet-rt-result-main, .sheet-rolltemplate-formule .sheet-rt-result-main, .sheet-rolltemplate-opposition .sheet-rt-result-main,
+.sheet-rolltemplate-dracoterrain .sheet-rt-result-main, .sheet-rolltemplate-invocation .sheet-rt-result-main, .sheet-rolltemplate-sort .sheet-rt-result-main,
+.sheet-rolltemplate-dracotech .sheet-rt-result-main, .sheet-rolltemplate-base2 .sheet-rt-result-main, .sheet-rolltemplate-base .sheet-rt-result-main,
+.sheet-rolltemplate-dracocontrole .sheet-rt-result-main, .sheet-rolltemplate-initiative .sheet-rt-result-details, .sheet-rolltemplate-rite .sheet-rt-result-details, .sheet-rolltemplate-formule .sheet-rt-result-details, .sheet-rolltemplate-opposition .sheet-rt-result-details,
+.sheet-rolltemplate-dracoterrain .sheet-rt-result-details, .sheet-rolltemplate-invocation .sheet-rt-result-details, .sheet-rolltemplate-sort .sheet-rt-result-details,
+.sheet-rolltemplate-dracotech .sheet-rt-result-details, .sheet-rolltemplate-base2 .sheet-rt-result-details, .sheet-rolltemplate-base .sheet-rt-result-details,
+.sheet-rolltemplate-dracocontrole .sheet-rt-result-details {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.sheet-rolltemplate-initiative .sheet-rt-result-details, .sheet-rolltemplate-rite .sheet-rt-result-details, .sheet-rolltemplate-formule .sheet-rt-result-details, .sheet-rolltemplate-opposition .sheet-rt-result-details,
+.sheet-rolltemplate-dracoterrain .sheet-rt-result-details, .sheet-rolltemplate-invocation .sheet-rt-result-details, .sheet-rolltemplate-sort .sheet-rt-result-details,
+.sheet-rolltemplate-dracotech .sheet-rt-result-details, .sheet-rolltemplate-base2 .sheet-rt-result-details, .sheet-rolltemplate-base .sheet-rt-result-details,
+.sheet-rolltemplate-dracocontrole .sheet-rt-result-details {
+  font-size: x-small;
+  font-weight: bold;
+}
+.sheet-rolltemplate-initiative .sheet-rt-result-details .inlinerollresult, .sheet-rolltemplate-rite .sheet-rt-result-details .inlinerollresult, .sheet-rolltemplate-formule .sheet-rt-result-details .inlinerollresult, .sheet-rolltemplate-opposition .sheet-rt-result-details .inlinerollresult,
+.sheet-rolltemplate-dracoterrain .sheet-rt-result-details .inlinerollresult, .sheet-rolltemplate-invocation .sheet-rt-result-details .inlinerollresult, .sheet-rolltemplate-sort .sheet-rt-result-details .inlinerollresult,
+.sheet-rolltemplate-dracotech .sheet-rt-result-details .inlinerollresult, .sheet-rolltemplate-base2 .sheet-rt-result-details .inlinerollresult, .sheet-rolltemplate-base .sheet-rt-result-details .inlinerollresult,
+.sheet-rolltemplate-dracocontrole .sheet-rt-result-details .inlinerollresult {
+  font-style: italic;
+  font-size: small;
 }
 
 .sheet-rolltemplate-base > h2,
@@ -4682,8 +4722,9 @@ div.sheet-habitus > .repcontainer > .repitem > div > div > textarea {
   justify-content: center;
   line-height: 14px;
 }
-.sheet-rolltemplate-base > div:first-of-type > span:last-of-type,
-.sheet-rolltemplate-dracocontrole > div:first-of-type > span:last-of-type {
+.sheet-rolltemplate-base > div:first-of-type > span:last-of-type, .sheet-rolltemplate-base > div:nth-of-type(3) > span:last-of-type,
+.sheet-rolltemplate-dracocontrole > div:first-of-type > span:last-of-type,
+.sheet-rolltemplate-dracocontrole > div:nth-of-type(3) > span:last-of-type {
   margin-top: 5px;
   margin-bottom: 10px;
 }

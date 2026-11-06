@@ -1,0 +1,54 @@
+<rolltemplate class="sheet-rolltemplate-base2">
+    <h1>{{name}}</h1>
+    <div class="rt-header">
+        <span>{{titleLabel}}</span>
+        <span>{{rollTitle}}</span>
+    </div>
+    <div class="rt-result">
+        <div class="rt-result-main">
+            <span>Résultat: </span>
+            <span>{{jet}}</span>
+
+            {{#rollTotal() computed::isSuccess 1}}
+                <span class="success">
+                    {{#rollTotal() computed::isCritical 1}}
+                    Critique
+                    {{/rollTotal() computed::isCritical 1}}
+                    {{#rollTotal() computed::isCritical 0}}
+                    Réussite
+                    {{/rollTotal() computed::isCritical 0}}
+                </span>
+            {{/rollTotal() computed::isSuccess 1}}
+            {{#rollTotal() computed::isSuccess 0}}
+                <span class="fail">
+                    {{#rollTotal() computed::isCritical 1}}
+                    Maladresse
+                    {{/rollTotal() computed::isCritical 1}}
+                    {{#rollTotal() computed::isCritical 0}}
+                    Échec
+                    {{/rollTotal() computed::isCritical 0}}
+                </span>
+            {{/rollTotal() computed::isSuccess 0}}
+        </div>
+
+        <div class="rt-result-details">
+            <span>Seuil {{computed::seuil}}</span>
+            <span>Marge {{computed::margin}}</span>
+        </div>
+    </div>
+
+    <div class="rt-extra">
+        {{#approche}}
+            <span>Approche de {{approche}}</span>
+        {{/approche}}
+        {{#metamorphe}}
+            <span>{{metamorphe}}</span>
+        {{/metamorphe}}
+        {{#mnemos1}}
+            <span>effet Mnémos: {{mnemos1}}</span>
+        {{/mnemos1}}
+        {{#mnemos2}}
+            <span>effet Mnémos: {{mnemos2}}</span>
+        {{/mnemos2}}
+    </div>
+</rolltemplate>

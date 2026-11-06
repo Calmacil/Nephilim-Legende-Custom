@@ -17,23 +17,19 @@
                 +numberInput('simu_age', 0)
 
     .simulacreVecus
-        label Vécu principal
+        label(for='simu_vecu') Vécu principal
         +textInput('simu_vecu')(placeholder='Vécu')
         +numberInput('simu-vecu-nbr', 0)
         +hiddenInput('nature', 'nephilim').nature
-        +kaSelectorVecuSimu('approche1', 'simu-vecu-nbr', '')
-        +rollButton('vecu', roll_vecu_base
-            .replace('__VECU__', 'simu_vecu')
-            .replace('__APPR__', 'approche1'))
+        +kaSelectorVecuCrp('approche1', 'simu-vecu-nbr', '')
+        +actButton('vecu')
     .simulacreVecus
-        label Vécu d’Initié
+        label(for='simu_vecu2') Vécu d’Initié
         +textInput('simu_vecu2')(placeholder='Vécu')
         +numberInput('simu-vecu-nbr2', 0)
         +hiddenInput('nature', 'nephilim').nature
-        +kaSelectorVecuSimu('approche2', 'simu-vecu-nbr2', '2')
-        +rollButton('vecu2', roll_vecu_base
-            .replace('__VECU__', 'simu_vecu2')
-            .replace('__APPR__', 'approche2'))
+        +kaSelectorVecuCrp('approche2', 'simu-vecu-nbr2', '2')
+        +actButton('vecu2')
 
     .col2
         .simulacreDescription
@@ -53,7 +49,7 @@
             .autoex.autoex24
                 +spanareaInput('simu-ress')
         +hiddenInput('nature', 'nephilim').nature
-        
+
         //- embarque sa div
         +degreMetamorphe()
 

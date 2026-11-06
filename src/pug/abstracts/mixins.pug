@@ -21,8 +21,10 @@ mixin rollButton(name, value='', label=false)
     if (label)
       span #{label}
 
-mixin actButton(name, value='')
-  button(class!=attributes.class name=`act_${name}` type='action' value!=value)
+mixin actButton(name, value='', label=false)
+  button(class!=attributes.class name=`act_${name}` title!=attributes.title type='action' value!=value)
+    if (label)
+      span #{label}
 
 mixin cbButton(name, label, value=null)
   label(class!=attributes.class)

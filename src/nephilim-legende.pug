@@ -45,6 +45,7 @@ include pug/components/incarnation-selector.pug
 
     //- roll templates
     include pug/rolltemplates/rt-base.html
+    include pug/rolltemplates/rt-base2.html
     include pug/rolltemplates/rt-sort.html
     include pug/rolltemplates/rt-invocation.html
     include pug/rolltemplates/rt-opposition.html
@@ -57,5 +58,11 @@ include pug/components/incarnation-selector.pug
 
 //- workers
 script(type='text/worker')
+    include js/utils.js
     include js/startup.js
     include js/repeating.js
+    include js/rolls.js
+
+    include js/tabs/tab1-nephilim.js
+    include js/tabs/tab2-simulacre.js
+    include js/tabs/tab3-incarnations.js

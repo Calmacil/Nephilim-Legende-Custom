@@ -17,16 +17,24 @@
     &> div
         display: flex
         width: 100%
-        justify-content: space-between
+        justify-content: center
+        gap: 6px
         flex-wrap: wrap
         border-top: 1px dotted black
+
         &> span
             display: flex
-            width: 100%
-            justify-content: center
-    &> div:first-of-type
-        &> span:first-of-type
-            margin-top: 10px
+            align-self: center
+
+    &> div.sheet-rt-header
+        padding: 3px 0
+        &> span:nth-of-type(2)
+            font-weight: bold
+
+    &> div.sheet-rt-extra
+        font-size: x-small
+        flex-direction: column
+        display: flex
 
 %rtSpan2
     font-weight: bold
@@ -112,12 +120,26 @@
         color: black
         font-weight: bold
         font-size: x-large
-        &.fullcrit
-            color: red
-            border: 0
-        &.fullfail
-            color: red
-            border: 0
+        &.fullcrit,
+        &.fullfail,
         &.importantroll
-            color: blue
             border: 0
+
+    & .sheet-rt-result
+        flex-direction: column
+        row-gap: 6px
+        padding-top: 10px
+        padding-bottom: 10px
+
+    & .sheet-rt-result-main,
+    & .sheet-rt-result-details
+        display: flex
+        justify-content: center
+        gap: 6px
+
+    & .sheet-rt-result-details
+        font-size: x-small
+        font-weight: bold
+        & .inlinerollresult
+            font-style: italic
+            font-size: small

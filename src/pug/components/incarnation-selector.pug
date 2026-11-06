@@ -90,13 +90,9 @@ mixin epoquesIncarnation()
                 +hiddenInput('expandVecus', 1)
                 .autoex.autoex24
                     +spanareaInput('vecu_description')
-                +hiddenInput('effectiveMnemos', "@{degres_mnemos1}+@{degres_mnemos2}")
                 //- Big select pour les approches
-                +kaSelectorVecuSimu('approche', 'degres_vecu_passe', '', true)
-                +hiddenInput('effectiveRoll', roll_vecu_base
-                    .replace('__VECU__', 'vecu')
-                    .replace('__APPR__', 'approche'))
-                +rollButton('vecu', '@{effectiveRoll}')
+                +kaSelectorVecuCrp('approche', 'degres_vecu_passe', '', true)
+                +actButton('vecu', '')
             div
                 div
                     +cbButton('attr_expandMnemos1', null, 1)
